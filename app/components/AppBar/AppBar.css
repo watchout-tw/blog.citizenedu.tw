@@ -1,0 +1,9 @@
+.AppBar {
+	padding: 16px;
+	background: rgba(220,220,220,0.2);
+}
+.AppBar-logo {
+	font-size: 20px;
+	font-weight: 700;
+	cursor: pointer;
+}

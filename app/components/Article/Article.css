@@ -1,0 +1,134 @@
+/** @define Article; use strict */
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+
+p, blockquote, h1, h2, h3, ul, ol, li, a, span {
+   font-family: 'Noto Sans', sans-serif;
+   line-height: 1.8;
+   font-size: 18px;
+   color: rgb(53,55,54);
+}
+.Article {
+	width: 100%;
+	margin: 100px auto 0px auto;
+}
+.Article-authorBackground {
+  /*background: rgb(230,230,230);*/
+  padding: 10px;
+}
+@media screen and (min-width: 400px){
+    .Article-content,.Article-author{
+		    max-width: 600px;
+        margin: 0 auto;
+    }
+}
+.Article-author {
+  //background: #FAFAFA;
+  line-height: 1.4;
+  font-family: 'Noto Sans', sans-serif;
+  
+}
+.Article-authorHeader {
+  min-height: 120px;
+}
+.Article-avatar {
+  cursor: pointer;
+	float: left;
+  margin: 20px 10px 0px 20px;
+  background: white;
+  //border: 3px solid rgb(140,140,140);
+  //box-shadow: 3px 3px 0px rgba(200,200,200,0.4);
+  border: 3px solid;
+  border-radius: 50%;
+  width: 80px;
+}
+.Article-avatar:hover {
+  box-shadow: 3px 3px 0px rgba(200,200,200,0.7);
+}
+.Article-info {
+	overflow:hidden;  _overflow:visible;  zoom:1; 
+	padding-left:10px;
+  padding-top: 24px;
+
+}
+div.Article-name {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 20px;
+  display: inline-block;
+}
+div.Article-name:hover {
+  text-decoration: underline;
+}
+div.Article-date {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 200;
+  margin: 0 6px;
+}
+
+blockquote {
+   //border: 1px solid rgb(220,220,220);
+   //border-left: 10px solid rgba(0,0,0,0.12);
+   padding: 0px 10px;
+   font-style: italic;
+   font-weight: 700;
+   font-size: 16px;
+   color: rgb(70,70,70);
+   
+}
+h1 {
+   font-size: 40px;
+   line-height: 1.25;
+   font-weight: 900;
+   margin: 40px 0px;
+}
+h2 {
+   font-size: 26px;
+   font-weight: 900;
+   margin: 16px 0px;
+}
+p {
+   
+}
+ol {
+   
+}
+li {
+
+}
+a, a:visited {
+   color: rgb(53,55,54);
+   cursor: pointer;
+   text-decoration: none;
+   border-bottom: 1px solid rgb(120,120,120);
+}
+a:hover {
+	
+}
+hr {
+   border: none;
+   border-top: 1px solid rgb(200,200,200);
+}
+/* IMAGES */
+a.lightbox {
+   text-decoration: none;
+   border: none;
+}
+a.lightbox img {
+}
+.filename {
+	font-size: 14px;
+}
+.informations {
+	display: none;
+}
+.Article-footer {
+  text-align: center;
+  background: rgb(230,230,230);
+  min-height: 150px;
+  
+}
+
+
+

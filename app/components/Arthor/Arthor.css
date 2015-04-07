@@ -1,0 +1,25 @@
+.Arthor {
+	line-height: 1.6;
+	margin-bottom: 20px;
+	box-shadow: 4px 4px 0px rgba(200,200,200,0.4);
+	padding: 18px;
+	background: white;
+	cursor: pointer;
+	border: 1px solid gray;
+
+}
+.Arthor:hover {
+    box-shadow: 4px 4px 0px rgba(200,200,200,0.6);
+}
+.Arthor-showFullBio {
+	margin-top: 15px;
+	background: #87B825;
+	color: white;
+	display: inline-block;
+	padding: 4px 10px;
+	cursor: pointer;
+	display: none;
+}
+.Arthor-showFullBio:hover {
+	box-shadow: 4px 4px 8px rgba(0,0,0,0.12), -4px -4px 8px rgba(0,0,0,0.12);;
+}
