@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "blog.citizenedu.tw",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node build.es6"
+    "build": "babel-node build.es6"
   },
   "repository": {
     "type": "git",
