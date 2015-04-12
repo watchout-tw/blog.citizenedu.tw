@@ -3,11 +3,11 @@ import webpack from "metalsmith-webpack";
 import reactTemplate from "metalsmith-react-templates";
 
 metalsmith(__dirname)
-  //.use(reactTemplate({
-    //directory: "app",
-    //baseFile: "index.html",
-    //nonStatic: true
-  //}))
+  .use(reactTemplate({
+    directory: "app",
+    baseFile: "index.html",
+    nonStatic: true
+  }))
   .use(webpack({
     entry: './app/app.es6',
     output: {
