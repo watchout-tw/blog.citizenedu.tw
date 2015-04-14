@@ -4,7 +4,7 @@ import AppBar from "../components/AppBar/AppBar.es6";
 import Author from "../components/Author/Author.es6";
 
 export default React.createClass({
-  displayName: "SingleArticle",
+  displayName: "AuthorPage",
 
   render() {
 

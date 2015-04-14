@@ -4,7 +4,7 @@ import AppBar from "../components/AppBar/AppBar.es6";
 
 
 export default React.createClass({
-  displayName: "SingleArticle",
+  displayName: "ArticlePage",
 
   render() {
 
