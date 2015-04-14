@@ -1,18 +1,42 @@
 import metalsmith from "metalsmith";
 import webpack from "metalsmith-webpack";
 import reactTemplate from "metalsmith-react-templates";
+import excerpts from "metalsmith-excerpts";
+import collections from "metalsmith-collections";
+import branch from "metalsmith-branch";
+import permalinks from "metalsmith-permalinks";
 
 metalsmith(__dirname)
+  .metadata({
+    site: {
+      title: "公民學院部落格",
+      url: "http://blog.citizenedu.tw/"
+    }
+  })
   .use(reactTemplate({
     directory: "app",
     baseFile: "index.html",
     nonStatic: true
   }))
+  .use(excerpts())
+  .use(branch("posts/**.html")
+    .use(permalinks({
+      pattern: "posts/:path",
+      relative: false
+    }))
+  )
+  .use(branch("!posts/**.html")
+    .use(branch("!index.html")
+      .use(permalinks({
+        relative: false
+      }))
+    )
+  )
   .use(webpack({
-    entry: './app/app.es6',
+    entry: "./app/app.es6",
     output: {
-      path: __dirname + '/build/js',
-      filename: 'bundle.js'
+      path: __dirname + "/build/js",
+      filename: "bundle.js"
     },
     module: {
       loaders: [
@@ -28,4 +52,5 @@ metalsmith(__dirname)
   }))
   .build(function (err) {
     if (err) throw err;
+    console.log("Site build complete.");
   });
