@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "watch 'npm run build' app",
-    "dev": "parallelshell 'http-server app' 'npm run watch'",
+    "dev": "parallelshell 'http-server build' 'npm run watch'",
     "build": "babel-node build.es6"
   },
   "repository": {
