@@ -1,3 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+
+p, blockquote, h3, ul, ol, li, a, span {
+   font-family: 'Noto Sans', sans-serif;
+   line-height: 1.8;
+   font-size: 18px;
+   color: rgb(53,55,54);
+}
+
 .flexWrapper {
 	display: flex;
 	flex-flow: column wrap;
@@ -7,4 +16,58 @@
 	.flexWrapper {
 		flex-flow: row wrap;
 	}
+}
+a, a:visited {
+   color: rgb(53,55,54);
+   cursor: pointer;
+   text-decoration: none;
+   border-bottom: 1px solid rgb(120,120,120);
+}
+a:hover {
+
+}
+h1 {
+   font-size: 28px;
+   line-height: 1.25;
+   font-weight: 900;
+   margin: 50px 0px 20px 0px;
+   border-left: 10px solid #87B825;
+   padding-left: 14px;
+
+}
+@media screen and (min-width: 400px){
+   h1 {
+      font-size: 40px;
+   }
+}
+h2 {
+   font-size: 26px;
+   font-weight: 900;
+   margin: 16px 0px;
+}
+p {
+
+}
+ol {
+
+}
+li {
+
+}
+hr {
+   border: none;
+   border-top: 1px solid rgb(200,200,200);
+}
+/* IMAGES */
+a.lightbox {
+   text-decoration: none;
+   border: none;
+}
+a.lightbox img {
+}
+.filename {
+	font-size: 14px;
+}
+.informations {
+	display: none;
 }
