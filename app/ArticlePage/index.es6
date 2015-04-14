@@ -11,7 +11,7 @@ export default React.createClass({
     return (
       <div>
         <AppBar type="simple"/>
-        <Article />
+        <Article {...this.props}/>
       </div>
     );
   }
