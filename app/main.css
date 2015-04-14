@@ -1,0 +1,10 @@
+.flexWrapper {
+	display: flex;
+	flex-flow: column wrap;
+	background: #FAFAFA;
+}
+@media all and (min-width: 600px) {
+	.flexWrapper {
+		flex-flow: row wrap;
+	}
+}

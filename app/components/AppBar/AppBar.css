@@ -1,9 +1,38 @@
 .AppBar {
 	padding: 16px;
-	background: rgba(220,220,220,0.2);
+	//background: rgba(220,220,220,0.2);
+	border-bottom: 1px solid rgb(230,230,230);
+
 }
-.AppBar-logo {
+a.AppBar-logo {
 	font-size: 20px;
 	font-weight: 700;
 	cursor: pointer;
+	border: none;
+	display: block;
+}
+
+a.AppBar-logo:hover {
+	color: #87B825;
+}
+a.AppBar-nav {
+	border: none;
+	font-size: 14px;
+	font-weight: 800;
+	margin-right: 10px;
+}
+a.AppBar-nav:hover {
+	border-bottom: 2px solid;
+	//color: #87B825;
+}
+
+@media screen and (min-width: 400px){
+	a.AppBar-logo {
+		display: inline-block;
+		padding-right: 10px;
+	}
+	a.AppBar-nav {
+	   margin: 0 5px;
+    }
+
 }

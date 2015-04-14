@@ -1,4 +1,6 @@
 import React from "react";
-import Post from "./Post";
+import Home from "./Home";
+import "./normalize.css";
+import "./main.css";
 
-React.render(Post(), document.getElementById("react-root"));
+React.render(Home(), document.getElementById("react-root"));

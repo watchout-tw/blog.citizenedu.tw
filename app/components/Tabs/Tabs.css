@@ -1,0 +1,12 @@
+.Tabs-tab {
+   display: inline-block;
+   margin-right: 10px;
+   padding: 15px 25px 5px 25px;
+   cursor: pointer;
+   color: rgb(100,100,100);
+}
+
+.Tabs-tab.is-active {
+   //border-bottom: 5px solid #87B825;
+   border-bottom: 5px solid rgb(53,55,54);
+}

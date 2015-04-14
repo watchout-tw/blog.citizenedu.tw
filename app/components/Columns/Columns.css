@@ -1,0 +1,83 @@
+.Columns {
+	display: inline-block;
+	overflow:hidden;  _overflow:visible;  zoom:1;
+	//background: #DABDA8;
+	background: #FAFAFA;
+	//min-height:100vh;
+	width: 100%;
+
+	flex: 1;
+	order: 2;
+
+}
+
+.Column {
+	background: white;
+	//border: 1px solid #DABDA8;
+	border: 1px solid #FAFAFA;
+	box-shadow: 4px 4px 0 0 rgba(0,0,0,0.12);
+	margin: 5px;
+	cursor: pointer;
+
+	display: inline-block;
+	
+	vertical-align: top;
+	padding: 8px 8px 8px 16px;
+	line-height: 1.6;
+
+	
+	overflow: hidden;
+
+	
+}
+@media screen and (min-width: 600px){
+    .Columns {
+    	flex: 2;
+    	
+    	height: 100vh;
+    	overflow: scroll;
+    	padding: 0 10px;
+    }
+    .Column {
+    	width: 250px;
+    	margin: 10px 5px;
+    	height: 200px;
+    }
+}
+.Column:hover {
+	box-shadow: 4px 4px 0 0 rgba(0,0,0,0.24);
+}
+.Column-header {
+	
+}
+.Column-name {
+   font-size: 20px;
+   font-weight: 800;
+   color: rgb(50,50,50);
+   display: inline-block;
+
+}
+.Column-articleCount {
+	font-size: 12px;
+	font-weight: 800;
+	//background: rgb(135,184,37);
+	//color: white;
+
+	background: rgb(230,230,230);
+	color: rgb(53,55,54);
+	
+	display: inline-block;
+	border-radius: 50%;
+	
+	padding-top: 4px;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	vertical-align: top;
+	margin: 3px 4px 0px 4px;
+
+}
+.Column:hover .Column-name {
+	//color: #87B825;
+	color: black;
+}

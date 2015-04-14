@@ -1,6 +1,7 @@
 .Comments {
-	background: rgb(240,240,240);
-	padding: 40px 0px;
+	background: rgb(250,250,250);
+	padding: 40px 8px;
+	
 }
 @media screen and (min-width: 400px){
     .Comments-content {
@@ -8,40 +9,53 @@
         margin: 0 auto;
     }
 }
+.Comments-header {
+   margin: 30px 0px 0px 0px;
+   border-bottom: 1px solid rgb(120,120,120);
+   padding-left: 10px;
+   padding-bottom: 10px;
+}
 .Comments-title {
 	/*padding: 4px 10px;
     border-left: 5px solid;*/
-    margin: 30px 0px 20px 0px;
     font-size: 40px;
     font-weight: 800;
+    display: inline-block;
+}
+a.Comments-goSeeAll, a.Comments-goSeeAll:visited {
+	font-size: 14px;
+	display: inline-block;
+	margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    padding-bottom: 2px;
+    color: rgb(50,50,50);
+    line-height: 1;
 
 }
-.Comments-tabs {
-	//border-bottom: 1px solid rgb(200,200,200);
-	
+a.Comments-goSeeAll:hover {
+	border-bottom: 1px solid rgb(100,100,100);
 }
-.Comments-tab {
-   display: inline-block;
-   margin-right: 10px;
-   padding: 5px 25px;
-   cursor: pointer;
-   color: rgb(100,100,100);
-  
-}
-.Comments-tab.is-active {
-   //border-bottom: 5px solid #87B825;
-   border-bottom: 5px solid rgb(53,55,54);
+.Comments-noPost {
+	padding: 10px;
 }
 .Comments-post {
-	border-bottom: 1px solid rgb(220,220,220);
+	border-bottom: 1px solid rgb(160,160,160);
+	padding-bottom: 10px;
+	
 	position: relative;
-	min-height: 150px;
-	border: 1px solid;
+	min-height: 50px;
+	overflow: hidden;
 	
 	margin: 0 auto;
 	margin-bottom: 10px;
 
-	
+	//background: white;
+	//box-shadow: 2px 2px 3px rgba(0,0,0,.12);
+
+}
+.Comments-post:hover {
+	//box-shadow: 2px 2px 4px rgba(0,0,0,.24);
 }
 .Comments-post.is-hide {
 	height: 0px;
@@ -53,31 +67,43 @@
 	border: none;
 }
 .Comments-main {
-	height: 280px;
-	overflow: hidden;
+	overflow:hidden;  _overflow:visible;  zoom:1; 
+	padding: 10px 10px 10px 10px;
 }
-.Comments-main.is-expand {
-	height: auto;
-	padding-bottom: 10px;
+@media all and (min-width: 400px){
+	.Comments-main {
+	   //padding: 10px 30px 0px 30px;
+    }
+}
+.Comments-main.is-folded {
+	max-height: 190px;
 }
 .Comments-expandButton {
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	box-sizing: border-box;
-	text-align: center;
-	padding: 12px;
-
-	//background: rgba(240,240,240,0.8);
-	background: rgba(0,0,0,0.8);
-	color: white;
-	cursor: pointer;
-	box-shadow: 0px -2px 0px rgba(0,0,0,0.12);
+	padding: 10px 20px 10px 12px;
+    width: 100%;
+    /*position: absolute;
+    bottom: 0px;
+    right: 0px;*/
+    cursor: pointer;
+    background: rgba(240,240,240,0.9);
+    color: rgb(160,160,160);
+    font-weight: 800;
+    font-family: 'Georgia';
+}
+.Comments-expandButton:hover {
+	color: #87B825;
+	//color: black;
 }
 
-.Comments-post p, .Comments-post a{
-	line-height: 1.4;
+.Comments-post p {
+	line-height: 1.6;
 	font-size: 16px;
+}
+.Comments-post a, .Comments-post a:visited {
+	color: rgb(135,184,37);
+	font-size: 16px;
+	text-decoration: none;
+	border: none;
 }
 .Comments-post ul, .Comments-post ol {
 	padding-left: 26px;
@@ -88,7 +114,6 @@
 .Comments-post li {
 	margin: 10px;
 	font-size: 16px;
-	;
 }
 .Comments-index {
     //font-family: 'Helvetica','Arial','sans-serif';
@@ -96,18 +121,17 @@
     font-size: 10px;
 }
 .Comments-img {
-	width: 50px;
+	width: 45px;
 	border-radius: 50%;
+	display: none;
 }
 .Comments-left {
 	float: left;
-	width: 60px;
-	padding: 5px;
-	padding-top: 20px;
+	//width: 60px;
+	padding-top: 10px;
+	text-align: center;
 }
-.Comments-main {
-	overflow:hidden;  _overflow:visible;  zoom:1; 
-}
+
 .Comments-author {
 	line-height: 1.4;
     font-weight: 800;
@@ -124,12 +148,13 @@
 }
 .Comments-footer {
 	text-align: center;
+	margin-top: 20px;
 }
 .Comments-button {
 	border: 1px solid rgb(200,200,200);
     border-radius: 20px;
     display: inline-block;
-    padding: 8px 20px;
+    padding: 9px 20px;
     cursor: pointer;
     margin-top: 10px;
     color: rgb(100,100,100);
@@ -139,33 +164,113 @@
 	color: #87B825;
     border-color: #87B825;
 }
-.Comments-button--hightlight {
+a.Comments-button--hightlight {
 	border: 1px solid rgb(100,100,100);
     color: rgb(100,100,100);
-    padding: 8px 20px;
+    padding: 3px 20px;
     border-radius: 20px;
     display: inline-block;
     cursor: pointer;
     margin-top: 10px;
     margin: 5px;
+    font-size: 16px;
+
 }
-.Comments-button--hightlight:hover {
+a.Comments-button--hightlight:hover {
   color: black;
   border-color: black;
 
 }
-aside { /* comment 中引用 */
-	margin-top: 15px;
-	border-left: 5px solid rgb(200,200,200);
-	background: rgb(230,230,230);
-	padding: 5px;
-	
+/* comment 中引用 */
+/*aside .title, aside blockquote { 
+	display: none;	
+}
+.Comments-main.is-expanded aside .title, .Comments-main.is-expanded aside blockquote { 
+	display: block;	
+}*/
+aside {
+	display: block;
+	margin-top: 10px;
+    //border-left: 4px solid rgb(220,220,220);
+	//background: rgba(200,200,200,1);
+	padding: 1px 5px;
 	font-family: 'Georgia';
+	position: relative;
+	color: rgb(100,100,100);
 }
 aside blockquote {
-    font-size: 12px;
+    font-family: sans-serif; 
+    //font-family: 'Georgia';	
+    //quotes: "\201C" "\201D" "\2018" "\2019";
+    quotes: "\201C" "\201D" "\201C" "\201D";
+    margin: 0px;
+    padding: 0px;
 }
+/*
+blockquote {
+   //border: 1px solid rgb(220,220,220);
+   //border-left: 10px solid rgba(0,0,0,0.12);
+   padding: 0px 10px;
+   //font-style: italic;
+   font-weight: 700;
+   font-size: 16px;
+   color: rgb(70,70,70);
+}*/
+aside blockquote > * {
+	color: rgb(100,100,100);	
+}
+
+.Comments-main p {
+	margin: 8px;
+}
+aside blockquote > p {
+	line-height: 1.2;
+}
+@media all and (min-width: 400px){
+	aside blockquote {
+		padding: 0 22px;
+	}
+}
+aside blockquote:before {
+    content: open-quote;
+    font-size: 30px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 14px;
+    left: -14px;
+    color: #87B825;
+}
+.Comments-post.is-folded {
+	position: relative;
+}
+.Comments-post.is-folded blockquote {
+   max-height: 35px;
+   overflow-y: hidden;
+   display: inline-block;
+}
+.Comments-post.is-folded blockquote:after {
+  content: '...';
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  color: rgb(100,100,100);
+}
+/*aside blockquote:after {
+	content: close-quote;
+	color: #ccc;
+	font-size: 40px;
+}*/
 aside img {
-	margin-top: 5px;
-	margin-right: 10px;
+	position: absolute;
+	top: 8px;
+	left: 0px;
+	display: none;
+}
+.Comments-main img {
+	display: none;
+}
+aside .title {
+	padding-left: 24px;
 }

@@ -1,25 +1,79 @@
 /** @define Article; use strict */
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 
-p, blockquote, h1, h2, h3, ul, ol, li, a, span {
+p, blockquote, h3, ul, ol, li, a, span {
    font-family: 'Noto Sans', sans-serif;
    line-height: 1.8;
    font-size: 18px;
    color: rgb(53,55,54);
 }
+
 .Article {
-	width: 100%;
-	margin: 100px auto 0px auto;
+  background: white;
+  width: 100%;
+  margin: 0px auto; 
+  
+  position: relative; 
+  overflow: hidden;
+}
+.Article-content a, .Article-content a:visited {
+  border: none;
+  color: rgb(135,184,37);
 }
 .Article-authorBackground {
   /*background: rgb(230,230,230);*/
   padding: 10px;
+}
+.Article-author {
+  padding-bottom: 30px;
+ 
+}
+.Article-cover {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.Article-coverImg {
+  width: 110%;
+  position: absolute;
+  top: -100px;
+  left: -10px;
+}
+.Article-coverCopyright {
+  color: #2F2930;
+  position: absolute;
+  bottom: 4px;
+  right: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
 }
 @media screen and (min-width: 400px){
     .Article-content,.Article-author{
 		    max-width: 600px;
         margin: 0 auto;
     }
+    .Article-cover {
+        width: 100%;
+        height: 300px;
+    }
+    .Article-coverImg {
+        width: 110%;
+        top: -380px;
+        left: -10%;
+    }
+}
+.Article-content {
+  background: rgba(255,255,255,0.8);
+  position: relative;
+  padding: 8px;
+}
+
+@media screen and (max-width: 400px){
+  .Article-content h1:first-child {
+      margin: 0;  
+  }
 }
 .Article-author {
   //background: #FAFAFA;
@@ -28,18 +82,18 @@ p, blockquote, h1, h2, h3, ul, ol, li, a, span {
   
 }
 .Article-authorHeader {
-  min-height: 120px;
+  min-height: 0px;
 }
 .Article-avatar {
   cursor: pointer;
 	float: left;
-  margin: 20px 10px 0px 20px;
+  margin: 20px 0px 0px 20px;
   background: white;
   //border: 3px solid rgb(140,140,140);
   //box-shadow: 3px 3px 0px rgba(200,200,200,0.4);
-  border: 3px solid;
+  border: 1px solid rgb(100,100,100);
   border-radius: 50%;
-  width: 80px;
+  width: 60px;
 }
 .Article-avatar:hover {
   box-shadow: 3px 3px 0px rgba(200,200,200,0.7);
@@ -50,14 +104,15 @@ p, blockquote, h1, h2, h3, ul, ol, li, a, span {
   padding-top: 24px;
 
 }
-div.Article-name {
+a.Article-name {
   cursor: pointer;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
-  margin-top: 20px;
+  
   display: inline-block;
+  border: none;
 }
-div.Article-name:hover {
+a.Article-name:hover {
   text-decoration: underline;
 }
 div.Article-date {
@@ -67,21 +122,19 @@ div.Article-date {
   margin: 0 6px;
 }
 
-blockquote {
-   //border: 1px solid rgb(220,220,220);
-   //border-left: 10px solid rgba(0,0,0,0.12);
-   padding: 0px 10px;
-   font-style: italic;
-   font-weight: 700;
-   font-size: 16px;
-   color: rgb(70,70,70);
-   
-}
 h1 {
-   font-size: 40px;
+   font-size: 28px;
    line-height: 1.25;
    font-weight: 900;
-   margin: 40px 0px;
+   margin: 50px 0px 20px 0px;
+   border-left: 10px solid #87B825;
+   padding-left: 14px;
+   
+}
+@media screen and (min-width: 400px){
+   h1 {
+      font-size: 40px;
+   }
 }
 h2 {
    font-size: 26px;
@@ -129,6 +182,7 @@ a.lightbox img {
   min-height: 150px;
   
 }
+
 
 
 

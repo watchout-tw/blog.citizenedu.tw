@@ -1,16 +1,17 @@
 import React from "react";
-import Article from "../components/Article/Article.es6";
+
 import AppBar from "../components/AppBar/AppBar.es6";
+import Author from "../components/Author/Author.es6";
 
 export default React.createClass({
-  displayName: "Post",
+  displayName: "SingleArticle",
 
   render() {
 
     return (
       <div>
-        <AppBar />
-        <Article />
+        <AppBar type="simple"/>
+        <Author type="page" />
       </div>
     );
   }

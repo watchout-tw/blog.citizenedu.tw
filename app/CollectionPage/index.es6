@@ -3,40 +3,37 @@ import AppBar from "../components/AppBar/AppBar.es6";
 import AboutSite from "../components/AboutSite/AboutSite.es6";
 import List from "../components/List/List.es6";
 import Tags from "../components/Tags/Tags.es6";
+import Columns from "../components/Columns/Columns.es6";
 
 export default React.createClass({
-  displayName: "Home",
+  displayName: "CollectionPage",
 
-  getInitialState () {
-    return {
-      tag: ""
-    };
-  },
-
-  _onChangeTag (i, event){
-    console.log(i);
-    this.setState({
-      tag: i
-    });
-  },
 
   render() {
+    var result = "";
 
-
-    return (
-
+    if(window.innerWidth > 400){
+        result = (
         <div>
             <AppBar type="nav"/>
             <div className="flexWrapper">
               <AboutSite />
-              <List type="index"
-                    tag={this.state.tag}/>
-              <Tags changeTagHandler={this._onChangeTag}
-                    tag={this.state.tag}/>
+          <Columns type="collection"/>
             </div>
+        </div>);
 
-        </div>
+    }else{
+        result = (
+        <div>
+          <AppBar type="nav"/>
+          <AboutSite />
+          <Columns type="collection"/>
 
+        </div>);
+    }
+
+    return (
+        result
     );
   }
 });

@@ -1,0 +1,243 @@
+.Author {
+	line-height: 1.6;
+	margin-bottom: 20px;
+	box-shadow: 4px 4px 0px rgba(200,200,200,0.4);
+	padding: 0 18px;
+	background: white;
+	cursor: pointer;
+	border: 1px solid gray;
+	margin: 0 5px;
+	
+}
+.Author p{
+	line-height: 1.4;
+	font-size: 16px;
+
+}
+.Author img {
+	max-width: 100%;
+}
+.Author:hover {
+    box-shadow: 4px 4px 0px rgba(200,200,200,0.6);
+}
+.Author-gotoBio {
+	margin-top: 5px;
+	background: #87B825;
+	color: white;
+	display: inline-block;
+	padding: 4px 10px;
+	cursor: pointer;
+	font-size: 14px;
+
+}
+.Author-gotoBio:hover {
+	//box-shadow: 4px 4px 8px rgba(0,0,0,0.12), -4px -4px 8px rgba(0,0,0,0.12);
+}
+/* =================================================== */
+
+.Author-widget {
+	text-align: center;
+	background: rgb(240,240,240);
+	padding: 4px 1px;
+	font-size: 14px;
+}
+.Author-widgetLink {
+	display: inline-block;
+	border: none;
+	color: rgb(50,50,50);
+	margin: 0 1px;
+}
+.Author-widgetLink:hover {
+	color: #87B825;
+}
+@media screen and (min-width: 400px){
+	.Author-widget {
+		background: rgba(250,250,250,0.8);
+		box-shadow: 0px 1px 0px rgba(0,0,0,0.12);
+	    z-index: 10;
+		font-size: 16px;
+		text-align: center;
+		width: 100%;
+		height: 50px;
+		padding-top: 4px;
+    }
+    .Author-fixedWidget {
+    	background: rgba(255,255,255,0.95);
+    	position: fixed;
+		top: 0;
+		z-index: 100;
+    }
+
+}
+.Author-widgetAvatar {
+	width: 40px;
+	border-radius: 50%;
+}
+.Author-widgetInfo {
+	vertical-align: top;
+	display: inline-block;
+	margin: 0 6px;
+    padding-top: 4px;
+}
+
+/* ====== 學科分類 ====== */
+.Author-tagsSection {
+	display: none;
+}
+@media screen and (min-width: 400px){
+	.Author-tagsSection {
+		display: inline-block;
+	}
+}
+.Author-tags {
+	font-size: 14px;
+}
+.Author-tagLink {
+	font-size: 14px;
+	color: rgb(80,80,80);
+}
+.Author-tagLink:hover {
+	color: black;
+}
+
+
+
+/* ==================================== */
+.Author--pageBio {
+	width: 100%;
+	//background: rgb(241,241,241);
+	padding-top: 50px;
+    
+}
+.Author--pageContent{
+	margin: 0 auto;
+	position: relative;
+}
+
+.Author-pageTop {
+	text-align: center;
+	//padding-bottom: 30px;
+}
+.Author-nameTitle {
+	margin-top: 10px;
+	font-size: 40px;
+	font-weight: 800;
+	text-align: center;
+}
+.Author-pageAvatar {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	box-shadow: 1px 1px 0 0 rgba(0,0,0,0.12),-1px 1px 0 0 rgba(0,0,0,0.12);
+    border: 3px solid white;
+}
+.Author-Tabs {
+	margin: 0 5px;
+}
+
+.Author--pageMain{
+	width: 100%;
+	border-top: 1px dotted rgb(220,220,220);
+	background: rgb(250,250,250);
+	padding-top: 20px;
+	padding-bottom: 100px;
+}
+.Author-bio {
+	line-height: 1.6;
+	//box-shadow: 4px 4px 0px rgba(200,200,200,0.4);
+	padding: 0 10px;
+	background: white;
+	cursor: pointer;
+	margin: 0 5px 50px 5px;
+	font-size: 16px;
+}
+.Author-bio * {
+	font-size: 16px;
+}
+.Author-bio a, .Author-bio a:visited {
+	font-size: 16px;
+	color: rgb(135,184,37);
+	border: none;
+}
+
+@media all and (min-width: 600px){
+	.Author--pageMain {
+		padding: 30px;
+	}
+	.Author--pageContent {
+		max-width: 600px;
+	}
+
+}
+.Author-bio p{
+    font-size: 16px;
+    line-height: 1.4;
+}
+.Author-showFullBio {
+	background: rgb(220,220,220);
+	padding: 4px 10px;
+	color: rgb(100,100,100);
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+}
+.Author-articleTitleWrapper {
+	position: absolute;
+    top: -32px;
+    left: 50%;
+}
+.Author-articleTitle {
+	position: relative;
+    left: -50%;
+    display: inline-block;
+    background: white;
+    border: 1px solid rgb(220,220,220);
+    padding: 2px 20px;
+    color: rgb(100,100,100);
+  
+}
+@media all and (min-width: 600px){
+	.Author-articleTitleWrapper {
+		position: relative;
+		top: 0;
+		margin-left: 10px;
+		display: block;
+		
+    }
+    .Author-articleTitle {
+    	position: relative;
+
+    }
+	
+}
+.Author-article {
+    line-height: 1.6;
+	margin-bottom: 20px;
+	//box-shadow: 4px 4px 0px rgba(200,200,200,0.4);
+	//background: white;
+	//border: 1px solid gray;
+	margin: 0 5px;
+	max-width: 600px;
+}
+.Author-articleItem {
+	margin: 1px;
+	padding: 12px;
+	cursor: pointer;
+	color: rgb(80,80,80);
+	display: block;
+	border:none;
+	line-height: 1.4;
+	font-size: 16px;
+}
+.Author-articleItem:hover {
+	color: black;
+	background: rgb(240,240,240);
+}
+.Author-articleItemDate {
+    display: inline-block;
+    margin-right: 14px;
+    float: left; 
+}
+.Author-articleItemTitle {
+	overflow: hidden;  _overflow:visible;  zoom:1;
+}

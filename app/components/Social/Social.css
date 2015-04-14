@@ -1,0 +1,56 @@
+/* MOBILE */
+.Social {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 10;
+	box-shadow: 0 -2px 8px rgba(0,0,0,0.12);
+}
+.Social-socialSets {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+}
+.Social-social {
+	background: #F1F1F1;
+	display: inline-block;
+	border-right: 1px solid rgb(220,220,220);
+	width: 50%;
+	height: 50px;
+	padding-top: 16px;
+	text-align: center;
+	cursor: pointer;
+
+}
+
+
+
+/* WEB */
+@media screen and (min-width: 400px){
+	.Social {
+	   position: relative;
+	   margin: 0 auto;
+	   width: 600px;
+	   vertical-align: bottom;
+	   height: 0px;
+    }
+    .Social-socialSets {
+       text-align: left;
+       position: absolute;
+       top: 25px;
+       left: 40px;
+       width: auto;
+    }
+    .Social-social {
+    	display: inline-block;
+    	width: auto;
+    	height: auto;
+    	padding: 0 20px 0 0 ;
+    	margin-right: 20px;
+	    background: none;
+	    text-align: left;
+	    color: rgb(50,50,50);
+    }
+    
+}
