@@ -31,7 +31,7 @@ export default React.createClass({
       });
 
   },
-  
+
   componentDidMount() {
     var ref = this.refs.AuthorWidget;
     if(!ref) return;
@@ -39,7 +39,7 @@ export default React.createClass({
     var rect = ref.getDOMNode().getBoundingClientRect();
     var bottom = rect.bottom;
     var scroll = this.state.scroll;
-    
+
     var _this = this;
     var cb = function(value){
         //console.log("callback:"+value);
@@ -104,12 +104,12 @@ export default React.createClass({
           )
 
       }else if(this.props.type === "page"){
-          /* ================================ 
+          /* ================================
            *   Tabs
            * ================================ */
           var tabs = [{id:'article', title: '文章'},
                       {id:'bio', title: '簡介'}];
-          
+
           var postItems = AuthorPost.map((item, key)=>{
               return(
                   <a className="Author-articleItem"
@@ -122,15 +122,15 @@ export default React.createClass({
           });
 
 
-          var authorBio = (this.state.showFullBio) ? 
+          var authorBio = (this.state.showFullBio) ?
           <div dangerouslySetInnerHTML={{__html: Author.user.bio_raw}} /> :
           <p>我相信，當我們以<a href="//google.com.tw/search?q=淺白">淺白</a>、易懂、清晰的探討方式進入哲學，避免那些晦澀、神秘、模糊的用詞，哲學思維內含的邏輯和批判能力才能發揮最大效用，協助我們解析論述和議題，察覺錯謬和悖論，在複雜的情境中做出正確的抉擇。</p>;
-          
+
           // var authorBioBUtton = (this.state.showFullBio) ?
           // "":
           // <div className="Author-showFullBio"
           //      onClick={this._onShowFullBio}>看完整介紹</div>;
-          
+
           result = (
           <div className="Author--page">
               <div className="Author--pageBio">
@@ -153,7 +153,7 @@ export default React.createClass({
                         <div className="Author-article">
                             {postItems}
                         </div>
-                   </div>       
+                   </div>
               </div>
           </div>
           );

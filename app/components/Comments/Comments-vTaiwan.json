@@ -1,7 +1,7 @@
-{  
-   "post_stream":{  
-      "posts":[  
-         {  
+{
+   "post_stream":{
+      "posts":[
+         {
             "id":34,
             "name":"Audrey Tang",
             "username":"audreyt",
@@ -32,50 +32,50 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -96,7 +96,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":90,
             "name":"Light Lin",
             "username":"dejavu",
@@ -127,50 +127,50 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -191,7 +191,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":215,
             "name":"vTaiwan.tw",
             "username":"vtaiwan",
@@ -222,50 +222,50 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -286,7 +286,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":249,
             "name":"金管會證期局",
             "username":"sfb",
@@ -317,55 +317,55 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "reply_to_user":{  
+            "reply_to_user":{
                "username":"vtaiwan",
                "avatar_template":"/user_avatar/talk.vtaiwan.tw/vtaiwan/{size}/44.png",
                "uploaded_avatar_id":44
             },
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":2,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -386,7 +386,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":679,
             "name":"vTaiwan.tw",
             "username":"vtaiwan",
@@ -415,8 +415,8 @@
             "can_edit":true,
             "can_delete":true,
             "can_recover":true,
-            "link_counts":[  
-               {  
+            "link_counts":[
+               {
                   "url":"https://g0v.hackpad.com/vTaiwan--zjiELIjtDUc",
                   "internal":false,
                   "reflection":false,
@@ -426,50 +426,50 @@
             ],
             "read":true,
             "user_title":null,
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -491,19 +491,19 @@
             "wiki":false
          }
       ],
-      "stream":[  
+      "stream":[
          34,
          90,
          215,
          249,
          679
       ],
-      "gaps":{  
-         "before":{  
+      "gaps":{
+         "before":{
 
          },
-         "after":{  
-            "679":[  
+         "after":{
+            "679":[
                680
             ]
          }
@@ -536,45 +536,45 @@
    "pinned_globally":false,
    "pinned":false,
    "pinned_at":null,
-   "details":{  
+   "details":{
       "auto_close_at":null,
       "auto_close_hours":null,
       "auto_close_based_on_last_post":false,
-      "created_by":{  
+      "created_by":{
          "id":1,
          "username":"audreyt",
          "uploaded_avatar_id":6,
          "avatar_template":"/user_avatar/talk.vtaiwan.tw/audreyt/{size}/6.png"
       },
-      "last_poster":{  
+      "last_poster":{
          "id":36,
          "username":"vtaiwan",
          "uploaded_avatar_id":44,
          "avatar_template":"/user_avatar/talk.vtaiwan.tw/vtaiwan/{size}/44.png"
       },
-      "participants":[  
-         {  
+      "participants":[
+         {
             "id":36,
             "username":"vtaiwan",
             "uploaded_avatar_id":44,
             "avatar_template":"/user_avatar/talk.vtaiwan.tw/vtaiwan/{size}/44.png",
             "post_count":2
          },
-         {  
+         {
             "id":63,
             "username":"sfb",
             "uploaded_avatar_id":62,
             "avatar_template":"/user_avatar/talk.vtaiwan.tw/sfb/{size}/62.png",
             "post_count":1
          },
-         {  
+         {
             "id":1,
             "username":"audreyt",
             "uploaded_avatar_id":6,
             "avatar_template":"/user_avatar/talk.vtaiwan.tw/audreyt/{size}/6.png",
             "post_count":1
          },
-         {  
+         {
             "id":16,
             "username":"dejavu",
             "uploaded_avatar_id":29,
@@ -582,8 +582,8 @@
             "post_count":1
          }
       ],
-      "suggested_topics":[  
-         {  
+      "suggested_topics":[
+         {
             "id":25,
             "title":"對募資人的規範",
             "fancy_title":"對募資人的規範",
@@ -613,7 +613,7 @@
             "views":497,
             "category_id":8
          },
-         {  
+         {
             "id":20,
             "title":"創業籌資環境是否尚有可以改善之處？",
             "fancy_title":"創業籌資環境是否尚有可以改善之處？",
@@ -643,7 +643,7 @@
             "views":659,
             "category_id":7
          },
-         {  
+         {
             "id":160,
             "title":"其他零售業網路相關法制建議",
             "fancy_title":"其他零售業網路相關法制建議",
@@ -669,7 +669,7 @@
             "views":476,
             "category_id":24
          },
-         {  
+         {
             "id":170,
             "title":"線上學習學分，是否認列為高等教育畢業學分？",
             "fancy_title":"線上學習學分，是否認列為高等教育畢業學分？",
@@ -695,7 +695,7 @@
             "views":564,
             "category_id":27
          },
-         {  
+         {
             "id":193,
             "title":"職業傷病認定",
             "fancy_title":"職業傷病認定",
@@ -722,8 +722,8 @@
             "category_id":32
          }
       ],
-      "links":[  
-         {  
+      "links":[
+         {
             "url":"https://g0v.hackpad.com/vTaiwan--zjiELIjtDUc",
             "title":"vTaiwan: &#24037;&#20316;&#32068;&#32858;&#26371;&#20849;&#31558; - g0v.hackpad.com",
             "fancy_title":null,
@@ -750,20 +750,20 @@
    "last_read_post_number":5,
    "deleted_by":null,
    "has_deleted":true,
-   "actions_summary":[  
-      {  
+   "actions_summary":[
+      {
          "id":4,
          "count":0,
          "hidden":false,
          "can_act":true
       },
-      {  
+      {
          "id":7,
          "count":0,
          "hidden":false,
          "can_act":true
       },
-      {  
+      {
          "id":8,
          "count":0,
          "hidden":false,

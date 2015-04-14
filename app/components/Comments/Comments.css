@@ -67,7 +67,7 @@ a.Comments-goSeeAll:hover {
 	border: none;
 }
 .Comments-main {
-	overflow:hidden;  _overflow:visible;  zoom:1; 
+	overflow:hidden;  _overflow:visible;  zoom:1;
 	padding: 10px 10px 10px 10px;
 }
 @media all and (min-width: 400px){
@@ -182,10 +182,10 @@ a.Comments-button--hightlight:hover {
 
 }
 /* comment 中引用 */
-/*aside .title, aside blockquote { 
+/*aside .title, aside blockquote {
 	display: none;	
 }
-.Comments-main.is-expanded aside .title, .Comments-main.is-expanded aside blockquote { 
+.Comments-main.is-expanded aside .title, .Comments-main.is-expanded aside blockquote {
 	display: block;	
 }*/
 aside {
@@ -199,7 +199,7 @@ aside {
 	color: rgb(100,100,100);
 }
 aside blockquote {
-    font-family: sans-serif; 
+    font-family: sans-serif;
     //font-family: 'Georgia';	
     //quotes: "\201C" "\201D" "\2018" "\2019";
     quotes: "\201C" "\201D" "\201C" "\201D";

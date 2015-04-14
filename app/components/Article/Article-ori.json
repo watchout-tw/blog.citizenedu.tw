@@ -1,4 +1,4 @@
-{  
+{
             "id":1872,
             "name":"朱家安",
             "username":"kris",
@@ -26,22 +26,22 @@
             "can_edit":true,
             "can_delete":true,
             "can_recover":true,
-            "link_counts":[  
-               {  
+            "link_counts":[
+               {
                   "url":"https://www.facebook.com/citizenedu",
                   "internal":false,
                   "reflection":false,
                   "title":"沃草公民學院 - Watchout Citizenedu | Facebook",
                   "clicks":1
                },
-               {  
+               {
                   "url":"https://www.facebook.com/pages/%E6%9E%97%E6%96%AF%E8%AB%BA-Lin-Sihyan/147719061920901",
                   "internal":false,
                   "reflection":false,
                   "title":"林斯諺　Lin Sihyan | Facebook",
                   "clicks":1
                },
-               {  
+               {
                   "url":"http://community.citizenedu.tw/",
                   "internal":true,
                   "reflection":false,
@@ -50,50 +50,50 @@
             ],
             "read":true,
             "user_title":null,
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":1,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,

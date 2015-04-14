@@ -107,7 +107,7 @@
 	width: 100%;
 	//background: rgb(241,241,241);
 	padding-top: 50px;
-    
+
 }
 .Author--pageContent{
 	margin: 0 auto;
@@ -194,7 +194,7 @@
     border: 1px solid rgb(220,220,220);
     padding: 2px 20px;
     color: rgb(100,100,100);
-  
+
 }
 @media all and (min-width: 600px){
 	.Author-articleTitleWrapper {
@@ -236,7 +236,7 @@
 .Author-articleItemDate {
     display: inline-block;
     margin-right: 14px;
-    float: left; 
+    float: left;
 }
 .Author-articleItemTitle {
 	overflow: hidden;  _overflow:visible;  zoom:1;

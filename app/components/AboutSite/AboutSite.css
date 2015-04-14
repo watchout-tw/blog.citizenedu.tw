@@ -2,12 +2,12 @@
     width: 100%;
     //background: #C39372;
     background: rgba(135,184,37,1);
-    
+
     color: white;
     //color: rgb(50,50,50);
     overflow: scroll;
     order: 1;
-    flex: 1;   
+    flex: 1;
 }
 @media screen and (min-width: 600px){
 	.AboutSite {
@@ -20,9 +20,9 @@
 	display: none;
 }
 @media screen and (min-width: 600px){
-    .AboutSite-img { 
-        display: block;   
-        width: 100%;    
+    .AboutSite-img {
+        display: block;
+        width: 100%;
     }
 }
 .AboutSite-content {

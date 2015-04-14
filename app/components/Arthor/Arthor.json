@@ -1,20 +1,20 @@
-{  
-   "user_badges":[  
-      {  
+{
+   "user_badges":[
+      {
          "id":4,
          "granted_at":"2014-09-01T03:32:16.298Z",
          "badge_id":4,
          "user_id":4,
          "granted_by_id":-1
       },
-      {  
+      {
          "id":3,
          "granted_at":"2014-09-01T03:32:16.290Z",
          "badge_id":3,
          "user_id":4,
          "granted_by_id":-1
       },
-      {  
+      {
          "id":268,
          "granted_at":"2014-11-05T03:42:06.640Z",
          "post_id":706,
@@ -25,8 +25,8 @@
          "topic_id":327
       }
    ],
-   "badges":[  
-      {  
+   "badges":[
+      {
          "id":4,
          "name":"Leader",
          "description":null,
@@ -41,7 +41,7 @@
          "system":true,
          "badge_type_id":1
       },
-      {  
+      {
          "id":3,
          "name":"Regular",
          "description":null,
@@ -56,7 +56,7 @@
          "system":true,
          "badge_type_id":2
       },
-      {  
+      {
          "id":14,
          "name":"First Link",
          "description":null,
@@ -72,39 +72,39 @@
          "badge_type_id":3
       }
    ],
-   "badge_types":[  
-      {  
+   "badge_types":[
+      {
          "id":1,
          "name":"Gold",
          "sort_order":9
       },
-      {  
+      {
          "id":2,
          "name":"Silver",
          "sort_order":8
       },
-      {  
+      {
          "id":3,
          "name":"Bronze",
          "sort_order":7
       }
    ],
-   "users":[  
-      {  
+   "users":[
+      {
          "id":4,
          "username":"kris",
          "uploaded_avatar_id":18,
          "avatar_template":"/user_avatar/community.citizenedu.tw/kris/{size}/18.png"
       },
-      {  
+      {
          "id":-1,
          "username":"system",
          "uploaded_avatar_id":1,
          "avatar_template":"/user_avatar/community.citizenedu.tw/system/{size}/1.png"
       }
    ],
-   "topics":[  
-      {  
+   "topics":[
+      {
          "id":327,
          "title":"烙哲學：歡迎加入哲學普及寫手俱樂部",
          "fancy_title":"烙哲學：歡迎加入哲學普及寫手俱樂部",
@@ -112,7 +112,7 @@
          "posts_count":1
       }
    ],
-   "user":{  
+   "user":{
       "id":4,
       "username":"kris",
       "uploaded_avatar_id":18,
@@ -128,53 +128,53 @@
       "can_edit_username":true,
       "can_edit_email":true,
       "can_edit_name":true,
-      "stats":[  
-         {  
+      "stats":[
+         {
             "action_type":13,
             "count":10,
             "id":null
          },
-         {  
+         {
             "action_type":12,
             "count":9,
             "id":null
          },
-         {  
+         {
             "action_type":4,
             "count":73,
             "id":null
          },
-         {  
+         {
             "action_type":5,
             "count":327,
             "id":null
          },
-         {  
+         {
             "action_type":6,
             "count":30,
             "id":null
          },
-         {  
+         {
             "action_type":1,
             "count":81,
             "id":null
          },
-         {  
+         {
             "action_type":2,
             "count":100,
             "id":null
          },
-         {  
+         {
             "action_type":9,
             "count":8,
             "id":null
          },
-         {  
+         {
             "action_type":3,
             "count":10,
             "id":null
          },
-         {  
+         {
             "action_type":11,
             "count":1,
             "id":null
@@ -190,7 +190,7 @@
       "badge_count":11,
       "notification_count":221,
       "has_title_badges":true,
-      "custom_fields":{  
+      "custom_fields":{
 
       },
       "post_count":408,
@@ -208,16 +208,16 @@
       "external_links_in_new_tab":false,
       "dynamic_favicon":false,
       "enable_quoting":true,
-      "muted_category_ids":[  
+      "muted_category_ids":[
 
       ],
-      "tracked_category_ids":[  
+      "tracked_category_ids":[
 
       ],
-      "watched_category_ids":[  
+      "watched_category_ids":[
 
       ],
-      "private_messages_stats":{  
+      "private_messages_stats":{
          "all":8,
          "mine":3,
          "unread":1
@@ -226,10 +226,10 @@
       "gravatar_avatar_upload_id":4,
       "custom_avatar_upload_id":null,
       "invited_by":null,
-      "custom_groups":[  
+      "custom_groups":[
 
       ],
-      "featured_user_badge_ids":[  
+      "featured_user_badge_ids":[
          4,
          3,
          268

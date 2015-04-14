@@ -1,7 +1,7 @@
-{  
-   "post_stream":{  
-      "posts":[  
-         {  
+{
+   "post_stream":{
+      "posts":[
+         {
             "id":1750,
             "name":"大為周",
             "username":"jodaway",
@@ -29,22 +29,22 @@
             "can_edit":true,
             "can_delete":false,
             "can_recover":true,
-            "link_counts":[  
-               {  
+            "link_counts":[
+               {
                   "url":"http://en.wikipedia.org/wiki/Cogito_ergo_sum",
                   "internal":false,
                   "reflection":false,
                   "title":"Cogito ergo sum - Wikipedia, the free encyclopedia",
                   "clicks":1
                },
-               {  
+               {
                   "url":"http://www.iep.utm.edu/descarte/",
                   "internal":false,
                   "reflection":false,
                   "title":"Descartes, Rene | Internet Encyclopedia of Philosophy",
                   "clicks":0
                },
-               {  
+               {
                   "url":"http://plato.stanford.edu/entries/descartes-epistemology/",
                   "internal":false,
                   "reflection":false,
@@ -54,50 +54,50 @@
             ],
             "read":true,
             "user_title":null,
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -118,7 +118,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":1762,
             "name":"WeiHung",
             "username":"WeiHung",
@@ -146,43 +146,43 @@
             "can_edit":true,
             "can_delete":true,
             "can_recover":true,
-            "link_counts":[  
-               {  
+            "link_counts":[
+               {
                   "url":"http://blog.sina.com.cn/s/blog_49473bb6010008r6.html",
                   "internal":false,
                   "reflection":false,
                   "title":"欣提卡《作为既是推理又是践行的“我思故我在”》导读_汕大猪哥哥_新浪博客",
                   "clicks":1
                },
-               {  
+               {
                   "url":"http://blog.sina.com.cn/s/blog_49473bb6010008qg.html",
                   "internal":false,
                   "reflection":false,
                   "title":"欣提卡《我思故我在，推理还是践行？》导读（三）_汕大猪哥哥_新浪博客",
                   "clicks":1
                },
-               {  
+               {
                   "url":"http://blog.sina.com.cn/s/blog_49473bb6010008qe.html",
                   "internal":false,
                   "reflection":false,
                   "title":"欣提卡《我思故我在，推理还是践行？》导读（一）_汕大猪哥哥_新浪博客",
                   "clicks":1
                },
-               {  
+               {
                   "url":"http://blog.sina.com.cn/s/blog_49473bb6010008qf.html",
                   "internal":false,
                   "reflection":false,
                   "title":"欣提卡《我思故我在，推理还是践行？》导读（二）_汕大猪哥哥_新浪博客",
                   "clicks":1
                },
-               {  
+               {
                   "url":"https://arlieferguson.wordpress.com/2013/06/27/descartes-cogito-and-hintikka/",
                   "internal":false,
                   "reflection":false,
                   "title":"Descartes’ Cogito and Hintikka | Articles in ancient philosophy",
                   "clicks":1
                },
-               {  
+               {
                   "url":"http://www.anselm.edu/homepage/dbanach/dc-obj-cogito.htm",
                   "internal":false,
                   "reflection":false,
@@ -192,50 +192,50 @@
             ],
             "read":true,
             "user_title":"Leader",
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -256,7 +256,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":1764,
             "name":"大為周",
             "username":"jodaway",
@@ -286,55 +286,55 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "reply_to_user":{  
+            "reply_to_user":{
                "username":"WeiHung",
                "avatar_template":"/user_avatar/community.citizenedu.tw/weihung/{size}/3.png",
                "uploaded_avatar_id":3
             },
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -355,7 +355,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":1771,
             "name":"WeiHung",
             "username":"WeiHung",
@@ -385,50 +385,50 @@
             "can_recover":true,
             "read":true,
             "user_title":"Leader",
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -449,7 +449,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":1772,
             "name":"朱家安",
             "username":"kris",
@@ -479,50 +479,50 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -543,7 +543,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":1791,
             "name":"大為周",
             "username":"jodaway",
@@ -573,55 +573,55 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "reply_to_user":{  
+            "reply_to_user":{
                "username":"kris",
                "avatar_template":"/user_avatar/community.citizenedu.tw/kris/{size}/18.png",
                "uploaded_avatar_id":18
             },
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -642,7 +642,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":1829,
             "name":"朱家安",
             "username":"kris",
@@ -672,55 +672,55 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "reply_to_user":{  
+            "reply_to_user":{
                "username":"jodaway",
                "avatar_template":"/letter_avatar/jodaway/{size}/2.png",
                "uploaded_avatar_id":null
             },
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -741,7 +741,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":1834,
             "name":"大為周",
             "username":"jodaway",
@@ -771,50 +771,50 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -835,7 +835,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":1922,
             "name":"朱家安",
             "username":"kris",
@@ -865,55 +865,55 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "reply_to_user":{  
+            "reply_to_user":{
                "username":"jodaway",
                "avatar_template":"/letter_avatar/jodaway/{size}/2.png",
                "uploaded_avatar_id":null
             },
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -934,7 +934,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":1923,
             "name":"大為周",
             "username":"jodaway",
@@ -964,50 +964,50 @@
             "can_recover":true,
             "read":true,
             "user_title":null,
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -1028,7 +1028,7 @@
             "can_view_edit_history":true,
             "wiki":false
          },
-         {  
+         {
             "id":1927,
             "name":"朱家安",
             "username":"kris",
@@ -1056,20 +1056,20 @@
             "can_edit":true,
             "can_delete":true,
             "can_recover":true,
-            "link_counts":[  
-               {  
+            "link_counts":[
+               {
                   "url":"http://en.wikipedia.org/wiki/Cogito_ergo_sum",
                   "internal":false,
                   "reflection":false,
                   "clicks":0
                },
-               {  
+               {
                   "url":"http://www.iep.utm.edu/descarte/",
                   "internal":false,
                   "reflection":false,
                   "clicks":0
                },
-               {  
+               {
                   "url":"http://plato.stanford.edu/entries/descartes-epistemology/",
                   "internal":false,
                   "reflection":false,
@@ -1078,50 +1078,50 @@
             ],
             "read":true,
             "user_title":null,
-            "actions_summary":[  
-               {  
+            "actions_summary":[
+               {
                   "id":2,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":3,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":4,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":5,
                   "count":0,
                   "hidden":true,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":6,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":7,
                   "count":0,
                   "hidden":false,
                   "can_act":true,
                   "can_defer_flags":false
                },
-               {  
+               {
                   "id":8,
                   "count":0,
                   "hidden":false,
@@ -1143,7 +1143,7 @@
             "wiki":false
          }
       ],
-      "stream":[  
+      "stream":[
          1750,
          1762,
          1764,
@@ -1165,38 +1165,38 @@
    "pinned_globally":false,
    "pinned":false,
    "pinned_at":null,
-   "details":{  
+   "details":{
       "auto_close_at":null,
       "auto_close_hours":null,
       "auto_close_based_on_last_post":false,
-      "created_by":{  
+      "created_by":{
          "id":346,
          "username":"jodaway",
          "uploaded_avatar_id":null,
          "avatar_template":"/letter_avatar/jodaway/{size}/2.png"
       },
-      "last_poster":{  
+      "last_poster":{
          "id":4,
          "username":"kris",
          "uploaded_avatar_id":18,
          "avatar_template":"/user_avatar/community.citizenedu.tw/kris/{size}/18.png"
       },
-      "participants":[  
-         {  
+      "participants":[
+         {
             "id":346,
             "username":"jodaway",
             "uploaded_avatar_id":null,
             "avatar_template":"/letter_avatar/jodaway/{size}/2.png",
             "post_count":5
          },
-         {  
+         {
             "id":4,
             "username":"kris",
             "uploaded_avatar_id":18,
             "avatar_template":"/user_avatar/community.citizenedu.tw/kris/{size}/18.png",
             "post_count":4
          },
-         {  
+         {
             "id":2,
             "username":"WeiHung",
             "uploaded_avatar_id":3,
@@ -1204,8 +1204,8 @@
             "post_count":2
          }
       ],
-      "suggested_topics":[  
-         {  
+      "suggested_topics":[
+         {
             "id":860,
             "title":"陰謀論的哲學問題：合理的故事，就是真的故事嗎？",
             "fancy_title":"陰謀論的哲學問題：合理的故事，就是真的故事嗎？",
@@ -1231,7 +1231,7 @@
             "views":2,
             "category_id":6
          },
-         {  
+         {
             "id":859,
             "title":"新手遊牧貓",
             "fancy_title":"新手遊牧貓",
@@ -1257,7 +1257,7 @@
             "views":12,
             "category_id":9
          },
-         {  
+         {
             "id":153,
             "title":"龍應台的名器",
             "fancy_title":"龍應台的名器",
@@ -1283,7 +1283,7 @@
             "views":58,
             "category_id":6
          },
-         {  
+         {
             "id":372,
             "title":"從【航海王】看「天龍人」在台灣",
             "fancy_title":"從【航海王】看「天龍人」在台灣",
@@ -1309,7 +1309,7 @@
             "views":69,
             "category_id":6
          },
-         {  
+         {
             "id":186,
             "title":"不可回復性裡的稻草人",
             "fancy_title":"不可回復性裡的稻草人",
@@ -1336,8 +1336,8 @@
             "category_id":6
          }
       ],
-      "links":[  
-         {  
+      "links":[
+         {
             "url":"http://blog.sina.com.cn/s/blog_49473bb6010008qe.html",
             "title":"欣提卡《我思故我在，推理还是践行？》导读（一）_汕大猪哥哥_新浪博客",
             "fancy_title":null,
@@ -1347,7 +1347,7 @@
             "user_id":2,
             "domain":"blog.sina.com.cn"
          },
-         {  
+         {
             "url":"http://blog.sina.com.cn/s/blog_49473bb6010008r6.html",
             "title":"欣提卡《作为既是推理又是践行的“我思故我在”》导读_汕大猪哥哥_新浪博客",
             "fancy_title":null,
@@ -1357,7 +1357,7 @@
             "user_id":2,
             "domain":"blog.sina.com.cn"
          },
-         {  
+         {
             "url":"http://blog.sina.com.cn/s/blog_49473bb6010008qg.html",
             "title":"欣提卡《我思故我在，推理还是践行？》导读（三）_汕大猪哥哥_新浪博客",
             "fancy_title":null,
@@ -1367,7 +1367,7 @@
             "user_id":2,
             "domain":"blog.sina.com.cn"
          },
-         {  
+         {
             "url":"http://blog.sina.com.cn/s/blog_49473bb6010008qf.html",
             "title":"欣提卡《我思故我在，推理还是践行？》导读（二）_汕大猪哥哥_新浪博客",
             "fancy_title":null,
@@ -1377,7 +1377,7 @@
             "user_id":2,
             "domain":"blog.sina.com.cn"
          },
-         {  
+         {
             "url":"https://arlieferguson.wordpress.com/2013/06/27/descartes-cogito-and-hintikka/",
             "title":"Descartes’ Cogito and Hintikka | Articles in ancient philosophy",
             "fancy_title":null,
@@ -1387,7 +1387,7 @@
             "user_id":2,
             "domain":"arlieferguson.wordpress.com"
          },
-         {  
+         {
             "url":"http://en.wikipedia.org/wiki/Cogito_ergo_sum",
             "title":"Cogito ergo sum - Wikipedia, the free encyclopedia",
             "fancy_title":null,
@@ -1397,7 +1397,7 @@
             "user_id":346,
             "domain":"en.wikipedia.org"
          },
-         {  
+         {
             "url":"http://en.wikipedia.org/wiki/Cogito_ergo_sum",
             "title":null,
             "fancy_title":null,
@@ -1407,7 +1407,7 @@
             "user_id":4,
             "domain":"en.wikipedia.org"
          },
-         {  
+         {
             "url":"http://www.anselm.edu/homepage/dbanach/dc-obj-cogito.htm",
             "title":"Descartes’s Response:",
             "fancy_title":null,
@@ -1417,7 +1417,7 @@
             "user_id":2,
             "domain":"www.anselm.edu"
          },
-         {  
+         {
             "url":"http://www.iep.utm.edu/descarte/",
             "title":"Descartes, Rene | Internet Encyclopedia of Philosophy",
             "fancy_title":null,
@@ -1427,7 +1427,7 @@
             "user_id":346,
             "domain":"www.iep.utm.edu"
          },
-         {  
+         {
             "url":"http://www.iep.utm.edu/descarte/",
             "title":null,
             "fancy_title":null,
@@ -1437,7 +1437,7 @@
             "user_id":4,
             "domain":"www.iep.utm.edu"
          },
-         {  
+         {
             "url":"http://plato.stanford.edu/entries/descartes-epistemology/",
             "title":null,
             "fancy_title":null,
@@ -1447,7 +1447,7 @@
             "user_id":4,
             "domain":"plato.stanford.edu"
          },
-         {  
+         {
             "url":"http://plato.stanford.edu/entries/descartes-epistemology/",
             "title":"Descartes' Epistemology (Stanford Encyclopedia of Philosophy)",
             "fancy_title":null,
@@ -1474,20 +1474,20 @@
    "last_read_post_number":11,
    "deleted_by":null,
    "has_deleted":false,
-   "actions_summary":[  
-      {  
+   "actions_summary":[
+      {
          "id":4,
          "count":0,
          "hidden":false,
          "can_act":true
       },
-      {  
+      {
          "id":7,
          "count":0,
          "hidden":false,
          "can_act":true
       },
-      {  
+      {
          "id":8,
          "count":0,
          "hidden":false,

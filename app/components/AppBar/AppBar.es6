@@ -3,9 +3,9 @@ import "./AppBar.css";
 
 export default React.createClass({
   displayName: "AppBar",
-  
+
   render() {
-      
+
       var result = <div></div>;
       var type = this.props.type;
 

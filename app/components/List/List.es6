@@ -13,21 +13,21 @@ export default React.createClass({
   getInitialState(){
        return {
           scroll: false
-          
+
        }
   },
 
   componentDidMount() {
     var ref = this.refs.List;
     if(!ref){
-      console.log("No ref");
+      //console.log("No ref");
       return;
     }
 
     var rect = ref.getDOMNode().getBoundingClientRect();
     var top = rect.top
     var scroll = this.state.scroll;
-    
+
     var _this = this;
     var cb = function(value){
         //console.log("callback:"+value);
@@ -37,7 +37,7 @@ export default React.createClass({
     };
 
     $(window).scroll(function(event){
-         console.log("s"+$(this).scrollTop());
+         //console.log("s"+$(this).scrollTop());
         // console.log(bottom);
         // console.log($(this).scrollTop() < bottom );
         // console.log(scroll);
@@ -63,10 +63,10 @@ export default React.createClass({
         //     <div className="List-nextPost">
         //       <div className="List-nextTitle">{NextPost.title}／朱家安</div>
         //       <div className="List-nextPreview">{ NextPost.brief+"..."}</div>
-              
+
         //     </div>
         // </div>;
-  
+
         var postItems = AuthorPost.map((item, key)=>{
             var title = item.author+"："+item.title;
             return(
@@ -78,11 +78,11 @@ export default React.createClass({
                 </a>
             )
         });
-        
+
         result = (
         <div className="List List-article" ref="List">
           <div className="List-content">
-              
+
               <div className="List-title">其他哲學類的文章</div>
               {postItems}
           </div>
@@ -96,7 +96,7 @@ export default React.createClass({
                    href="#/article/1"  >
                      <div className="List-articleItemTitle List-boldTitle">朱家安：{item.title}</div>
                      <div className="List-articleItemBrief">{item.brief}</div>
-                     
+
                 </a>
             )
         });
@@ -104,32 +104,32 @@ export default React.createClass({
            "List-filter" : true,
            "is-fixed" : this.state.scroll && window.innerWidth <= 600
         });
-        console.log(this.state.scroll);
-        console.log(listFilterClasses);
-        var filterItem =  (this.props.tag) ? 
+        //console.log(this.state.scroll);
+        //console.log(listFilterClasses);
+        var filterItem =  (this.props.tag) ?
           <div className={listFilterClasses}>
               <div className="List-filterMeta">標籤</div>
               <div className="List-filterTitle">{this.props.tag}</div>
           </div> :"";
-        
+
         result = (
           <div className="List List--index" ref="List">
               {filterItem}
-          
-              <div className="List-indexContent">  
+
+              <div className="List-indexContent">
                   {postItems}
               </div>
 
               <div className="List-footer">
                   <div className="List-button">載入更多</div>
-              </div> 
+              </div>
         </div>);
 
      }else{
 
      }
-      
-      
+
+
       return result;
   }
 });

@@ -6,7 +6,7 @@ import arthor from "./Arthor.json";;
 
 export default React.createClass({
   displayName: "Arthor",
-  
+
   render() {
       //console.log(arthor.user.bio_excerpt);
       //console.log(arthor.user.bio_raw);
