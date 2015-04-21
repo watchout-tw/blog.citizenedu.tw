@@ -71,7 +71,7 @@ export default React.createClass({
       if(this.props.type === "section"){
           result = (
               <div className="Author">
-                 <a href="#/author/1">
+                 <a href="/author/1">
                  <div dangerouslySetInnerHTML={{__html: Author.user.bio_excerpt}}></div>
                  <div className="Author-gotoBio">作者個人頁面</div>
                  </a>
@@ -92,7 +92,7 @@ export default React.createClass({
                        src="http://okapi.books.com.tw/uploads/article/article10144_3.png" />
                   <div className="Author-widgetInfo">
                       <a className="Author-widgetLink"
-                         href="#/author/1">朱家安</a>・<a className="Author-widgetLink">沃草烙哲學</a>
+                         href="/author/1">朱家安</a>・<a className="Author-widgetLink">沃草烙哲學</a>
                       <span className="Author-tagsSection">
                           <span className="Author-tags">／</span>
                           <a className="Author-tagLink">哲學</a>
@@ -114,7 +114,7 @@ export default React.createClass({
               return(
                   <a className="Author-articleItem"
                      key={key}
-                     href="#/article/1"  >
+                     href="/article/1"  >
                        <div className="Author-articleItemDate">{item.date}</div>
                        <div className="Author-articleItemTitle">{item.title}</div>
                   </a>

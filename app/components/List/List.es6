@@ -72,7 +72,7 @@ export default React.createClass({
             return(
                 <a className="List-articleItem"
                    key={key}
-                   href="#/article/1"  >
+                   href="/article/1"  >
                      <div className="List-articleItemDate">{item.date}</div>
                      <div className="List-articleItemTitle">{title}</div>
                 </a>
@@ -93,7 +93,7 @@ export default React.createClass({
             return(
                 <a className="List-indexItem"
                    key={key}
-                   href="#/article/1"  >
+                   href="/article/1"  >
                      <div className="List-articleItemTitle List-boldTitle">朱家安：{item.title}</div>
                      <div className="List-articleItemBrief">{item.brief}</div>
 
