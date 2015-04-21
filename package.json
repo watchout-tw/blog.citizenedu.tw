@@ -6,8 +6,10 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watch 'npm run build' app",
-    "dev": "parallelshell 'http-server build' 'npm run watch'",
+    "watch": "watch 'npm run build' app src",
+    "livereload": "live-reload app src",
+    "serve": "http-server build",
+    "dev": "parallelshell 'npm run watch' 'npm run serve' 'npm run livereload'",
     "build": "babel-node build.es6"
   },
   "repository": {
@@ -32,6 +34,7 @@
     "http-server": "^0.8.0",
     "jquery": "^2.1.3",
     "json-loader": "^0.5.1",
+    "live-reload": "^1.1.0",
     "metalsmith": "^1.5.0",
     "metalsmith-branch": "0.0.4",
     "metalsmith-collections": "^0.7.0",
@@ -44,6 +47,7 @@
     "metalsmith-writemetadata": "^0.4.4",
     "parallelshell": "^1.1.1",
     "react": "^0.12.2",
+    "react-router": "^0.12.4",
     "style-loader": "^0.9.0",
     "url-loader": "^0.5.5",
     "watch": "^0.16.0",
