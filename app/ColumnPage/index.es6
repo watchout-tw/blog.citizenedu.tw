@@ -16,17 +16,6 @@ export default React.createClass({
 
     var result = "";
 
-    if(window.innerWidth > 400){
-        result = (
-        <div>
-            <AppBar type="nav"/>
-            <div className="flexWrapper">
-              <AboutSite/>
-              <Columns type="column"/>
-            </div>
-        </div>);
-
-    }else{
         result = (
         <div>
             <AppBar type="nav"/>
@@ -35,7 +24,6 @@ export default React.createClass({
               <Columns type="column"/>
 
         </div>);
-    }
 
 
 
