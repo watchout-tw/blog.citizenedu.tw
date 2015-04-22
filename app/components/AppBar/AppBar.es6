@@ -28,6 +28,8 @@ export default React.createClass({
                className="AppBar-nav">專欄</a>
             <a href="/collections"
                className="AppBar-nav">套餐</a>
+            <a href="/cfp"
+               className="AppBar-nav">徵稿</a>
           </div>
         );
 
