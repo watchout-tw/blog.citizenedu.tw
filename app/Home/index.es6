@@ -22,7 +22,6 @@ export default React.createClass({
 
   render() {
 
-
     return (
 
         <div>
@@ -30,7 +29,8 @@ export default React.createClass({
             <div className="flexWrapper">
               <AboutSite />
               <List type="index"
-                    tag={this.state.tag}/>
+                    tag={this.state.tag}
+                    posts={this.props.collections.posts}/>
               <Tags changeTagHandler={this._onChangeTag}
                     tag={this.state.tag}/>
             </div>

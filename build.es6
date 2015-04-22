@@ -13,6 +13,11 @@ metalsmith(__dirname)
       url: "http://blog.citizenedu.tw/"
     }
   })
+  .use(collections({
+    posts: {
+      pattern: "posts/**.html"
+    }
+  }))
   .use(branch("posts/**.html")
     .use(permalinks({
       pattern: "posts/:path",
@@ -26,17 +31,12 @@ metalsmith(__dirname)
       }))
     )
   )
-  .use(collections({
-    posts: {
-      pattern: "posts/**.html"
-    }
-  }))
+  .use(excerpts())
   .use(reactTemplate({
     directory: "app",
     baseFile: "index.html",
     nonStatic: true
   }))
-  .use(excerpts())
   .use(webpack({
     entry: "./app/app.es6",
     output: {

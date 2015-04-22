@@ -56,13 +56,13 @@ export default React.createClass({
 
       if(type === "article"){
 
-        var postItems = AuthorPost.map((item, key)=>{
+        var postItems = this.props.posts.map((item, key)=>{
             var title = item.author+"："+item.title;
             return(
                 <a className="List-articleItem"
                    key={key}
-                   href="/article/1"  >
-                     <div className="List-articleItemDate">{item.date}</div>
+                   href={"/" + item.path}>
+                     <div className="List-articleItemDate">{item.published_at}</div>
                      <div className="List-articleItemTitle">{title}</div>
                 </a>
             )
@@ -78,13 +78,15 @@ export default React.createClass({
         </div>);
 
      }else if(type === "index"){
-        var postItems = AuthorPost.map((item, key)=>{
+        var postItems = this.props.posts.map((item, key)=>{
             return(
                 <a className="List-indexItem"
                    key={key}
-                   href="/article/1"  >
+                   href={"/" + item.path}>
                      <div className="List-articleItemTitle List-boldTitle">朱家安：{item.title}</div>
-                     <div className="List-articleItemBrief">{item.brief}</div>
+                     <div className="List-articleItemBrief"
+                          dangerouslySetInnerHTML={{__html: item.excerpt}}>
+                     </div>
 
                 </a>
             )
