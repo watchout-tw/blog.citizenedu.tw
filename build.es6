@@ -16,6 +16,15 @@ metalsmith(__dirname)
   .use(collections({
     posts: {
       pattern: "posts/**.html"
+    },
+    columns: {
+      pattern: "columns/**.html"
+    },
+    collections: {
+      pattern: "collections/**.html"
+    },
+    authors: {
+      pattern: "authors/**.html"
     }
   }))
   .use(branch("posts/**.html")
