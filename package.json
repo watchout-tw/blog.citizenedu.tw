@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "watch 'npm run build' app src",
-    "livereload": "live-reload app src",
+    "livereload": "live-reload app src --delay=1",
     "serve": "http-server build",
     "dev": "parallelshell 'npm run watch' 'npm run serve' 'npm run livereload'",
     "build": "babel-node build.es6"
