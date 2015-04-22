@@ -13,7 +13,6 @@ export default React.createClass({
   },
 
   render() {
-
     var result = "";
 
         result = (
@@ -21,7 +20,7 @@ export default React.createClass({
             <AppBar type="nav"/>
 
               <AboutSite/>
-              <Columns type="column"/>
+              <Columns type="column" items={this.props.collections.columns}/>
 
         </div>);
 

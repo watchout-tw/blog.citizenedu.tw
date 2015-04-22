@@ -1,14 +1,11 @@
 import React from "react";
 import "./Columns.css";
 
-import Columns from "./Columns.json";
-import Collections from "./Collections.json";
 export default React.createClass({
   displayName: "Columns",
 
   render() {
-  	  var data = (this.props.type === "column") ? Columns : Collections;
-      var columnItems = data.map((item,key)=>{
+      var columnItems = this.props.items.map((item,key)=>{
           return (
           	  <div className="Column"
                    key={key}>
