@@ -7,16 +7,15 @@ export default React.createClass({
   render() {
       var columnItems = this.props.items.map((item,key)=>{
           return (
-          	  <div className="Column"
-                   key={key}>
+          	  <a className="Column" href={"/" + item.path} key={key}>
 
              	  <div className="Column-header">
-                  <div className="Column-name">{item.name}</div>
-                  <div className="Column-articleCount">{item.articleCount}</div>
+                  <div className="Column-name">{item.title}</div>
+                  <div className="Column-articleCount">{this.props.collections[item.title] ? this.props.collections[item.title].length : 0}</div>
 
                 </div>
-             	  <div className="Column-intro">{item.intro}</div>
-              </div>
+             	  <div className="Column-intro">{item.contents}</div>
+              </a>
           )
   	  });
 

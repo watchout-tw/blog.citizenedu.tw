@@ -13,21 +13,15 @@ export default React.createClass({
   },
 
   render() {
-    var result = "";
-
-        result = (
+        return (
         <div>
             <AppBar type="nav"/>
 
+            <div className="flexWrapper">
               <AboutSite/>
-              <Columns type="column" items={this.props.collections.columns}/>
+              <Columns type="column" items={this.props.collections.columns} collections={this.props.collections}/>
+            </div>
 
         </div>);
-
-
-
-    return (
-        result
-      );
   }
 });
