@@ -19,6 +19,7 @@ mv build/.git tmp-git
 REV=`git describe --always`
 BUILD=git-$REV npm run build
 mv tmp-git build/.git
+cp CNAME build
 cd build
 git add -A .
 echo "regen for $REV" | git commit-tree `git write-tree` -p `git rev-parse HEAD` -p $REV | xargs git reset --hard
