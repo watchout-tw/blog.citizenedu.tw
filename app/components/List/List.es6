@@ -83,7 +83,7 @@ export default React.createClass({
                 <a className="List-indexItem"
                    key={key}
                    href={"/" + item.path}>
-                     <div className="List-articleItemTitle List-boldTitle">朱家安：{item.title}</div>
+                     <div className="List-articleItemTitle List-boldTitle">{item.author}：{item.title}</div>
                      <div className="List-articleItemBrief"
                           dangerouslySetInnerHTML={{__html: item.excerpt}}>
                      </div>
