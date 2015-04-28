@@ -20,6 +20,12 @@ metalsmith(__dirname)
     columns: {
       pattern: "columns/**.html"
     },
+    subjects: {
+      pattern: "subjects/**.html"
+    },
+    tags: {
+      pattern: "tags/**.html"
+    },
     guide: {
       pattern: "guide/**.html"
     },

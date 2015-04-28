@@ -21,11 +21,14 @@ export default React.createClass({
   },
 
   render() {
-    var columns = {};
-    this.props.collections.columns.forEach((key) => {
-      columns[key.title] = 1;
-    });
-    var posts = columns[this.props.title] ? (this.props.collections[this.props.title] || []) : this.props.posts;
+    var type = this.props.type,
+       index = {};
+    if (type && this.props.collections[type]) {
+      this.props.collections[type].forEach((key) => {
+        index[key.title] = 1;
+      });
+    }
+    var posts = type && index[this.props.title] ? (this.props.collections[this.props.title] || []) : this.props.posts;
 
     return (
 
@@ -37,6 +40,7 @@ export default React.createClass({
                     tag={this.state.tag}
                     posts={posts}/>
               <Tags changeTagHandler={this._onChangeTag}
+                    items={this.props.collections.subjects.concat(this.props.collections.tags)}
                     tag={this.state.tag}/>
             </div>
 
