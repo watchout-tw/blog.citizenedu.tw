@@ -20,8 +20,8 @@ metalsmith(__dirname)
     columns: {
       pattern: "columns/**.html"
     },
-    collections: {
-      pattern: "collections/**.html"
+    guide: {
+      pattern: "guide/**.html"
     },
     authors: {
       pattern: "authors/**.html"
