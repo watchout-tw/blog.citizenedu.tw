@@ -65,6 +65,7 @@ co(function* () {
       return column.topic_list.topics
         .filter((t) => !t.pinned)
         .filter((t) => !posts[`${t.id}.html`])
+        // XXX topic data doesn't have primary category/column id
         .map((t) => Object.assign(t, { column_title: column.title }))
     })
     .reduce((prev, cur) => prev.concat(cur))
