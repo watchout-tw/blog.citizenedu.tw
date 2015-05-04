@@ -1,5 +1,6 @@
 
-var fs = require('mz/fs'),
+var debug = require('debug')('update:post'),
+    fs = require('mz/fs'),
     co = require('co'),
     superagent = require('superagent'),
     yaml = require('js-yaml')
@@ -19,7 +20,7 @@ function withPromise() {
   }
 }
 
-var topicURL = 'http://community.citizenedu.tw/t/topic'
+var topicURL = 'http://community.citizenedu.tw/t'
 var postsPath = __dirname + '/../src/posts'
 var columnsPath = __dirname + '/../src/columns'
 
@@ -41,7 +42,7 @@ function buildIndex(path) {
 function* readFiles(path) {
   return fs.readdir(path)
     .then(buildIndex(path))
-    .catch(function (err) { console.error(err) })
+    .catch(function (err) { debug(err) })
 }
 
 co(function* () {
@@ -50,6 +51,7 @@ co(function* () {
   yield Object.keys(columns)
     .filter((n) => (undefined !== columns[n].link && columns[n].link))
     .map(function (name) {
+      debug('get column %s', columns[name].title)
       return superagent
         .get(`${columns[name].link}.json`)
         .use(withPromise())
@@ -57,11 +59,11 @@ co(function* () {
         .then((res) => Object.assign(columns[name], res.body))
         .catch(function (err) { console.error(err) })
     })
-  // console.log(columns)
 
-  yield Object.values(columns)
+  var r = yield Object.values(columns)
     .filter((c) => undefined !== c.topic_list && c.topic_list.topics)
     .map(function (column) {
+      debug('check column %s for new topics', column.title)
       return column.topic_list.topics
         .filter((t) => !t.pinned)
         .filter((t) => !posts[`${t.id}.html`])
@@ -70,17 +72,19 @@ co(function* () {
     })
     .reduce((prev, cur) => prev.concat(cur))
     .map(function (topicInfo) {
+      debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
       return superagent
         .get(`${topicURL}/${topicInfo.id}.json`)
         .use(withPromise())
         .end()
-        .catch(function (err) { console.error(err) })
+        .catch(function (err) { debug(err) })
         .then((res) => res.body)
         // alright, we are using Discourse topic ID as Blog post ID...
         .then(function (topic) {
+          debug('write topic %s (%s)', topic.id, topic.title)
           return fs.writeFile(`${postsPath}/${topic.id}.html`,
 `---
-title: ${topic.title}
+title: "${topic.title}"
 created_at: ${topic.created_at.replace(/T.*/, '')}
 modified_at: ${topic.post_stream.posts[0].updated_at.replace(/T.*/, '')}
 author: ${topic.post_stream.posts[0].name}
@@ -91,4 +95,5 @@ ${topic.post_stream.posts[0].cooked}
 `)
         })
     })
+  debug('%d topics updated', r.length)
 })
