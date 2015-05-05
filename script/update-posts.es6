@@ -64,31 +64,51 @@ function extractTopics(posts, column) {
     .map((t) => Object.assign(t, { column_title: column.title }))
 }
 
+function extractTags() {
+  return function (topic) {
+    var post = topic.post_stream.posts[0]
+    var tagsRE = /<pre><code>分類：(.*?)<\/code><\/pre>\n\n/
+    var r = post.cooked.match(tagsRE)
+    if (null !== r) {
+      topic.tags = r[1].split(/(?:,|，|、)\s*/)
+      post.cooked = post.cooked.replace(tagsRE, '')
+      debug('found tags %s', topic.tags.join(', '))
+    } else {
+      topic.tags = []
+      debug('no tags found')
+    }
+    return topic
+  }
+}
+
 function buildTopic(topicInfo) {
   debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
   return superagent
     .get(`${topicURL}/${topicInfo.id}.json`)
     .use(withPromise())
     .end()
-    .catch(function (err) { debug(err) })
     .then((res) => res.body)
+    .then(extractTags())
     .then(writePost.bind(null, topicInfo))
+    .catch(function (err) { debug(err) })
 }
 
 function writePost(topicInfo, topic) {
   debug('write topic %s (%s)', topic.id, topic.title)
   // alright, we are using Discourse topic ID as Blog post ID...
   return fs.writeFile(`${postsPath}/${topic.id}.html`,
-`---
-title: "${topic.title}"
-created_at: ${topic.created_at.replace(/T.*/, '')}
-modified_at: ${topic.post_stream.posts[0].updated_at.replace(/T.*/, '')}
-author: ${topic.post_stream.posts[0].name}
-rtemplate: ArticlePage
-collection: ['${topicInfo.column_title}', '哲學', 'posts']
----
-${topic.post_stream.posts[0].cooked}
-`)
+      '---\n'
+      + yaml.safeDump({
+        title: topic.title,
+        created_at: topic.created_at.replace(/T.*/, ''),
+        modified_at: topic.post_stream.posts[0].updated_at.replace(/T.*/, ''),
+        author: topic.post_stream.posts[0].name,
+        rtemplate: 'ArticlePage',
+        collection: [topicInfo.column_title].concat(topic.tags).concat(['posts'])
+      })
+      + '---\n'
+      + topic.post_stream.posts[0].cooked
+  )
 }
 
 co(function* () {
