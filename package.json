@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "env": "env",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update:post": "babel-node script/update-posts.es6",
     "build": "babel-node build.es6",
@@ -32,6 +33,7 @@
     "babel-loader": "^5.0.0",
     "co": "^4.5.2",
     "css-loader": "^0.9.1",
+    "debug": "^2.1.3",
     "file-loader": "^0.8.1",
     "http-server": "^0.8.0",
     "jquery": "^2.1.3",
