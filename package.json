@@ -8,10 +8,11 @@
     "env": "env",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update:post": "babel-node script/update-posts.es6",
+    "update": "npm run update:post",
     "build": "babel-node build.es6",
     "serve": "http-server build",
     "watch": "watch 'npm run build' app src",
-    "livereload": "live-reload app src --delay=6000",
+    "livereload": "live-reload app src --delay=8000",
     "dev": "parallelshell 'npm run serve' 'npm run watch' 'npm run livereload'"
   },
   "repository": {
