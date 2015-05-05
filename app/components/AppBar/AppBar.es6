@@ -27,7 +27,7 @@ export default React.createClass({
             <a href="/columns"
                className="AppBar-nav">專欄</a>
             <a href="/collections"
-               className="AppBar-nav">套餐</a>
+               className="AppBar-nav">評論懶人包</a>
             <a href="http://community.citizenedu.tw/t/topic/938"
                className="AppBar-nav">徵稿</a>
           </div>
