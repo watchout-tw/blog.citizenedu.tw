@@ -1,7 +1,10 @@
+import Debug from "debug"
 import React from "react/addons";
 import "./Author.css";
 import $ from "jquery";
 import Tabs from "../Tabs/Tabs.es6";
+
+var debug = Debug('component:Author')
 
 //http://community.citizenedu.tw/users/kris/activity
 import Author from "./Author.json";
@@ -9,6 +12,45 @@ import Author from "./Author.json";
 import AuthorPost from "./AuthorPost.json";
 
 export default React.createClass({
+  _extract(name){
+    var all = {}
+    this.props.collections[name].forEach(function (x) {
+      all[x.title] = true
+    })
+    return this.props.collection.filter((c) => all[c])
+  },
+
+  renderColumn(){
+    var column = this._extract('columns')[0]
+    debug('render column %s', column)
+    return (
+      <a className='Author-widgetLink' href={'/columns/' + column}>{column}</a>
+      )
+  },
+  renderSubjects(){
+    debug('render subjects %s', this._extract('subjects'))
+    var subjects = this._extract('subjects').map((s) =>
+      <a className="Author-tagLink" href={'/subjects/' + s} key={s}>{s}</a>
+    )
+    return subjects
+  },
+  renderTags(){
+    debug('render tags %s', this._extract('tags'))
+    return this._extract('tags').map((t) =>
+      <a className="Author-tagLink" href={'/tags/' + t} key={t}>{t}</a>
+    )
+  },
+  _join(items, sep){
+    var result = []
+    items.forEach(function (x, i) {
+      result.push(x)
+      if (i < items.length - 1) {
+        result.push(sep)
+      }
+    })
+    return result
+  },
+
   displayName: "Author",
 
   getInitialState(){
@@ -42,17 +84,12 @@ export default React.createClass({
 
     var _this = this;
     var cb = function(value){
-        //console.log("callback:"+value);
         _this.setState({
             scroll: value
         });
     };
 
     $(window).scroll(function(event){
-        // console.log("s"+$(this).scrollTop());
-        // console.log(bottom);
-        // console.log($(this).scrollTop() < bottom );
-        // console.log(scroll);
 
         if( $(this).scrollTop() > bottom ){
             cb(true);
@@ -64,9 +101,6 @@ export default React.createClass({
     });
   },
   render() {
-      //console.log(Author.user.bio_excerpt);
-      //console.log(Author.user.bio_raw);
-      //
       var result = "";
       if(this.props.type === "section"){
           result = (
@@ -79,6 +113,8 @@ export default React.createClass({
           )
 
       }else if(this.props.type === "widget"){
+    // XXX metalsmith reverses arrays in meta
+    this.props.collection.reverse()
           var classSet = React.addons.classSet;
           var classes = classSet({
               "Author-widget" : true,
@@ -92,12 +128,10 @@ export default React.createClass({
                        src="http://okapi.books.com.tw/uploads/article/article10144_3.png" />
                   <div className="Author-widgetInfo">
                       <a className="Author-widgetLink"
-                         href="/author/1">朱家安</a>・<a className="Author-widgetLink">沃草烙哲學</a>
+                         href="/author/1">{this.props.author}</a>・<a className="Author-widgetLink">{this.renderColumn()}</a>
                       <span className="Author-tagsSection">
                           <span className="Author-tags">／</span>
-                          <a className="Author-tagLink">哲學</a>
-                          <span className="Author-tags">・</span>
-                          <a className="Author-tagLink">藝術</a>
+                          {this._join(this.renderSubjects().concat(this.renderTags()), <span className="Author-tags">・</span>)}
                       </span>
                   </div>
               </div>
