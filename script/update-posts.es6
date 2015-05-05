@@ -45,44 +45,40 @@ function* readFiles(path) {
     .catch(function (err) { debug(err) })
 }
 
-co(function* () {
-  var [posts, columns] = yield [postsPath, columnsPath].map(readFiles)
+function getColumnInfo(columns, name) {
+  debug('get column %s', columns[name].title)
+  return superagent
+    .get(`${columns[name].link}.json`)
+    .use(withPromise())
+    .end()
+    .then((res) => Object.assign(columns[name], res.body))
+    .catch(function (err) { console.error(err) })
+}
 
-  yield Object.keys(columns)
-    .filter((n) => (undefined !== columns[n].link && columns[n].link))
-    .map(function (name) {
-      debug('get column %s', columns[name].title)
-      return superagent
-        .get(`${columns[name].link}.json`)
-        .use(withPromise())
-        .end()
-        .then((res) => Object.assign(columns[name], res.body))
-        .catch(function (err) { console.error(err) })
-    })
+function getTopics(posts, column) {
+  debug('check column %s for new topics', column.title)
+  return column.topic_list.topics
+    .filter((t) => !t.pinned)
+    .filter((t) => !posts[`${t.id}.html`])
+    // XXX topic data doesn't have primary category/column id
+    .map((t) => Object.assign(t, { column_title: column.title }))
+}
 
-  var r = yield Object.values(columns)
-    .filter((c) => undefined !== c.topic_list && c.topic_list.topics)
-    .map(function (column) {
-      debug('check column %s for new topics', column.title)
-      return column.topic_list.topics
-        .filter((t) => !t.pinned)
-        .filter((t) => !posts[`${t.id}.html`])
-        // XXX topic data doesn't have primary category/column id
-        .map((t) => Object.assign(t, { column_title: column.title }))
-    })
-    .reduce((prev, cur) => prev.concat(cur))
-    .map(function (topicInfo) {
-      debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
-      return superagent
-        .get(`${topicURL}/${topicInfo.id}.json`)
-        .use(withPromise())
-        .end()
-        .catch(function (err) { debug(err) })
-        .then((res) => res.body)
-        // alright, we are using Discourse topic ID as Blog post ID...
-        .then(function (topic) {
-          debug('write topic %s (%s)', topic.id, topic.title)
-          return fs.writeFile(`${postsPath}/${topic.id}.html`,
+function buildTopic(topicInfo) {
+  debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
+  return superagent
+    .get(`${topicURL}/${topicInfo.id}.json`)
+    .use(withPromise())
+    .end()
+    .catch(function (err) { debug(err) })
+    .then((res) => res.body)
+    // alright, we are using Discourse topic ID as Blog post ID...
+    .then(writePost.bind(null, topicInfo))
+}
+
+function writePost(topicInfo, topic) {
+  debug('write topic %s (%s)', topic.id, topic.title)
+  return fs.writeFile(`${postsPath}/${topic.id}.html`,
 `---
 title: "${topic.title}"
 created_at: ${topic.created_at.replace(/T.*/, '')}
@@ -93,7 +89,20 @@ collection: ['${topicInfo.column_title}', '哲學', 'posts']
 ---
 ${topic.post_stream.posts[0].cooked}
 `)
-        })
-    })
+}
+
+co(function* () {
+  var [posts, columns] = yield [postsPath, columnsPath].map(readFiles)
+
+  yield Object.keys(columns)
+    .filter((n) => (undefined !== columns[n].link && columns[n].link))
+    .map(getColumnInfo.bind(null, columns))
+
+  var r = yield Object.values(columns)
+    .filter((c) => undefined !== c.topic_list && c.topic_list.topics)
+    .map(getTopics.bind(null, posts))
+    .reduce((prev, cur) => prev.concat(cur))
+    .map(buildTopic)
+
   debug('%d topics updated', r.length)
 })
