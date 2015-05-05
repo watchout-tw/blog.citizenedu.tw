@@ -55,7 +55,7 @@ function getColumnInfo(columns, name) {
     .catch(function (err) { console.error(err) })
 }
 
-function getTopics(posts, column) {
+function extractTopics(posts, column) {
   debug('check column %s for new topics', column.title)
   return column.topic_list.topics
     .filter((t) => !t.pinned)
@@ -100,7 +100,7 @@ co(function* () {
 
   var r = yield Object.values(columns)
     .filter((c) => undefined !== c.topic_list && c.topic_list.topics)
-    .map(getTopics.bind(null, posts))
+    .map(extractTopics.bind(null, posts))
     .reduce((prev, cur) => prev.concat(cur))
     .map(buildTopic)
 
