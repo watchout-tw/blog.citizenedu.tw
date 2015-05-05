@@ -39,7 +39,7 @@ function buildIndex(path) {
   }
 }
 
-function* readFiles(path) {
+function readFiles(path) {
   return fs.readdir(path)
     .then(buildIndex(path))
     .catch(function (err) { debug(err) })
@@ -72,12 +72,12 @@ function buildTopic(topicInfo) {
     .end()
     .catch(function (err) { debug(err) })
     .then((res) => res.body)
-    // alright, we are using Discourse topic ID as Blog post ID...
     .then(writePost.bind(null, topicInfo))
 }
 
 function writePost(topicInfo, topic) {
   debug('write topic %s (%s)', topic.id, topic.title)
+  // alright, we are using Discourse topic ID as Blog post ID...
   return fs.writeFile(`${postsPath}/${topic.id}.html`,
 `---
 title: "${topic.title}"
