@@ -14,7 +14,7 @@ export default React.createClass({
                   <div className="Column-articleCount">{this.props.collections[item.title] ? this.props.collections[item.title].length : 0}</div>
 
                 </div>
-             	  <div className="Column-intro">{item.contents}</div>
+             	  <div className="Column-intro" dangerouslySetInnerHTML={{__html: item.contents}}></div>
               </a>
           )
   	  });
