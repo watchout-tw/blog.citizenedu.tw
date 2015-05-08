@@ -12,8 +12,8 @@ export default React.createClass({
         <img className="AboutSite-img"
              src={imgURL} />
         <div className="AboutSite-content">
-            <div className="AboutSite-title">公民學院部落格</div>
-            <div className="AboutSite-info">生活中的人文閱讀：歷史、哲學、政治、社會、人類學...</div>
+            <div className="AboutSite-title">公民學院</div>
+            <div className="AboutSite-info">為所有人準備的人文學習、討論平台。我們不但小國小民，更要好國好民。</div>
             <div className="AboutSite-meta">第一次來？</div>
         </div>
       </div>
