@@ -29,9 +29,6 @@ metalsmith(__dirname)
     tags: {
       pattern: "tags/**.html"
     },
-    guide: {
-      pattern: "guide/**.html"
-    },
     authors: {
       pattern: "authors/**.html"
     }
