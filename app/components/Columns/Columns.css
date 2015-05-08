@@ -39,9 +39,9 @@
     	padding: 0 10px;
     }
     .Column {
-    	width: 255px;
+    	width: 250px;
     	margin: 10px 5px;
-    	height: 210px;
+    	height: 202px;
     }
 }
 .Column:hover {
