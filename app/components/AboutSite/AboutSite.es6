@@ -14,7 +14,7 @@ export default React.createClass({
         <div className="AboutSite-content">
             <div className="AboutSite-title">公民學院</div>
             <div className="AboutSite-info">為所有人準備的人文學習、討論平台。我們不但小國小民，更要好國好民。</div>
-            <div className="AboutSite-meta">第一次來？</div>
+            <a className="AboutSite-meta" href="/posts/974">第一次來？</a>
         </div>
       </div>
       );
