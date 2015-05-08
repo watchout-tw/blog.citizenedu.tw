@@ -35,9 +35,10 @@ function writeAuthor(author) {
 co(function* () {
   var [posts, authors] = yield [helper.postsPath, helper.authorsPath].map(helper.readFiles)
 
-  yield Object.values(posts)
+  var r = yield Object.values(posts)
     .map((p) => p.authorname)
     .filter((u) => !authors[`${u}.html`])
     .map(buildAuthor)
-    .catch(debug)
-})
+
+  debug('%d author(s) updated', r.length)
+}).catch(debug)

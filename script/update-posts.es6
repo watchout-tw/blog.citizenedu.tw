@@ -15,7 +15,6 @@ function getColumnInfo(columns, name) {
     .use(helper.withPromise())
     .end()
     .then((res) => Object.assign(columns[name], res.body))
-    .catch(debug)
 }
 
 function extractTopics(posts, column) {
@@ -53,7 +52,6 @@ function buildTopic(topicInfo) {
     .then((res) => res.body)
     .then(extractTags())
     .then(writePost.bind(null, topicInfo))
-    .catch(debug)
 }
 
 function writePost(topicInfo, topic) {
@@ -88,5 +86,5 @@ co(function* () {
     .reduce((prev, cur) => prev.concat(cur))
     .map(buildTopic)
 
-  debug('%d topics updated', r.length)
-})
+  debug('%d topic(s) updated', r.length)
+}).catch(debug)
