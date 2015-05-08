@@ -4,8 +4,10 @@ var debug = require('debug')('citizenedu:helper'),
     yaml = require('js-yaml')
 
 var helper = {
+  baseURL: 'http://community.citizenedu.tw/',
   postsPath: __dirname + '/../src/posts',
   columnsPath: __dirname + '/../src/columns',
+  authorsPath: __dirname + '/../src/authors',
 
   // superagent middleware
   withPromise() {
