@@ -28,7 +28,7 @@ function writeAuthor(author) {
         rtemplate: 'AuthorPage'
       })
       + '---\n'
-      + author.user.bio_excerpt
+      + author.user.bio_cooked
     )
 }
 
