@@ -43,14 +43,6 @@ function extractTags() {
   }
 }
 
-//function extractAuthor() {
-  //return function (topic) {
-    //var post = topic.post_stream.posts[0]
-    //var authorRE = /<pre><code>作者(?:：|:)\s*(.*?)<\/code><\/pre>\n\n/
-    //var r = post.cooked.match(authorRE)
-  //}
-//}
-
 function buildTopic(topicInfo) {
   debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
   return superagent
