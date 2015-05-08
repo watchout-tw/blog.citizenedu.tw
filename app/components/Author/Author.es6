@@ -105,8 +105,8 @@ export default React.createClass({
       if(this.props.type === "section"){
           result = (
               <div className="Author">
-                 <a href="/author/1">
-                 <div dangerouslySetInnerHTML={{__html: Author.user.bio_excerpt}}></div>
+                 <a href={"/authors/" + this.props.authorname}>
+                 <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
                  <div className="Author-gotoBio">作者個人頁面</div>
                  </a>
               </div>
@@ -128,7 +128,7 @@ export default React.createClass({
                        src="http://okapi.books.com.tw/uploads/article/article10144_3.png" />
                   <div className="Author-widgetInfo">
                       <a className="Author-widgetLink"
-                         href="/author/1">{this.props.author}</a>・<a className="Author-widgetLink">{this.renderColumn()}</a>
+                         href={"/authors/" + this.props.authorname}>{this.props.author}</a>・<a className="Author-widgetLink">{this.renderColumn()}</a>
                       <span className="Author-tagsSection">
                           <span className="Author-tags">／</span>
                           {this._join(this.renderSubjects().concat(this.renderTags()), <span className="Author-tags">・</span>)}
@@ -156,14 +156,8 @@ export default React.createClass({
           });
 
 
-          var authorBio = (this.state.showFullBio) ?
-          <div dangerouslySetInnerHTML={{__html: Author.user.bio_raw}} /> :
-          <p>我相信，當我們以<a href="//google.com.tw/search?q=淺白">淺白</a>、易懂、清晰的探討方式進入哲學，避免那些晦澀、神秘、模糊的用詞，哲學思維內含的邏輯和批判能力才能發揮最大效用，協助我們解析論述和議題，察覺錯謬和悖論，在複雜的情境中做出正確的抉擇。</p>;
-
-          // var authorBioBUtton = (this.state.showFullBio) ?
-          // "":
-          // <div className="Author-showFullBio"
-          //      onClick={this._onShowFullBio}>看完整介紹</div>;
+          debug(this.props)
+          var authorBio = <div dangerouslySetInnerHTML={{__html: this.props.contents}} />
 
           result = (
           <div className="Author--page">
@@ -171,8 +165,8 @@ export default React.createClass({
                   <div className="Author--pageContent">
                       <div className="Author-pageTop">
                           <img className="Author-pageAvatar"
-                            src="http://okapi.books.com.tw/uploads/photo/photo10142.jpg" />
-                          <div className="Author-nameTitle">{Author.user.name}</div>
+                            src={this.props.avatar.replace('{size}', '120x120')} />
+                          <div className="Author-nameTitle">{this.props.title}</div>
                       </div>
                       <div className="Author-bio">
                           {authorBio}
