@@ -1,5 +1,5 @@
 
-var debug = require('debug')('update:post'),
+var debug = require('debug')('citizenedu:update:post'),
     fs = require('mz/fs'),
     co = require('co'),
     superagent = require('superagent'),
@@ -15,7 +15,7 @@ function getColumnInfo(columns, name) {
     .use(helper.withPromise())
     .end()
     .then((res) => Object.assign(columns[name], res.body))
-    .catch(function (err) { console.error(err) })
+    .catch(debug)
 }
 
 function extractTopics(posts, column) {
@@ -53,7 +53,7 @@ function buildTopic(topicInfo) {
     .then((res) => res.body)
     .then(extractTags())
     .then(writePost.bind(null, topicInfo))
-    .catch(function (err) { debug(err) })
+    .catch(debug)
 }
 
 function writePost(topicInfo, topic) {
@@ -66,12 +66,13 @@ function writePost(topicInfo, topic) {
         created_at: topic.created_at.replace(/T.*/, ''),
         modified_at: topic.post_stream.posts[0].updated_at.replace(/T.*/, ''),
         author: topic.post_stream.posts[0].name,
+        authorname: topic.post_stream.posts[0].username,
         rtemplate: 'ArticlePage',
         collection: [topicInfo.column_title].concat(topic.tags).concat(['posts'])
       })
       + '---\n'
       + topic.post_stream.posts[0].cooked
-  )
+    )
 }
 
 co(function* () {
