@@ -125,7 +125,7 @@ export default React.createClass({
               <div className={classes}
                    ref="AuthorWidget">
                   <img className="Author-widgetAvatar"
-                       src="http://okapi.books.com.tw/uploads/article/article10144_3.png" />
+                       src={this.props.avatar.replace('{size}', '120x120')} />
                   <div className="Author-widgetInfo">
                       <a className="Author-widgetLink"
                          href={"/authors/" + this.props.authorname}>{this.props.author}</a>・<a className="Author-widgetLink">{this.renderColumn()}</a>
