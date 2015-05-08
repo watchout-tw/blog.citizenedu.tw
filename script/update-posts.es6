@@ -3,53 +3,16 @@ var debug = require('debug')('update:post'),
     fs = require('mz/fs'),
     co = require('co'),
     superagent = require('superagent'),
-    yaml = require('js-yaml')
-
-// superagent middleware
-function withPromise() {
-  return function (req) {
-    req.end = function () {
-      return new Promise(function (resolve, reject) {
-        Object.getPrototypeOf(req).end.call(req, function (err, res) {
-          if (err) { reject(err) }
-          if (!res.ok) { reject(res.text) }
-          resolve(res)
-        })
-      })
-    }
-  }
-}
+    yaml = require('js-yaml'),
+    helper = require('./helper')
 
 var topicURL = 'http://community.citizenedu.tw/t'
-var postsPath = __dirname + '/../src/posts'
-var columnsPath = __dirname + '/../src/columns'
-
-function getFileMeta(fn) {
-  var meta = fs.readFileSync(fn, 'utf-8').split('---')[1]
-  return yaml.safeLoad(meta)
-}
-
-function buildIndex(path) {
-  return function (files) {
-    var index = {}
-    files.forEach(function (fn) {
-      index[fn] = getFileMeta(`${path}/${fn}`)
-    })
-    return index
-  }
-}
-
-function readFiles(path) {
-  return fs.readdir(path)
-    .then(buildIndex(path))
-    .catch(function (err) { debug(err) })
-}
 
 function getColumnInfo(columns, name) {
   debug('get column %s', columns[name].title)
   return superagent
     .get(`${columns[name].link}.json`)
-    .use(withPromise())
+    .use(helper.withPromise())
     .end()
     .then((res) => Object.assign(columns[name], res.body))
     .catch(function (err) { console.error(err) })
@@ -85,7 +48,7 @@ function buildTopic(topicInfo) {
   debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
   return superagent
     .get(`${topicURL}/${topicInfo.id}.json`)
-    .use(withPromise())
+    .use(helper.withPromise())
     .end()
     .then((res) => res.body)
     .then(extractTags())
@@ -96,7 +59,7 @@ function buildTopic(topicInfo) {
 function writePost(topicInfo, topic) {
   debug('write topic %s (%s)', topic.id, topic.title)
   // alright, we are using Discourse topic ID as Blog post ID...
-  return fs.writeFile(`${postsPath}/${topic.id}.html`,
+  return fs.writeFile(`${helper.postsPath}/${topic.id}.html`,
       '---\n'
       + yaml.safeDump({
         title: topic.title,
@@ -112,7 +75,7 @@ function writePost(topicInfo, topic) {
 }
 
 co(function* () {
-  var [posts, columns] = yield [postsPath, columnsPath].map(readFiles)
+  var [posts, columns] = yield [helper.postsPath, helper.columnsPath].map(helper.readFiles)
 
   yield Object.keys(columns)
     .filter((n) => (undefined !== columns[n].link && columns[n].link))
