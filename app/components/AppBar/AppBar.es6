@@ -26,7 +26,7 @@ export default React.createClass({
                className="AppBar-nav">最新</a>
             <a href="/columns"
                className="AppBar-nav">專欄</a>
-            <a href="/collections"
+            <a href="/columns/評論懶人包"
                className="AppBar-nav">評論懶人包</a>
             <a href="http://community.citizenedu.tw/t/topic/938"
                className="AppBar-nav">徵稿</a>
