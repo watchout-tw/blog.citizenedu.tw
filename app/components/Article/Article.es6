@@ -50,6 +50,7 @@ export default React.createClass({
             <Social goToCommentHandler={this._onGoToComment} {...this.props}/>
 
             <div className="Article-content">
+              <h1>{this.state.title}</h1>
               <div dangerouslySetInnerHTML={{__html: this.state.contents}}></div>
             </div>
             <div className="Article-authorBackground">
