@@ -29,7 +29,7 @@ function extractTopics(posts, column) {
 function extractTags() {
   return function (topic) {
     var post = topic.post_stream.posts[0]
-    var tagsRE = /<pre><code>分類：(.*?)<\/code><\/pre>\n\n/
+    var tagsRE = /<pre><code>分類(?:：|:)\s*(.*?)<\/code><\/pre>\n\n/
     var r = post.cooked.match(tagsRE)
     if (null !== r) {
       topic.tags = r[1].split(/(?:,|，|、)\s*/)
@@ -42,6 +42,14 @@ function extractTags() {
     return topic
   }
 }
+
+//function extractAuthor() {
+  //return function (topic) {
+    //var post = topic.post_stream.posts[0]
+    //var authorRE = /<pre><code>作者(?:：|:)\s*(.*?)<\/code><\/pre>\n\n/
+    //var r = post.cooked.match(authorRE)
+  //}
+//}
 
 function buildTopic(topicInfo) {
   debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
