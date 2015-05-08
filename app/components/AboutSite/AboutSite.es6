@@ -12,8 +12,8 @@ export default React.createClass({
         <img className="AboutSite-img"
              src={imgURL} />
         <div className="AboutSite-content">
-            <div className="AboutSite-title">公民學院</div>
-            <div className="AboutSite-info">為所有人準備的人文學習、討論平台。我們不但小國小民，更要好國好民。</div>
+            <div className="AboutSite-title">{this.props.title || this.props.site.title}</div>
+            <div className="AboutSite-info" dangerouslySetInnerHTML={{__html: this.props.contents || this.props.site.description}}></div>
             <a className="AboutSite-meta" href="/posts/974">第一次來？</a>
         </div>
       </div>

@@ -35,7 +35,7 @@ export default React.createClass({
         <div>
             <AppBar type="nav"/>
             <div className="flexWrapper">
-              <AboutSite />
+              <AboutSite {...this.props}/>
               <List type="index"
                     tag={this.state.tag}
                     posts={posts}/>

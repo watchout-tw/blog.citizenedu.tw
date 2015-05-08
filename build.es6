@@ -9,8 +9,9 @@ import permalinks from "metalsmith-permalinks";
 metalsmith(__dirname)
   .metadata({
     site: {
-      title: "公民學院部落格",
-      url: "http://blog.citizenedu.tw/"
+      title: "公民學院",
+      url: "http://blog.citizenedu.tw/",
+      description: "沃草公民學院是為所有人準備的人文學習、討論平台。我們不但小國小民，更要好國好民。",
     }
   })
   .use(collections({
