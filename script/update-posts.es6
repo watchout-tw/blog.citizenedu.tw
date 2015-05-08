@@ -1,5 +1,5 @@
 
-var debug = require('debug')('citizenedu:update:post'),
+var debug = require('debug')('update:post'),
     fs = require('mz/fs'),
     co = require('co'),
     superagent = require('superagent'),

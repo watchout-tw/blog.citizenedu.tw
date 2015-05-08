@@ -1,5 +1,5 @@
 
-var debug = require('debug')('citizenedu:helper'),
+var debug = require('debug')('helper'),
     fs = require('mz/fs'),
     yaml = require('js-yaml')
 
