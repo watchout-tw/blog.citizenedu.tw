@@ -26,18 +26,29 @@ function extractTopics(posts, column) {
     .map((t) => Object.assign(t, { column_title: column.title }))
 }
 
-function extractTags() {
+function extractMeta() {
   return function (topic) {
     var post = topic.post_stream.posts[0]
-    var tagsRE = /<pre><code>分類(?:：|:)\s*(.*?)<\/code><\/pre>\n\n/
-    var r = post.cooked.match(tagsRE)
+    var metaRE = /^<pre><code>([\s\S]*?)<\/code><\/pre>\n\n/
+    var meta = {
+      "分類": "tags",
+    }
+    var r = post.cooked.match(metaRE)
     if (null !== r) {
-      topic.tags = r[1].split(/(?:,|，|、)\s*/)
-      post.cooked = post.cooked.replace(tagsRE, '')
-      debug('found tags %s', topic.tags.join(', '))
+      r[1].split('\n')
+        .map((line) => line.split(/(?:：|:)\s*/))
+        .forEach(function ([name, value]) {
+          if (meta[name]) {
+            topic[meta[name]] = value.split(/(?:,|，|、)\s*/)
+            if (topic[meta[name]].length === 1) {
+              topic[meta[name]] = topic[meta[name]][0]
+            }
+            debug('found %s %s', meta[name], topic[meta[name]])
+          }
+        })
+      post.cooked = post.cooked.replace(metaRE, '')
     } else {
-      topic.tags = []
-      debug('no tags found')
+      debug('no meta found')
     }
     return topic
   }
@@ -50,7 +61,7 @@ function buildTopic(topicInfo) {
     .use(helper.withPromise())
     .end()
     .then((res) => res.body)
-    .then(extractTags())
+    .then(extractMeta())
     .then(writePost.bind(null, topicInfo))
 }
 
