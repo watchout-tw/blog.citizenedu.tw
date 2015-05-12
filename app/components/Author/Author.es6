@@ -103,10 +103,11 @@ export default React.createClass({
   render() {
       var result = "";
       if(this.props.type === "section"){
+          var author = this.props.collections.authors.filter((a) => a.path === `authors/${this.props.authorname}`)[0]
           result = (
               <div className="Author">
                  <a href={"/authors/" + this.props.authorname}>
-                 <div dangerouslySetInnerHTML={{__html: this.props.contents}}></div>
+                 <div dangerouslySetInnerHTML={{__html: author.excerpt}}></div>
                  <div className="Author-gotoBio">作者個人頁面</div>
                  </a>
               </div>
