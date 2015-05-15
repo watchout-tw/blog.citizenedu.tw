@@ -30,14 +30,14 @@ function extractMeta() {
     var metaRE = /^<pre><code>([\s\S]*?)<\/code><\/pre>\n\n/
     var meta = {
       "分類": "tags",
+      "圖片": "picture",
     }
-    Object.values(meta).forEach(function (header) {
-      topic[header] = topic[header] || []
-    })
+    topic.tags = []
+    topic.picture = ""
     var r = post.cooked.match(metaRE)
     if (null !== r) {
       r[1].split('\n')
-        .map((line) => line.split(/(?:：|:)\s*/))
+        .map((line) => line.split(/(?:：)\s*/))
         .forEach(function ([name, value]) {
           if (meta[name]) {
             topic[meta[name]] = value.split(/(?:,|，|、)\s*/)
@@ -68,6 +68,10 @@ function buildTopic(topicInfo) {
 
 function writePost(topicInfo, topic) {
   debug('write topic %s (%s)', topic.id, topic.title)
+  if (topic.picture) topic.picture = topic.picture.split(/src="(.*?)"/)[1]
+  if (topic.picture.substr(0, 4) !== "http") {
+    topic.picture = helper.baseURL + topic.picture
+  }
   // alright, we are using Discourse topic ID as Blog post ID...
   return fs.writeFile(`${helper.postsPath}/${topic.id}.html`,
       '---\n'
@@ -79,7 +83,8 @@ function writePost(topicInfo, topic) {
         authorname: topic.post_stream.posts[0].username,
         avatar: helper.baseURL + topic.post_stream.posts[0].avatar_template,
         rtemplate: 'ArticlePage',
-        collection: [topicInfo.column_title].concat(topic.tags).concat(['posts'])
+        collection: [topicInfo.column_title].concat(topic.tags).concat(['posts']),
+        picture: topic.picture
       })
       + '---\n'
       + topic.post_stream.posts[0].cooked
