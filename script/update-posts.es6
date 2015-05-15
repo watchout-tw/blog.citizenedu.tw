@@ -33,6 +33,9 @@ function extractMeta() {
     var meta = {
       "分類": "tags",
     }
+    Object.values(meta).forEach(function (header) {
+      topic[header] = topic[header] || []
+    })
     var r = post.cooked.match(metaRE)
     if (null !== r) {
       r[1].split('\n')
