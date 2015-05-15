@@ -4,7 +4,7 @@ var debug = require('debug')('update:author'),
     co = require('co'),
     superagent = require('superagent'),
     yaml = require('js-yaml'),
-    helper = require('../app/helper')
+    helper = require('./helper')
 
 var userURL = 'http://community.citizenedu.tw/users/'
 

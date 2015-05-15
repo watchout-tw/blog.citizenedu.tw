@@ -4,7 +4,7 @@ var debug = require('debug')('update:post'),
     co = require('co'),
     superagent = require('superagent'),
     yaml = require('js-yaml'),
-    helper = require('../app/helper')
+    helper = require('./helper')
 
 function getColumnInfo(columns, name) {
   debug('get column %s', columns[name].title)

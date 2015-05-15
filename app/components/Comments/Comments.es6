@@ -2,10 +2,13 @@ import React from "react/addons";
 import "./Comments.css";
 import Tabs from "../Tabs/Tabs.es6";
 
-//http://community.citizenedu.tw/t/topic/798/11
-import {post_stream} from "./Comments.json";
 import $ from "jquery";
 
+import superagent from "superagent";
+import helper from "../../helper";
+import Debug from "debug";
+
+var debug = console.log
 
 export default React.createClass({
   displayName: "Comments",
@@ -14,7 +17,7 @@ export default React.createClass({
       return {
          focusTab: 'all',//all, editorsPick
          max: 3,
-         commentData: post_stream.posts,
+         commentData: [],
          expandedCommentId:{},
          path: location.pathname
       }
@@ -44,6 +47,20 @@ export default React.createClass({
     });
 
   },
+
+  getCommentData() {
+    debug("woot!")
+    superagent
+      .get(helper.topicURL(this.props.path.replace(/.*\//, '')))
+      .use(helper.withPromise())
+      .end()
+      .then(function (res) {
+        this.setState({
+          commentData: res.body.post_stream.posts
+        })
+      })
+  },
+
   // /////////////////// IMAGE URL ISSUE
   componentDidMount() {
 
@@ -89,8 +106,11 @@ export default React.createClass({
     this.setState({
         commentData: trimCommentData
     });
+
+    this.getCommentData()
   },
   render() {
+    debug('render')
 
       /* ================================
        *   Comments
@@ -191,9 +211,6 @@ export default React.createClass({
          <div className="Comments-content">
             <div className="Comments-header">
               <div className="Comments-title">編輯嚴選留言</div>
-              <a className="Comments-goSeeAll"
-                 href="//google.com.tw"
-                 target="_blank">看全部留言</a>
             </div>
 
             {content}
