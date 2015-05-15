@@ -41,7 +41,7 @@ export default React.createClass({
             <Author type="widget" {...this.props}/>
             <div className="Article-cover">
                 <img className="Article-coverImg"
-                     src={this.props.picture || this.props.site.picture} />
+                     src={this.props.picture || this.props.site.post_picture} />
                 <a className="Article-coverCopyright"
                    href="https://www.facebook.com/ElaineeFangs"
                    target="_blank">圖／Elainee.’s</a>
