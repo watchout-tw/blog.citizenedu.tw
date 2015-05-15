@@ -69,7 +69,7 @@ function buildTopic(topicInfo) {
 function writePost(topicInfo, topic) {
   debug('write topic %s (%s)', topic.id, topic.title)
   if (topic.picture) topic.picture = topic.picture.split(/src="(.*?)"/)[1]
-  if (topic.picture.substr(0, 4) !== "http") {
+  if (topic.picture && topic.picture.substr(0, 4) !== "http") {
     topic.picture = helper.baseURL + topic.picture
   }
   // alright, we are using Discourse topic ID as Blog post ID...
