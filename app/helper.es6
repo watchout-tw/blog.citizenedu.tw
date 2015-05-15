@@ -8,7 +8,7 @@ var helper = {
   columnsPath: __dirname + '/../src/columns',
   authorsPath: __dirname + '/../src/authors',
 
-  baseURL: 'http://community.citizenedu.tw/',
+  baseURL: 'http://community.citizenedu.tw',
 
   topicURL(id) {
     return `http://community.citizenedu.tw/t/${id}.json`

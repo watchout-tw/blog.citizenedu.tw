@@ -77,7 +77,7 @@ function writePost(topicInfo, topic) {
         modified_at: topic.post_stream.posts[0].updated_at.replace(/T.*/, ''),
         author: topic.post_stream.posts[0].name,
         authorname: topic.post_stream.posts[0].username,
-        avatar: helper.baseURL + topic.post_stream.posts[0].avatar_template.substr(1),
+        avatar: helper.baseURL + topic.post_stream.posts[0].avatar_template,
         rtemplate: 'ArticlePage',
         collection: [topicInfo.column_title].concat(topic.tags).concat(['posts'])
       })

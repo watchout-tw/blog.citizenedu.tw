@@ -24,7 +24,7 @@ function writeAuthor(author) {
       '---\n'
       + yaml.safeDump({
         title: author.user.name,
-        avatar: helper.baseURL + author.user.avatar_template.substr(1),
+        avatar: helper.baseURL + author.user.avatar_template,
         rtemplate: 'AuthorPage'
       })
       + '---\n'
