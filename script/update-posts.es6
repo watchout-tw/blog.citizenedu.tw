@@ -4,7 +4,7 @@ var debug = require('debug')('update:post'),
     co = require('co'),
     superagent = require('superagent'),
     yaml = require('js-yaml'),
-    helper = require('./helper')
+    helper = require('../app/helper')
 
 var topicURL = 'http://community.citizenedu.tw/t'
 
