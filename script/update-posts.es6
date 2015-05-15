@@ -6,8 +6,6 @@ var debug = require('debug')('update:post'),
     yaml = require('js-yaml'),
     helper = require('../app/helper')
 
-var topicURL = 'http://community.citizenedu.tw/t'
-
 function getColumnInfo(columns, name) {
   debug('get column %s', columns[name].title)
   return superagent
@@ -60,7 +58,7 @@ function extractMeta() {
 function buildTopic(topicInfo) {
   debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
   return superagent
-    .get(`${topicURL}/${topicInfo.id}.json`)
+    .get(helper.topicURL(topicInfo.id))
     .use(helper.withPromise())
     .end()
     .then((res) => res.body)

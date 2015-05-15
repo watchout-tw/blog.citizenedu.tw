@@ -4,10 +4,15 @@ var debug = require('debug')('helper'),
     yaml = require('js-yaml')
 
 var helper = {
-  baseURL: 'http://community.citizenedu.tw/',
   postsPath: __dirname + '/../src/posts',
   columnsPath: __dirname + '/../src/columns',
   authorsPath: __dirname + '/../src/authors',
+
+  baseURL: 'http://community.citizenedu.tw/',
+
+  topicURL(id) {
+    return `http://community.citizenedu.tw/t/${id}.json`
+  },
 
   // superagent middleware
   withPromise() {
