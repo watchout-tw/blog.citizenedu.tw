@@ -15,7 +15,8 @@ export default React.createClass({
          focusTab: 'all',//all, editorsPick
          max: 3,
          commentData: post_stream.posts,
-         expandedCommentId:{}
+         expandedCommentId:{},
+         path: location.pathname
       }
   },
 
@@ -50,7 +51,7 @@ export default React.createClass({
       var rect = this.getDOMNode().getBoundingClientRect();
       //console.log(rect.top);
 
-      this.props.commentMountHandler(rect.top);
+      //this.props.commentMountHandler(rect.top);
 
 
       //////////////
@@ -97,7 +98,7 @@ export default React.createClass({
       var { focusTab, max, commentData, expandedCommentId } =  this.state;
       var noComment = true;
 
-      //console.log(commentData);
+      console.log(commentData);
 
       var postsItem = commentData
 
@@ -169,13 +170,13 @@ export default React.createClass({
               <div className="Comments-button"
                     onClick={this._onSetNewMax}>載入更多</div>
               <a className="Comments-button--hightlight"
-                 href={"http://community.citizenedu.tw/t/topic/" + this.props.path.replace('posts/', '')}
+                 href={"http://community.citizenedu.tw/t/topic/" + this.state.path.replace('posts/', '')}
                  target="_blank">我要留言</a>
           </div>
       ): (
           <div className="Comments-footer">
               <a className="Comments-button--hightlight"
-                 href={"http://community.citizenedu.tw/t/topic/" + this.props.path.replace('posts/', '')}
+                 href={"http://community.citizenedu.tw/t/topic/" + this.state.path.replace('posts/', '')}
                  target="_blank">我要留言</a>
           </div>
       );

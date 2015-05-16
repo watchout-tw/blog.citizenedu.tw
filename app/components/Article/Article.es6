@@ -1,7 +1,6 @@
 import React from "react/addons";
 
 import Author from "../Author/Author.es6";
-import Comments from "../Comments/Comments.es6";
 import Social from "../Social/Social.es6";
 import List from "../List/List.es6";
 
@@ -67,7 +66,7 @@ export default React.createClass({
 
                 </div>
             </div>
-            <Comments commentMountHandler={this._onCommentsMounted} {...this.props}/>
+            <div id="comment-root"></div>
             <List type="article" {...this.props}/>
           </div>
       </div>

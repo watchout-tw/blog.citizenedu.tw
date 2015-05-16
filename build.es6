@@ -55,10 +55,13 @@ metalsmith(__dirname)
     nonStatic: true
   }))
   .use(webpack({
-    entry: "./app/app.es6",
+    entry: {
+      app: "./app/app.es6",
+      comments: "./app/comment.es6",
+    },
     output: {
       path: __dirname + "/build/js",
-      filename: "bundle.js"
+      filename: "[name].js"
     },
     module: {
       loaders: [
