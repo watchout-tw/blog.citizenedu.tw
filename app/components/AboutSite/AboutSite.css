@@ -46,7 +46,13 @@
   color: white;
 }
 .AboutSite-meta {
-	margin-top: 12px;
+	margin-top: 6px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 600px){
+  .AboutSite-meta {
+    margin-top: 12px;
+  }
 }
 .AboutSite-meta a {
 	font-size: 12px;
