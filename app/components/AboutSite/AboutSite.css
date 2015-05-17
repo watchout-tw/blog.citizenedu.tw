@@ -1,45 +1,61 @@
 .AboutSite {
     width: 100%;
-    //background: #C39372;
     background: rgba(135,184,37,1);
 
     color: white;
-    //color: rgb(50,50,50);
     overflow: scroll;
     order: 1;
     flex: 1;
-}
-@media screen and (min-width: 600px){
-	.AboutSite {
-		height: 100vh;
-    	overflow: scroll;
-    	flex: 0 0 340px;
-    }
 }
 .AboutSite-img {
 	display: none;
 }
 @media screen and (min-width: 600px){
-    .AboutSite-img {
-        display: block;
-        width: 100%;
-    }
+	.AboutSite {
+		height: 100vh;
+    overflow: scroll;
+    flex: 0 0 340px;
+  }
+  .AboutSite-img {
+    display: block;
+    width: 100%;
+  }
 }
 .AboutSite-content {
-	line-height: 1.6;
 	padding: 10px;
 }
 .AboutSite-title {
+  margin: 0;
+  padding: 0;
 	font-size: 24px;
 	font-weight: 800;
+  color: white;
+}
+.AboutSite-info {
+  margin-top: 1px;
+}
+@media screen and (min-width: 600px){
+  .AboutSite-info {
+    margin-top: 5px;
+  }
+}
+.AboutSite-info {
+  padding: 0;
+	line-height: 1.6;
+  font-size: 16px;
+  color: white;
 }
 .AboutSite-meta {
-	margin-top: 20px;
-	font-size: 10px;
+	margin-top: 12px;
+}
+.AboutSite-meta a {
+	font-size: 12px;
 	display: inline-block;
 	cursor: pointer;
+  color: white;
+	border-bottom: none;
 }
-.AboutSite-meta:hover {
-	border-bottom: 1px solid;
-
+.AboutSite-meta a:hover {
+	border-bottom: none;
+  box-shadow: 0px 1px white;
 }
