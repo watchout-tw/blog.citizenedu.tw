@@ -55,10 +55,12 @@ export default React.createClass({
       .use(helper.withPromise())
       .end()
       .then(function (res) {
-        this.setState({
-          commentData: res.body.post_stream.posts
-        })
-      })
+        if (this.isMounted()) {
+          this.setState({
+            commentData: res.body.post_stream.posts
+          })
+        }
+      }.bind(this))
       .catch(function (err) {
         debug(err)
       })
@@ -180,6 +182,7 @@ export default React.createClass({
             </div>
           )
       });
+      debug(postsItem)
 
 
       /* ================================
