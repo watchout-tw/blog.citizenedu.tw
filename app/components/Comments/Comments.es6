@@ -19,7 +19,7 @@ export default React.createClass({
 
   getInitialState(){
       return {
-         focusTab: 'all',//all, editorsPick
+         focusTab: 'editorsPick',//all, editorsPick
          max: 3,
          commentData: [],
          expandedCommentId:{},
@@ -128,9 +128,7 @@ export default React.createClass({
 
       var postsItem = commentData
 
-      .filter((item)=>{
-        return (focusTab === 'editorsPick') ? (item.post_type === 2) : item;
-      })
+      .filter((item)=> (focusTab === 'all') || (focusTab === 'editorsPick' && item.post_type === 2))
       .map((item, key)=>{
           noComment  = false;
           var size = 120;
