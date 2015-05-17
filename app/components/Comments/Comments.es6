@@ -51,7 +51,7 @@ export default React.createClass({
   getCommentData() {
     superagent
       // XXX posts path
-      .get(helper.topicURL(this.state.path.replace('/posts/', ''))
+      .get(helper.topicURL(this.state.path.replace('/posts/', '')))
       .use(helper.withPromise())
       .end()
       .then(function (res) {
