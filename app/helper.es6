@@ -9,7 +9,8 @@ var helper = {
   baseURL: 'http://community.citizenedu.tw',
 
   topicURL(id) {
-    return `http://community.citizenedu.tw/t/${id}.json`
+    id = id.replace(/\/$/, '')
+    return `http://community.citizenedu.tw/t/topic/${id}.json`
   },
 
   // superagent middleware
@@ -18,8 +19,8 @@ var helper = {
       req.end = function () {
         return new Promise(function (resolve, reject) {
           Object.getPrototypeOf(req).end.call(req, function (err, res) {
-            if (err) { reject(err) }
-            if (!res.ok) { reject(res.text) }
+            if (err) { return reject(err) }
+            if (!res.ok) { return reject(res.text) }
             resolve(res)
           })
         })

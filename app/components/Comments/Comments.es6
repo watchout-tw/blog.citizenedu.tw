@@ -8,7 +8,7 @@ import superagent from "superagent";
 import helper from "../../helper";
 import Debug from "debug";
 
-var debug = console.log
+var debug = Debug("component:Comments");
 
 export default React.createClass({
   displayName: "Comments",
@@ -49,15 +49,17 @@ export default React.createClass({
   },
 
   getCommentData() {
-    debug("woot!")
     superagent
-      .get(helper.topicURL(this.props.path.replace(/.*\//, '')))
+      .get(helper.topicURL(this.state.path.replace(/.*\/[^$]/, '')))
       .use(helper.withPromise())
       .end()
       .then(function (res) {
         this.setState({
           commentData: res.body.post_stream.posts
         })
+      })
+      .catch(function (err) {
+        debug(err)
       })
   },
 
@@ -110,15 +112,12 @@ export default React.createClass({
     this.getCommentData()
   },
   render() {
-    debug('render')
 
       /* ================================
        *   Comments
        * ================================ */
       var { focusTab, max, commentData, expandedCommentId } =  this.state;
       var noComment = true;
-
-      console.log(commentData);
 
       var postsItem = commentData
 
