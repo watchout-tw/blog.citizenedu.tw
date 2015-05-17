@@ -57,7 +57,7 @@ export default React.createClass({
       .then(function (res) {
         if (this.isMounted()) {
           this.setState({
-            commentData: res.body.post_stream.posts
+            commentData: res.body.post_stream.posts.slice(1)
           })
         }
       }.bind(this))
