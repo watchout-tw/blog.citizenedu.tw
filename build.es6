@@ -11,7 +11,8 @@ metalsmith(__dirname)
     site: {
       title: "公民學院",
       url: "http://blog.citizenedu.tw/",
-      description: '<p>沃草公民學院是為所有人準備的人文學習、討論平台。我們不但小國小民，更要好國好民。</p><a class="AboutSite-meta" href="/posts/974">第一次來？</a>',
+      description: '沃草公民學院是為所有人準備的人文學習、討論平台。我們不但小國小民，更要好國好民。',
+      info: '<a href="/posts/974">第一次來？</a> | <a href="https://www.facebook.com/citizenedu" target="_blank">粉絲頁</a>',
       picture: "https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/1504090_922738074406074_7665839227643434653_n.jpg?oh=f0706350b9b2c39734154cbdd9bc6ae9&oe=55A7F6A8&__gda__=1437631201_97d700bf5b77f0a823a8f85f3a3fbf80",
       post_picture: "https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xfp1/t31.0-8/10514156_978580618821819_5686475740468114136_o.jpg",
     }
