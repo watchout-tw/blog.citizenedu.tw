@@ -8,9 +8,13 @@ var helper = {
 
   baseURL: 'http://community.citizenedu.tw',
 
-  topicURL(id) {
+  topicURL(id, {json} = {}) {
     id = id.replace(/\/$/, '')
-    return `http://community.citizenedu.tw/t/topic/${id}.json`
+    if (json) {
+      return `http://community.citizenedu.tw/t/topic/${id}.json`
+    } else {
+      return `http://community.citizenedu.tw/t/topic/${id}`
+    }
   },
 
   // superagent middleware

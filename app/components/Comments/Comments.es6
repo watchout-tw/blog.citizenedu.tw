@@ -10,6 +10,10 @@ import Debug from "debug";
 
 var debug = Debug("component:Comments");
 
+function postPathToId(path) {
+  return path.replace('/posts/', '')
+}
+
 export default React.createClass({
   displayName: "Comments",
 
@@ -51,7 +55,7 @@ export default React.createClass({
   getCommentData() {
     superagent
       // XXX posts path
-      .get(helper.topicURL(this.state.path.replace('/posts/', '')))
+      .get(helper.topicURL(postPathToId(this.state.path), {json: true}))
       .use(helper.withPromise())
       .end()
       .then(function (res) {
@@ -193,13 +197,13 @@ export default React.createClass({
               <div className="Comments-button"
                     onClick={this._onSetNewMax}>載入更多</div>
               <a className="Comments-button--hightlight"
-                 href={"http://community.citizenedu.tw/t/topic/" + this.state.path.replace('posts/', '')}
+                 href={helper.topicURL(postPathToId(this.state.path))}
                  target="_blank">我要留言</a>
           </div>
       ): (
           <div className="Comments-footer">
               <a className="Comments-button--hightlight"
-                 href={"http://community.citizenedu.tw/t/topic/" + this.state.path.replace('posts/', '')}
+                 href={helper.topicURL(postPathToId(this.state.path))}
                  target="_blank">我要留言</a>
           </div>
       );
