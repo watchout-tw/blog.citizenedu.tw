@@ -8,13 +8,23 @@ p, blockquote, h3, ul, ol, li, a, span {
 }
 
 .flexWrapper {
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
 	display: flex;
-	flex-flow: column wrap;
+
+   -webkit-flex-direction: column;
+   -ms-flex-direction: column;
+   flex-direction: column;
+	
 	background: #FAFAFA;
 }
 @media all and (min-width: 600px) {
 	.flexWrapper {
-		flex-flow: row wrap;
+		-webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
 	}
 }
 a, a:visited {
