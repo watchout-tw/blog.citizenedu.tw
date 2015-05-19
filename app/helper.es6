@@ -9,7 +9,7 @@ var helper = {
   baseURL: 'http://community.citizenedu.tw',
 
   topicURL(id, {json} = {}) {
-    id = id.replace(/\/$/, '')
+    id = String(id).replace(/\/$/, '')
     if (json) {
       return `http://community.citizenedu.tw/t/topic/${id}.json`
     } else {

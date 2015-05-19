@@ -58,7 +58,7 @@ function extractMeta() {
 function buildTopic(topicInfo) {
   debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
   return superagent
-    .get(helper.topicURL(topicInfo.id))
+    .get(helper.topicURL(topicInfo.id, {json: true}))
     .use(helper.withPromise())
     .end()
     .then((res) => res.body)
