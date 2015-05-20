@@ -4,7 +4,8 @@ var debug = require('debug')('update:post'),
     co = require('co'),
     superagent = require('superagent'),
     yaml = require('js-yaml'),
-    helper = require('./helper')
+    helper = require('./helper'),
+    argv = require('minimist')(process.argv.slice(2));
 
 function getColumnInfo(columns, name) {
   debug('get column %s', columns[name].title)
@@ -93,6 +94,8 @@ function writePost(topicInfo, topic) {
 
 co(function* () {
   var [posts, columns] = yield [helper.postsPath, helper.columnsPath].map(helper.readFiles)
+
+  if (argv.f) posts = []
 
   yield Object.keys(columns)
     .filter((n) => (undefined !== columns[n].link && columns[n].link))
