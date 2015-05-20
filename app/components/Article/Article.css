@@ -26,10 +26,7 @@
   position: relative;
 }
 .Article-coverImg {
-  width: 110%;
-  position: absolute;
-  top: -100px;
-  left: -10px;
+  height: 150px;
 }
 .Article-coverCopyright {
   color: #2F2930;
@@ -40,7 +37,7 @@
   border: none;
   font-size: 12px;
 }
-@media screen and (min-width: 400px){
+@media screen and (min-width: 400px) and (max-width: 1299px) {
     .Article-content,.Article-author{
 		    max-width: 600px;
         margin: 0 auto;
@@ -50,9 +47,21 @@
         height: 300px;
     }
     .Article-coverImg {
-        width: 110%;
-        top: -380px;
-        left: -10%;
+      height: 300px;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .Article-content,.Article-author{
+		    max-width: 600px;
+        margin: 0 auto;
+    }
+    .Article-cover {
+        width: 100%;
+        height: 300px;
+    }
+    .Article-coverImg {
+      width: 100%;
+      height: auto;
     }
 }
 .Article-content {
