@@ -84,7 +84,7 @@ function writePost(topicInfo, topic) {
         authorname: topic.post_stream.posts[0].username,
         avatar: helper.baseURL + topic.post_stream.posts[0].avatar_template,
         rtemplate: 'ArticlePage',
-        collection: [topicInfo.column_title].concat(topic.tags).concat(['posts']),
+        collection: [topicInfo.column_title].concat(topic.tags).concat(['posts']).concat([topic.post_stream.posts[0].username]),
         picture: topic.picture
       })
       + '---\n'

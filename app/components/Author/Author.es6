@@ -6,11 +6,6 @@ import Tabs from "../Tabs/Tabs.es6";
 
 var debug = Debug('component:Author')
 
-//http://community.citizenedu.tw/users/kris/activity
-import Author from "./Author.json";
-//http://community.citizenedu.tw/users/kris/activity/posts
-import AuthorPost from "./AuthorPost.json";
-
 export default React.createClass({
   _extract(name){
     var all = {}
@@ -145,12 +140,12 @@ export default React.createClass({
           var tabs = [{id:'article', title: '文章'},
                       {id:'bio', title: '簡介'}];
 
-          var postItems = AuthorPost.map((item, key)=>{
+          var postItems = this.props.collections[this.props.path.replace(/.*\//, '')].map((item, key)=>{
               return(
                   <a className="Author-articleItem"
                      key={key}
-                     href="/article/1"  >
-                       <div className="Author-articleItemDate">{item.date}</div>
+                     href={"/" + item.path}  >
+                       <div className="Author-articleItemDate">{item.created_at}</div>
                        <div className="Author-articleItemTitle">{item.title}</div>
                   </a>
               )
