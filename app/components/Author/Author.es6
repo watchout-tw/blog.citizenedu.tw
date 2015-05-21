@@ -140,7 +140,12 @@ export default React.createClass({
           var tabs = [{id:'article', title: '文章'},
                       {id:'bio', title: '簡介'}];
 
-          var postItems = this.props.collections[this.props.path.replace(/.*\//, '')].map((item, key)=>{
+          function timestamp(dateString) {
+            return (new Date(dateString)).getTime()
+          }
+          var postItems = this.props.collections[this.props.path.replace(/.*\//, '')]
+            .sort((a, b) => timestamp(b.created_at) - timestamp(a.created_at))
+            .map((item, key)=>{
               return(
                   <a className="Author-articleItem"
                      key={key}
