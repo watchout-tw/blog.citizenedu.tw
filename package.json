@@ -43,7 +43,7 @@
     "metalsmith": "^1.5.0",
     "metalsmith-branch": "0.0.4",
     "metalsmith-collections": "^0.7.0",
-    "metalsmith-excerpts": "^1.0.0",
+    "metalsmith-excerpts": "git+https://github.com/pm5/metalsmith-excerpts.git",
     "metalsmith-permalinks": "^0.4.0",
     "metalsmith-react-templates": "git://github.com/pm5/metalsmith-react-templates.git",
     "metalsmith-serve": "0.0.3",
