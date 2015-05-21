@@ -38,10 +38,13 @@ export default React.createClass({
               <AboutSite {...this.props}/>
               <List type="index"
                     tag={this.state.tag}
-                    posts={posts}/>
+                    posts={posts}
+                    />
               <Tags changeTagHandler={this._onChangeTag}
                     items={this.props.collections.subjects.concat(this.props.collections.tags)}
-                    tag={this.state.tag}/>
+                    tag={this.state.tag}
+                    {...this.props}
+                    />
             </div>
 
         </div>

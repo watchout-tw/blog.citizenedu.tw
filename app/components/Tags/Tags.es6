@@ -16,7 +16,7 @@ export default React.createClass({
       var tagsItem = this.props.items.map((item, key)=>{
           var tagClasses = classSet({
             "Tags-Tag": true,
-            "is-active" : this.props.tag == item.title
+            "is-active" : this.props.title === item.title
           })
           return (
             <a className={tagClasses}
