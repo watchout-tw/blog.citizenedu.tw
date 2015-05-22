@@ -28,6 +28,11 @@
 .Article-coverImg {
   height: 150px;
 }
+.Article-coverCopyright a {
+  color: #2F2930;
+  border: none;
+  font-size: 12px;
+}
 .Article-coverCopyright {
   color: #2F2930;
   position: absolute;

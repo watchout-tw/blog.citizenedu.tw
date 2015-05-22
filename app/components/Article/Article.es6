@@ -34,6 +34,7 @@ export default React.createClass({
       var size = 120;//size=45,120
       //var avatarTemplate = data.avatar_template.split('{size}')[0]+"/"+size+"/"+article.avatar_template.split('{size}')[1];
       //var imgURL = "http://community.citizenedu.tw"+avatarTemplate;
+      var attr = this.props.picture_attr ? "圖／" + this.props.picture_attr : "";
       return (
       <div>
           <div className="Article">
@@ -41,9 +42,8 @@ export default React.createClass({
             <div className="Article-cover">
                 <img className="Article-coverImg"
                      src={this.props.picture || this.props.site.post_picture} />
-                <a className="Article-coverCopyright"
-                   href="https://www.facebook.com/ElaineeFangs"
-                   target="_blank">圖／Elainee.’s</a>
+                <span className="Article-coverCopyright"
+                    dangerouslySetInnerHTML={{__html: attr}}></span>
             </div>
 
             <Social goToCommentHandler={this._onGoToComment} {...this.props}/>

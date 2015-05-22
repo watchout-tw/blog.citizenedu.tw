@@ -33,6 +33,26 @@
   .AboutSite-img {
     display: block;
     width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  .AboutSite-imgPicture {
+    width: 100%;
+  }
+  .AboutSite-imgCopyright a {
+    color: #2F2930;
+    border: none;
+    font-size: 12px;
+  }
+  .AboutSite-imgCopyright {
+    color: #2F2930;
+    position: absolute;
+    bottom: 4px;
+    right: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 12px;
   }
 }
 .AboutSite-content {
