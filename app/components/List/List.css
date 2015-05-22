@@ -13,17 +13,17 @@
 .List-nextItem {
 	line-height: 1.4;
 	font-size: 14px;
-	margin: 10px 0 4px 0;	
+	margin: 10px 0 4px 0;
 }
 .List-nextItemTitle {
 	background: rgb(200,200,200);
 	display: inline-block;
 	padding: 6px 14px;
 	color: white;
-	margin: 10px 0;	
+	margin: 10px 0;
 }
 .List-nextPost {
-	cursor: pointer;	
+	cursor: pointer;
 }
 .List-nextPost:hover, .List-nextTitle:hover {
 	color: #87B825;
@@ -85,8 +85,8 @@
 .List-articleItemDate {
    display: inline-block;
    background: rgb(220,220,220);
-   padding: 0 4px;
    margin: 5px 0;
+   color: #a0a0a0;
 }
 @media all and (min-width: 400px){
 	.List-articleItemDate {

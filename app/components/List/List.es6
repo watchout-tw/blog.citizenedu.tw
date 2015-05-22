@@ -62,7 +62,7 @@ export default React.createClass({
                 <a className="List-articleItem"
                    key={key}
                    href={"/" + item.path}>
-                     <div className="List-articleItemDate">{item.published_at}</div>
+                     <div className="List-articleItemDate">{item.created_at}</div>
                      <div className="List-articleItemTitle">{title}</div>
                 </a>
             )
@@ -84,6 +84,7 @@ export default React.createClass({
                    key={key}
                    href={"/" + item.path}>
                      <div className="List-articleItemTitle List-boldTitle">{item.author}：{item.title}</div>
+                     <div className="List-articleItemDate">{item.created_at}</div>
                      <div className="List-articleItemBrief"
                           dangerouslySetInnerHTML={{__html: item.excerpt}}>
                      </div>
