@@ -22,7 +22,10 @@ function extractTopics(posts, column) {
     .filter((t) => !t.pinned)
     .filter((t) => !posts[`${t.id}.html`])
     // XXX topic data doesn't have primary category/column id
-    .map((t) => Object.assign(t, { column_title: column.title }))
+    .map((t) => Object.assign(t, {
+      column_title: column.title,
+      post_picture: column.post_picture
+    }))
 }
 
 function extractMeta() {
@@ -85,7 +88,7 @@ function writePost(topicInfo, topic) {
         avatar: helper.baseURL + topic.post_stream.posts[0].avatar_template,
         rtemplate: 'ArticlePage',
         collection: [topicInfo.column_title].concat(topic.tags).concat(['posts']).concat([topic.post_stream.posts[0].username]),
-        picture: topic.picture
+        picture: topic.picture || topicInfo.post_picture
       })
       + '---\n'
       + topic.post_stream.posts[0].cooked
