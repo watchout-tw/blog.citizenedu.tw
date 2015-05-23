@@ -12,7 +12,8 @@
     "serve": "http-server build",
     "watch": "watch 'npm run build' app src",
     "livereload": "live-reload app src --delay=8000",
-    "dev": "parallelshell 'npm run serve' 'npm run watch' 'npm run livereload'"
+    "dev": "parallelshell 'npm run serve' 'npm run watch' 'npm run livereload'",
+    "deploy": "git push && ./deploy"
   },
   "repository": {
     "type": "git",
