@@ -215,8 +215,12 @@ export default React.createClass({
       <div className="Comments">
          <div className="Comments-content">
             <div className="Comments-header">
-              <div className="Comments-title">編輯嚴選留言</div>
+              <div className="Comments-title"
+                onClick={this._onToggle.bind(null, 'editorsPick')}>編輯嚴選留言</div>
+              <div className="Comments-goSeeAll"
+                onClick={this._onToggle.bind(null, 'all')}>看全部留言</div>
             </div>
+
 
             {content}
             {showMoreButtonItem}
