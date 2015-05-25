@@ -1,7 +1,7 @@
 .Comments {
 	background: rgb(250,250,250);
 	padding: 40px 8px;
-	
+
 }
 @media screen and (min-width: 400px){
     .Comments-content {
@@ -22,7 +22,8 @@
     font-weight: 800;
     display: inline-block;
 }
-a.Comments-goSeeAll, a.Comments-goSeeAll:visited {
+.Comments-goSeeAll,
+.Comments-editorsPick {
 	font-size: 14px;
 	display: inline-block;
 	margin: 0 10px;
@@ -33,8 +34,12 @@ a.Comments-goSeeAll, a.Comments-goSeeAll:visited {
     line-height: 1;
 
 }
-a.Comments-goSeeAll:hover {
+.Comments-editorsPick:hover,
+.Comments-goSeeAll:hover {
 	border-bottom: 1px solid rgb(100,100,100);
+}
+.Comments-hideTab {
+  display: none;
 }
 .Comments-noPost {
 	padding: 10px;
@@ -42,11 +47,11 @@ a.Comments-goSeeAll:hover {
 .Comments-post {
 	border-bottom: 1px solid rgb(160,160,160);
 	padding-bottom: 10px;
-	
+
 	position: relative;
 	min-height: 50px;
 	overflow: hidden;
-	
+
 	margin: 0 auto;
 	margin-bottom: 10px;
 
@@ -109,7 +114,7 @@ a.Comments-goSeeAll:hover {
 	padding-left: 26px;
 	line-height: 1.2;
 	font-size: 16px;
-	
+
 }
 .Comments-post li {
 	margin: 10px;
@@ -183,10 +188,10 @@ a.Comments-button--hightlight:hover {
 }
 /* comment 中引用 */
 /*aside .title, aside blockquote {
-	display: none;	
+	display: none;
 }
 .Comments-main.is-expanded aside .title, .Comments-main.is-expanded aside blockquote {
-	display: block;	
+	display: block;
 }*/
 aside {
 	display: block;
@@ -200,7 +205,7 @@ aside {
 }
 aside blockquote {
     font-family: sans-serif;
-    //font-family: 'Georgia';	
+    //font-family: 'Georgia';
     //quotes: "\201C" "\201D" "\2018" "\2019";
     quotes: "\201C" "\201D" "\201C" "\201D";
     margin: 0px;
@@ -217,7 +222,7 @@ blockquote {
    color: rgb(70,70,70);
 }*/
 aside blockquote > * {
-	color: rgb(100,100,100);	
+	color: rgb(100,100,100);
 }
 
 .Comments-main p {

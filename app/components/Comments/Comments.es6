@@ -1,6 +1,7 @@
 import React from "react/addons";
 import "./Comments.css";
 import Tabs from "../Tabs/Tabs.es6";
+import classNames from "classnames";
 
 import $ from "jquery";
 
@@ -20,6 +21,7 @@ export default React.createClass({
   getInitialState(){
       return {
          focusTab: 'editorsPick',//all, editorsPick
+         tabTitle: this._tabs['editorsPick'],
          max: 3,
          commentData: [],
          expandedCommentId:{},
@@ -27,10 +29,16 @@ export default React.createClass({
       }
   },
 
+  _tabs: {
+    all: '全部留言',
+    editorsPick: '編輯嚴選留言'
+  },
+
   _onToggle(choice, event){
       //console.log(choice);
       this.setState({
-          focusTab: choice
+          focusTab: choice,
+        tabTitle: this._tabs[choice]
       });
   },
 
@@ -215,9 +223,10 @@ export default React.createClass({
       <div className="Comments">
          <div className="Comments-content">
             <div className="Comments-header">
-              <div className="Comments-title"
-                onClick={this._onToggle.bind(null, 'editorsPick')}>編輯嚴選留言</div>
-              <div className="Comments-goSeeAll"
+              <div className="Comments-title">{this.state.tabTitle}</div>
+              <div className={classNames("Comments-editorsPick", {'Comments-hideTab': this.state.focusTab === 'editorsPick'})}
+                onClick={this._onToggle.bind(null, 'editorsPick')}>看編輯嚴選留言</div>
+              <div className={classNames("Comments-goSeeAll", {'Comments-hideTab': this.state.focusTab === 'all'})}
                 onClick={this._onToggle.bind(null, 'all')}>看全部留言</div>
             </div>
 
