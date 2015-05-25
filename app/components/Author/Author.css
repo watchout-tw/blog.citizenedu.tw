@@ -2,7 +2,7 @@
 	line-height: 1.6;
 	margin-bottom: 20px;
 	box-shadow: 4px 4px 0px rgba(200,200,200,0.4);
-	padding: 0 18px;
+	padding: 18px 18px 0 18px;
 	background: white;
 	cursor: pointer;
 	border: 1px solid gray;
@@ -12,6 +12,7 @@
 .Author p{
 	line-height: 1.4;
 	font-size: 16px;
+	clear: left;
 
 }
 .Author img {
