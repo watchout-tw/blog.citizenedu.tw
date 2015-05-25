@@ -42,6 +42,18 @@
   border: none;
   font-size: 12px;
 }
+h1.Article-title {
+  border-left: none;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-left: 0;
+}
+@media screen and (min-width: 400px) {
+    h1.Article-title {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
 @media screen and (min-width: 400px) and (max-width: 1299px) {
     .Article-content,.Article-author{
 		    max-width: 600px;

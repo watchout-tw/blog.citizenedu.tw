@@ -15,16 +15,14 @@
 .Social-social {
 	background: #F1F1F1;
 	display: inline-block;
-	border-right: 1px solid rgb(220,220,220);
-	width: 50%;
+	border-left: 3px solid rgb(230,230,230);
+	width: calc(50% - 3px);
 	height: 50px;
-	padding-top: 16px;
 	text-align: center;
 	cursor: pointer;
+	padding: 16px 0 0 0;
 
 }
-
-
 
 /* WEB */
 @media screen and (min-width: 400px){
@@ -39,14 +37,14 @@
        text-align: left;
        position: absolute;
        top: 25px;
-       left: 40px;
+       left: 5px;
        width: auto;
     }
     .Social-social {
     	display: inline-block;
     	width: auto;
     	height: auto;
-    	padding: 0 20px 0 0 ;
+    	padding: 0 0 0 20px;
     	margin-right: 20px;
 	    background: none;
 	    text-align: left;
