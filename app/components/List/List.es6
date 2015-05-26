@@ -49,36 +49,49 @@ export default React.createClass({
     });
   },
 
+  _extract(name){
+    var all = {}
+    this.props.collections[name].forEach(function (x) {
+      all[x.title] = true
+    })
+    return this.props.collection.filter((c) => all[c])
+  },
+
   render() {
       var result = <div></div>;
       var type = this.props.type;
       var classSet = React.addons.classSet;
 
       if(type === "article"){
+        var subject = this._extract('subjects')[0]
 
-        var postItems = this.props.posts.map((item, key)=>{
-            var title = item.author+"："+item.title;
-            return(
-                <a className="List-articleItem"
-                   key={key}
-                   href={"/" + item.path}>
-                     <div className="List-articleItemDate">{item.created_at}</div>
-                     <div className="List-articleItemTitle">{title}</div>
-                </a>
-            )
-        });
+        var posts = this.props.collections[subject] || []
+        var postItems = []
+        if (posts.length > 0) {
+          postItems = posts.map((item, key)=>{
+              var title = item.author+"："+item.title;
+              return(
+                  <a className="List-articleItem"
+                     key={key}
+                     href={"/" + item.path}>
+                       <div className="List-articleItemDate">{item.created_at}</div>
+                       <div className="List-articleItemTitle">{title}</div>
+                  </a>
+              )
+          });
+        }
 
         result = (
         <div className="List List-article" ref="List">
           <div className="List-content">
 
-              <div className="List-title">其他哲學類的文章</div>
+              <div className="List-title">其他{subject || '同類型'}的文章</div>
               {postItems}
           </div>
         </div>);
 
      }else if(type === "index"){
-        var postItems = this.props.posts.map((item, key)=>{
+        var postItems = this.props.posts.slice(0, 5).map((item, key)=>{
             return(
                 <a className="List-indexItem"
                    key={key}
