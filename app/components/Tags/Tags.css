@@ -1,7 +1,7 @@
 .Tags {
 	//background: #D36E6E;
 	background: rgb(250,250,250);
-	
+
 	display: inline-block;
 	vertical-align: top;
 	padding-left: 10px;
@@ -12,7 +12,7 @@
   	-ms-flex-order: 3;              /* TWEENER - IE 10 */
   	-webkit-order: 3;               /* NEW - Chrome */
 	order: 3;
-	
+
 }
 @media screen and (min-width: 600px){
 	.Tags {
@@ -41,10 +41,13 @@
 	margin: 10px 0;
 	color: rgb(120,120,120);
 }
+a.Tags-Tag:visited {
+	border-bottom: 1px solid rgb(220,220,220);
+}
 .Tags-Tag {
 	padding: 5px 10px;
 	cursor: pointer;
-	border: 1px solid rgb(220,220,220);
+  border: 1px solid rgb(220,220,220);
 	display: inline-block;
 	margin: 4px;
 	background: white;
