@@ -11,11 +11,10 @@ export default React.createClass({
       }
   },
   _onFBShare(){
-      var appid = "417086321749673";
-      var domain = "http%3A%2F%2Fblog-test.citizenedu.tw";
-      var picture = "http://wallpaperu.com/wp-content/uploads/2014/09/cute_cat_wallpaper26.jpg";
-      window.location.href = "https://www.facebook.com/dialog/feed?app_id="+appid+"&display=popup&caption=&link="+domain+"&redirect_uri="+domain+"&picture="+picture;
-
+      console.log('woot')
+      var appid = "1016443865047062";
+      var url = window.location.href;
+      window.location.href = "https://www.facebook.com/dialog/feed?app_id="+appid+"&display=popup&caption=&link="+url+"&redirect_uri="+url+"&picture=";
   },
   render() {
 
