@@ -1,13 +1,19 @@
 import React from "react";
+import Transmit from "react-transmit";
 import "./Social.css";
+import superagent from "superagent";
+import helper from "../../helper";
 
+function postPathToId(path) {
+  return path.replace('/posts/', '')
+}
 
-export default React.createClass({
+const Social = React.createClass({
   displayName: "Social",
 
   getInitialState(){
       return {
-          showShare: false
+        showShare: false,
       }
   },
   _onFBShare(){
@@ -22,12 +28,29 @@ export default React.createClass({
           <div className="Social">
               <div className="Social-socialSets">
                 <div className="Social-social"
-                     onClick={this.props.goToCommentHandler}>5 討論</div>
+                     onClick={this.props.goToCommentHandler}>{this.props.disqusPostsCount || 0} 討論</div>
                 <div className="Social-social"
-                     onClick={this._onFBShare}>49 分享</div>
+                     onClick={this._onFBShare}>{this.props.fbShareCount || 0} 分享</div>
               </div>
 
           </div>
       );
   }
 });
+
+export default Transmit.createContainer(Social, {
+  queries: {
+    disqusPostsCount: function (param) {
+      return superagent
+        .get(helper.topicURL(postPathToId(location.pathname), {json: true}))
+        .use(helper.withPromise())
+        .end()
+        .then(function (res) {
+          return +res.body.posts_count - 1
+        })
+    },
+    fbShareCount: function (param) {
+      return new Promise((r) => r(100))
+    }
+  }
+})
