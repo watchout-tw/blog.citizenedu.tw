@@ -50,7 +50,13 @@ export default Transmit.createContainer(Social, {
         })
     },
     fbShareCount: function (param) {
-      return new Promise((r) => r(100))
+      return superagent
+        .get("https://graph.facebook.com/?id=" + location)
+        .use(helper.withPromise())
+        .end()
+        .then(function (res) {
+          return +res.shares || 0
+        })
     }
   }
 })
