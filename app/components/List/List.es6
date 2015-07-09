@@ -98,6 +98,7 @@ export default React.createClass({
                    href={"/" + item.path}>
                      <div className="List-articleItemTitle List-boldTitle">{item.author}：{item.title}</div>
                      <div className="List-articleItemDate">{item.created_at}</div>
+                     <div className="List-articleItemColumn">{item.collection.filter((c) => this._getColumns()[c])[0]}</div>
                      <div className="List-articleItemBrief"
                           dangerouslySetInnerHTML={{__html: item.excerpt}}>
                      </div>

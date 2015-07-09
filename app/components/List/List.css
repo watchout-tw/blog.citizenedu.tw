@@ -82,6 +82,12 @@
 	color: black;
 	background: rgb(240,240,240);
 }
+.List-articleItemColumn {
+   display: inline-block;
+   background: rgb(220,220,220);
+   margin: 5px 0;
+   color: #a0a0a0;
+}
 .List-articleItemDate {
    display: inline-block;
    background: rgb(220,220,220);
@@ -89,11 +95,19 @@
    color: #a0a0a0;
 }
 @media all and (min-width: 400px){
+	.List-articleItemColumn {
+	   display: inline-block;
+       float: left;
+       background: none;
+       margin: 0 14px 0 0;
+       line-height: 1.6em;
+    }
 	.List-articleItemDate {
 	   display: inline-block;
        float: left;
        background: none;
        margin: 0 14px 0 0;
+       line-height: 1.6em;
     }
 }
 .List-articleItemTitle {
@@ -142,6 +156,7 @@
 	font-size: 16px;
 }
 .List-articleItemBrief {
+  clear: left;
 	color: rgb(100,100,100);
 }
 
