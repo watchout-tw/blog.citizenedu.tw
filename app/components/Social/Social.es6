@@ -55,7 +55,7 @@ export default Transmit.createContainer(Social, {
         .use(helper.withPromise())
         .end()
         .then(function (res) {
-          return +res.shares || 0
+          return +res.body.shares || 0
         })
     }
   }
