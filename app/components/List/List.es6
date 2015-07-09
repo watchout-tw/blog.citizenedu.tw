@@ -5,6 +5,18 @@ import "./List.css";
 //http://community.citizenedu.tw/users/kris/activity/posts
 import AuthorPost from "./AuthorPost.json";
 
+const allColumns = {
+  '巷仔口社會學': true,
+  '歷史學柑仔店': true,
+  '沃草布告欄': true,
+  '沃草烙哲學': true,
+  '沃草野台': true,
+  '芭樂人類學': true,
+  '菜市場政治學': true,
+  '評論懶人包': true,
+  '阿草愛讀書': true,
+};
+
 export default React.createClass({
   displayName: "List",
 
@@ -98,7 +110,7 @@ export default React.createClass({
                    href={"/" + item.path}>
                      <div className="List-articleItemTitle List-boldTitle">{item.author}：{item.title}</div>
                      <div className="List-articleItemDate">{item.created_at}</div>
-                     <div className="List-articleItemColumn">{item.collection.filter((c) => this._getColumns()[c])[0]}</div>
+                     <div className="List-articleItemColumn">{item.collection.filter((c) => allColumns[c])[0]}</div>
                      <div className="List-articleItemBrief"
                           dangerouslySetInnerHTML={{__html: item.excerpt}}>
                      </div>
