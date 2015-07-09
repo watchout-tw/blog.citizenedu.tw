@@ -59,6 +59,7 @@ metalsmith(__dirname)
     entry: {
       app: "./app/app.es6",
       comments: "./app/comment.es6",
+      social: "./app/social.es6",
     },
     output: {
       path: __dirname + "/build/js",

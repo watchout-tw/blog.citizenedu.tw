@@ -24,7 +24,7 @@ export default React.createClass({
                 <div className="Social-social"
                      onClick={this.props.goToCommentHandler}>5 討論</div>
                 <div className="Social-social"
-                     onClick={this._onFBShare}>48 分享</div>
+                     onClick={this._onFBShare}>49 分享</div>
               </div>
 
           </div>

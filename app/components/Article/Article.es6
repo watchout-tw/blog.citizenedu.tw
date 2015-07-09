@@ -1,7 +1,6 @@
 import React from "react/addons";
 
 import Author from "../Author/Author.es6";
-import Social from "../Social/Social.es6";
 import List from "../List/List.es6";
 
 import "./Article.css";
@@ -46,9 +45,9 @@ export default React.createClass({
                     dangerouslySetInnerHTML={{__html: attr}}></span>
             </div>
 
-            <Social goToCommentHandler={this._onGoToComment} {...this.props}/>
+            <div id="social-root"></div>
 
-            
+
             <div className="Article-content">
               <h1 className="Article-title">{this.state.title}</h1>
               <div dangerouslySetInnerHTML={{__html: this.state.contents}}></div>
