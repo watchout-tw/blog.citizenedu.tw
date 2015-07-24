@@ -7,7 +7,7 @@
   "scripts": {
     "env": "env",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "update": "script/update",
+    "update": "script/update.sh",
     "build": "babel-node build.es6",
     "serve": "http-server build",
     "watch": "watch 'npm run build' app src",
