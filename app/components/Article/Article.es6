@@ -56,7 +56,7 @@ export default React.createClass({
                 <div className="Article-author">
                    <div className="Article-authorHeader">
                       <img className="Article-avatar"
-                           src={this.props.avatar.replace('{size}', '120x120')} />
+                           src={this.props.avatar.replace('{size}', '120')} />
                       <div className="Article-info">
                           <a className="Article-name" href={"/authors/" + this.props.authorname}>{this.props.author}</a>
                           <div className="Article-date">{this.state.created_at}</div>

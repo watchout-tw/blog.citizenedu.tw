@@ -121,7 +121,7 @@ export default React.createClass({
               <div className={classes}
                    ref="AuthorWidget">
                   <img className="Author-widgetAvatar"
-                       src={this.props.avatar.replace('{size}', '120x120')} />
+                       src={this.props.avatar.replace('{size}', '120')} />
                   <div className="Author-widgetInfo">
                       <a className="Author-widgetLink"
                          href={"/authors/" + this.props.authorname}>{this.props.author}</a>・<a className="Author-widgetLink">{this.renderColumn()}</a>
@@ -166,7 +166,7 @@ export default React.createClass({
                   <div className="Author--pageContent">
                       <div className="Author-pageTop">
                           <img className="Author-pageAvatar"
-                            src={this.props.avatar.replace('{size}', '120x120')} />
+                            src={this.props.avatar.replace('{size}', '120')} />
                           <div className="Author-nameTitle">{this.props.title}</div>
                       </div>
                       <div className="Author-bio">
