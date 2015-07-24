@@ -7,7 +7,12 @@
 	width: 100%;
 
 	flex: 1;
-	order: 2;
+
+  -webkit-box-ordinal-group: 2;   /* OLD - iOS 6-, Safari 3.2-6 */
+  -moz-box-ordinal-group: 2;      /* OLD - Firefox 29- */
+  -ms-flex-order: 2;              /* TWEENER - IE 20 */
+  -webkit-order: 2;               /* NEW - Chrome */
+  order: 2;
 
 }
 
