@@ -103,7 +103,7 @@ export default React.createClass({
         </div>);
 
      }else if(type === "index"){
-        var postItems = this.props.posts.slice(0, 5).map((item, key)=>{
+        var postItems = this.props.posts.slice(0, 20).map((item, key)=>{
             return(
                 <a className="List-indexItem"
                    key={key}
