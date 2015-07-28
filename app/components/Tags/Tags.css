@@ -7,34 +7,8 @@
 	padding-left: 10px;
 	width: 100%;
 	padding-bottom: 80px;
-    -webkit-box-ordinal-group: 3;   /* OLD - iOS 6-, Safari 3.1-6 */
-  	-moz-box-ordinal-group: 3;      /* OLD - Firefox 19- */
-  	-ms-flex-order: 3;              /* TWEENER - IE 10 */
-  	-webkit-order: 3;               /* NEW - Chrome */
-	order: 3;
-
 }
-@media screen and (min-width: 600px){
-	.Tags {
-		-webkit-box-flex: 1 100%;      /* OLD - iOS 6-, Safari 3.1-6 */
-    	-moz-box-flex: 1 100%;         /* OLD - Firefox 19- */
-    	-webkit-flex: 1 100%;          /* Chrome */
-    	-ms-flex: 1 100%;              /* IE 10 */
-		flex: 1 100%;
-    }
 
-}
-@media screen and (min-width: 1000px){
-	.Tags {
-		-webkit-box-flex: 0 0 320px;     /* OLD - iOS 6-, Safari 3.1-6 */
-    	-moz-box-flex: 0 0 320px;        /* OLD - Firefox 19- */
-    	-webkit-flex: 0 0 320px;         /* Chrome */
-    	-ms-flex: 0 0 320px;            /* IE 10 */
-		flex: 0 0 320px;
-    	height: 100vh;
-    }
-
-}
 .Tags-title {
 	border-bottom: 1px solid rgb(220,220,220);
 	padding: 5px;

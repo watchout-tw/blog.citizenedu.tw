@@ -22,8 +22,6 @@
 }
 @media screen and (min-width: 600px){
 	.AboutSite {
-		height: 100vh;
-    overflow: scroll;
     -webkit-box-flex:  0 0 340px;      /* OLD - iOS 6-, Safari 3.1-6 */
     -moz-box-flex:  0 0 340px;         /* OLD - Firefox 19- */
     -webkit-flex:  0 0 340px;          /* Chrome */

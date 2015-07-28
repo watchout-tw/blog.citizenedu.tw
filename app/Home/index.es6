@@ -29,7 +29,7 @@ export default React.createClass({
       });
     }
     var posts = type && index[this.props.title] ? (this.props.collections[this.props.title] || []) : this.props.posts;
-
+    
     return (
 
         <div>
@@ -38,13 +38,20 @@ export default React.createClass({
               <AboutSite {...this.props}/>
               <List type="index"
                     tag={this.state.tag}
-                    posts={posts}
-                    />
-              <Tags changeTagHandler={this._onChangeTag}
+                    posts={posts} />
+              <div className="defaultTags">
+                  <Tags changeTagHandler={this._onChangeTag}
                     items={this.props.collections.subjects.concat(this.props.collections.tags)}
                     tag={this.state.tag}
-                    {...this.props}
-                    />
+                    {...this.props} />
+              </div>
+            </div>
+            <div className="padTags">
+                <Tags changeTagHandler={this._onChangeTag}
+                      items={this.props.collections.subjects.concat(this.props.collections.tags)}
+                      tag={this.state.tag}
+                      {...this.props} />
+
             </div>
 
         </div>
