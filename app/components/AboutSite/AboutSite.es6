@@ -10,7 +10,7 @@ export default React.createClass({
       return (
       <div className="AboutSite">
         <figure className="AboutSite-img">
-          <img className="AboutSite-imgPicture" src={this.props.picture || this.props.site.picture} />
+          <img className="AboutSite-imgPicture" src={this.props.picture || require(this.props.site.picture)} />
           <span className="AboutSite-imgCopyright"
             dangerouslySetInnerHTML={{__html: attr}}></span>
         </figure>

@@ -13,7 +13,7 @@ metalsmith(__dirname)
       url: "http://blog.citizenedu.tw/",
       description: '沃草公民學院是為所有人準備的人文學習、討論平台。我們不但小國小民，更要好國好民。',
       info: '<a href="/posts/990">第一次來？</a> | <a href="https://www.facebook.com/citizenedu" target="_blank">粉絲頁</a>',
-      picture: "http://community.citizenedu.tw/uploads/default/232/8a48d7059c66ce03.jpg",
+      picture: "../../cover.jpg",
       post_picture: "http://community.citizenedu.tw/uploads/default/258/588e74a547d93ad5.png"
     }
   })
@@ -69,7 +69,7 @@ metalsmith(__dirname)
       loaders: [
         { test: /\.(js|es6)$/, exclude: /node_modules/, loader: "babel-loader" },
         { test: /\.css$/, loader: "style-loader!css-loader" },
-        { test: /\.(jpg|png)$/, loader: "url-loader" },
+        { test: /\.(jpg|png)$/, loader: "url-loader?limit=1" },
         { test: /\.(json)$/, loader: "json-loader" },
       ]
     },
