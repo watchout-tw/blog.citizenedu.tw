@@ -13,7 +13,8 @@
     "watch": "npm run build && watch 'npm run build' app src",
     "livereload": "live-reload app src --delay=8000",
     "dev": "parallelshell 'npm run serve' 'npm run watch' 'npm run livereload'",
-    "deploy": "npm run build && cp CNAME build/ && gh-pages -d build/ -b gh-pages"
+    "deploy": "npm run build && cp CNAME build/ && gh-pages -d build/ -b gh-pages",
+    "update-post": "rm src/posts/* && npm run update && npm run deploy"
   },
   "repository": {
     "type": "git",
