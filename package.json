@@ -1,6 +1,6 @@
 {
   "name": "blog-citizenedu-tw",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "blog.citizenedu.tw",
   "main": "index.js",
   "private": true,
