@@ -5,11 +5,12 @@ import excerpts from "metalsmith-excerpts";
 import collections from "metalsmith-collections";
 import branch from "metalsmith-branch";
 import permalinks from "metalsmith-permalinks";
+import feed from 'metalsmith-feed'
 
 metalsmith(__dirname)
   .metadata({
     site: {
-      title: "公民學院",
+      title: "沃草公民學院",
       url: "http://blog.citizenedu.tw/",
       description: '沃草公民學院是為所有人準備的人文學習、討論平台。我們不但小國小民，更要好國好民。',
       info: '<a href="/posts/990">第一次來？</a> | <a href="https://www.facebook.com/citizenedu" target="_blank">粉絲頁</a>',
@@ -77,6 +78,7 @@ metalsmith(__dirname)
       extensions: ["", ".web.js", ".js", ".jsx", ".es6"]
     }
   }))
+  .use(feed({collection: 'posts'}))
   .build(function (err) {
     if (err) throw err;
     console.log("Site build complete.");
