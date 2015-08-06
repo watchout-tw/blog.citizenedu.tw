@@ -6,6 +6,7 @@ var debug = require('debug')('update:post'),
     yaml = require('js-yaml'),
     helper = require('./helper'),
     argv = require('minimist')(process.argv.slice(2));
+var mkdirp = require('mkdirp')
 
 function getColumnInfo(columns, name) {
   debug('get column %s', columns[name].title)
@@ -77,6 +78,7 @@ function writePost(topicInfo, topic) {
   if (topic.picture && topic.picture.substr(0, 4) !== "http") {
     topic.picture = helper.baseURL + topic.picture
   }
+  mkdirp(helper.postsPath)
   // alright, we are using Discourse topic ID as Blog post ID...
   return fs.writeFile(`${helper.postsPath}/${topic.id}.html`,
       '---\n'
@@ -100,6 +102,7 @@ co(function* () {
   var [posts, columns] = yield [helper.postsPath, helper.columnsPath].map(helper.readFiles)
 
   if (argv.f) posts = []
+  posts = posts || []
 
   yield Object.keys(columns)
     .filter((n) => (undefined !== columns[n].link && columns[n].link))

@@ -5,6 +5,7 @@ var debug = require('debug')('update:author'),
     superagent = require('superagent'),
     yaml = require('js-yaml'),
     helper = require('./helper')
+var mkdirp = require('mkdirp')
 
 var userURL = 'http://community.citizenedu.tw/users/'
 
@@ -20,6 +21,7 @@ function buildAuthor(username) {
 
 function writeAuthor(author) {
   debug('write author %s', author.user.username)
+  mkdirp(helper.authorsPath)
   return fs.writeFile(`${helper.authorsPath}/${author.user.username}.html`,
       '---\n'
       + yaml.safeDump({
@@ -34,6 +36,7 @@ function writeAuthor(author) {
 
 co(function* () {
   var [posts, authors] = yield [helper.postsPath, helper.authorsPath].map(helper.readFiles)
+  authors = authors || []
 
   var r = yield Object.values(posts)
     .map((p) => p.authorname)
