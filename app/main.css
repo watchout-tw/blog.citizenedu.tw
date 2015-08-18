@@ -20,12 +20,44 @@ p, blockquote, h3, ul, ol, li, a, span {
 
 	background: #FAFAFA;
 }
+.padTags {
+   display: none;
+}
+.defaultTags {
+   -webkit-box-flex: 0 0 320px;     /* OLD - iOS 6-, Safari 3.1-6 */
+   -moz-box-flex: 0 0 320px;        /* OLD - Firefox 19- */
+   -webkit-flex: 0 0 320px;         /* Chrome */
+   -ms-flex: 0 0 320px;            /* IE 10 */
+   flex: 0 0 320px;
+   height: 100vh;
+
+   -webkit-box-ordinal-group: 3;   /* OLD - iOS 6-, Safari 3.1-6 */
+   -moz-box-ordinal-group: 3;      /* OLD - Firefox 19- */
+   -ms-flex-order: 3;              /* TWEENER - IE 10 */
+   -webkit-order: 3;               /* NEW - Chrome */
+   order: 3;
+   
+}
 @media all and (min-width: 600px) {
 	.flexWrapper {
 		-webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
 	}
+   .padTags {
+      display: block;
+   }
+   .defaultTags {
+      display: none;
+   }
+}
+@media all and (min-width: 1000px) {
+   .padTags {
+      display: none;
+   }
+   .defaultTags {
+      display: block;
+   }
 }
 a, a:visited {
    color: rgb(53,55,54);
