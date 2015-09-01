@@ -138,6 +138,17 @@ div.Article-date {
   font-weight: 200;
   margin: 0 6px;
 }
+.Article-cfpLink {
+  border: none;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+.Article-cfpImg {
+  width: calc( 100% - 10px );
+  padding: 5px;
+
+}
 
 .Article-footer {
   text-align: center;

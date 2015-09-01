@@ -70,7 +70,7 @@ metalsmith(__dirname)
       loaders: [
         { test: /\.(js|es6)$/, exclude: /node_modules/, loader: "babel-loader" },
         { test: /\.css$/, loader: "style-loader!css-loader" },
-        { test: /\.(jpg|png)$/, loader: "url-loader?limit=1" },
+        { test: /\.(jpg|png)$/, loader: "url-loader" },
         { test: /\.(json)$/, loader: "json-loader" },
       ]
     },

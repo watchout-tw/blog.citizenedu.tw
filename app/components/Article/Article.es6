@@ -34,6 +34,7 @@ export default React.createClass({
       //var avatarTemplate = data.avatar_template.split('{size}')[0]+"/"+size+"/"+article.avatar_template.split('{size}')[1];
       //var imgURL = "http://community.citizenedu.tw"+avatarTemplate;
       var attr = this.props.picture_attr ? "圖／" + this.props.picture_attr : "";
+      
       return (
       <div>
           <div className="Article">
@@ -54,7 +55,7 @@ export default React.createClass({
             </div>
             <div className="Article-authorBackground">
                 <div className="Article-author">
-                   <div className="Article-authorHeader">
+                    <div className="Article-authorHeader">
                       <img className="Article-avatar"
                            src={this.props.avatar.replace('{size}', '120')} />
                       <div className="Article-info">
@@ -62,9 +63,10 @@ export default React.createClass({
                           <div className="Article-date">{this.state.created_at}</div>
                       </div>
                       <Author type="section" {...this.props}/>
-                   </div>
-
+                    </div>
+                    <a className="Article-cfpLink" href="/posts/938/"><img className="Article-cfpImg" src="/cfp.jpg" /></a>
                 </div>
+                
             </div>
             <div id="comment-root"></div>
             <List type="article" {...this.props}/>
