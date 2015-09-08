@@ -8,7 +8,7 @@
     "env": "env",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update": "script/update.sh",
-    "build": "babel-node build.es6 && cp app/*.jpg CNAME build/ && cp .gitignore-build build/.gitignore",
+    "build": "babel-node build.es6 && cp app/*.jpg CNAME build/ && (cat $(find app -name '*.css') > build/styles.css) && cp .gitignore-build build/.gitignore",
     "serve": "http-server build",
     "watch": "npm run build && watch 'npm run build' app src",
     "livereload": "live-reload app src --delay=8000",
