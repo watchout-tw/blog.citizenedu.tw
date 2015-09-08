@@ -144,13 +144,13 @@ export default React.createClass({
             return (new Date(dateString)).getTime()
           }
           var postItems = this.props.collections[this.props.path.replace(/.*\//, '')]
-            .sort((a, b) => timestamp(b.created_at) - timestamp(a.created_at))
+            .sort((a, b) => timestamp(b.modified_at) - timestamp(a.modified_at))
             .map((item, key)=>{
               return(
                   <a className="Author-articleItem"
                      key={key}
                      href={"/" + item.path}  >
-                       <div className="Author-articleItemDate">{item.created_at}</div>
+                       <div className="Author-articleItemDate">{item.modified_at}</div>
                        <div className="Author-articleItemTitle">{item.title}</div>
                   </a>
               )

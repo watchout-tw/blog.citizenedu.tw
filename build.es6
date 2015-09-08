@@ -21,7 +21,7 @@ metalsmith(__dirname)
   .use(collections({
     posts: {
       pattern: "posts/**.html",
-      sortBy: "created_at",
+      sortBy: "modified_at",
       reverse: true,
     },
     columns: {
