@@ -5,14 +5,12 @@ export default React.createClass({
   displayName: "AboutSite",
 
   render() {
-      //var classes = (this.props.flex) ? "AboutSite is-flex" : "AboutSite";
-      var attr = this.props.picture_attr ? "圖／" + this.props.picture_attr : "";
       return (
       <div className="AboutSite">
         <figure className="AboutSite-img">
           <img className="AboutSite-imgPicture" src={this.props.picture || this.props.site.picture} />
           <span className="AboutSite-imgCopyright"
-            dangerouslySetInnerHTML={{__html: attr}}></span>
+            dangerouslySetInnerHTML={{__html: this.props.picture_attr ? "圖／" + this.props.picture_attr : ""}}></span>
         </figure>
         <section className="AboutSite-content">
           <h3 className="AboutSite-title">{this.props.title || this.props.site.title}</h3>
