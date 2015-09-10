@@ -33,7 +33,10 @@ export default React.createClass({
       var size = 120;//size=45,120
       //var avatarTemplate = data.avatar_template.split('{size}')[0]+"/"+size+"/"+article.avatar_template.split('{size}')[1];
       //var imgURL = "http://community.citizenedu.tw"+avatarTemplate;
-      var attr = this.props.picture_attr ? "圖／" + this.props.picture_attr : "";
+      var attr = this.props.picture_attr ? (
+                <span className="Article-coverCopyright"
+                    dangerouslySetInnerHTML={{__html: "圖／" + this.props.picture_attr}}></span>
+          ) : "";
 
       return (
       <div>
@@ -42,8 +45,7 @@ export default React.createClass({
             <div className="Article-cover">
                 <img className="Article-coverImg"
                      src={this.props.picture || this.props.site.post_picture} />
-                <span className="Article-coverCopyright"
-                    dangerouslySetInnerHTML={{__html: attr}}></span>
+                {attr}
             </div>
 
             <div id="social-root"></div>

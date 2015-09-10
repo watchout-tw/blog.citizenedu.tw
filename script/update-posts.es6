@@ -26,7 +26,7 @@ function extractTopics(posts, column) {
     .map((t) => Object.assign(t, {
       column_title: column.title,
       post_picture: column.post_picture,
-      post_picture_attr: column.post_picture_attr
+      post_picture_attr: column.post_picture_attr || ''
     }))
 }
 
