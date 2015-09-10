@@ -34,7 +34,7 @@ export default React.createClass({
       //var avatarTemplate = data.avatar_template.split('{size}')[0]+"/"+size+"/"+article.avatar_template.split('{size}')[1];
       //var imgURL = "http://community.citizenedu.tw"+avatarTemplate;
       var attr = this.props.picture_attr ? "圖／" + this.props.picture_attr : "";
-      
+
       return (
       <div>
           <div className="Article">
@@ -66,7 +66,7 @@ export default React.createClass({
                     </div>
                     <a className="Article-cfpLink" href="/posts/938/"><img className="Article-cfpImg" src="/cfp.jpg" /></a>
                 </div>
-                
+
             </div>
             <div id="comment-root"></div>
             <List type="article" {...this.props}/>

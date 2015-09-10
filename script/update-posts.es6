@@ -25,7 +25,8 @@ function extractTopics(posts, column) {
     // XXX topic data doesn't have primary category/column id
     .map((t) => Object.assign(t, {
       column_title: column.title,
-      post_picture: column.post_picture
+      post_picture: column.post_picture,
+      post_picture_attr: column.post_picture_attr
     }))
 }
 
@@ -91,7 +92,8 @@ function writePost(topicInfo, topic) {
         avatar: helper.baseURL + topic.post_stream.posts[0].avatar_template,
         rtemplate: 'ArticlePage',
         collection: [topicInfo.column_title].concat(topic.tags).concat(['posts']).concat([topic.post_stream.posts[0].username]),
-        picture: topic.picture || topicInfo.post_picture
+        picture: topic.picture || topicInfo.post_picture,
+        picture_attr: topic.picture_attr || topicInfo.post_picture_attr
       })
       + '---\n'
       + topic.post_stream.posts[0].cooked
