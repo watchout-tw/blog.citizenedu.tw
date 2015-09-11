@@ -38,6 +38,7 @@ function extractMeta() {
       "分類": "tags",
       "圖片": "picture",
       "作者": "author",
+      "出版時間": "published_at"
     }
     topic.tags = []
     topic.picture = ""
@@ -87,6 +88,7 @@ function writePost(topicInfo, topic) {
         title: topic.title,
         created_at: topic.created_at.replace(/T.*/, ''),
         modified_at: topic.post_stream.posts[0].updated_at.replace(/T.*/, ''),
+        published_at: (topic.published_at || topic.created_at).replace(/[\sT].*/, ''),
         author: topic.author || topic.post_stream.posts[0].name,
         authorname: topic.post_stream.posts[0].username,
         avatar: helper.baseURL + topic.post_stream.posts[0].avatar_template,

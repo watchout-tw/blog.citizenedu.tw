@@ -62,7 +62,7 @@ export default React.createClass({
                            src={this.props.avatar.replace('{size}', '120')} />
                       <div className="Article-info">
                           <a className="Article-name" href={"/authors/" + this.props.authorname}>{this.props.author}</a>
-                          <div className="Article-date">{this.state.created_at}</div>
+                          <div className="Article-date">{this.state.published_at || this.state.created_at}</div>
                       </div>
                       <Author type="section" {...this.props}/>
                     </div>

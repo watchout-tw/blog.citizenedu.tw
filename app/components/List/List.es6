@@ -86,7 +86,7 @@ export default React.createClass({
                   <a className="List-articleItem"
                      key={key}
                      href={"/" + item.path}>
-                       <div className="List-articleItemDate">{item.modified_at}</div>
+                       <div className="List-articleItemDate">{item.published_at || item.created_at}</div>
                        <div className="List-articleItemTitle">{title}</div>
                   </a>
               )
@@ -109,7 +109,7 @@ export default React.createClass({
                    key={key}
                    href={"/" + item.path}>
                      <div className="List-articleItemTitle List-boldTitle">{item.author}：{item.title}</div>
-                     <div className="List-articleItemDate">{item.modified_at}</div>
+                     <div className="List-articleItemDate">{item.published_at || item.created_at}</div>
                      <div className="List-articleItemColumn">{item.collection.filter((c) => allColumns[c])[0]}</div>
                      <div className="List-articleItemBrief"
                           dangerouslySetInnerHTML={{__html: item.excerpt}}>
