@@ -28,8 +28,13 @@ export default React.createClass({
         index[key.title] = 1;
       });
     }
-    var posts = type && index[this.props.title] ? (this.props.collections[this.props.title] || []) : this.props.posts;
-    
+
+    function timestamp(dateString) {
+      return (new Date(dateString)).getTime()
+    }
+    var posts = (type && index[this.props.title] ? (this.props.collections[this.props.title] || []) : this.props.posts)
+      .sort((a, b) => timestamp(b.published_at) - timestamp(a.published_at))
+
     return (
 
         <div>
