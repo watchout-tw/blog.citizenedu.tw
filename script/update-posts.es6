@@ -98,7 +98,7 @@ function writePost(topicInfo, topic) {
         picture_attr: topic.picture_attr || topicInfo.post_picture_attr
       })
       + '---\n'
-      + topic.post_stream.posts[0].cooked.replace(/src="\//g, 'src="//community.citizenedu.tw/')
+      + topic.post_stream.posts[0].cooked.replace(/src="\/([^\/])/g, 'src="//community.citizenedu.tw/$1')
     )
 }
 
