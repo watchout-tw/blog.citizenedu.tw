@@ -7,6 +7,7 @@ export default React.createClass({
   render() {
       return (
       <div className="AboutSite">
+        <div className="AboutSite-fix">
         <figure className="AboutSite-img">
           <img className="AboutSite-imgPicture" src={this.props.picture || this.props.site.picture} />
           <span className="AboutSite-imgCopyright"
@@ -21,6 +22,7 @@ export default React.createClass({
             dangerouslySetInnerHTML={{__html: (this.props.contents ? this.props.info : this.props.site.info)}}>
           </div>
         </section>
+        </div>
       </div>
       );
   }

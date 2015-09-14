@@ -37,7 +37,7 @@ export default React.createClass({
 
     return (
 
-        <div>
+        <div className="app">
             <AppBar type="nav"/>
             <div className="flexWrapper">
               <AboutSite {...this.props}/>
@@ -45,10 +45,12 @@ export default React.createClass({
                     tag={this.state.tag}
                     posts={posts} />
               <div className="defaultTags">
+                  <div className="defaultTags-fixed">
                   <Tags changeTagHandler={this._onChangeTag}
                     items={this.props.collections.subjects.concat(this.props.collections.tags)}
                     tag={this.state.tag}
                     {...this.props} />
+                  </div>
               </div>
             </div>
             <div className="padTags">

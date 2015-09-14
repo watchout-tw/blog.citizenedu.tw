@@ -6,7 +6,10 @@ p, blockquote, h3, ul, ol, li, a, span {
    font-size: 18px;
    color: rgb(53,55,54);
 }
-
+.app {
+   width: 100%;
+   overflow: hidden;
+}
 .flexWrapper {
    display: -webkit-box;
    display: -moz-box;
@@ -38,8 +41,10 @@ p, blockquote, h3, ul, ol, li, a, span {
    order: 3;
    
 }
+
 @media all and (min-width: 600px) {
 	.flexWrapper {
+      padding-top: 69px;
 		-webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
@@ -49,6 +54,12 @@ p, blockquote, h3, ul, ol, li, a, span {
    }
    .defaultTags {
       display: none;
+   }
+   .defaultTags-fixed {
+      height: 100vh;
+      position: fixed;
+      width: 320px;
+      overflow: hidden;
    }
 }
 @media all and (min-width: 1000px) {

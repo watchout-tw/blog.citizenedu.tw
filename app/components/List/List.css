@@ -134,8 +134,7 @@
 }
 @media screen and (min-width: 600px){
     .List--index {
-    	height: 100vh;
-    	overflow: scroll;
+    	height: auto;
     }
 }
 

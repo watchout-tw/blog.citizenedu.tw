@@ -16,10 +16,14 @@
     -webkit-flex: 1;          /* Chrome */
     -ms-flex: 1;              /* IE 10 */
     flex: 1;
+
+    
 }
 .AboutSite-img {
 	display: none;
 }
+
+
 @media screen and (min-width: 600px){
 	.AboutSite {
     -webkit-box-flex:  0 0 340px;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -27,6 +31,12 @@
     -webkit-flex:  0 0 340px;          /* Chrome */
     -ms-flex:  0 0 340px;              /* IE 10 */
     flex: 0 0 340px;
+    padding-top: 0px;
+  }
+  .AboutSite-fix {
+    position: fixed;
+    width: 340px;
+    height: 100vh;
   }
   .AboutSite-img {
     display: block;
