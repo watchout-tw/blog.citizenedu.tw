@@ -1,42 +1,24 @@
 .AboutSite {
     width: 100%;
-    background: rgba(135,184,37,1);
 
+    background: rgba(135,184,37,1);
     color: white;
     overflow: scroll;
-
-    -webkit-box-ordinal-group: 1;   /* OLD - iOS 6-, Safari 3.1-6 */
-    -moz-box-ordinal-group: 1;      /* OLD - Firefox 19- */
-    -ms-flex-order: 1;              /* TWEENER - IE 10 */
-    -webkit-order: 1;               /* NEW - Chrome */
-    order: 1;
-
-    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
-    -moz-box-flex: 1;         /* OLD - Firefox 19- */
-    -webkit-flex: 1;          /* Chrome */
-    -ms-flex: 1;              /* IE 10 */
-    flex: 1;
-
-    
+    z-index: 0;
 }
 .AboutSite-img {
 	display: none;
 }
 
+@media screen and (min-width: 600px) and (max-width: 999px){
 
+}
 @media screen and (min-width: 600px){
-	.AboutSite {
-    -webkit-box-flex:  0 0 340px;      /* OLD - iOS 6-, Safari 3.1-6 */
-    -moz-box-flex:  0 0 340px;         /* OLD - Firefox 19- */
-    -webkit-flex:  0 0 340px;          /* Chrome */
-    -ms-flex:  0 0 340px;              /* IE 10 */
-    flex: 0 0 340px;
-    padding-top: 0px;
-  }
-  .AboutSite-fix {
-    position: fixed;
+  .AboutSite {
     width: 340px;
     height: 100vh;
+    position: fixed;
+    left:0;
   }
   .AboutSite-img {
     display: block;
@@ -62,6 +44,24 @@
     border: none;
     font-size: 12px;
   }
+}
+
+@media screen and (min-width: 1000px){
+	.AboutSite {
+    -webkit-box-flex:  0 0 340px;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex:  0 0 340px;         /* OLD - Firefox 19- */
+    -webkit-flex:  0 0 340px;          /* Chrome */
+    -ms-flex:  0 0 340px;              /* IE 10 */
+    flex: 0 0 340px;
+    padding-top: 0px;
+  }
+  .AboutSite-fix {
+    position: fixed;
+    width: 340px;
+    height: 100vh;
+    background: rgba(135,184,37,1);
+  }
+  
 }
 .AboutSite-content {
 	padding: 10px;

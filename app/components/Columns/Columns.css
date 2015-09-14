@@ -1,26 +1,12 @@
 .Columns {
 	display: inline-block;
 	overflow:hidden;  _overflow:visible;  zoom:1;
-	//background: #DABDA8;
 	background: #FAFAFA;
-	//min-height:100vh;
 	width: 100%;
 
-	flex: 1;
-
-  -webkit-box-ordinal-group: 2;   /* OLD - iOS 6-, Safari 3.2-6 */
-  -moz-box-ordinal-group: 2;      /* OLD - Firefox 29- */
-  -ms-flex-order: 2;              /* TWEENER - IE 20 */
-  -webkit-order: 2;               /* NEW - Chrome */
-  order: 2;
+	
 
 }
-@media screen and (min-width: 600px){
-	.Columns {
-		padding-top: 69px;
-	}
-}
-
 .Column {
 	background: white;
 	//border: 1px solid #DABDA8;
@@ -42,7 +28,6 @@
 @media screen and (min-width: 600px){
     .Columns {
     	flex: 2;
-
     	height: 100vh;
     	overflow: scroll;
     	padding: 0 10px;

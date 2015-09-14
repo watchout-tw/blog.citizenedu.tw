@@ -17,7 +17,7 @@ export default React.createClass({
         <div>
             <AppBar type="nav"/>
 
-            <div className="flexWrapper">
+            <div className="flexWrapper--Columns">
               <AboutSite {...this.props}/>
               <Columns type="column" items={this.props.collections.columns} collections={this.props.collections}/>
             </div>

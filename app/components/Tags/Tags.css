@@ -7,6 +7,8 @@
 	padding-left: 10px;
 	width: calc(100% - 15px);
 	padding-bottom: 80px;
+
+	z-index: 2;
 }
 
 .Tags-title {

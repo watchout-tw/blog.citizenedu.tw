@@ -1,5 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+/* --------- 讓頁面不會滾動 -------- */
+html {
+    overflow: hidden;
+    height: 100%;
+}
 
+body {
+    height: 100%;
+    overflow: auto;
+}
+/* -------- */
+
+body {
+   background: rgb(250,250,250);
+}
 p, blockquote, h3, ul, ol, li, a, span {
    font-family: 'Noto Sans', sans-serif;
    line-height: 1.8;
@@ -8,7 +22,7 @@ p, blockquote, h3, ul, ol, li, a, span {
 }
 .app {
    width: 100%;
-   overflow: hidden;
+   overflow-x: hidden;
 }
 .flexWrapper {
    display: -webkit-box;
@@ -26,48 +40,52 @@ p, blockquote, h3, ul, ol, li, a, span {
 .padTags {
    display: none;
 }
-.defaultTags {
-   -webkit-box-flex: 0 0 320px;     /* OLD - iOS 6-, Safari 3.1-6 */
-   -moz-box-flex: 0 0 320px;        /* OLD - Firefox 19- */
-   -webkit-flex: 0 0 320px;         /* Chrome */
-   -ms-flex: 0 0 320px;            /* IE 10 */
-   flex: 0 0 320px;
-   height: 100vh;
 
-   -webkit-box-ordinal-group: 3;   /* OLD - iOS 6-, Safari 3.1-6 */
-   -moz-box-ordinal-group: 3;      /* OLD - Firefox 19- */
-   -ms-flex-order: 3;              /* TWEENER - IE 10 */
-   -webkit-order: 3;               /* NEW - Chrome */
-   order: 3;
-   
+@media all and (min-width: 600px) and (max-width: 999px){
+   .padWrapper {
+      padding-left: 340px;
+   }
+
 }
-
 @media all and (min-width: 600px) {
+
 	.flexWrapper {
       padding-top: 69px;
+     
 		-webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row;
+
 	}
-   .padTags {
-      display: block;
-   }
-   .defaultTags {
-      display: none;
-   }
-   .defaultTags-fixed {
-      height: 100vh;
-      position: fixed;
-      width: 320px;
+   .flexWrapper--Columns {
+      padding-top: 69px;
+      padding-left: 340px;
+      width: calc(100% - 350px);
       overflow: hidden;
    }
+
+   .padTags {
+      display: block;
+      padding-left: 340px;
+   }
+   .defaultTags {
+      display: none;
+   }
+   
 }
 @media all and (min-width: 1000px) {
+   .flexWrapper {
+      padding-right: 320px;
+   }
    .padTags {
       display: none;
    }
    .defaultTags {
       display: block;
+      width: 300px;
+      height: 20px;
+      position: fixed;
+  
    }
 }
 a, a:visited {

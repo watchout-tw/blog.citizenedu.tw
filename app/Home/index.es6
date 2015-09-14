@@ -40,17 +40,19 @@ export default React.createClass({
         <div className="app">
             <AppBar type="nav"/>
             <div className="flexWrapper">
-              <AboutSite {...this.props}/>
-              <List type="index"
-                    tag={this.state.tag}
-                    posts={posts} />
+              <div className="padWrapper">
+                  <AboutSite {...this.props}/>
+                  <List type="index"
+                        tag={this.state.tag}
+                        posts={posts} />
+              </div>
               <div className="defaultTags">
-                  <div className="defaultTags-fixed">
+                  
                   <Tags changeTagHandler={this._onChangeTag}
                     items={this.props.collections.subjects.concat(this.props.collections.tags)}
                     tag={this.state.tag}
                     {...this.props} />
-                  </div>
+                  
               </div>
             </div>
             <div className="padTags">
