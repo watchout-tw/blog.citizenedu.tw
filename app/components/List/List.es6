@@ -13,7 +13,7 @@ const allColumns = {
   '沃草野台': true,
   '芭樂人類學': true,
   '菜市場政治學': true,
-  '評論懶人包': true,
+  '觀點懶人包': true,
   '阿草愛讀書': true,
 };
 
