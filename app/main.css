@@ -88,6 +88,17 @@ p, blockquote, h3, ul, ol, li, a, span {
   
    }
 }
+@media all and (min-width: 1440px) {
+   .defaultTags {
+      display: block;
+      width: 300px;
+      height: 20px;
+      position: fixed;
+      top: 84px;
+      right: calc((100vw - 1440px)/2);
+  
+   }
+}
 a, a:visited {
    color: rgb(53,55,54);
    cursor: pointer;

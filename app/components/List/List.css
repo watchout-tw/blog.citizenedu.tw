@@ -135,7 +135,7 @@
 @media screen and (min-width: 600px) and (max-width: 999px){
     .List--index {
     	height: auto;
-    	width: calc(100vw - 320px);/* 避免沒文章的時候，寬度不見 */
+    	width: calc(100vw - 350px);/* 避免沒文章的時候，寬度不見 */
 
     }
 }
@@ -143,16 +143,16 @@
     .List--index {
     	height: auto;
     	padding-left: 340px;
-    	width: calc(100vw - 800px);/* 避免沒文章的時候，寬度不見 */
+    	width: calc(100vw - 670px);/* 避免沒文章的時候，寬度不見 */
 
     }
+    .List-indexContent {
+		max-width: 800px;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
 }
 
-
-.List-indexContent {
-	max-width: 800px;
-
-}
 .List-indexItem {
 	margin-bottom: 20px;
 	padding: 10px 12px;
