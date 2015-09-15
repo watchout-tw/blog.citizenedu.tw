@@ -132,15 +132,18 @@
     -webkit-order: 2;               /* NEW - Chrome */
 	order: 2;
 }
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) and (max-width: 999px){
     .List--index {
     	height: auto;
+    	width: calc(100vw - 320px);/* 避免沒文章的時候，寬度不見 */
 
     }
 }
 @media screen and (min-width: 1000px){
     .List--index {
+    	height: auto;
     	padding-left: 340px;
+    	width: calc(100vw - 800px);/* 避免沒文章的時候，寬度不見 */
 
     }
 }
@@ -168,6 +171,7 @@
 /* ----------------- */
 .List-footer {
 	margin: 0 auto;
+	margin-top: 20px;
 	text-align: center;
 }
 .List-button {
