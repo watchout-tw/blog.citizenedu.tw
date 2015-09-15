@@ -9,7 +9,7 @@ export default React.createClass({
   render() {
 
     return (
-      <div>
+      <div className="app">
         <AppBar type="simple"/>
         <Article {...this.props}/>
       </div>
