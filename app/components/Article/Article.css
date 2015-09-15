@@ -19,6 +19,7 @@
   .Article-content img {
     width: auto;
     height: auto;
+    max-width: 600px;
   }
 }
 .Article-authorBackground {
