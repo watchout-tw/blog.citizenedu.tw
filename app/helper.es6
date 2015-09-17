@@ -11,7 +11,7 @@ var helper = {
   topicURL(id, {json} = {}) {
     id = String(id).replace(/\/$/, '')
     if (json) {
-      return `http://community.citizenedu.tw/t/topic/${id}.json`
+      return `http://community.citizenedu.tw/t/${id}.json`
     } else {
       return `http://community.citizenedu.tw/t/topic/${id}`
     }
