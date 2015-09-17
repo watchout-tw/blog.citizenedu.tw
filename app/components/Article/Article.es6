@@ -61,7 +61,7 @@ export default React.createClass({
                       <img className="Article-avatar"
                            src={this.props.avatar.replace('{size}', '120')} />
                       <div className="Article-info">
-                          <a className="Article-name" href={"/authors/" + this.props.authorname}>{this.props.author}</a>
+                          <a className="Article-name" href={"/authors/" + this.props.authorname}>{[].concat(this.props.author).join('、')}</a>
                           <div className="Article-date">{this.state.published_at || this.state.created_at}</div>
                       </div>
                       <Author type="section" {...this.props}/>
