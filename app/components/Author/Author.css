@@ -7,7 +7,7 @@
 	cursor: pointer;
 	border: 1px solid gray;
 	margin: 0 5px;
-	
+
 }
 .Author p{
 	line-height: 1.4;
@@ -202,13 +202,13 @@
 		top: 0;
 		margin-left: 10px;
 		display: block;
-		
+
     }
     .Author-articleTitle {
     	position: relative;
 
     }
-	
+
 }
 .Author-article {
     line-height: 1.6;
