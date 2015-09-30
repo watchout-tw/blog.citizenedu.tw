@@ -6,7 +6,7 @@ import collections from 'metalsmith-collections'
 import branch from 'metalsmith-branch'
 import permalinks from 'metalsmith-permalinks'
 import feed from 'metalsmith-feed'
-import ogimage from './metalsmith-ogimage'
+import ogimage from './lib/metalsmith-ogimage'
 
 metalsmith(__dirname)
   .metadata({
