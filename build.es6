@@ -1,11 +1,12 @@
-import metalsmith from "metalsmith";
-import webpack from "metalsmith-webpack";
-import reactTemplate from "metalsmith-react-templates";
-import excerpts from "metalsmith-excerpts";
-import collections from "metalsmith-collections";
-import branch from "metalsmith-branch";
-import permalinks from "metalsmith-permalinks";
+import metalsmith from 'metalsmith'
+import webpack from 'metalsmith-webpack'
+import reactTemplate from 'metalsmith-react-templates'
+import excerpts from 'metalsmith-excerpts'
+import collections from 'metalsmith-collections'
+import branch from 'metalsmith-branch'
+import permalinks from 'metalsmith-permalinks'
 import feed from 'metalsmith-feed'
+import ogimage from './metalsmith-ogimage'
 
 metalsmith(__dirname)
   .metadata({
@@ -51,6 +52,7 @@ metalsmith(__dirname)
     )
   )
   .use(excerpts())
+  .use(ogimage())
   .use(reactTemplate({
     directory: "app",
     baseFile: "index.html",
