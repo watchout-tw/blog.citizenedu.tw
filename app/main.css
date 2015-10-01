@@ -4,11 +4,14 @@ html {
     overflow: hidden;
     height: 100%;
 }
-
-body {
-    height: 100%;
-    overflow: auto;
+@media all and (min-width: 500px){
+   /* 手機設定這個樣式，會讓滾動不順暢 */
+   body {
+      height: 100%;
+      overflow: auto;
+   }
 }
+
 /* -------- */
 
 body {
