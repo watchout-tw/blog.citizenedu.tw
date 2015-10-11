@@ -67,5 +67,7 @@
     "watch": "~0.16.0",
     "webpack": "~1.7.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "metalsmith-ogimage": "0.0.1"
+  }
 }
