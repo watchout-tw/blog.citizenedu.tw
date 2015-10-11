@@ -28,7 +28,8 @@
     "url": "https://github.com/watchout-tw/blog.citizenedu.tw/issues"
   },
   "homepage": "https://github.com/watchout-tw/blog.citizenedu.tw",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "babel": "~5.0.9",
     "babel-core": "~5.0.9",
     "babel-loader": "~5.0.0",
@@ -48,6 +49,7 @@
     "metalsmith-collections": "~0.7.0",
     "metalsmith-excerpts": "git+https://github.com/pm5/metalsmith-excerpts.git",
     "metalsmith-feed": "0.0.6",
+    "metalsmith-ogimage": "0.0.1",
     "metalsmith-permalinks": "~0.4.0",
     "metalsmith-react-templates": "git://github.com/pm5/metalsmith-react-templates.git",
     "metalsmith-serve": "0.0.3",
@@ -66,8 +68,5 @@
     "url-loader": "~0.5.5",
     "watch": "~0.16.0",
     "webpack": "~1.7.3"
-  },
-  "devDependencies": {
-    "metalsmith-ogimage": "0.0.1"
   }
 }
