@@ -63,8 +63,8 @@ function extractMeta() {
   }
 }
 
-function buildTopic(topicInfo) {
-  debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
+function buildTopic(waitFor, topicInfo) {
+  debug('get topic %s of %s, wait for %d', topicInfo.id, topicInfo.column_title, waitFor)
   return new Promise(function (resolve, reject) {
     setTimeout(function () {
       superagent
@@ -75,7 +75,7 @@ function buildTopic(topicInfo) {
         .then(extractMeta())
         .then(writePost.bind(null, topicInfo))
         .then(resolve)
-    }, parseInt(Math.random() * 60000))
+    }, waitFor)
   })
 }
 
@@ -117,11 +117,11 @@ co(function* () {
     .filter((n) => (undefined !== columns[n].link && columns[n].link))
     .map(getColumnInfo.bind(null, columns))
 
-  var r = yield Object.values(columns)
+  var posts = yield Object.values(columns)
     .filter((c) => undefined !== c.topic_list && c.topic_list.topics)
     .map(extractTopics.bind(null, posts))
     .reduce((prev, cur) => prev.concat(cur))
-    .map(buildTopic)
-
-  debug('%d topic(s) updated', r.length)
+  posts
+    .map(buildTopic.bind(null, parseInt(Math.random() * 1000 * posts.length)))
+  debug('%d topic(s) updated', posts.length)
 }).catch(debug)

@@ -9,7 +9,7 @@ var mkdirp = require('mkdirp')
 
 var userURL = 'http://community.citizenedu.tw/users/'
 
-function buildAuthor(username) {
+function buildAuthor(waitFor, username) {
   debug('get author %s', username)
   return new Promise(function (resolve, reject) {
     setTimeout(function () {
@@ -20,7 +20,7 @@ function buildAuthor(username) {
         .then((res) => res.body)
         .then(writeAuthor)
         .then(resolve)
-    }, parseInt(Math.random() * 10000))
+    }, waitFor)
   })
 }
 
@@ -43,10 +43,11 @@ co(function* () {
   var [posts, authors] = yield [helper.postsPath, helper.authorsPath].map(helper.readFiles)
   authors = authors || []
 
-  var r = yield Object.values(posts)
+  var authors = yield Object.values(posts)
     .map((p) => p.authorname)
     .filter((u) => !authors[`${u}.html`])
-    .map(buildAuthor)
+  authors
+    .map(buildAuthor.bind(null, parseInt(Math.random() * 1000 * authors.length)))
 
-  debug('%d author(s) updated', r.length)
+  debug('%d author(s) updated', authors.length)
 }).catch(debug)
