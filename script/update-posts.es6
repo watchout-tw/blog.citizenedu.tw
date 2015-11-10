@@ -65,13 +65,18 @@ function extractMeta() {
 
 function buildTopic(topicInfo) {
   debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
-  return superagent
-    .get(helper.topicURL(topicInfo.id, {json: true}))
-    .use(helper.withPromise())
-    .end()
-    .then((res) => res.body)
-    .then(extractMeta())
-    .then(writePost.bind(null, topicInfo))
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      superagent
+        .get(helper.topicURL(topicInfo.id, {json: true}))
+        .use(helper.withPromise())
+        .end()
+        .then((res) => res.body)
+        .then(extractMeta())
+        .then(writePost.bind(null, topicInfo))
+        .then(resolve)
+    }, parseInt(Math.random() * 60000))
+  })
 }
 
 function writePost(topicInfo, topic) {

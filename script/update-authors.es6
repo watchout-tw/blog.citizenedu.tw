@@ -11,12 +11,17 @@ var userURL = 'http://community.citizenedu.tw/users/'
 
 function buildAuthor(username) {
   debug('get author %s', username)
-  return superagent
-    .get(`${userURL}/${username}.json`)
-    .use(helper.withPromise())
-    .end()
-    .then((res) => res.body)
-    .then(writeAuthor)
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      superagent
+        .get(`${userURL}/${username}.json`)
+        .use(helper.withPromise())
+        .end()
+        .then((res) => res.body)
+        .then(writeAuthor)
+        .then(resolve)
+    }, parseInt(Math.random() * 10000))
+  })
 }
 
 function writeAuthor(author) {
