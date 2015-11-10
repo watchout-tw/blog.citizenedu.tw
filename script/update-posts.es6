@@ -63,7 +63,8 @@ function extractMeta() {
   }
 }
 
-function buildTopic(waitFor, topicInfo) {
+function buildTopic(windowSize, topicInfo) {
+  var waitFor = parseInt(Math.random() * 200 * windowSize)
   debug('get topic %s of %s, wait for %d', topicInfo.id, topicInfo.column_title, waitFor)
   return new Promise(function (resolve, reject) {
     setTimeout(function () {
@@ -122,6 +123,6 @@ co(function* () {
     .map(extractTopics.bind(null, posts))
     .reduce((prev, cur) => prev.concat(cur))
   posts
-    .map(buildTopic.bind(null, parseInt(Math.random() * 1000 * posts.length)))
+    .map(buildTopic.bind(null, posts.length))
   debug('%d topic(s) updated', posts.length)
 }).catch(debug)

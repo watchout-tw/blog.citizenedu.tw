@@ -9,8 +9,9 @@ var mkdirp = require('mkdirp')
 
 var userURL = 'http://community.citizenedu.tw/users/'
 
-function buildAuthor(waitFor, username) {
-  debug('get author %s', username)
+function buildAuthor(windowSize, username) {
+  var waitFor = parseInt(Math.random() * 200 * windowSize)
+  debug('get author %s, wait for %d', username, waitFor)
   return new Promise(function (resolve, reject) {
     setTimeout(function () {
       superagent
@@ -47,7 +48,7 @@ co(function* () {
     .map((p) => p.authorname)
     .filter((u) => !authors[`${u}.html`])
   authors
-    .map(buildAuthor.bind(null, parseInt(Math.random() * 1000 * authors.length)))
+    .map(buildAuthor.bind(null, authors.length))
 
   debug('%d author(s) updated', authors.length)
 }).catch(debug)
