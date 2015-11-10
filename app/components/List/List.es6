@@ -69,12 +69,20 @@ export default React.createClass({
     return this.props.collection.filter((c) => all[c])
   },
 
-  render() {
-      var result = <div></div>;
-      var type = this.props.type;
-      var classSet = React.addons.classSet;
+  _click(){
+    console.log("click");
+  },
 
-      if(type === "article"){
+  render() {
+     
+
+        return (
+          <div className="List List--index" ref="List">
+            im the list
+            <button onClick={this._click}></button>
+          </div>);
+
+
         var subject = this._extract('subjects')[0]
 
         var posts = this.props.collections[subject] || []
@@ -93,7 +101,7 @@ export default React.createClass({
           });
         }
 
-        result = (
+        return (
         <div className="List List-article" ref="List">
           <div className="List-content">
 
@@ -102,52 +110,6 @@ export default React.createClass({
           </div>
         </div>);
 
-     }else if(type === "index"){
-        var postItems = this.props.posts.slice(0, 20).map((item, key)=>{
-            return(
-                <a className="List-indexItem"
-                   key={key}
-                   href={"/" + item.path}>
-                     <div className="List-articleItemTitle List-boldTitle">{[].concat(item.author).join('、')}：{item.title}</div>
-                     <div className="List-articleItemDate">{item.published_at || item.created_at}</div>
-                     <div className="List-articleItemColumn">{item.collection.filter((c) => allColumns[c])[0]}</div>
-                     <div className="List-articleItemBrief"
-                          dangerouslySetInnerHTML={{__html: item.excerpt}}>
-                     </div>
-
-                </a>
-            )
-        });
-        var listFilterClasses = classSet({
-           "List-filter" : true,
-           "is-fixed" : this.state.scroll && window.innerWidth <= 600
-        });
-        //console.log(this.state.scroll);
-        //console.log(listFilterClasses);
-        var filterItem =  (this.props.tag) ?
-          <div className={listFilterClasses}>
-              <div className="List-filterMeta">標籤</div>
-              <div className="List-filterTitle">{this.props.tag}</div>
-          </div> :"";
-
-        result = (
-          <div className="List List--index" ref="List">
-              {filterItem}
-
-              <div className="List-indexContent">
-                  {postItems}
-              </div>
-
-              <div className="List-footer">
-                  <div className="List-button">載入更多</div>
-              </div>
-        </div>);
-
-     }else{
-
-     }
-
-
-      return result;
+   
   }
 });

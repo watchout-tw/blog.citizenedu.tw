@@ -1,7 +1,7 @@
 import React from "react";
 import AppBar from "../components/AppBar/AppBar.es6";
 import AboutSite from "../components/AboutSite/AboutSite.es6";
-import List from "../components/List/List.es6";
+import IndexList from "../components/IndexList/IndexList.es6";
 import Tags from "../components/Tags/Tags.es6";
 
 export default React.createClass({
@@ -35,6 +35,7 @@ export default React.createClass({
     var posts = (type && index[this.props.title] ? (this.props.collections[this.props.title] || []) : this.props.posts)
       .sort((a, b) => timestamp(b.published_at) - timestamp(a.published_at))
 
+    
     return (
 
         <div className="app">
@@ -42,9 +43,7 @@ export default React.createClass({
             <div className="flexWrapper">
               <div className="padWrapper">
                   <AboutSite {...this.props}/>
-                  <List type="index"
-                        tag={this.state.tag}
-                        posts={posts} />
+                  <div id="indexList-root"></div>
               </div>
               <div className="defaultTags">
                   

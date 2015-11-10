@@ -1,0 +1,218 @@
+.List {
+	//background: rgb(250,250,250);
+	padding-bottom: 90px;
+	position: relative;
+
+}
+.List-article {
+	background: rgb(250,250,250);
+}
+
+
+/* NEXT */
+.List-nextItem {
+	line-height: 1.4;
+	font-size: 14px;
+	margin: 10px 0 4px 0;
+}
+.List-nextItemTitle {
+	background: rgb(200,200,200);
+	display: inline-block;
+	padding: 6px 14px;
+	color: white;
+	margin: 10px 0;
+}
+.List-nextPost {
+	cursor: pointer;
+}
+.List-nextPost:hover, .List-nextTitle:hover {
+	color: #87B825;
+}
+.List-nextTitle {
+	font-weight: 700;
+}
+.List-nextPreview {
+	font-size: 16px;
+}
+.List-nextLink {
+	display: inline-block;
+	font-size: 16px;
+	color: rgb(100,100,100);
+	border: none;
+	text-decoration: underline;
+}
+
+/* LIST */
+.List-content {
+	padding: 10px 5px 0px 5px;
+}
+@media screen and (min-width: 400px){
+    .List-content {
+		max-width: 600px;
+        margin: 0 auto;
+
+    }
+    .List-indexContent {
+		max-width: 600px;
+
+    }
+}
+.List-title {
+	padding: 0px 12px;
+	font-weight: 700;
+	//border-bottom: 1px solid rgb(120,120,120);
+}
+@media all and (min-width: 400px){
+	.List-title {
+		padding: 0px 5px 10px 15px;
+    }
+}
+.List-articleItem {
+	margin: 1px;
+	padding: 12px 12px;
+	cursor: pointer;
+	color: rgb(80,80,80);
+	display: block;
+	border:none;
+	line-height: 1.4;
+	font-size: 16px;
+
+}
+.List-articleItem:hover, .List-indexItem:hover {
+	color: black;
+	background: rgb(240,240,240);
+}
+.List-articleItemColumn {
+   display: inline-block;
+   background: rgb(220,220,220);
+   margin: 5px 0;
+   color: #a0a0a0;
+}
+.List-articleItemDate {
+   display: inline-block;
+   background: rgb(220,220,220);
+   margin: 5px 0;
+   color: #a0a0a0;
+}
+@media all and (min-width: 400px){
+	.List-articleItemColumn {
+	   display: inline-block;
+       float: left;
+       background: none;
+       margin: 0 14px 0 0;
+       line-height: 1.6em;
+    }
+	.List-articleItemDate {
+	   display: inline-block;
+       float: left;
+       background: none;
+       margin: 0 14px 0 0;
+       line-height: 1.6em;
+    }
+}
+.List-articleItemTitle {
+	overflow: hidden;  _overflow:visible;  zoom:1;
+
+}
+
+/* ----------------- */
+.List-boldTitle {
+	font-weight: 800;
+}
+.List--index {
+	-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+	flex: 1;
+
+	-webkit-box-ordinal-group: 2;   /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-ordinal-group: 2;      /* OLD - Firefox 19- */
+    -ms-flex-order: 2;              /* TWEENER - IE 10 */
+    -webkit-order: 2;               /* NEW - Chrome */
+	order: 2;
+}
+@media screen and (min-width: 600px) and (max-width: 999px){
+    .List--index {
+    	height: auto;
+    	width: calc(100vw - 350px);/* 避免沒文章的時候，寬度不見 */
+
+    }
+}
+@media screen and (min-width: 1000px){
+    .List--index {
+    	height: auto;
+    	margin-left: 340px;
+    	width: calc(100vw - 670px);/* 避免沒文章的時候，寬度不見 */
+
+    }
+    .List-indexContent {
+		max-width: 800px;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+}
+
+.List-indexItem {
+	margin-bottom: 20px;
+	padding: 10px 12px;
+	cursor: pointer;
+	color: rgb(80,80,80);
+	display: block;
+	border:none;
+	line-height: 1.4;
+	font-size: 16px;
+}
+.List-articleItemBrief {
+    clear: left;
+	color: rgb(100,100,100);
+}
+
+/* ----------------- */
+.List-footer {
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center;
+}
+.List-button {
+	border: 1px solid rgb(220,220,220);
+	color: rgb(100,100,100);
+	cursor: pointer;
+	padding: 8px 20px;
+	display: inline-block;
+	border-radius: 20px;
+
+}
+.List-button:hover {
+   border: 1px solid rgb(50,50,50);
+   color: black;
+}
+
+/* ----------------- */
+
+/* ----------------- */
+.List-filter {
+    line-height: 1.4;
+    padding: 10px;
+    border-bottom: 1px solid rgb(220,220,220);
+    //text-align: center;
+
+}
+
+.List-filter.is-fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: rgba(255,255,255,0.8);
+}
+.List-filterMeta {
+	font-size: 14px;
+}
+.List-filterTitle {
+	margin-top: 4px;
+	font-size: 18px;
+	font-weight: 800;
+}
+
+
+
