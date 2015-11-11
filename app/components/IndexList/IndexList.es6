@@ -80,7 +80,7 @@ export default React.createClass({
       "excerpt" : content
     }
   },
-  _httpGetPost(postURL, articleTitle, columnName){
+  _httpGetPost(postURL, articleTitle, columnName, postStreamId){
     var parseCooked = this._parseCooked;
     return new Promise((resolve, reject)=>{
         
@@ -89,10 +89,12 @@ export default React.createClass({
             var article = res.body.post_stream.posts[0];
             var parsed = parseCooked(article);
             var date = article.created_at.split("T")[0];
+
+            //console.log(articleTitle+":"+postStreamId)
            
             //2015-02-05T07:16:27
             var formatedPost = {
-                id: article.id,
+                id: postStreamId,
                 title: articleTitle,
                 excerpt: parsed.excerpt,
 
@@ -125,7 +127,8 @@ export default React.createClass({
           
             httpGetPost(`http://community.citizenedu.tw/t/topic/${value.id}.json`, 
                          value.title,
-                         columnName).then((formatedPost)=>{
+                         columnName,
+                         value.id).then((formatedPost)=>{
                 
                 formatPostLists.push(formatedPost);
                 if(formatPostLists.length === lists.length){
