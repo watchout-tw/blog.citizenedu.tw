@@ -1,0 +1,97 @@
+{
+	"default" : {
+		"title": "公民學院部落格",
+		"picture": "http://blog.citizenedu.tw/cover.jpg",
+		"info": "<a href='/posts/990'>第一次來？</a>｜<a href='https://www.facebook.com/citizenedu' target='_blank'>粉絲頁</a>",
+		"description": "沃草公民學院是為所有人準備的人文學習、討論平台。我們不但小國小民，更要好國好民。"
+	},
+	"columns":{	
+		"巷仔口社會學": {
+			"title": "巷仔口社會學",
+			"picture": "http://community.citizenedu.tw/uploads/default/233/8e9242b4a4095a1a.jpg",
+			"picture_attr": "<a href='https://www.flickr.com/photos/kuanzi/' target='_blank'>陳小冠</a>",
+			"post_picture": "http://community.citizenedu.tw/uploads/default/original/1X/abcd4d167a1ec1cf553daa661ae67bd552e07770.jpg",
+			"post_picture_attr": "<a href='https://www.flickr.com/photos/kuanzi/' target='_blank'>陳小冠</a>",
+			"info": "<a href='http://twstreetcorner.org/' target='_blank'>BLOG</a>｜<a href='https://www.facebook.com/twstreetcorner?fref=ts' target='_blank'>粉絲頁</a>",
+			"description": "推廣社會學知識給大眾，以易懂的文字介紹社會學概念。作者針對社會議題提出看法，讓社會聽到多元聲音。"
+		},
+		"歷史學柑仔店": {
+			"title": "歷史學柑仔店",
+			"picture": "http://community.citizenedu.tw/uploads/default/original/1X/2eafa2a8265bb0fa0ea9fd07e01729ae41ad018b.jpg",
+			"picture_attr": "<a href='https://www.flickr.com/photos/kuanzi/' target='_blank'>陳小冠</a>",
+			"post_picture": "http://community.citizenedu.tw/uploads/default/original/1X/2eafa2a8265bb0fa0ea9fd07e01729ae41ad018b.jpg",
+			"post_picture_attr": "",
+			"info": "<a href='http://kam-a-tiam.typepad.com/' target='_blank'>BLOG</a> | <a href='https://www.facebook.com/historyforumtw' target='_blank'>粉絲頁</a>",
+			"description": "台灣的公民史學書寫，普世價值的歷史思考，常民生活與人類歷史經驗的人文閱讀。"
+		},
+		"沃草布告欄": {
+			"title": "沃草布告欄",
+			"picture": "http://community.citizenedu.tw/uploads/default/235/e2d506b98b9a0eee.jpg",
+			"picture_attr": "",
+			"post_picture": "http://community.citizenedu.tw/uploads/default/original/1X/632baae1a9e4d9c47a04eb129e647cb98705de7e.jpg",
+			"post_picture_attr": "",
+			"info": "",
+			"description": "各種優惠公告好康活動最後一天～"
+		},
+		"沃草烙哲學": {
+			"title": "沃草烙哲學",
+			"picture": "http://community.citizenedu.tw/uploads/default/original/1X/7f35430c76a9ac1997c65a913fdfaea1185cd2a3.jpg",
+			"picture_attr": "",
+			"post_picture": "http://community.citizenedu.tw/uploads/default/original/1X/4d8603f6502780d2ac546e98fa480b61023549b5.jpg",
+			"post_picture_attr": "",
+			"info": "<a href='/posts/938/' target='_blank'>烙哲學徵稿</a>",
+			"description": "烙哲學是沃草支援的哲學寫作社群，藉由書寫和討論，我們希望讓大家知道：日常生活的很多部分，都可以烙哲學！"
+		},
+		"沃草野台": {
+			"title": "沃草野台",
+			"picture": "http://community.citizenedu.tw/uploads/default/original/1X/bc1ee4dfc6823975f165184115f68ec281ff21aa.jpg",
+			"picture_attr": "",
+			"post_picture": "http://community.citizenedu.tw/uploads/default/original/1X/cc0e8c68bc0a2ff4860dd91054b45b54f5498a9e.jpg",
+			"post_picture_attr": "",
+			"info": "<a href='/posts/938'>詳細徵稿訊息</a>",
+			"description": "「沃草野台」徵稿中，我們歡迎清晰易懂符合邏輯的簡短評論，以及各種人文學科普及文章。"
+		},
+		"芭樂人類學": {
+			"title": "芭樂人類學",
+			"picture": "http://community.citizenedu.tw/uploads/default/236/600ddb5590ab7620.jpg",
+			"picture_attr": "",
+			"post_picture": "http://community.citizenedu.tw/uploads/default/original/1X/9bc40a32520b4a3b1ea5221085d2039c16c76ebe.jpg",
+			"post_picture_attr": "",
+			"info": "<a href='http://guavanthropology.tw/' target='_blank'>BLOG</a> | <a href='https://www.facebook.com/guavanthropology' target='_blank'>粉絲頁</a>",
+			"description": "以台灣青壯人類學家為主的共筆部落格 ，從人類學觀點探索日常生活、文化況味、社會張力、與世界百態。"
+		},
+		"菜市場政治學": {
+			"title": "菜市場政治學",
+			"picture": "http://community.citizenedu.tw/uploads/default/237/28140f15318f56b1.jpg",
+			"picture_attr": "<a href='https://www.flickr.com/photos/kuanzi/' target='_blank'>陳小冠</a>",
+			"post_picture": "http://community.citizenedu.tw/uploads/default/original/1X/0faf4171b45f6b521f4c2084719ca02102cec62a.jpg",
+			"post_picture_attr": "<a href='https://www.flickr.com/photos/kuanzi/' target='_blank'>陳小冠</a>",
+			"info": "<a href='http://whogovernstw.org/' target='_blank'>BLOG</a> | <a href='https://www.facebook.com/whogovernstw' target='_blank'>粉絲頁</a>",
+			"description": "一群政治學的研究與實踐者，希望更多人了解政治學的分析視角，進而共同關心、思辨台灣的政治狀況，促進民主深化。"
+		},
+		"觀點懶人包": {
+			"title": "觀點懶人包",
+			"picture": "http://community.citizenedu.tw/uploads/default/255/8b400031ca6888c0.jpg",
+			"picture_attr": "",
+			"post_picture": "http://community.citizenedu.tw/uploads/default/original/1X/f92d6f7c9a55a1243a3e90f4216c0a9a44191b8c.jpg",
+			"post_picture_attr": "",
+			"info": "",
+			"description": "阿草為大家整理各種議題的各種意見。"
+		},
+		"阿草愛讀書": {
+			"title": "",
+			"picture": "http://community.citizenedu.tw/uploads/default/232/8a48d7059c66ce03.jpg",
+			"picture_attr": "",
+			"post_picture": "http://community.citizenedu.tw/uploads/default/original/1X/a9c9d260dc1e0f70db88454cdb9f40344959ac0e.jpg",
+			"post_picture_attr": "",
+			"info": "<a href='/posts/938'>詳細徵稿訊息</a>",
+			"description": "「阿草愛讀書」書評專欄徵稿中，我們歡迎人文、社科領域書籍的導讀和評論。"
+		}
+	}
+}
+
+
+
+		
+
+

@@ -1,37 +1,32 @@
 .Tags {
-	//background: #D36E6E;
 	background: rgb(250,250,250);
-
 	display: inline-block;
 	vertical-align: top;
 	padding-left: 10px;
 	width: calc(100% - 15px);
 	padding-bottom: 80px;
-
 	z-index: 2;
 }
-
 .Tags-title {
 	border-bottom: 1px solid rgb(220,220,220);
 	padding: 5px;
 	margin: 10px 0;
 	color: rgb(120,120,120);
 }
-a.Tags-Tag:visited {
-	border-bottom: 1px solid rgb(220,220,220);
-}
 .Tags-Tag {
 	padding: 5px 10px;
 	cursor: pointer;
-  border: 1px solid rgb(220,220,220);
+    border: 1px solid rgb(220,220,220);
 	display: inline-block;
 	margin: 4px;
 	background: white;
+
+	font-size: 18px;
+    line-height: 1.8;
+    color: rgb(53,55,54);
 }
 .Tags-Tag:hover, .Tags-Tag.is-active {
-	//border: 1px solid #D36E6E;
 	border: 1px solid rgba(135,184,37,1);
-	//background: #D36E6E;
 	background: rgba(135,184,37,1);
 	color: white;
 }

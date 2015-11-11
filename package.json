@@ -29,7 +29,6 @@
   },
   "homepage": "https://github.com/watchout-tw/blog.citizenedu.tw",
   "dependencies": {
-    "moment": "^2.10.6"
   },
   "devDependencies": {
     "babel": "~5.0.9",

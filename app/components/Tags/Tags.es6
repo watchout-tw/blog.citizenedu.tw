@@ -1,27 +1,21 @@
 import React from "react/addons";
-
+import TagsData from "./Tags.json";
 import "./Tags.css";
 
 export default React.createClass({
   displayName: "Tags",
-
-  getInitialState(){
-       return {
-
-       }
-  },
-
   render() {
-      var classSet = React.addons.classSet;
-      var tagsItem = this.props.items.map((item, key)=>{
+      const classSet = React.addons.classSet;
+      const {changeTagHandler} = this.props;
+      var tagsItem = TagsData.map((item, key)=>{
           var tagClasses = classSet({
             "Tags-Tag": true,
-            "is-active" : this.props.title === item.title
+            "is-active" : this.props.tag === item.title
           })
           return (
-            <a className={tagClasses}
-              href={"/" + item.path}
-                 key={key}>{item.title}</a>
+            <div className={tagClasses}
+                 onClick={changeTagHandler.bind(null, item.type, item.title)}
+                 key={key}>{item.title}</div>
           )
       });
 

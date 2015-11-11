@@ -28,81 +28,7 @@ p, blockquote, h3, ul, ol, li, a, span {
    width: 100%;
    overflow-x: hidden;
 }
-.flexWrapper {
-   display: -webkit-box;
-   display: -moz-box;
-   display: -ms-flexbox;
-   display: -webkit-flex;
-	display: flex;
 
-   -webkit-flex-direction: column;
-   -ms-flex-direction: column;
-   flex-direction: column;
-
-	background: #FAFAFA;
-}
-.padTags {
-   display: none;
-}
-
-@media all and (min-width: 600px) and (max-width: 999px){
-   .padWrapper {
-      padding-left: 340px;
-   }
-
-}
-@media all and (min-width: 600px) {
-
-	.flexWrapper {
-      padding-top: 69px;
-     
-		-webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-
-	}
-   .flexWrapper--Columns {
-      padding-top: 69px;
-      padding-left: 340px;
-      width: calc(100% - 350px);
-      overflow: hidden;
-   }
-
-   .padTags {
-      display: block;
-      padding-left: 340px;
-   }
-   .defaultTags {
-      display: none;
-   }
-   
-}
-@media all and (min-width: 1000px) {
-   .flexWrapper {
-      padding-right: 320px;
-   }
-   .padTags {
-      display: none;
-   }
-   .defaultTags {
-      display: block;
-      width: 300px;
-      height: 20px;
-      position: fixed;
-  
-   }
-}
-@media all and (min-width: 1440px) {
-   .defaultTags {
-      display: block;
-      width: 300px;
-      height: 20px;
-      position: fixed;
-      top: 84px;
-      right: calc((100vw - 1440px)/2);
-  
-   }
-}
 a, a:visited {
    color: rgb(53,55,54);
    cursor: pointer;
@@ -152,8 +78,8 @@ a.lightbox {
 a.lightbox img {
 }
 .filename {
-	font-size: 14px;
+   font-size: 14px;
 }
 .informations {
-	display: none;
+   display: none;
 }

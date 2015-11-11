@@ -1,15 +1,62 @@
-[ "歷史學",
-  "政治學",
-  "人類學",
-  "哲學",
-  "社會學",
-  "語言學",
-  "宗教學",
-  "傳播學",
-  "勞工",
-  "環境",
-  "階級",
-  "性別",
-  "教育",
-  "國會",
-  "選舉" ]
+[ 
+  {
+    "title":"人類學",
+    "type": "subjects"
+  },
+  {
+    "title":"歷史學",
+    "type": "subjects"
+  },
+  {
+    "title": "政治學",
+    "type": "subjects"
+  },
+  {
+    "title": "社會學",
+    "type": "subjects"
+  },
+  {
+    "title": "語言學",
+    "type": "subjects"
+  },
+  {
+    "title": "宗教學",
+    "type": "subjects"
+  },
+  {
+    "title": "傳播學",
+    "type": "subjects"
+  },
+  {
+    "title": "哲學",
+    "type": "subjects"
+  },
+  {
+    "title": "勞工",
+    "type": "tags"
+  },
+  {
+    "title": "環境",
+    "type": "tags"
+  },
+  {
+    "title": "性別",
+    "type": "tags"
+  },
+  {
+    "title": "階級",
+    "type": "tags"
+  },
+  {
+    "title": "教育",
+    "type": "tags"
+  },
+  {
+    "title": "國會",
+    "type": "tags"
+  },
+  {
+    "title": "選舉",
+    "type": "tags"
+  }
+]

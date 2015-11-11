@@ -1,13 +1,83 @@
+
 import React from "react/addons";
-import columnList from "./columnList.json";
 import request from "superagent";
-import moment from "moment"; 
 
+import AboutSite from "../AboutSite/AboutSite.es6";
+import IndexList from "../IndexList/IndexList.es6";
+import Tags from "../Tags/Tags.es6";
+/* 目前有的專欄列表 */
+import columnList from "./columnList.json";
 import "./IndexList.css";
-
 
 export default React.createClass({
   displayName: "IndexList",
+
+  getInitialState () {
+    return {
+        tag: "",
+        column:""
+    };
+  },
+  componentDidMount(){
+    //直接輸入 url，active tag/column 決定
+    var pathname = window.location.pathname;
+    if(pathname.indexOf("/subjects/")!==-1){
+        this.setState({
+            tag: decodeURI(pathname.split("/subjects/")[1].split("/")[0])
+        })
+    }
+    if(pathname.indexOf("/tags/")!==-1){
+        this.setState({
+            tag: decodeURI(pathname.split("/tags/")[1].split("/")[0])
+        })
+    }
+    if(pathname.indexOf("/columns/")!==-1){
+        this.setState({
+            column: decodeURI(pathname.split("/columns/")[1].split("/")[0])
+        })
+    }
+    
+  },
+
+  _onChangeTag (type, title, event){
+    //console.log(title);
+
+    history.pushState("", "", `/${type}/${title}`);
+
+    this.setState({
+      tag: title,
+      column: ""
+    });
+  },
+
+  render() {
+    const {column, tag} = this.state;
+    return (
+      <div>
+          <div className="flexWrapper">
+            <div className="padWrapper">
+                <AboutSite column={column} tag={tag}/>
+                <Lists column={column} tag={tag}/>
+            </div>
+            <div className="defaultTags"> 
+                <Tags changeTagHandler={this._onChangeTag.bind(this)}
+                      tag={tag}/>
+            </div>
+          </div>
+          <div className="padTags">
+                <Tags changeTagHandler={this._onChangeTag.bind(this)}
+                      tag={tag}/>
+              
+          </div>
+      </div>
+
+    );
+  }
+});
+
+
+var Lists = React.createClass({
+  displayName: "Lists",
 
   getInitialState(){
     return {
@@ -69,6 +139,11 @@ export default React.createClass({
         //substring(0,40)，因為出現在後面的不要
         content = content.split('</p></blockquote>')[0].split('<blockquote><p>')[1];
 
+    }else if(content.substring(0,40).indexOf('<p><img')!==-1){
+        //一開始是一張圖片，取第二個 <p>
+        //烙哲學
+        content = content.split('<p>')[2].split('</p>')[0];
+
     }else{
         content = content.split('</p>')[0].split('<p>')[1];
     }
@@ -99,7 +174,7 @@ export default React.createClass({
                 excerpt: parsed.excerpt,
 
                 date: date,
-                timstamp: moment(date, "YYYY-MM-DD").unix(),
+                timstamp: (new Date(date)).getTime(),
                 
                 author: parsed.author,
                 columnName: columnName,
@@ -151,7 +226,7 @@ export default React.createClass({
     //format: http://community.citizenedu.tw/c/37-category.json?page=1
 
     var completeURL = `${base}/c/${categoryID}-category.json?page=${page}`
-    console.log(`=>${completeURL}`)
+    //console.log(`=>${completeURL}`)
     
     return new Promise((resolve, reject)=>{
 
@@ -180,7 +255,7 @@ export default React.createClass({
     var updateStatePosts = this._updateStatePosts;
 
     columnList.data.map((item, index)=>{
-        console.log(`get posts: ${item.title}`)
+        //console.log(`get posts: ${item.title}`)
 
         var url = `${item.link}.json`;
         var topics = [];//to save all the topics(posts) in this category
@@ -219,25 +294,55 @@ export default React.createClass({
     })
   },
   componentDidMount() {
-
-    console.log(">>indexList");
     this._getPosts();
   },
   _loadMore(){
-    console.log("loadMore");
-    console.log(this.state.posts)
+    // console.log("loadMore");
+    // console.log(this.state.posts)
+    
+    this.setState({
+       displayPostsCount: this.state.displayPostsCount + 10
+    })
+
   },
   render() {
-        let {posts} = this.state;
+        const {tag, column} = this.props;
+        let {posts, displayPostsCount} = this.state;
+
         if(posts.length === 0){
             return <div className="List List--index" ref="List"></div>
         }
 
-        var postItems = posts.map((item, key)=>{
+        var filteredPosts = posts
+            .filter((item,key)=>{
+                // filter column and tag
+                var shouldReturn = true;
+                if(tag){
+                    if(item.tag!==tag){
+                      shouldReturn = false;
+                    }
+                }
+                if(column){
+                    if(item.columnName!==column){
+                      shouldReturn = false;
+                    }
+                }
+                if(shouldReturn === true){
+                   return item;
+                }
+            })
+            .filter((item,key)=>{
+                if(key < displayPostsCount){
+                   return item;
+                }
+            });
+
+        var postItems = 
+            filteredPosts.map((item, key)=>{
             return(
                 <a className="List-indexItem"
                    key={key}
-                   href={"/posts/" + item.id}>
+                   href={`/posts/${item.id}/`}>
                       <div className="List-articleItemTitle List-boldTitle">
                         {item.author}{(item.author) ? "：" : ""}{item.title}
                       </div>
@@ -250,29 +355,38 @@ export default React.createClass({
                 </a>
             )
         });
+
         var classSet = React.addons.classSet;
+        
         var listFilterClasses = classSet({
            "List-filter" : true,
            "is-fixed" : this.state.scroll && window.innerWidth <= 600
         });
+        /*
+        //顯示目前的標籤，原本因為用 server-side 丟出來沒有使用
         var filterItem =  (this.props.tag) ?
           <div className={listFilterClasses}>
               <div className="List-filterMeta">標籤</div>
               <div className="List-filterTitle">{this.props.tag}</div>
           </div> :"";
+        */
 
-         return (
-          <div className="List List--index" ref="List">
-              {filterItem}
+        var loadMoreButtonItem = (displayPostsCount <= filteredPosts.length) ? (
+            <div className="List-footer">
+                 <div className="List-button"
+                      onClick={this._loadMore}>載入更多</div>
+            </div>
+        ) : "";
 
-              <div className="List-indexContent">
-                  {postItems}
-              </div>
-              <div className="List-footer">
-                  <div className="List-button"
-                       onClick={this._loadMore}>載入更多</div>
-              </div>
-        </div>);
+        return (
+            <div className="List List--index" ref="List">
+               
+               <div className="List-indexContent">
+                   {postItems}
+               </div>
+               {loadMoreButtonItem}
+            </div>
+         );
 
     
   }
