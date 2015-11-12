@@ -108,12 +108,14 @@ export default React.createClass({
                 <a className="List-indexItem"
                    key={key}
                    href={"/" + item.path}>
-                     <div className="List-articleItemTitle List-boldTitle">{[].concat(item.author).join('、')}：{item.title}</div>
-                     <div className="List-articleItemDate">{item.published_at || item.created_at}</div>
-                     <div className="List-articleItemColumn">{item.collection.filter((c) => allColumns[c])[0]}</div>
-                     <div className="List-articleItemBrief"
-                          dangerouslySetInnerHTML={{__html: item.excerpt}}>
-                     </div>
+                    <div className="List-articleItemTitle List-boldTitle">
+                       {[].concat(item.author).join('、')}{item.author ? "：" : ""}{item.title}
+                    </div>
+                    <div className="List-articleItemDate">{item.published_at || item.created_at}</div>
+                    <div className="List-articleItemColumn">{item.collection.filter((c) => allColumns[c])[0]}</div>
+                    <div className="List-articleItemBrief"
+                         dangerouslySetInnerHTML={{__html: item.excerpt}}>
+                    </div>
 
                 </a>
             )
