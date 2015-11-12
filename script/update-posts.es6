@@ -63,15 +63,21 @@ function extractMeta() {
   }
 }
 
-function buildTopic(topicInfo) {
-  debug('get topic %s of %s', topicInfo.id, topicInfo.column_title)
-  return superagent
-    .get(helper.topicURL(topicInfo.id, {json: true}))
-    .use(helper.withPromise())
-    .end()
-    .then((res) => res.body)
-    .then(extractMeta())
-    .then(writePost.bind(null, topicInfo))
+function buildTopic(windowSize, topicInfo) {
+  var waitFor = parseInt(Math.random() * 200 * windowSize)
+  debug('get topic %s of %s, wait for %d', topicInfo.id, topicInfo.column_title, waitFor)
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      superagent
+        .get(helper.topicURL(topicInfo.id, {json: true}))
+        .use(helper.withPromise())
+        .end()
+        .then((res) => res.body)
+        .then(extractMeta())
+        .then(writePost.bind(null, topicInfo))
+        .then(resolve)
+    }, waitFor)
+  })
 }
 
 function writePost(topicInfo, topic) {
@@ -112,11 +118,11 @@ co(function* () {
     .filter((n) => (undefined !== columns[n].link && columns[n].link))
     .map(getColumnInfo.bind(null, columns))
 
-  var r = yield Object.values(columns)
+  var posts = yield Object.values(columns)
     .filter((c) => undefined !== c.topic_list && c.topic_list.topics)
     .map(extractTopics.bind(null, posts))
     .reduce((prev, cur) => prev.concat(cur))
-    .map(buildTopic)
-
-  debug('%d topic(s) updated', r.length)
+  posts
+    .map(buildTopic.bind(null, posts.length))
+  debug('%d topic(s) updated', posts.length)
 }).catch(debug)
