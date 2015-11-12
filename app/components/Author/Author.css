@@ -105,18 +105,14 @@
 /* ==================================== */
 .Author--pageBio {
 	width: 100%;
-	//background: rgb(241,241,241);
 	padding-top: 50px;
-
 }
 .Author--pageContent{
 	margin: 0 auto;
 	position: relative;
 }
-
 .Author-pageTop {
 	text-align: center;
-	//padding-bottom: 30px;
 }
 .Author-nameTitle {
 	margin-top: 10px;
@@ -161,6 +157,9 @@
 }
 
 @media all and (min-width: 600px){
+	.Author--pageBio {
+		padding-top: 100px;
+	}
 	.Author--pageMain {
 		padding: 30px;
 	}
