@@ -103,7 +103,7 @@ export default React.createClass({
         </div>);
 
      }else if(type === "index"){
-        var postItems = this.props.posts.slice(0, 20).map((item, key)=>{
+        var postItems = this.props.posts.map((item, key)=>{
             return(
                 <a className="List-indexItem"
                    key={key}
@@ -124,11 +124,17 @@ export default React.createClass({
         });
         //console.log(this.state.scroll);
         //console.log(listFilterClasses);
+
         var filterItem =  (this.props.tag) ?
           <div className={listFilterClasses}>
               <div className="List-filterMeta">標籤</div>
               <div className="List-filterTitle">{this.props.tag}</div>
           </div> :"";
+        /*
+        <div className="List-footer">
+            <div className="List-button">載入更多</div>
+        </div>
+        */
 
         result = (
           <div className="List List--index" ref="List">
@@ -138,9 +144,6 @@ export default React.createClass({
                   {postItems}
               </div>
 
-              <div className="List-footer">
-                  <div className="List-button">載入更多</div>
-              </div>
         </div>);
 
      }else{
@@ -148,6 +151,6 @@ export default React.createClass({
      }
 
 
-      return result;
+     return result;
   }
 });
