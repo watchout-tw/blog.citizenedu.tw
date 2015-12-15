@@ -30,3 +30,13 @@ function getTopics(topics, link, pg) {
 export function digTopics(link) {
     return getTopics([], link, 0);
 }
+
+export function getColumnInfo(columns, name) {
+  debug('get column %s', columns[name].title)
+  return superagent
+    .get(`${columns[name].link}.json`)
+    .use(withPromise())
+    .end()
+    .then((res) => Object.assign(columns[name], res.body))
+}
+
