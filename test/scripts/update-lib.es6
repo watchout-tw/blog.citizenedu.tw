@@ -7,7 +7,9 @@ import p2 from '../fake/community/c/9-category-page2.json';
 import p3 from '../fake/community/c/9-category-page3.json';
 import p4 from '../fake/community/c/9-category-page4.json';
 
-before(() => {
+import * as lib from '../../script/update-lib';
+
+beforeEach(() => {
     // for unit test, return fixture json data via nock library
     nock('http://community.citizenedu.tw/')
         .get('/c/9-category.json').query({page: 0}).reply(200, p0)
@@ -28,6 +30,18 @@ describe('Test http Get', () => {
                     expect(err).to.equal(null);
                     done();
                 });
+        });
+    });
+});
+
+describe('Test update-lib', () => {
+    context('digTopics(link)', () => {
+        it('get page0 json', (done) => {
+            let url = 'http://community.citizenedu.tw/c/9-category.json';
+            lib.digTopics(url).then((topics) => {
+                expect(topics.length).to.equal(106);
+                done();
+            }).catch(done);
         });
     });
 });
