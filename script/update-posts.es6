@@ -1,3 +1,4 @@
+import {getColumnInfo} from './update-lib';
 
 var debug = require('debug')('update:post'),
     fs = require('mz/fs'),
@@ -7,15 +8,6 @@ var debug = require('debug')('update:post'),
     helper = require('./helper'),
     argv = require('minimist')(process.argv.slice(2));
 var mkdirp = require('mkdirp')
-
-function getColumnInfo(columns, name) {
-  debug('get column %s', columns[name].title)
-  return superagent
-    .get(`${columns[name].link}.json`)
-    .use(helper.withPromise())
-    .end()
-    .then((res) => Object.assign(columns[name], res.body))
-}
 
 function extractTopics(posts, column) {
   debug('check column %s for new topics', column.title)
