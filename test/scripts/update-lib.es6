@@ -44,5 +44,30 @@ describe('Test update-lib', () => {
             }).catch(done);
         });
     });
+
+    context('getColumnInfo(link)', () => {
+        it('test', (done) => {
+            let col = {
+                title: 'Fake',
+                link: 'http://community.citizenedu.tw/c/9-category',
+                type: 'columns'
+            };
+
+            let cols = {
+                'mine': col
+            };
+
+            lib.getColumnInfo(cols, 'mine').then(() => {
+                expect(cols.mine).to.exist;
+                expect(cols.mine.title).to.exist;
+                expect(cols.mine.link).to.exist;
+                expect(cols.mine.type).to.exist;
+                expect(cols.mine.topic_list).to.exist;
+                expect(cols.mine.topic_list.topics).to.exist;
+                expect(cols.mine.topic_list.topics.length).to.equal(106);
+                done();
+            }).catch(done);
+        });
+    });
 });
 

@@ -31,12 +31,18 @@ export function digTopics(link) {
     return getTopics([], link, 0);
 }
 
+/**
+ * For a given Column data-structure, use its 'link' attribute to dig corresponding json data. To fetch each of posts and assign back to the column data-structure respectively.
+ */
 export function getColumnInfo(columns, name) {
   debug('get column %s', columns[name].title)
-  return superagent
-    .get(`${columns[name].link}.json`)
-    .use(withPromise())
-    .end()
-    .then((res) => Object.assign(columns[name], res.body))
+  return digTopics(`${columns[name].link}.json`)
+    .then((posts) => {
+        // to keep original code logic, we just assign downloaded Post data into
+        // original column data strcture.
+        columns[name].topic_list = {
+            topics: posts
+        };
+    });
 }
 
