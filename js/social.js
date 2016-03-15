@@ -196,7 +196,7 @@
 /* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(35)();
+	exports = module.exports = __webpack_require__(34)();
 	exports.push([module.id, "/* MOBILE */\n.Social {\n\tposition: fixed;\n\tbottom: 0;\n\twidth: 100%;\n\theight: 50px;\n\tz-index: 10;\n\tbox-shadow: 0 -2px 8px rgba(0,0,0,0.12);\n}\n.Social-socialSets {\n\tdisplay: inline-block;\n\tvertical-align: top;\n\twidth: 100%;\n}\n.Social-social {\n\tbackground: #F1F1F1;\n\tdisplay: inline-block;\n\tborder-left: 3px solid rgb(230,230,230);\n\twidth: calc(50% - 3px);\n\theight: 50px;\n\ttext-align: center;\n\tcursor: pointer;\n\tpadding: 8px 0 0 0;\n\n}\n\n/* WEB */\n@media screen and (min-width: 400px){\n\t.Social {\n\t   position: relative;\n\t   margin: 0 auto;\n\t   width: 600px;\n\t   vertical-align: bottom;\n\t   height: 0px;\n    }\n    .Social-socialSets {\n       text-align: left;\n       position: absolute;\n       top: 25px;\n       left: 5px;\n       width: auto;\n    }\n    .Social-social {\n    \tdisplay: inline-block;\n    \twidth: auto;\n    \theight: auto;\n    \tpadding: 0 0 0 20px;\n    \tmargin-right: 20px;\n\t    background: none;\n\t    text-align: left;\n\t    color: rgb(50,50,50);\n    }\n\n}", ""]);
 
 /***/ },
@@ -464,8 +464,7 @@
 /***/ },
 /* 32 */,
 /* 33 */,
-/* 34 */,
-/* 35 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = function() {
@@ -486,6 +485,7 @@
 	}
 
 /***/ },
+/* 35 */,
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
