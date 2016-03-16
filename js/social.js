@@ -5832,10 +5832,10 @@
 	var ReactMount = __webpack_require__(56);
 	var SelectEventPlugin = __webpack_require__(126);
 	var ServerReactRootIndex = __webpack_require__(127);
-	var SimpleEventPlugin = __webpack_require__(130);
-	var SVGDOMPropertyConfig = __webpack_require__(128);
+	var SimpleEventPlugin = __webpack_require__(128);
+	var SVGDOMPropertyConfig = __webpack_require__(129);
 
-	var createFullPageComponent = __webpack_require__(129);
+	var createFullPageComponent = __webpack_require__(130);
 
 	function inject() {
 	  ReactInjection.EventEmitter.injectReactEventListener(
@@ -14727,166 +14727,6 @@
 /* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule SVGDOMPropertyConfig
-	 */
-
-	/*jslint bitwise: true*/
-
-	"use strict";
-
-	var DOMProperty = __webpack_require__(83);
-
-	var MUST_USE_ATTRIBUTE = DOMProperty.injection.MUST_USE_ATTRIBUTE;
-
-	var SVGDOMPropertyConfig = {
-	  Properties: {
-	    cx: MUST_USE_ATTRIBUTE,
-	    cy: MUST_USE_ATTRIBUTE,
-	    d: MUST_USE_ATTRIBUTE,
-	    dx: MUST_USE_ATTRIBUTE,
-	    dy: MUST_USE_ATTRIBUTE,
-	    fill: MUST_USE_ATTRIBUTE,
-	    fillOpacity: MUST_USE_ATTRIBUTE,
-	    fontFamily: MUST_USE_ATTRIBUTE,
-	    fontSize: MUST_USE_ATTRIBUTE,
-	    fx: MUST_USE_ATTRIBUTE,
-	    fy: MUST_USE_ATTRIBUTE,
-	    gradientTransform: MUST_USE_ATTRIBUTE,
-	    gradientUnits: MUST_USE_ATTRIBUTE,
-	    markerEnd: MUST_USE_ATTRIBUTE,
-	    markerMid: MUST_USE_ATTRIBUTE,
-	    markerStart: MUST_USE_ATTRIBUTE,
-	    offset: MUST_USE_ATTRIBUTE,
-	    opacity: MUST_USE_ATTRIBUTE,
-	    patternContentUnits: MUST_USE_ATTRIBUTE,
-	    patternUnits: MUST_USE_ATTRIBUTE,
-	    points: MUST_USE_ATTRIBUTE,
-	    preserveAspectRatio: MUST_USE_ATTRIBUTE,
-	    r: MUST_USE_ATTRIBUTE,
-	    rx: MUST_USE_ATTRIBUTE,
-	    ry: MUST_USE_ATTRIBUTE,
-	    spreadMethod: MUST_USE_ATTRIBUTE,
-	    stopColor: MUST_USE_ATTRIBUTE,
-	    stopOpacity: MUST_USE_ATTRIBUTE,
-	    stroke: MUST_USE_ATTRIBUTE,
-	    strokeDasharray: MUST_USE_ATTRIBUTE,
-	    strokeLinecap: MUST_USE_ATTRIBUTE,
-	    strokeOpacity: MUST_USE_ATTRIBUTE,
-	    strokeWidth: MUST_USE_ATTRIBUTE,
-	    textAnchor: MUST_USE_ATTRIBUTE,
-	    transform: MUST_USE_ATTRIBUTE,
-	    version: MUST_USE_ATTRIBUTE,
-	    viewBox: MUST_USE_ATTRIBUTE,
-	    x1: MUST_USE_ATTRIBUTE,
-	    x2: MUST_USE_ATTRIBUTE,
-	    x: MUST_USE_ATTRIBUTE,
-	    y1: MUST_USE_ATTRIBUTE,
-	    y2: MUST_USE_ATTRIBUTE,
-	    y: MUST_USE_ATTRIBUTE
-	  },
-	  DOMAttributeNames: {
-	    fillOpacity: 'fill-opacity',
-	    fontFamily: 'font-family',
-	    fontSize: 'font-size',
-	    gradientTransform: 'gradientTransform',
-	    gradientUnits: 'gradientUnits',
-	    markerEnd: 'marker-end',
-	    markerMid: 'marker-mid',
-	    markerStart: 'marker-start',
-	    patternContentUnits: 'patternContentUnits',
-	    patternUnits: 'patternUnits',
-	    preserveAspectRatio: 'preserveAspectRatio',
-	    spreadMethod: 'spreadMethod',
-	    stopColor: 'stop-color',
-	    stopOpacity: 'stop-opacity',
-	    strokeDasharray: 'stroke-dasharray',
-	    strokeLinecap: 'stroke-linecap',
-	    strokeOpacity: 'stroke-opacity',
-	    strokeWidth: 'stroke-width',
-	    textAnchor: 'text-anchor',
-	    viewBox: 'viewBox'
-	  }
-	};
-
-	module.exports = SVGDOMPropertyConfig;
-
-
-/***/ },
-/* 129 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule createFullPageComponent
-	 * @typechecks
-	 */
-
-	"use strict";
-
-	// Defeat circular references by requiring this directly.
-	var ReactCompositeComponent = __webpack_require__(46);
-	var ReactElement = __webpack_require__(49);
-
-	var invariant = __webpack_require__(88);
-
-	/**
-	 * Create a component that will throw an exception when unmounted.
-	 *
-	 * Components like <html> <head> and <body> can't be removed or added
-	 * easily in a cross-browser way, however it's valuable to be able to
-	 * take advantage of React's reconciliation for styling and <title>
-	 * management. So we just document it and throw in dangerous cases.
-	 *
-	 * @param {string} tag The tag to wrap
-	 * @return {function} convenience constructor of new component
-	 */
-	function createFullPageComponent(tag) {
-	  var elementFactory = ReactElement.createFactory(tag);
-
-	  var FullPageComponent = ReactCompositeComponent.createClass({
-	    displayName: 'ReactFullPageComponent' + tag,
-
-	    componentWillUnmount: function() {
-	      ("production" !== process.env.NODE_ENV ? invariant(
-	        false,
-	        '%s tried to unmount. Because of cross-browser quirks it is ' +
-	        'impossible to unmount some top-level components (eg <html>, <head>, ' +
-	        'and <body>) reliably and efficiently. To fix this, have a single ' +
-	        'top-level component that never unmounts render these elements.',
-	        this.constructor.displayName
-	      ) : invariant(false));
-	    },
-
-	    render: function() {
-	      return elementFactory(this.props);
-	    }
-	  });
-
-	  return FullPageComponent;
-	}
-
-	module.exports = createFullPageComponent;
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
-
-/***/ },
-/* 130 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/* WEBPACK VAR INJECTION */(function(process) {/**
 	 * Copyright 2013-2014, Facebook, Inc.
 	 * All rights reserved.
@@ -15311,6 +15151,166 @@
 	};
 
 	module.exports = SimpleEventPlugin;
+
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
+
+/***/ },
+/* 129 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule SVGDOMPropertyConfig
+	 */
+
+	/*jslint bitwise: true*/
+
+	"use strict";
+
+	var DOMProperty = __webpack_require__(83);
+
+	var MUST_USE_ATTRIBUTE = DOMProperty.injection.MUST_USE_ATTRIBUTE;
+
+	var SVGDOMPropertyConfig = {
+	  Properties: {
+	    cx: MUST_USE_ATTRIBUTE,
+	    cy: MUST_USE_ATTRIBUTE,
+	    d: MUST_USE_ATTRIBUTE,
+	    dx: MUST_USE_ATTRIBUTE,
+	    dy: MUST_USE_ATTRIBUTE,
+	    fill: MUST_USE_ATTRIBUTE,
+	    fillOpacity: MUST_USE_ATTRIBUTE,
+	    fontFamily: MUST_USE_ATTRIBUTE,
+	    fontSize: MUST_USE_ATTRIBUTE,
+	    fx: MUST_USE_ATTRIBUTE,
+	    fy: MUST_USE_ATTRIBUTE,
+	    gradientTransform: MUST_USE_ATTRIBUTE,
+	    gradientUnits: MUST_USE_ATTRIBUTE,
+	    markerEnd: MUST_USE_ATTRIBUTE,
+	    markerMid: MUST_USE_ATTRIBUTE,
+	    markerStart: MUST_USE_ATTRIBUTE,
+	    offset: MUST_USE_ATTRIBUTE,
+	    opacity: MUST_USE_ATTRIBUTE,
+	    patternContentUnits: MUST_USE_ATTRIBUTE,
+	    patternUnits: MUST_USE_ATTRIBUTE,
+	    points: MUST_USE_ATTRIBUTE,
+	    preserveAspectRatio: MUST_USE_ATTRIBUTE,
+	    r: MUST_USE_ATTRIBUTE,
+	    rx: MUST_USE_ATTRIBUTE,
+	    ry: MUST_USE_ATTRIBUTE,
+	    spreadMethod: MUST_USE_ATTRIBUTE,
+	    stopColor: MUST_USE_ATTRIBUTE,
+	    stopOpacity: MUST_USE_ATTRIBUTE,
+	    stroke: MUST_USE_ATTRIBUTE,
+	    strokeDasharray: MUST_USE_ATTRIBUTE,
+	    strokeLinecap: MUST_USE_ATTRIBUTE,
+	    strokeOpacity: MUST_USE_ATTRIBUTE,
+	    strokeWidth: MUST_USE_ATTRIBUTE,
+	    textAnchor: MUST_USE_ATTRIBUTE,
+	    transform: MUST_USE_ATTRIBUTE,
+	    version: MUST_USE_ATTRIBUTE,
+	    viewBox: MUST_USE_ATTRIBUTE,
+	    x1: MUST_USE_ATTRIBUTE,
+	    x2: MUST_USE_ATTRIBUTE,
+	    x: MUST_USE_ATTRIBUTE,
+	    y1: MUST_USE_ATTRIBUTE,
+	    y2: MUST_USE_ATTRIBUTE,
+	    y: MUST_USE_ATTRIBUTE
+	  },
+	  DOMAttributeNames: {
+	    fillOpacity: 'fill-opacity',
+	    fontFamily: 'font-family',
+	    fontSize: 'font-size',
+	    gradientTransform: 'gradientTransform',
+	    gradientUnits: 'gradientUnits',
+	    markerEnd: 'marker-end',
+	    markerMid: 'marker-mid',
+	    markerStart: 'marker-start',
+	    patternContentUnits: 'patternContentUnits',
+	    patternUnits: 'patternUnits',
+	    preserveAspectRatio: 'preserveAspectRatio',
+	    spreadMethod: 'spreadMethod',
+	    stopColor: 'stop-color',
+	    stopOpacity: 'stop-opacity',
+	    strokeDasharray: 'stroke-dasharray',
+	    strokeLinecap: 'stroke-linecap',
+	    strokeOpacity: 'stroke-opacity',
+	    strokeWidth: 'stroke-width',
+	    textAnchor: 'text-anchor',
+	    viewBox: 'viewBox'
+	  }
+	};
+
+	module.exports = SVGDOMPropertyConfig;
+
+
+/***/ },
+/* 130 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule createFullPageComponent
+	 * @typechecks
+	 */
+
+	"use strict";
+
+	// Defeat circular references by requiring this directly.
+	var ReactCompositeComponent = __webpack_require__(46);
+	var ReactElement = __webpack_require__(49);
+
+	var invariant = __webpack_require__(88);
+
+	/**
+	 * Create a component that will throw an exception when unmounted.
+	 *
+	 * Components like <html> <head> and <body> can't be removed or added
+	 * easily in a cross-browser way, however it's valuable to be able to
+	 * take advantage of React's reconciliation for styling and <title>
+	 * management. So we just document it and throw in dangerous cases.
+	 *
+	 * @param {string} tag The tag to wrap
+	 * @return {function} convenience constructor of new component
+	 */
+	function createFullPageComponent(tag) {
+	  var elementFactory = ReactElement.createFactory(tag);
+
+	  var FullPageComponent = ReactCompositeComponent.createClass({
+	    displayName: 'ReactFullPageComponent' + tag,
+
+	    componentWillUnmount: function() {
+	      ("production" !== process.env.NODE_ENV ? invariant(
+	        false,
+	        '%s tried to unmount. Because of cross-browser quirks it is ' +
+	        'impossible to unmount some top-level components (eg <html>, <head>, ' +
+	        'and <body>) reliably and efficiently. To fix this, have a single ' +
+	        'top-level component that never unmounts render these elements.',
+	        this.constructor.displayName
+	      ) : invariant(false));
+	    },
+
+	    render: function() {
+	      return elementFactory(this.props);
+	    }
+	  });
+
+	  return FullPageComponent;
+	}
+
+	module.exports = createFullPageComponent;
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
