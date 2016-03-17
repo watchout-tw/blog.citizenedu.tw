@@ -869,10 +869,10 @@
 	"use strict";
 
 	module.exports = {
-		createContainer:       __webpack_require__(77),
-		render:                __webpack_require__(78),
-		renderToString:        __webpack_require__(79),
-		injectIntoMarkup:      __webpack_require__(80),
+		createContainer:       __webpack_require__(80),
+		render:                __webpack_require__(77),
+		renderToString:        __webpack_require__(78),
+		injectIntoMarkup:      __webpack_require__(79),
 		setPromiseConstructor: function (PromiseConstructor) {
 			__webpack_require__(81).Promise = PromiseConstructor;
 		}
@@ -8700,11 +8700,11 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(144);
+	var CallbackQueue = __webpack_require__(142);
 	var PooledClass = __webpack_require__(89);
 	var ReactCurrentOwner = __webpack_require__(48);
 	var ReactPerf = __webpack_require__(58);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(143);
 
 	var assign = __webpack_require__(62);
 	var invariant = __webpack_require__(88);
@@ -9253,6 +9253,112 @@
 	 */
 	"use strict";
 
+	var React  = __webpack_require__(153);
+	var assign = React.__spread;
+
+	/**
+	 * @function render
+	 */
+	module.exports = function (Component, props, targetDOMNode, callback) {
+		var myProps = assign({}, props, window.__reactTransmitPacket || {});
+
+		if (window.__reactTransmitPacket) {
+			delete window.__reactTransmitPacket;
+		}
+
+		React.render(React.createElement(Component, myProps), targetDOMNode, callback);
+	};
+
+
+/***/ },
+/* 78 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @copyright © 2015, Rick Wong. All rights reserved.
+	 */
+	"use strict";
+
+	var promiseProxy = __webpack_require__(81);
+	var React        = __webpack_require__(153);
+	var assign       = React.__spread;
+
+	/**
+	 * @function renderToString
+	 */
+	module.exports = function (Component, props) {
+		props = props || {};
+
+		return new promiseProxy.Promise(function (resolve, reject) {
+			var onQuery = function (promise) {
+				promise.then(function (queryResults) {
+					var myProps     = assign({}, props, queryResults);
+					var reactString = React.renderToString(React.createElement(Component, myProps));
+
+					resolve({
+						reactString: reactString,
+						reactData:   queryResults
+					});
+				}).catch(function (error) {
+					reject(error);
+				});
+			};
+
+			var myProps = assign({}, props, {onQuery: onQuery});
+			React.renderToString(React.createElement(Component, myProps));
+		});
+	};
+
+
+/***/ },
+/* 79 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * NOTE: This file is copied from `react-async`. Thanks Andrey Popp!
+	 *
+	 * @see https://github.com/andreypopp/react-async
+	 */
+	"use strict";
+
+	var asciiJSON = __webpack_require__(197);
+
+	/**
+	 * Inject data and optional client scripts into markup.
+	 *
+	 * @param {String} markup
+	 * @param {Object} data
+	 * @param {?Array} scripts
+	 */
+	function injectIntoMarkup(markup, data, scripts) {
+		var escapedJson = asciiJSON.stringify(data).replace(/<\//g, '<\\/');
+		var injected = '<script>window.__reactTransmitPacket=' + escapedJson + '</script>';
+
+		if (scripts) {
+			injected += scripts.map(function(script) {
+				return '<script src="' + script + '"></script>';
+			}).join('');
+		}
+
+		if (markup.indexOf('</body>') > -1) {
+			return markup.replace('</body>', injected + '$&');
+		} else {
+			return markup + injected;
+		}
+	}
+
+	module.exports = injectIntoMarkup;
+
+
+/***/ },
+/* 80 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @copyright © 2015, Rick Wong. All rights reserved.
+	 */
+	"use strict";
+
 	var promiseProxy = __webpack_require__(81);
 	var React        = __webpack_require__(153);
 	var assign       = React.__spread;
@@ -9431,112 +9537,6 @@
 
 		return Container;
 	};
-
-
-/***/ },
-/* 78 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * @copyright © 2015, Rick Wong. All rights reserved.
-	 */
-	"use strict";
-
-	var React  = __webpack_require__(153);
-	var assign = React.__spread;
-
-	/**
-	 * @function render
-	 */
-	module.exports = function (Component, props, targetDOMNode, callback) {
-		var myProps = assign({}, props, window.__reactTransmitPacket || {});
-
-		if (window.__reactTransmitPacket) {
-			delete window.__reactTransmitPacket;
-		}
-
-		React.render(React.createElement(Component, myProps), targetDOMNode, callback);
-	};
-
-
-/***/ },
-/* 79 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * @copyright © 2015, Rick Wong. All rights reserved.
-	 */
-	"use strict";
-
-	var promiseProxy = __webpack_require__(81);
-	var React        = __webpack_require__(153);
-	var assign       = React.__spread;
-
-	/**
-	 * @function renderToString
-	 */
-	module.exports = function (Component, props) {
-		props = props || {};
-
-		return new promiseProxy.Promise(function (resolve, reject) {
-			var onQuery = function (promise) {
-				promise.then(function (queryResults) {
-					var myProps     = assign({}, props, queryResults);
-					var reactString = React.renderToString(React.createElement(Component, myProps));
-
-					resolve({
-						reactString: reactString,
-						reactData:   queryResults
-					});
-				}).catch(function (error) {
-					reject(error);
-				});
-			};
-
-			var myProps = assign({}, props, {onQuery: onQuery});
-			React.renderToString(React.createElement(Component, myProps));
-		});
-	};
-
-
-/***/ },
-/* 80 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * NOTE: This file is copied from `react-async`. Thanks Andrey Popp!
-	 *
-	 * @see https://github.com/andreypopp/react-async
-	 */
-	"use strict";
-
-	var asciiJSON = __webpack_require__(197);
-
-	/**
-	 * Inject data and optional client scripts into markup.
-	 *
-	 * @param {String} markup
-	 * @param {Object} data
-	 * @param {?Array} scripts
-	 */
-	function injectIntoMarkup(markup, data, scripts) {
-		var escapedJson = asciiJSON.stringify(data).replace(/<\//g, '<\\/');
-		var injected = '<script>window.__reactTransmitPacket=' + escapedJson + '</script>';
-
-		if (scripts) {
-			injected += scripts.map(function(script) {
-				return '<script src="' + script + '"></script>';
-			}).join('');
-		}
-
-		if (markup.indexOf('</body>') > -1) {
-			return markup.replace('</body>', injected + '$&');
-		} else {
-			return markup + injected;
-		}
-	}
-
-	module.exports = injectIntoMarkup;
 
 
 /***/ },
@@ -13454,7 +13454,7 @@
 	"use strict";
 
 	var ReactUpdates = __webpack_require__(71);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(143);
 
 	var assign = __webpack_require__(62);
 	var emptyFunction = __webpack_require__(136);
@@ -14514,7 +14514,7 @@
 	var getActiveElement = __webpack_require__(180);
 	var isTextInputElement = __webpack_require__(166);
 	var keyOf = __webpack_require__(99);
-	var shallowEqual = __webpack_require__(141);
+	var shallowEqual = __webpack_require__(139);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -15654,9 +15654,9 @@
 	"use strict";
 
 	var PooledClass = __webpack_require__(89);
-	var CallbackQueue = __webpack_require__(144);
+	var CallbackQueue = __webpack_require__(142);
 	var ReactPutListenerQueue = __webpack_require__(191);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(143);
 
 	var assign = __webpack_require__(62);
 	var emptyFunction = __webpack_require__(136);
@@ -15753,9 +15753,7 @@
 
 
 /***/ },
-/* 139 */,
-/* 140 */,
-/* 141 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15803,9 +15801,9 @@
 
 
 /***/ },
-/* 142 */,
-/* 143 */,
-/* 144 */
+/* 140 */,
+/* 141 */,
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15908,7 +15906,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 145 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16152,6 +16150,8 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
+/* 144 */,
+/* 145 */,
 /* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -18740,12 +18740,12 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(144);
+	var CallbackQueue = __webpack_require__(142);
 	var PooledClass = __webpack_require__(89);
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 	var ReactInputSelection = __webpack_require__(167);
 	var ReactPutListenerQueue = __webpack_require__(191);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(143);
 
 	var assign = __webpack_require__(62);
 
