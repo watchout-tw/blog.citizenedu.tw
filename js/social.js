@@ -887,8 +887,8 @@
 	 * Module dependencies.
 	 */
 
-	var Emitter = __webpack_require__(152);
-	var reduce = __webpack_require__(151);
+	var Emitter = __webpack_require__(151);
+	var reduce = __webpack_require__(152);
 
 	/**
 	 * Root reference for iframes.
@@ -8700,11 +8700,11 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(144);
+	var CallbackQueue = __webpack_require__(143);
 	var PooledClass = __webpack_require__(89);
 	var ReactCurrentOwner = __webpack_require__(48);
 	var ReactPerf = __webpack_require__(58);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(144);
 
 	var assign = __webpack_require__(62);
 	var invariant = __webpack_require__(88);
@@ -13454,7 +13454,7 @@
 	"use strict";
 
 	var ReactUpdates = __webpack_require__(71);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(144);
 
 	var assign = __webpack_require__(62);
 	var emptyFunction = __webpack_require__(136);
@@ -14514,7 +14514,7 @@
 	var getActiveElement = __webpack_require__(180);
 	var isTextInputElement = __webpack_require__(166);
 	var keyOf = __webpack_require__(99);
-	var shallowEqual = __webpack_require__(139);
+	var shallowEqual = __webpack_require__(145);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -15654,9 +15654,9 @@
 	"use strict";
 
 	var PooledClass = __webpack_require__(89);
-	var CallbackQueue = __webpack_require__(144);
+	var CallbackQueue = __webpack_require__(143);
 	var ReactPutListenerQueue = __webpack_require__(191);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(144);
 
 	var assign = __webpack_require__(62);
 	var emptyFunction = __webpack_require__(136);
@@ -15753,59 +15753,11 @@
 
 
 /***/ },
-/* 139 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule shallowEqual
-	 */
-
-	"use strict";
-
-	/**
-	 * Performs equality by iterating through keys on an object and returning
-	 * false when any key has values which are not strictly equal between
-	 * objA and objB. Returns true when the values of all keys are strictly equal.
-	 *
-	 * @return {boolean}
-	 */
-	function shallowEqual(objA, objB) {
-	  if (objA === objB) {
-	    return true;
-	  }
-	  var key;
-	  // Test for A's keys different from B.
-	  for (key in objA) {
-	    if (objA.hasOwnProperty(key) &&
-	        (!objB.hasOwnProperty(key) || objA[key] !== objB[key])) {
-	      return false;
-	    }
-	  }
-	  // Test for B's keys missing from A.
-	  for (key in objB) {
-	    if (objB.hasOwnProperty(key) && !objA.hasOwnProperty(key)) {
-	      return false;
-	    }
-	  }
-	  return true;
-	}
-
-	module.exports = shallowEqual;
-
-
-/***/ },
+/* 139 */,
 /* 140 */,
 /* 141 */,
 /* 142 */,
-/* 143 */,
-/* 144 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15908,7 +15860,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 145 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16150,6 +16102,54 @@
 	module.exports = Transaction;
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
+
+/***/ },
+/* 145 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule shallowEqual
+	 */
+
+	"use strict";
+
+	/**
+	 * Performs equality by iterating through keys on an object and returning
+	 * false when any key has values which are not strictly equal between
+	 * objA and objB. Returns true when the values of all keys are strictly equal.
+	 *
+	 * @return {boolean}
+	 */
+	function shallowEqual(objA, objB) {
+	  if (objA === objB) {
+	    return true;
+	  }
+	  var key;
+	  // Test for A's keys different from B.
+	  for (key in objA) {
+	    if (objA.hasOwnProperty(key) &&
+	        (!objB.hasOwnProperty(key) || objA[key] !== objB[key])) {
+	      return false;
+	    }
+	  }
+	  // Test for B's keys missing from A.
+	  for (key in objB) {
+	    if (objB.hasOwnProperty(key) && !objA.hasOwnProperty(key)) {
+	      return false;
+	    }
+	  }
+	  return true;
+	}
+
+	module.exports = shallowEqual;
+
 
 /***/ },
 /* 146 */
@@ -16985,35 +16985,6 @@
 
 	
 	/**
-	 * Reduce `arr` with `fn`.
-	 *
-	 * @param {Array} arr
-	 * @param {Function} fn
-	 * @param {Mixed} initial
-	 *
-	 * TODO: combatible error handling?
-	 */
-
-	module.exports = function(arr, fn, initial){  
-	  var idx = 0;
-	  var len = arr.length;
-	  var curr = arguments.length == 3
-	    ? initial
-	    : arr[idx++];
-
-	  while (idx < len) {
-	    curr = fn.call(null, curr, arr[idx], ++idx, arr);
-	  }
-	  
-	  return curr;
-	};
-
-/***/ },
-/* 152 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	/**
 	 * Expose `Emitter`.
 	 */
 
@@ -17177,6 +17148,35 @@
 	  return !! this.listeners(event).length;
 	};
 
+
+/***/ },
+/* 152 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	/**
+	 * Reduce `arr` with `fn`.
+	 *
+	 * @param {Array} arr
+	 * @param {Function} fn
+	 * @param {Mixed} initial
+	 *
+	 * TODO: combatible error handling?
+	 */
+
+	module.exports = function(arr, fn, initial){  
+	  var idx = 0;
+	  var len = arr.length;
+	  var curr = arguments.length == 3
+	    ? initial
+	    : arr[idx++];
+
+	  while (idx < len) {
+	    curr = fn.call(null, curr, arr[idx], ++idx, arr);
+	  }
+	  
+	  return curr;
+	};
 
 /***/ },
 /* 153 */
@@ -18740,12 +18740,12 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(144);
+	var CallbackQueue = __webpack_require__(143);
 	var PooledClass = __webpack_require__(89);
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 	var ReactInputSelection = __webpack_require__(167);
 	var ReactPutListenerQueue = __webpack_require__(191);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(144);
 
 	var assign = __webpack_require__(62);
 
