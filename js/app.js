@@ -54,9 +54,9 @@
 
 	__webpack_require__(9);
 
-	__webpack_require__(13);
-
 	__webpack_require__(11);
+
+	__webpack_require__(13);
 
 	__webpack_require__(15);
 
@@ -209,8 +209,8 @@
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
-		module.hot.accept("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Article/Article.css", function() {
-			var newContent = require("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Article/Article.css");
+		module.hot.accept("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Arthor/Arthor.css", function() {
+			var newContent = require("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Arthor/Arthor.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -223,7 +223,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
-	exports.push([module.id, "/** @define Article; use strict */\n.Article {\n  background: white;\n  width: 100%;\n  margin: 70px auto 0px;\n\n  position: relative;\n  overflow: hidden;\n}\n.Article-content a, .Article-content a:visited {\n  border: none;\n  color: rgb(135,184,37);\n}\n.Article-content img {\n  width: 100%;\n  height: auto;\n}\n@media screen and (min-width: 600px){\n  .Article-content img {\n    width: auto;\n    height: auto;\n    max-width: 600px;\n  }\n}\n.Article-authorBackground {\n  /*background: rgb(230,230,230);*/\n  padding: 10px;\n}\n.Article-author {\n  padding-bottom: 30px;\n\n}\n.Article-cover {\n  width: 100%;\n  height: 150px;\n  overflow: hidden;\n  position: relative;\n}\n.Article-coverImg {\n  height: 150px;\n}\n.Article-coverCopyright a {\n  color: #e9e9e9;\n  border: none;\n  font-size: 12px;\n}\n.Article-coverCopyright {\n  color: #e9e9e9;\n  position: absolute;\n  bottom: 4px;\n  right: 10px;\n  cursor: pointer;\n  border: none;\n  font-size: 12px;\n}\nh1.Article-title {\n  border-left: none;\n  padding-top: 30px;\n  padding-bottom: 40px;\n  padding-left: 0;\n}\n@media screen and (min-width: 400px) {\n    h1.Article-title {\n        padding-top: 0;\n        padding-bottom: 0;\n    }\n}\n@media screen and (min-width: 400px) and (max-width: 1299px) {\n    .Article-content,.Article-author{\n\t\t    max-width: 600px;\n        margin: 0 auto;\n    }\n    .Article-cover {\n        width: 100%;\n        height: 300px;\n    }\n    .Article-coverImg {\n      height: 300px;\n    }\n}\n@media screen and (min-width: 1300px) {\n    .Article-content,.Article-author{\n\t\t    max-width: 600px;\n        margin: 0 auto;\n    }\n    .Article-cover {\n        width: 100%;\n        height: 300px;\n    }\n    .Article-coverImg {\n      width: 100%;\n      height: auto;\n    }\n}\n.Article-content {\n  background: rgba(255,255,255,0.8);\n  position: relative;\n  padding: 8px;\n}\n\n@media screen and (max-width: 400px){\n  .Article-content h1:first-child {\n      margin: 0;\n  }\n}\n.Article-author {\n  //background: #FAFAFA;\n  line-height: 1.4;\n  font-family: 'Noto Sans', sans-serif;\n\n}\n.Article-authorHeader {\n  min-height: 0px;\n}\n.Article-avatar {\n  cursor: pointer;\n\tfloat: left;\n  margin: 20px 0px 0px 20px;\n  background: white;\n  //border: 3px solid rgb(140,140,140);\n  //box-shadow: 3px 3px 0px rgba(200,200,200,0.4);\n  border: 1px solid rgb(100,100,100);\n  border-radius: 50%;\n  width: 60px;\n}\n.Article-avatar:hover {\n  box-shadow: 3px 3px 0px rgba(200,200,200,0.7);\n}\n.Article-info {\n\toverflow:hidden;  _overflow:visible;  zoom:1;\n\tpadding-left:10px;\n  padding-top: 24px;\n\n}\na.Article-name {\n  cursor: pointer;\n  font-size: 20px;\n  font-weight: 800;\n\n  display: inline-block;\n  border: none;\n}\na.Article-name:hover {\n  text-decoration: underline;\n}\ndiv.Article-date {\n  display: inline-block;\n  font-size: 10px;\n  font-weight: 200;\n  margin: 0 6px;\n}\n.Article-cfpLink {\n  border: none;\n  text-decoration: none;\n  display: block;\n  margin-top: 10px;\n}\n.Article-cfpImg {\n  width: calc( 100% - 10px );\n  padding: 5px;\n\n}\n\n.Article-footer {\n  text-align: center;\n  background: rgb(230,230,230);\n  min-height: 150px;\n\n}\n", ""]);
+	exports.push([module.id, ".Arthor {\n\tline-height: 1.6;\n\tmargin-bottom: 20px;\n\tbox-shadow: 4px 4px 0px rgba(200,200,200,0.4);\n\tpadding: 18px;\n\tbackground: white;\n\tcursor: pointer;\n\tborder: 1px solid gray;\n\n}\n.Arthor:hover {\n    box-shadow: 4px 4px 0px rgba(200,200,200,0.6);\n}\n.Arthor-showFullBio {\n\tmargin-top: 15px;\n\tbackground: #87B825;\n\tcolor: white;\n\tdisplay: inline-block;\n\tpadding: 4px 10px;\n\tcursor: pointer;\n\tdisplay: none;\n}\n.Arthor-showFullBio:hover {\n\tbox-shadow: 4px 4px 8px rgba(0,0,0,0.12), -4px -4px 8px rgba(0,0,0,0.12);;\n}", ""]);
 
 /***/ },
 /* 13 */
@@ -239,8 +239,8 @@
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
-		module.hot.accept("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Arthor/Arthor.css", function() {
-			var newContent = require("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Arthor/Arthor.css");
+		module.hot.accept("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Article/Article.css", function() {
+			var newContent = require("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Article/Article.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -253,7 +253,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
-	exports.push([module.id, ".Arthor {\n\tline-height: 1.6;\n\tmargin-bottom: 20px;\n\tbox-shadow: 4px 4px 0px rgba(200,200,200,0.4);\n\tpadding: 18px;\n\tbackground: white;\n\tcursor: pointer;\n\tborder: 1px solid gray;\n\n}\n.Arthor:hover {\n    box-shadow: 4px 4px 0px rgba(200,200,200,0.6);\n}\n.Arthor-showFullBio {\n\tmargin-top: 15px;\n\tbackground: #87B825;\n\tcolor: white;\n\tdisplay: inline-block;\n\tpadding: 4px 10px;\n\tcursor: pointer;\n\tdisplay: none;\n}\n.Arthor-showFullBio:hover {\n\tbox-shadow: 4px 4px 8px rgba(0,0,0,0.12), -4px -4px 8px rgba(0,0,0,0.12);;\n}", ""]);
+	exports.push([module.id, "/** @define Article; use strict */\n.Article {\n  background: white;\n  width: 100%;\n  margin: 70px auto 0px;\n\n  position: relative;\n  overflow: hidden;\n}\n.Article-content a, .Article-content a:visited {\n  border: none;\n  color: rgb(135,184,37);\n}\n.Article-content img {\n  width: 100%;\n  height: auto;\n}\n@media screen and (min-width: 600px){\n  .Article-content img {\n    width: auto;\n    height: auto;\n    max-width: 600px;\n  }\n}\n.Article-authorBackground {\n  /*background: rgb(230,230,230);*/\n  padding: 10px;\n}\n.Article-author {\n  padding-bottom: 30px;\n\n}\n.Article-cover {\n  width: 100%;\n  height: 150px;\n  overflow: hidden;\n  position: relative;\n}\n.Article-coverImg {\n  height: 150px;\n}\n.Article-coverCopyright a {\n  color: #e9e9e9;\n  border: none;\n  font-size: 12px;\n}\n.Article-coverCopyright {\n  color: #e9e9e9;\n  position: absolute;\n  bottom: 4px;\n  right: 10px;\n  cursor: pointer;\n  border: none;\n  font-size: 12px;\n}\nh1.Article-title {\n  border-left: none;\n  padding-top: 30px;\n  padding-bottom: 40px;\n  padding-left: 0;\n}\n@media screen and (min-width: 400px) {\n    h1.Article-title {\n        padding-top: 0;\n        padding-bottom: 0;\n    }\n}\n@media screen and (min-width: 400px) and (max-width: 1299px) {\n    .Article-content,.Article-author{\n\t\t    max-width: 600px;\n        margin: 0 auto;\n    }\n    .Article-cover {\n        width: 100%;\n        height: 300px;\n    }\n    .Article-coverImg {\n      height: 300px;\n    }\n}\n@media screen and (min-width: 1300px) {\n    .Article-content,.Article-author{\n\t\t    max-width: 600px;\n        margin: 0 auto;\n    }\n    .Article-cover {\n        width: 100%;\n        height: 300px;\n    }\n    .Article-coverImg {\n      width: 100%;\n      height: auto;\n    }\n}\n.Article-content {\n  background: rgba(255,255,255,0.8);\n  position: relative;\n  padding: 8px;\n}\n\n@media screen and (max-width: 400px){\n  .Article-content h1:first-child {\n      margin: 0;\n  }\n}\n.Article-author {\n  //background: #FAFAFA;\n  line-height: 1.4;\n  font-family: 'Noto Sans', sans-serif;\n\n}\n.Article-authorHeader {\n  min-height: 0px;\n}\n.Article-avatar {\n  cursor: pointer;\n\tfloat: left;\n  margin: 20px 0px 0px 20px;\n  background: white;\n  //border: 3px solid rgb(140,140,140);\n  //box-shadow: 3px 3px 0px rgba(200,200,200,0.4);\n  border: 1px solid rgb(100,100,100);\n  border-radius: 50%;\n  width: 60px;\n}\n.Article-avatar:hover {\n  box-shadow: 3px 3px 0px rgba(200,200,200,0.7);\n}\n.Article-info {\n\toverflow:hidden;  _overflow:visible;  zoom:1;\n\tpadding-left:10px;\n  padding-top: 24px;\n\n}\na.Article-name {\n  cursor: pointer;\n  font-size: 20px;\n  font-weight: 800;\n\n  display: inline-block;\n  border: none;\n}\na.Article-name:hover {\n  text-decoration: underline;\n}\ndiv.Article-date {\n  display: inline-block;\n  font-size: 10px;\n  font-weight: 200;\n  margin: 0 6px;\n}\n.Article-cfpLink {\n  border: none;\n  text-decoration: none;\n  display: block;\n  margin-top: 10px;\n}\n.Article-cfpImg {\n  width: calc( 100% - 10px );\n  padding: 5px;\n\n}\n\n.Article-footer {\n  text-align: center;\n  background: rgb(230,230,230);\n  min-height: 150px;\n\n}\n", ""]);
 
 /***/ },
 /* 15 */
