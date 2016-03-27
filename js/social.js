@@ -8700,11 +8700,11 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(144);
+	var CallbackQueue = __webpack_require__(142);
 	var PooledClass = __webpack_require__(89);
 	var ReactCurrentOwner = __webpack_require__(48);
 	var ReactPerf = __webpack_require__(58);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(143);
 
 	var assign = __webpack_require__(62);
 	var invariant = __webpack_require__(88);
@@ -13454,7 +13454,7 @@
 	"use strict";
 
 	var ReactUpdates = __webpack_require__(71);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(143);
 
 	var assign = __webpack_require__(62);
 	var emptyFunction = __webpack_require__(136);
@@ -15654,9 +15654,9 @@
 	"use strict";
 
 	var PooledClass = __webpack_require__(89);
-	var CallbackQueue = __webpack_require__(144);
+	var CallbackQueue = __webpack_require__(142);
 	var ReactPutListenerQueue = __webpack_require__(191);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(143);
 
 	var assign = __webpack_require__(62);
 	var emptyFunction = __webpack_require__(136);
@@ -15803,9 +15803,7 @@
 /***/ },
 /* 140 */,
 /* 141 */,
-/* 142 */,
-/* 143 */,
-/* 144 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15908,7 +15906,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 145 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16152,6 +16150,8 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
+/* 144 */,
+/* 145 */,
 /* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -16377,7 +16377,7 @@
 	 * @typechecks
 	 */
 
-	var performance = __webpack_require__(196);
+	var performance = __webpack_require__(194);
 
 	/**
 	 * Detect if we can use `window.performance.now()` and gracefully fallback to
@@ -16413,8 +16413,8 @@
 	var EventPluginRegistry = __webpack_require__(162);
 	var EventPluginUtils = __webpack_require__(43);
 
-	var accumulateInto = __webpack_require__(194);
-	var forEachAccumulated = __webpack_require__(195);
+	var accumulateInto = __webpack_require__(195);
+	var forEachAccumulated = __webpack_require__(196);
 	var invariant = __webpack_require__(88);
 
 	/**
@@ -16692,8 +16692,8 @@
 	var EventConstants = __webpack_require__(87);
 	var EventPluginHub = __webpack_require__(148);
 
-	var accumulateInto = __webpack_require__(194);
-	var forEachAccumulated = __webpack_require__(195);
+	var accumulateInto = __webpack_require__(195);
+	var forEachAccumulated = __webpack_require__(196);
 
 	var PropagationPhases = EventConstants.PropagationPhases;
 	var getListener = EventPluginHub.getListener;
@@ -18740,12 +18740,12 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(144);
+	var CallbackQueue = __webpack_require__(142);
 	var PooledClass = __webpack_require__(89);
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 	var ReactInputSelection = __webpack_require__(167);
 	var ReactPutListenerQueue = __webpack_require__(191);
-	var Transaction = __webpack_require__(145);
+	var Transaction = __webpack_require__(143);
 
 	var assign = __webpack_require__(62);
 
@@ -19034,8 +19034,8 @@
 
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 
-	var accumulateInto = __webpack_require__(194);
-	var forEachAccumulated = __webpack_require__(195);
+	var accumulateInto = __webpack_require__(195);
+	var forEachAccumulated = __webpack_require__(196);
 	var invariant = __webpack_require__(88);
 
 	function remove(event) {
@@ -20031,6 +20031,38 @@
 /* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule performance
+	 * @typechecks
+	 */
+
+	"use strict";
+
+	var ExecutionEnvironment = __webpack_require__(65);
+
+	var performance;
+
+	if (ExecutionEnvironment.canUseDOM) {
+	  performance =
+	    window.performance ||
+	    window.msPerformance ||
+	    window.webkitPerformance;
+	}
+
+	module.exports = performance || {};
+
+
+/***/ },
+/* 195 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function(process) {/**
 	 * Copyright 2014, Facebook, Inc.
 	 * All rights reserved.
@@ -20097,7 +20129,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 195 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20129,38 +20161,6 @@
 	};
 
 	module.exports = forEachAccumulated;
-
-
-/***/ },
-/* 196 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule performance
-	 * @typechecks
-	 */
-
-	"use strict";
-
-	var ExecutionEnvironment = __webpack_require__(65);
-
-	var performance;
-
-	if (ExecutionEnvironment.canUseDOM) {
-	  performance =
-	    window.performance ||
-	    window.msPerformance ||
-	    window.webkitPerformance;
-	}
-
-	module.exports = performance || {};
 
 
 /***/ },
