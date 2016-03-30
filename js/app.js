@@ -50,6 +50,8 @@
 
 	__webpack_require__(6);
 
+	__webpack_require__(10);
+
 	__webpack_require__(12);
 
 	__webpack_require__(14);
@@ -60,13 +62,11 @@
 
 	__webpack_require__(20);
 
-	__webpack_require__(22);
-
 	__webpack_require__(8);
 
-	__webpack_require__(24);
+	__webpack_require__(22);
 
-	__webpack_require__(10);
+	__webpack_require__(24);
 
 	__webpack_require__(26);
 
@@ -180,8 +180,8 @@
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
-		module.hot.accept("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Social/Social.css", function() {
-			var newContent = require("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Social/Social.css");
+		module.hot.accept("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/AboutSite/AboutSite.css", function() {
+			var newContent = require("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/AboutSite/AboutSite.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -194,7 +194,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(36)();
-	exports.push([module.id, "/* MOBILE */\n.Social {\n\tposition: fixed;\n\tbottom: 0;\n\twidth: 100%;\n\theight: 50px;\n\tz-index: 10;\n\tbox-shadow: 0 -2px 8px rgba(0,0,0,0.12);\n}\n.Social-socialSets {\n\tdisplay: inline-block;\n\tvertical-align: top;\n\twidth: 100%;\n}\n.Social-social {\n\tbackground: #F1F1F1;\n\tdisplay: inline-block;\n\tborder-left: 3px solid rgb(230,230,230);\n\twidth: calc(50% - 3px);\n\theight: 50px;\n\ttext-align: center;\n\tcursor: pointer;\n\tpadding: 8px 0 0 0;\n\n}\n\n/* WEB */\n@media screen and (min-width: 400px){\n\t.Social {\n\t   position: relative;\n\t   margin: 0 auto;\n\t   width: 600px;\n\t   vertical-align: bottom;\n\t   height: 0px;\n    }\n    .Social-socialSets {\n       text-align: left;\n       position: absolute;\n       top: 25px;\n       left: 5px;\n       width: auto;\n    }\n    .Social-social {\n    \tdisplay: inline-block;\n    \twidth: auto;\n    \theight: auto;\n    \tpadding: 0 0 0 20px;\n    \tmargin-right: 20px;\n\t    background: none;\n\t    text-align: left;\n\t    color: rgb(50,50,50);\n    }\n\n}", ""]);
+	exports.push([module.id, ".AboutSite {\n    width: 100%;\n\n    background: rgba(135,184,37,1);\n    color: white;\n    overflow: scroll;\n    z-index: 0;\n}\n.AboutSite-img {\n\tdisplay: none;\n}\n\n@media screen and (min-width: 600px) and (max-width: 999px){\n\n}\n@media screen and (min-width: 600px){\n  .AboutSite {\n    width: 340px;\n    height: 100vh;\n    position: fixed;\n    left:0;\n  }\n  .AboutSite-img {\n    display: block;\n    width: 100%;\n    padding: 0;\n    margin: 0;\n    position: relative;\n  }\n  .AboutSite-imgPicture {\n    width: 100%;\n  }\n  .AboutSite-imgCopyright a {\n    color: #e9e9e9;\n    border: none;\n    font-size: 12px;\n  }\n  .AboutSite-imgCopyright {\n    color: #e9e9e9;\n    position: absolute;\n    bottom: 4px;\n    right: 10px;\n    cursor: pointer;\n    border: none;\n    font-size: 12px;\n  }\n}\n\n@media screen and (min-width: 1000px){\n\t.AboutSite {\n    -webkit-box-flex:  0 0 340px;      /* OLD - iOS 6-, Safari 3.1-6 */\n    -moz-box-flex:  0 0 340px;         /* OLD - Firefox 19- */\n    -webkit-flex:  0 0 340px;          /* Chrome */\n    -ms-flex:  0 0 340px;              /* IE 10 */\n    flex: 0 0 340px;\n    padding-top: 0px;\n  }\n  .AboutSite-fix {\n    position: fixed;\n    width: 340px;\n    height: 100vh;\n    background: rgba(135,184,37,1);\n  }\n  \n}\n.AboutSite-content {\n\tpadding: 10px;\n}\n.AboutSite-title {\n  margin: 0;\n  padding: 0;\n\tfont-size: 24px;\n\tfont-weight: 800;\n  color: white;\n}\n.AboutSite-info {\n  margin-top: 1px;\n}\n@media screen and (min-width: 600px){\n  .AboutSite-info {\n    margin-top: 5px;\n  }\n}\n.AboutSite-info {\n  padding: 0;\n\tline-height: 1.6;\n  font-size: 16px;\n  color: white;\n}\n.AboutSite-meta {\n\tmargin-top: 6px;\n  margin-bottom: 8px;\n}\n@media screen and (min-width: 600px){\n  .AboutSite-meta {\n    margin-top: 12px;\n  }\n}\n.AboutSite-meta a {\n\tfont-size: 12px;\n\tdisplay: inline-block;\n\tcursor: pointer;\n  color: white;\n\tborder-bottom: none;\n}\n.AboutSite-meta a:hover {\n\tborder-bottom: none;\n  box-shadow: 0px 1px white;\n}\n", ""]);
 
 /***/ },
 /* 12 */
@@ -204,36 +204,6 @@
 
 	// load the styles
 	var content = __webpack_require__(13);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(33)(content, {});
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		module.hot.accept("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/AboutSite/AboutSite.css", function() {
-			var newContent = require("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/AboutSite/AboutSite.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(36)();
-	exports.push([module.id, ".AboutSite {\n    width: 100%;\n\n    background: rgba(135,184,37,1);\n    color: white;\n    overflow: scroll;\n    z-index: 0;\n}\n.AboutSite-img {\n\tdisplay: none;\n}\n\n@media screen and (min-width: 600px) and (max-width: 999px){\n\n}\n@media screen and (min-width: 600px){\n  .AboutSite {\n    width: 340px;\n    height: 100vh;\n    position: fixed;\n    left:0;\n  }\n  .AboutSite-img {\n    display: block;\n    width: 100%;\n    padding: 0;\n    margin: 0;\n    position: relative;\n  }\n  .AboutSite-imgPicture {\n    width: 100%;\n  }\n  .AboutSite-imgCopyright a {\n    color: #e9e9e9;\n    border: none;\n    font-size: 12px;\n  }\n  .AboutSite-imgCopyright {\n    color: #e9e9e9;\n    position: absolute;\n    bottom: 4px;\n    right: 10px;\n    cursor: pointer;\n    border: none;\n    font-size: 12px;\n  }\n}\n\n@media screen and (min-width: 1000px){\n\t.AboutSite {\n    -webkit-box-flex:  0 0 340px;      /* OLD - iOS 6-, Safari 3.1-6 */\n    -moz-box-flex:  0 0 340px;         /* OLD - Firefox 19- */\n    -webkit-flex:  0 0 340px;          /* Chrome */\n    -ms-flex:  0 0 340px;              /* IE 10 */\n    flex: 0 0 340px;\n    padding-top: 0px;\n  }\n  .AboutSite-fix {\n    position: fixed;\n    width: 340px;\n    height: 100vh;\n    background: rgba(135,184,37,1);\n  }\n  \n}\n.AboutSite-content {\n\tpadding: 10px;\n}\n.AboutSite-title {\n  margin: 0;\n  padding: 0;\n\tfont-size: 24px;\n\tfont-weight: 800;\n  color: white;\n}\n.AboutSite-info {\n  margin-top: 1px;\n}\n@media screen and (min-width: 600px){\n  .AboutSite-info {\n    margin-top: 5px;\n  }\n}\n.AboutSite-info {\n  padding: 0;\n\tline-height: 1.6;\n  font-size: 16px;\n  color: white;\n}\n.AboutSite-meta {\n\tmargin-top: 6px;\n  margin-bottom: 8px;\n}\n@media screen and (min-width: 600px){\n  .AboutSite-meta {\n    margin-top: 12px;\n  }\n}\n.AboutSite-meta a {\n\tfont-size: 12px;\n\tdisplay: inline-block;\n\tcursor: pointer;\n  color: white;\n\tborder-bottom: none;\n}\n.AboutSite-meta a:hover {\n\tborder-bottom: none;\n  box-shadow: 0px 1px white;\n}\n", ""]);
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(15);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(33)(content, {});
@@ -250,20 +220,20 @@
 	}
 
 /***/ },
-/* 15 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(36)();
 	exports.push([module.id, ".AppBar {\n\tpadding: 16px;\n\t//background: rgba(220,220,220,0.2);\n\tborder-bottom: 1px solid rgb(230,230,230);\n\twidth: 100%;\n\n\n}\n@media screen and (min-width: 600px){\n\t.AppBar {\n\t    top: 0;\n        position: fixed;\n        background: white;\n        z-index: 1;\n\n\t}\n\n}\na.AppBar-logo {\n\tfont-size: 20px;\n\tfont-weight: 700;\n\tcursor: pointer;\n\tborder: none;\n\tdisplay: block;\n}\n\na.AppBar-logo:hover {\n\tcolor: #87B825;\n}\na.AppBar-nav {\n\tborder: none;\n\tfont-size: 14px;\n\tfont-weight: 800;\n\tmargin-right: 10px;\n}\na.AppBar-nav:hover {\n\tborder-bottom: 2px solid;\n\t//color: #87B825;\n}\n\n@media screen and (min-width: 400px){\n\ta.AppBar-logo {\n\t\tdisplay: inline-block;\n\t\tpadding-right: 10px;\n\t}\n\ta.AppBar-nav {\n\t   margin: 0 5px;\n    }\n\n}\n", ""]);
 
 /***/ },
-/* 16 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(17);
+	var content = __webpack_require__(15);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(33)(content, {});
@@ -280,20 +250,20 @@
 	}
 
 /***/ },
-/* 17 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(36)();
 	exports.push([module.id, ".Arthor {\n\tline-height: 1.6;\n\tmargin-bottom: 20px;\n\tbox-shadow: 4px 4px 0px rgba(200,200,200,0.4);\n\tpadding: 18px;\n\tbackground: white;\n\tcursor: pointer;\n\tborder: 1px solid gray;\n\n}\n.Arthor:hover {\n    box-shadow: 4px 4px 0px rgba(200,200,200,0.6);\n}\n.Arthor-showFullBio {\n\tmargin-top: 15px;\n\tbackground: #87B825;\n\tcolor: white;\n\tdisplay: inline-block;\n\tpadding: 4px 10px;\n\tcursor: pointer;\n\tdisplay: none;\n}\n.Arthor-showFullBio:hover {\n\tbox-shadow: 4px 4px 8px rgba(0,0,0,0.12), -4px -4px 8px rgba(0,0,0,0.12);;\n}", ""]);
 
 /***/ },
-/* 18 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(19);
+	var content = __webpack_require__(17);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(33)(content, {});
@@ -310,20 +280,20 @@
 	}
 
 /***/ },
-/* 19 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(36)();
 	exports.push([module.id, "/** @define Article; use strict */\n.Article {\n  background: white;\n  width: 100%;\n  margin: 70px auto 0px;\n\n  position: relative;\n  overflow: hidden;\n}\n.Article-content a, .Article-content a:visited {\n  border: none;\n  color: rgb(135,184,37);\n}\n.Article-content img {\n  width: 100%;\n  height: auto;\n}\n@media screen and (min-width: 600px){\n  .Article-content img {\n    width: auto;\n    height: auto;\n    max-width: 600px;\n  }\n}\n.Article-authorBackground {\n  /*background: rgb(230,230,230);*/\n  padding: 10px;\n}\n.Article-author {\n  padding-bottom: 30px;\n\n}\n.Article-cover {\n  width: 100%;\n  height: 150px;\n  overflow: hidden;\n  position: relative;\n}\n.Article-coverImg {\n  height: 150px;\n}\n.Article-coverCopyright a {\n  color: #e9e9e9;\n  border: none;\n  font-size: 12px;\n}\n.Article-coverCopyright {\n  color: #e9e9e9;\n  position: absolute;\n  bottom: 4px;\n  right: 10px;\n  cursor: pointer;\n  border: none;\n  font-size: 12px;\n}\nh1.Article-title {\n  border-left: none;\n  padding-top: 30px;\n  padding-bottom: 40px;\n  padding-left: 0;\n}\n@media screen and (min-width: 400px) {\n    h1.Article-title {\n        padding-top: 0;\n        padding-bottom: 0;\n    }\n}\n@media screen and (min-width: 400px) and (max-width: 1299px) {\n    .Article-content,.Article-author{\n\t\t    max-width: 600px;\n        margin: 0 auto;\n    }\n    .Article-cover {\n        width: 100%;\n        height: 300px;\n    }\n    .Article-coverImg {\n      height: 300px;\n    }\n}\n@media screen and (min-width: 1300px) {\n    .Article-content,.Article-author{\n\t\t    max-width: 600px;\n        margin: 0 auto;\n    }\n    .Article-cover {\n        width: 100%;\n        height: 300px;\n    }\n    .Article-coverImg {\n      width: 100%;\n      height: auto;\n    }\n}\n.Article-content {\n  background: rgba(255,255,255,0.8);\n  position: relative;\n  padding: 8px;\n}\n\n@media screen and (max-width: 400px){\n  .Article-content h1:first-child {\n      margin: 0;\n  }\n}\n.Article-author {\n  //background: #FAFAFA;\n  line-height: 1.4;\n  font-family: 'Noto Sans', sans-serif;\n\n}\n.Article-authorHeader {\n  min-height: 0px;\n}\n.Article-avatar {\n  cursor: pointer;\n\tfloat: left;\n  margin: 20px 0px 0px 20px;\n  background: white;\n  //border: 3px solid rgb(140,140,140);\n  //box-shadow: 3px 3px 0px rgba(200,200,200,0.4);\n  border: 1px solid rgb(100,100,100);\n  border-radius: 50%;\n  width: 60px;\n}\n.Article-avatar:hover {\n  box-shadow: 3px 3px 0px rgba(200,200,200,0.7);\n}\n.Article-info {\n\toverflow:hidden;  _overflow:visible;  zoom:1;\n\tpadding-left:10px;\n  padding-top: 24px;\n\n}\na.Article-name {\n  cursor: pointer;\n  font-size: 20px;\n  font-weight: 800;\n\n  display: inline-block;\n  border: none;\n}\na.Article-name:hover {\n  text-decoration: underline;\n}\ndiv.Article-date {\n  display: inline-block;\n  font-size: 10px;\n  font-weight: 200;\n  margin: 0 6px;\n}\n.Article-cfpLink {\n  border: none;\n  text-decoration: none;\n  display: block;\n  margin-top: 10px;\n}\n.Article-cfpImg {\n  width: calc( 100% - 10px );\n  padding: 5px;\n\n}\n\n.Article-footer {\n  text-align: center;\n  background: rgb(230,230,230);\n  min-height: 150px;\n\n}\n", ""]);
 
 /***/ },
-/* 20 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(21);
+	var content = __webpack_require__(19);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(33)(content, {});
@@ -340,20 +310,20 @@
 	}
 
 /***/ },
-/* 21 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(36)();
 	exports.push([module.id, ".Author {\n\tline-height: 1.6;\n\tmargin-bottom: 20px;\n\tbox-shadow: 4px 4px 0px rgba(200,200,200,0.4);\n\tpadding: 18px 18px 0 18px;\n\tbackground: white;\n\tcursor: pointer;\n\tborder: 1px solid gray;\n\tmargin: 0 5px;\n\n}\n.Author p{\n\tline-height: 1.4;\n\tfont-size: 16px;\n\tclear: left;\n\n}\n.Author img {\n\tmax-width: 100%;\n}\n.Author:hover {\n    box-shadow: 4px 4px 0px rgba(200,200,200,0.6);\n}\n.Author-gotoBio {\n\tmargin-top: 5px;\n\tbackground: #87B825;\n\tcolor: white;\n\tdisplay: inline-block;\n\tpadding: 4px 10px;\n\tcursor: pointer;\n\tfont-size: 14px;\n\n}\n.Author-gotoBio:hover {\n\t//box-shadow: 4px 4px 8px rgba(0,0,0,0.12), -4px -4px 8px rgba(0,0,0,0.12);\n}\n/* =================================================== */\n\n.Author-widget {\n\ttext-align: center;\n\tbackground: rgb(240,240,240);\n\tpadding: 4px 1px;\n\tfont-size: 14px;\n}\n.Author-widgetLink {\n\tdisplay: inline-block;\n\tborder: none;\n\tcolor: rgb(50,50,50);\n\tmargin: 0 1px;\n}\n.Author-widgetLink:hover {\n\tcolor: #87B825;\n}\n@media screen and (min-width: 400px){\n\t.Author-widget {\n\t\tbackground: rgba(250,250,250,0.8);\n\t\tbox-shadow: 0px 1px 0px rgba(0,0,0,0.12);\n\t    z-index: 10;\n\t\tfont-size: 16px;\n\t\ttext-align: center;\n\t\twidth: 100%;\n\t\tpadding-top: 5px;\n    }\n    .Author-fixedWidget {\n    \tbackground: rgba(255,255,255,0.95);\n    \tposition: fixed;\n\t\ttop: 0;\n\t\tz-index: 100;\n    }\n\n}\n.Author-widgetAvatar {\n\twidth: 40px;\n\tborder-radius: 50%;\n}\n.Author-widgetInfo {\n\tvertical-align: top;\n\tdisplay: inline-block;\n\tmargin: 0 6px;\n    padding-top: 4px;\n}\n\n/* ====== 學科分類 ====== */\n.Author-tagsSection {\n\tdisplay: none;\n}\n@media screen and (min-width: 400px){\n\t.Author-tagsSection {\n\t\tdisplay: inline-block;\n\t}\n}\n.Author-tags {\n\tfont-size: 14px;\n}\n.Author-tagLink {\n\tfont-size: 14px;\n\tcolor: rgb(80,80,80);\n}\n.Author-tagLink:hover {\n\tcolor: black;\n}\n\n\n\n/* ==================================== */\n.Author--pageBio {\n\twidth: 100%;\n\tpadding-top: 50px;\n}\n.Author--pageContent{\n\tmargin: 0 auto;\n\tposition: relative;\n}\n.Author-pageTop {\n\ttext-align: center;\n}\n.Author-nameTitle {\n\tmargin-top: 10px;\n\tfont-size: 40px;\n\tfont-weight: 800;\n\ttext-align: center;\n}\n.Author-pageAvatar {\n\twidth: 120px;\n\theight: 120px;\n\tborder-radius: 50%;\n\tbox-shadow: 1px 1px 0 0 rgba(0,0,0,0.12),-1px 1px 0 0 rgba(0,0,0,0.12);\n    border: 3px solid white;\n}\n.Author-Tabs {\n\tmargin: 0 5px;\n}\n\n.Author--pageMain{\n\twidth: 100%;\n\tborder-top: 1px dotted rgb(220,220,220);\n\tbackground: rgb(250,250,250);\n\tpadding-top: 20px;\n\tpadding-bottom: 100px;\n}\n.Author-bio {\n\tline-height: 1.6;\n\t//box-shadow: 4px 4px 0px rgba(200,200,200,0.4);\n\tpadding: 0 10px;\n\tbackground: white;\n\tcursor: pointer;\n\tmargin: 0 5px 50px 5px;\n\tfont-size: 16px;\n}\n.Author-bio * {\n\tfont-size: 16px;\n}\n.Author-bio a, .Author-bio a:visited {\n\tfont-size: 16px;\n\tcolor: rgb(135,184,37);\n\tborder: none;\n}\n\n@media all and (min-width: 600px){\n\t.Author--pageBio {\n\t\tpadding-top: 100px;\n\t}\n\t.Author--pageMain {\n\t\tpadding: 30px;\n\t}\n\t.Author--pageContent {\n\t\tmax-width: 600px;\n\t}\n\n}\n.Author-bio p{\n    font-size: 16px;\n    line-height: 1.4;\n}\n.Author-showFullBio {\n\tbackground: rgb(220,220,220);\n\tpadding: 4px 10px;\n\tcolor: rgb(100,100,100);\n\tdisplay: inline-block;\n\tmargin: 0;\n\ttext-align: center;\n}\n.Author-articleTitleWrapper {\n\tposition: absolute;\n    top: -32px;\n    left: 50%;\n}\n.Author-articleTitle {\n\tposition: relative;\n    left: -50%;\n    display: inline-block;\n    background: white;\n    border: 1px solid rgb(220,220,220);\n    padding: 2px 20px;\n    color: rgb(100,100,100);\n\n}\n@media all and (min-width: 600px){\n\t.Author-articleTitleWrapper {\n\t\tposition: relative;\n\t\ttop: 0;\n\t\tmargin-left: 10px;\n\t\tdisplay: block;\n\n    }\n    .Author-articleTitle {\n    \tposition: relative;\n\n    }\n\n}\n.Author-article {\n    line-height: 1.6;\n\tmargin-bottom: 20px;\n\t//box-shadow: 4px 4px 0px rgba(200,200,200,0.4);\n\t//background: white;\n\t//border: 1px solid gray;\n\tmargin: 0 5px;\n\tmax-width: 600px;\n}\n.Author-articleItem {\n\tmargin: 1px;\n\tpadding: 12px;\n\tcursor: pointer;\n\tcolor: rgb(80,80,80);\n\tdisplay: block;\n\tborder:none;\n\tline-height: 1.4;\n\tfont-size: 16px;\n}\n.Author-articleItem:hover {\n\tcolor: black;\n\tbackground: rgb(240,240,240);\n}\n.Author-articleItemDate {\n    display: inline-block;\n    margin-right: 14px;\n    float: left;\n}\n.Author-articleItemTitle {\n\toverflow: hidden;  _overflow:visible;  zoom:1;\n}\n", ""]);
 
 /***/ },
-/* 22 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(23);
+	var content = __webpack_require__(21);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(33)(content, {});
@@ -370,20 +340,20 @@
 	}
 
 /***/ },
-/* 23 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(36)();
 	exports.push([module.id, ".Columns {\n\tdisplay: inline-block;\n\toverflow:hidden;  _overflow:visible;  zoom:1;\n\tbackground: #FAFAFA;\n\twidth: 100%;\n\n\t\n\n}\n.Column {\n\tbackground: white;\n\t//border: 1px solid #DABDA8;\n\tborder: 1px solid #FAFAFA;\n\tbox-shadow: 4px 4px 0 0 rgba(0,0,0,0.12);\n\tmargin: 5px;\n\tcursor: pointer;\n\tdisplay: block;\n\t\n\tvertical-align: top;\n\tpadding: 8px 8px 8px 16px;\n\tline-height: 1.6;\n\n\n\toverflow: hidden;\n\n\n}\n@media screen and (min-width: 600px){\n    .Columns {\n    \tflex: 2;\n    \theight: 100vh;\n    \toverflow: scroll;\n    \tpadding: 0 10px;\n    }\n    .Column {\n    \twidth: 250px;\n    \tmargin: 10px 5px;\n    \theight: 202px;\n    \tdisplay: inline-block;\n    }\n}\n.Column:hover {\n\tbox-shadow: 4px 4px 0 0 rgba(0,0,0,0.24);\n}\n.Column-header {\n\n}\n.Column-name {\n   font-size: 20px;\n   font-weight: 800;\n   color: rgb(50,50,50);\n   display: inline-block;\n\n}\n.Column-articleCount {\n\tfont-size: 12px;\n\tfont-weight: 800;\n\t//background: rgb(135,184,37);\n\t//color: white;\n\n\tbackground: rgb(230,230,230);\n\tcolor: rgb(53,55,54);\n\n\tdisplay: inline-block;\n\tborder-radius: 50%;\n\n\tpadding-top: 4px;\n\twidth: 24px;\n\theight: 24px;\n\ttext-align: center;\n\tvertical-align: top;\n\tmargin: 3px 4px 0px 4px;\n\n}\n.Column:hover .Column-name {\n\t//color: #87B825;\n\tcolor: black;\n}\n", ""]);
 
 /***/ },
-/* 24 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(25);
+	var content = __webpack_require__(23);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(33)(content, {});
@@ -400,11 +370,41 @@
 	}
 
 /***/ },
-/* 25 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(36)();
 	exports.push([module.id, ".List {\n\t//background: rgb(250,250,250);\n\tpadding-bottom: 90px;\n\tposition: relative;\n\n}\n.List-article {\n\tbackground: rgb(250,250,250);\n}\n\n\n/* NEXT */\n.List-nextItem {\n\tline-height: 1.4;\n\tfont-size: 14px;\n\tmargin: 10px 0 4px 0;\n}\n.List-nextItemTitle {\n\tbackground: rgb(200,200,200);\n\tdisplay: inline-block;\n\tpadding: 6px 14px;\n\tcolor: white;\n\tmargin: 10px 0;\n}\n.List-nextPost {\n\tcursor: pointer;\n}\n.List-nextPost:hover, .List-nextTitle:hover {\n\tcolor: #87B825;\n}\n.List-nextTitle {\n\tfont-weight: 700;\n}\n.List-nextPreview {\n\tfont-size: 16px;\n}\n.List-nextLink {\n\tdisplay: inline-block;\n\tfont-size: 16px;\n\tcolor: rgb(100,100,100);\n\tborder: none;\n\ttext-decoration: underline;\n}\n\n/* LIST */\n.List-content {\n\tpadding: 10px 5px 0px 5px;\n}\n@media screen and (min-width: 400px){\n    .List-content {\n\t\tmax-width: 600px;\n        margin: 0 auto;\n\n    }\n    .List-indexContent {\n\t\tmax-width: 600px;\n\n    }\n}\n.List-title {\n\tpadding: 0px 12px;\n\tfont-weight: 700;\n\t//border-bottom: 1px solid rgb(120,120,120);\n}\n@media all and (min-width: 400px){\n\t.List-title {\n\t\tpadding: 0px 5px 10px 15px;\n    }\n}\n.List-articleItem {\n\tmargin: 1px;\n\tpadding: 12px 12px;\n\tcursor: pointer;\n\tcolor: rgb(80,80,80);\n\tdisplay: block;\n\tborder:none;\n\tline-height: 1.4;\n\tfont-size: 16px;\n\n}\n.List-articleItem:hover, .List-indexItem:hover {\n\tcolor: black;\n\tbackground: rgb(240,240,240);\n}\n.List-articleItemColumn {\n   display: inline-block;\n   background: rgb(220,220,220);\n   margin: 5px 0;\n   color: #a0a0a0;\n}\n.List-articleItemDate {\n   display: inline-block;\n   background: rgb(220,220,220);\n   margin: 5px 0;\n   color: #a0a0a0;\n}\n@media all and (min-width: 400px){\n\t.List-articleItemColumn {\n\t   display: inline-block;\n       float: left;\n       background: none;\n       margin: 0 14px 0 0;\n       line-height: 1.6em;\n    }\n\t.List-articleItemDate {\n\t   display: inline-block;\n       float: left;\n       background: none;\n       margin: 0 14px 0 0;\n       line-height: 1.6em;\n    }\n}\n.List-articleItemTitle {\n\toverflow: hidden;  _overflow:visible;  zoom:1;\n\n}\n\n/* ----------------- */\n.List-boldTitle {\n\tfont-weight: 800;\n}\n.List--index {\n\t-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */\n    -moz-box-flex: 1;         /* OLD - Firefox 19- */\n    -webkit-flex: 1;          /* Chrome */\n    -ms-flex: 1;              /* IE 10 */\n\tflex: 1;\n\n\t-webkit-box-ordinal-group: 2;   /* OLD - iOS 6-, Safari 3.1-6 */\n    -moz-box-ordinal-group: 2;      /* OLD - Firefox 19- */\n    -ms-flex-order: 2;              /* TWEENER - IE 10 */\n    -webkit-order: 2;               /* NEW - Chrome */\n\torder: 2;\n}\n@media screen and (min-width: 600px) and (max-width: 999px){\n    .List--index {\n    \theight: auto;\n    \twidth: calc(100vw - 350px);/* 避免沒文章的時候，寬度不見 */\n\n    }\n}\n@media screen and (min-width: 1000px){\n    .List--index {\n    \theight: auto;\n    \tmargin-left: 340px;\n    \twidth: calc(100vw - 670px);/* 避免沒文章的時候，寬度不見 */\n\n    }\n    .List-indexContent {\n\t\tmax-width: 800px;\n\t\tmargin-top: 10px;\n\t\tmargin-left: 10px;\n\t}\n}\n\n.List-indexItem {\n\tmargin-bottom: 20px;\n\tpadding: 10px 12px;\n\tcursor: pointer;\n\tcolor: rgb(80,80,80);\n\tdisplay: block;\n\tborder:none;\n\tline-height: 1.4;\n\tfont-size: 16px;\n}\n.List-articleItemBrief {\n    clear: left;\n\tcolor: rgb(100,100,100);\n}\n\n/* ----------------- */\n.List-footer {\n\tmargin: 0 auto;\n\tmargin-top: 20px;\n\ttext-align: center;\n}\n.List-button {\n\tborder: 1px solid rgb(220,220,220);\n\tcolor: rgb(100,100,100);\n\tcursor: pointer;\n\tpadding: 8px 20px;\n\tdisplay: inline-block;\n\tborder-radius: 20px;\n\n}\n.List-button:hover {\n   border: 1px solid rgb(50,50,50);\n   color: black;\n}\n\n/* ----------------- */\n\n/* ----------------- */\n.List-filter {\n    line-height: 1.4;\n    padding: 10px;\n    border-bottom: 1px solid rgb(220,220,220);\n    //text-align: center;\n\n}\n\n.List-filter.is-fixed {\n\tposition: fixed;\n\ttop: 0;\n\twidth: 100%;\n\tbackground: rgba(255,255,255,0.8);\n}\n.List-filterMeta {\n\tfont-size: 14px;\n}\n.List-filterTitle {\n\tmargin-top: 4px;\n\tfont-size: 18px;\n\tfont-weight: 800;\n}\n\n\n\n", ""]);
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(25);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(33)(content, {});
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		module.hot.accept("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Social/Social.css", function() {
+			var newContent = require("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Social/Social.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(36)();
+	exports.push([module.id, "/* MOBILE */\n.Social {\n\tposition: fixed;\n\tbottom: 0;\n\twidth: 100%;\n\theight: 50px;\n\tz-index: 10;\n\tbox-shadow: 0 -2px 8px rgba(0,0,0,0.12);\n}\n.Social-socialSets {\n\tdisplay: inline-block;\n\tvertical-align: top;\n\twidth: 100%;\n}\n.Social-social {\n\tbackground: #F1F1F1;\n\tdisplay: inline-block;\n\tborder-left: 3px solid rgb(230,230,230);\n\twidth: calc(50% - 3px);\n\theight: 50px;\n\ttext-align: center;\n\tcursor: pointer;\n\tpadding: 8px 0 0 0;\n\n}\n\n/* WEB */\n@media screen and (min-width: 400px){\n\t.Social {\n\t   position: relative;\n\t   margin: 0 auto;\n\t   width: 600px;\n\t   vertical-align: bottom;\n\t   height: 0px;\n    }\n    .Social-socialSets {\n       text-align: left;\n       position: absolute;\n       top: 25px;\n       left: 5px;\n       width: auto;\n    }\n    .Social-social {\n    \tdisplay: inline-block;\n    \twidth: auto;\n    \theight: auto;\n    \tpadding: 0 0 0 20px;\n    \tmargin-right: 20px;\n\t    background: none;\n\t    text-align: left;\n\t    color: rgb(50,50,50);\n    }\n\n}", ""]);
 
 /***/ },
 /* 26 */
