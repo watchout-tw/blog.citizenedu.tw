@@ -52,14 +52,15 @@
 
 	var _React2 = _interopRequireWildcard(_React);
 
-	var _Social = __webpack_require__(1);
+	var _Social = __webpack_require__(2);
 
 	var _Social2 = _interopRequireWildcard(_Social);
 
 	_React2["default"].render(_React2["default"].createElement(_Social2["default"], null), document.getElementById("social-root"));
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -74,11 +75,11 @@
 
 	var _React2 = _interopRequireWildcard(_React);
 
-	var _Transmit = __webpack_require__(40);
+	var _Transmit = __webpack_require__(39);
 
 	var _Transmit2 = _interopRequireWildcard(_Transmit);
 
-	__webpack_require__(8);
+	__webpack_require__(10);
 
 	var _superagent = __webpack_require__(41);
 
@@ -149,7 +150,6 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 2 */,
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -161,13 +161,15 @@
 /* 5 */,
 /* 6 */,
 /* 7 */,
-/* 8 */
+/* 8 */,
+/* 9 */,
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(9);
+	var content = __webpack_require__(11);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(33)(content, {});
@@ -184,15 +186,13 @@
 	}
 
 /***/ },
-/* 9 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(36)();
 	exports.push([module.id, "/* MOBILE */\n.Social {\n\tposition: fixed;\n\tbottom: 0;\n\twidth: 100%;\n\theight: 50px;\n\tz-index: 10;\n\tbox-shadow: 0 -2px 8px rgba(0,0,0,0.12);\n}\n.Social-socialSets {\n\tdisplay: inline-block;\n\tvertical-align: top;\n\twidth: 100%;\n}\n.Social-social {\n\tbackground: #F1F1F1;\n\tdisplay: inline-block;\n\tborder-left: 3px solid rgb(230,230,230);\n\twidth: calc(50% - 3px);\n\theight: 50px;\n\ttext-align: center;\n\tcursor: pointer;\n\tpadding: 8px 0 0 0;\n\n}\n\n/* WEB */\n@media screen and (min-width: 400px){\n\t.Social {\n\t   position: relative;\n\t   margin: 0 auto;\n\t   width: 600px;\n\t   vertical-align: bottom;\n\t   height: 0px;\n    }\n    .Social-socialSets {\n       text-align: left;\n       position: absolute;\n       top: 25px;\n       left: 5px;\n       width: auto;\n    }\n    .Social-social {\n    \tdisplay: inline-block;\n    \twidth: auto;\n    \theight: auto;\n    \tpadding: 0 0 0 20px;\n    \tmargin-right: 20px;\n\t    background: none;\n\t    text-align: left;\n\t    color: rgb(50,50,50);\n    }\n\n}", ""]);
 
 /***/ },
-/* 10 */,
-/* 11 */,
 /* 12 */,
 /* 13 */,
 /* 14 */,
@@ -859,8 +859,7 @@
 
 
 /***/ },
-/* 39 */,
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -880,6 +879,7 @@
 
 
 /***/ },
+/* 40 */,
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -13530,7 +13530,7 @@
 
 	"use strict";
 
-	var AutoFocusMixin = __webpack_require__(174);
+	var AutoFocusMixin = __webpack_require__(175);
 	var ReactBrowserComponentMixin = __webpack_require__(104);
 	var ReactCompositeComponent = __webpack_require__(46);
 	var ReactElement = __webpack_require__(49);
@@ -13600,7 +13600,7 @@
 	"use strict";
 
 	var EventConstants = __webpack_require__(87);
-	var LocalEventTrapMixin = __webpack_require__(175);
+	var LocalEventTrapMixin = __webpack_require__(174);
 	var ReactBrowserComponentMixin = __webpack_require__(104);
 	var ReactCompositeComponent = __webpack_require__(46);
 	var ReactElement = __webpack_require__(49);
@@ -13654,7 +13654,7 @@
 	"use strict";
 
 	var EventConstants = __webpack_require__(87);
-	var LocalEventTrapMixin = __webpack_require__(175);
+	var LocalEventTrapMixin = __webpack_require__(174);
 	var ReactBrowserComponentMixin = __webpack_require__(104);
 	var ReactCompositeComponent = __webpack_require__(46);
 	var ReactElement = __webpack_require__(49);
@@ -13705,7 +13705,7 @@
 
 	"use strict";
 
-	var AutoFocusMixin = __webpack_require__(174);
+	var AutoFocusMixin = __webpack_require__(175);
 	var DOMPropertyOperations = __webpack_require__(42);
 	var LinkedValueUtils = __webpack_require__(176);
 	var ReactBrowserComponentMixin = __webpack_require__(104);
@@ -13942,7 +13942,7 @@
 
 	"use strict";
 
-	var AutoFocusMixin = __webpack_require__(174);
+	var AutoFocusMixin = __webpack_require__(175);
 	var LinkedValueUtils = __webpack_require__(176);
 	var ReactBrowserComponentMixin = __webpack_require__(104);
 	var ReactCompositeComponent = __webpack_require__(46);
@@ -14130,7 +14130,7 @@
 
 	"use strict";
 
-	var AutoFocusMixin = __webpack_require__(174);
+	var AutoFocusMixin = __webpack_require__(175);
 	var DOMPropertyOperations = __webpack_require__(42);
 	var LinkedValueUtils = __webpack_require__(176);
 	var ReactBrowserComponentMixin = __webpack_require__(104);
@@ -14511,10 +14511,10 @@
 	var ReactInputSelection = __webpack_require__(167);
 	var SyntheticEvent = __webpack_require__(152);
 
-	var getActiveElement = __webpack_require__(180);
+	var getActiveElement = __webpack_require__(188);
 	var isTextInputElement = __webpack_require__(166);
 	var keyOf = __webpack_require__(99);
-	var shallowEqual = __webpack_require__(143);
+	var shallowEqual = __webpack_require__(141);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -14743,17 +14743,17 @@
 	var EventConstants = __webpack_require__(87);
 	var EventPluginUtils = __webpack_require__(43);
 	var EventPropagators = __webpack_require__(151);
-	var SyntheticClipboardEvent = __webpack_require__(181);
+	var SyntheticClipboardEvent = __webpack_require__(180);
 	var SyntheticEvent = __webpack_require__(152);
-	var SyntheticFocusEvent = __webpack_require__(182);
-	var SyntheticKeyboardEvent = __webpack_require__(183);
+	var SyntheticFocusEvent = __webpack_require__(181);
+	var SyntheticKeyboardEvent = __webpack_require__(182);
 	var SyntheticMouseEvent = __webpack_require__(170);
-	var SyntheticDragEvent = __webpack_require__(184);
-	var SyntheticTouchEvent = __webpack_require__(185);
-	var SyntheticUIEvent = __webpack_require__(186);
-	var SyntheticWheelEvent = __webpack_require__(187);
+	var SyntheticDragEvent = __webpack_require__(183);
+	var SyntheticTouchEvent = __webpack_require__(184);
+	var SyntheticUIEvent = __webpack_require__(185);
+	var SyntheticWheelEvent = __webpack_require__(186);
 
-	var getEventCharCode = __webpack_require__(188);
+	var getEventCharCode = __webpack_require__(187);
 
 	var invariant = __webpack_require__(88);
 	var keyOf = __webpack_require__(99);
@@ -15600,7 +15600,7 @@
 
 	"use strict";
 
-	var adler32 = __webpack_require__(191);
+	var adler32 = __webpack_require__(190);
 
 	var ReactMarkupChecksum = {
 	  CHECKSUM_ATTR_NAME: 'data-react-checksum',
@@ -15655,7 +15655,7 @@
 
 	var PooledClass = __webpack_require__(89);
 	var CallbackQueue = __webpack_require__(146);
-	var ReactPutListenerQueue = __webpack_require__(190);
+	var ReactPutListenerQueue = __webpack_require__(191);
 	var Transaction = __webpack_require__(147);
 
 	var assign = __webpack_require__(62);
@@ -15952,9 +15952,7 @@
 
 
 /***/ },
-/* 141 */,
-/* 142 */,
-/* 143 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16002,6 +16000,8 @@
 
 
 /***/ },
+/* 142 */,
+/* 143 */,
 /* 144 */,
 /* 145 */,
 /* 146 */
@@ -18236,7 +18236,7 @@
 
 	var containsNode = __webpack_require__(132);
 	var focusNode = __webpack_require__(201);
-	var getActiveElement = __webpack_require__(180);
+	var getActiveElement = __webpack_require__(188);
 
 	function isInDocument(node) {
 	  return containsNode(document.documentElement, node);
@@ -18464,10 +18464,10 @@
 
 	"use strict";
 
-	var SyntheticUIEvent = __webpack_require__(186);
+	var SyntheticUIEvent = __webpack_require__(185);
 	var ViewportMetrics = __webpack_require__(164);
 
-	var getEventModifierState = __webpack_require__(203);
+	var getEventModifierState = __webpack_require__(202);
 
 	/**
 	 * @interface MouseEvent
@@ -18554,7 +18554,7 @@
 	"use strict";
 
 	var CSSPropertyOperations = __webpack_require__(103);
-	var DOMChildrenOperations = __webpack_require__(202);
+	var DOMChildrenOperations = __webpack_require__(203);
 	var DOMPropertyOperations = __webpack_require__(42);
 	var ReactMount = __webpack_require__(56);
 	var ReactPerf = __webpack_require__(58);
@@ -18744,7 +18744,7 @@
 	var PooledClass = __webpack_require__(89);
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 	var ReactInputSelection = __webpack_require__(167);
-	var ReactPutListenerQueue = __webpack_require__(190);
+	var ReactPutListenerQueue = __webpack_require__(191);
 	var Transaction = __webpack_require__(147);
 
 	var assign = __webpack_require__(62);
@@ -18988,37 +18988,6 @@
 /* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule AutoFocusMixin
-	 * @typechecks static-only
-	 */
-
-	"use strict";
-
-	var focusNode = __webpack_require__(201);
-
-	var AutoFocusMixin = {
-	  componentDidMount: function() {
-	    if (this.props.autoFocus) {
-	      focusNode(this.getDOMNode());
-	    }
-	  }
-	};
-
-	module.exports = AutoFocusMixin;
-
-
-/***/ },
-/* 175 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/* WEBPACK VAR INJECTION */(function(process) {/**
 	 * Copyright 2014, Facebook, Inc.
 	 * All rights reserved.
@@ -19067,6 +19036,37 @@
 	module.exports = LocalEventTrapMixin;
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule AutoFocusMixin
+	 * @typechecks static-only
+	 */
+
+	"use strict";
+
+	var focusNode = __webpack_require__(201);
+
+	var AutoFocusMixin = {
+	  componentDidMount: function() {
+	    if (this.props.autoFocus) {
+	      focusNode(this.getDOMNode());
+	    }
+	  }
+	};
+
+	module.exports = AutoFocusMixin;
+
 
 /***/ },
 /* 176 */
@@ -19411,39 +19411,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * @providesModule getActiveElement
-	 * @typechecks
-	 */
-
-	/**
-	 * Same as document.activeElement but wraps in a try-catch block. In IE it is
-	 * not safe to call document.activeElement if there is nothing focused.
-	 *
-	 * The activeElement will be null only if the document body is not yet defined.
-	 */
-	function getActiveElement() /*?DOMElement*/ {
-	  try {
-	    return document.activeElement || document.body;
-	  } catch (e) {
-	    return document.body;
-	  }
-	}
-
-	module.exports = getActiveElement;
-
-
-/***/ },
-/* 181 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
 	 * @providesModule SyntheticClipboardEvent
 	 * @typechecks static-only
 	 */
@@ -19483,7 +19450,7 @@
 
 
 /***/ },
-/* 182 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19500,7 +19467,7 @@
 
 	"use strict";
 
-	var SyntheticUIEvent = __webpack_require__(186);
+	var SyntheticUIEvent = __webpack_require__(185);
 
 	/**
 	 * @interface FocusEvent
@@ -19526,7 +19493,7 @@
 
 
 /***/ },
-/* 183 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19543,11 +19510,11 @@
 
 	"use strict";
 
-	var SyntheticUIEvent = __webpack_require__(186);
+	var SyntheticUIEvent = __webpack_require__(185);
 
-	var getEventCharCode = __webpack_require__(188);
+	var getEventCharCode = __webpack_require__(187);
 	var getEventKey = __webpack_require__(204);
-	var getEventModifierState = __webpack_require__(203);
+	var getEventModifierState = __webpack_require__(202);
 
 	/**
 	 * @interface KeyboardEvent
@@ -19617,7 +19584,7 @@
 
 
 /***/ },
-/* 184 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19660,7 +19627,7 @@
 
 
 /***/ },
-/* 185 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19677,9 +19644,9 @@
 
 	"use strict";
 
-	var SyntheticUIEvent = __webpack_require__(186);
+	var SyntheticUIEvent = __webpack_require__(185);
 
-	var getEventModifierState = __webpack_require__(203);
+	var getEventModifierState = __webpack_require__(202);
 
 	/**
 	 * @interface TouchEvent
@@ -19712,7 +19679,7 @@
 
 
 /***/ },
-/* 186 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19778,7 +19745,7 @@
 
 
 /***/ },
-/* 187 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19843,7 +19810,7 @@
 
 
 /***/ },
-/* 188 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19899,6 +19866,39 @@
 
 
 /***/ },
+/* 188 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule getActiveElement
+	 * @typechecks
+	 */
+
+	/**
+	 * Same as document.activeElement but wraps in a try-catch block. In IE it is
+	 * not safe to call document.activeElement if there is nothing focused.
+	 *
+	 * The activeElement will be null only if the document body is not yet defined.
+	 */
+	function getActiveElement() /*?DOMElement*/ {
+	  try {
+	    return document.activeElement || document.body;
+	  } catch (e) {
+	    return document.body;
+	  }
+	}
+
+	module.exports = getActiveElement;
+
+
+/***/ },
 /* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -19929,6 +19929,44 @@
 
 /***/ },
 /* 190 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule adler32
+	 */
+
+	/* jslint bitwise:true */
+
+	"use strict";
+
+	var MOD = 65521;
+
+	// This is a clean-room implementation of adler32 designed for detecting
+	// if markup is not what we expect it to be. It does not need to be
+	// cryptographically strong, only reasonably good at detecting if markup
+	// generated on the server is different than that on the client.
+	function adler32(data) {
+	  var a = 1;
+	  var b = 0;
+	  for (var i = 0; i < data.length; i++) {
+	    a = (a + data.charCodeAt(i)) % MOD;
+	    b = (b + a) % MOD;
+	  }
+	  return a | (b << 16);
+	}
+
+	module.exports = adler32;
+
+
+/***/ },
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -19985,44 +20023,6 @@
 	PooledClass.addPoolingTo(ReactPutListenerQueue);
 
 	module.exports = ReactPutListenerQueue;
-
-
-/***/ },
-/* 191 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule adler32
-	 */
-
-	/* jslint bitwise:true */
-
-	"use strict";
-
-	var MOD = 65521;
-
-	// This is a clean-room implementation of adler32 designed for detecting
-	// if markup is not what we expect it to be. It does not need to be
-	// cryptographically strong, only reasonably good at detecting if markup
-	// generated on the server is different than that on the client.
-	function adler32(data) {
-	  var a = 1;
-	  var b = 0;
-	  for (var i = 0; i < data.length; i++) {
-	    a = (a + data.charCodeAt(i)) % MOD;
-	    b = (b + a) % MOD;
-	  }
-	  return a | (b << 16);
-	}
-
-	module.exports = adler32;
 
 
 /***/ },
@@ -20536,6 +20536,57 @@
 /* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * Copyright 2013 Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule getEventModifierState
+	 * @typechecks static-only
+	 */
+
+	"use strict";
+
+	/**
+	 * Translation from modifier key to the associated property in the event.
+	 * @see http://www.w3.org/TR/DOM-Level-3-Events/#keys-Modifiers
+	 */
+
+	var modifierKeyToProp = {
+	  'Alt': 'altKey',
+	  'Control': 'ctrlKey',
+	  'Meta': 'metaKey',
+	  'Shift': 'shiftKey'
+	};
+
+	// IE8 does not implement getModifierState so we simply map it to the only
+	// modifier keys exposed by the event itself, does not support Lock-keys.
+	// Currently, all major browsers except Chrome seems to support Lock-keys.
+	function modifierStateGetter(keyArg) {
+	  /*jshint validthis:true */
+	  var syntheticEvent = this;
+	  var nativeEvent = syntheticEvent.nativeEvent;
+	  if (nativeEvent.getModifierState) {
+	    return nativeEvent.getModifierState(keyArg);
+	  }
+	  var keyProp = modifierKeyToProp[keyArg];
+	  return keyProp ? !!nativeEvent[keyProp] : false;
+	}
+
+	function getEventModifierState(nativeEvent) {
+	  return modifierStateGetter;
+	}
+
+	module.exports = getEventModifierState;
+
+
+/***/ },
+/* 203 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function(process) {/**
 	 * Copyright 2013-2014, Facebook, Inc.
 	 * All rights reserved.
@@ -20711,57 +20762,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 203 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013 Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule getEventModifierState
-	 * @typechecks static-only
-	 */
-
-	"use strict";
-
-	/**
-	 * Translation from modifier key to the associated property in the event.
-	 * @see http://www.w3.org/TR/DOM-Level-3-Events/#keys-Modifiers
-	 */
-
-	var modifierKeyToProp = {
-	  'Alt': 'altKey',
-	  'Control': 'ctrlKey',
-	  'Meta': 'metaKey',
-	  'Shift': 'shiftKey'
-	};
-
-	// IE8 does not implement getModifierState so we simply map it to the only
-	// modifier keys exposed by the event itself, does not support Lock-keys.
-	// Currently, all major browsers except Chrome seems to support Lock-keys.
-	function modifierStateGetter(keyArg) {
-	  /*jshint validthis:true */
-	  var syntheticEvent = this;
-	  var nativeEvent = syntheticEvent.nativeEvent;
-	  if (nativeEvent.getModifierState) {
-	    return nativeEvent.getModifierState(keyArg);
-	  }
-	  var keyProp = modifierKeyToProp[keyArg];
-	  return keyProp ? !!nativeEvent[keyProp] : false;
-	}
-
-	function getEventModifierState(nativeEvent) {
-	  return modifierStateGetter;
-	}
-
-	module.exports = getEventModifierState;
-
-
-/***/ },
 /* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -20779,7 +20779,7 @@
 
 	"use strict";
 
-	var getEventCharCode = __webpack_require__(188);
+	var getEventCharCode = __webpack_require__(187);
 
 	/**
 	 * Normalization of deprecated HTML5 `key` values
