@@ -52,15 +52,14 @@
 
 	var _React2 = _interopRequireWildcard(_React);
 
-	var _Social = __webpack_require__(2);
+	var _Social = __webpack_require__(1);
 
 	var _Social2 = _interopRequireWildcard(_Social);
 
 	_React2["default"].render(_React2["default"].createElement(_Social2["default"], null), document.getElementById("social-root"));
 
 /***/ },
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -75,7 +74,7 @@
 
 	var _React2 = _interopRequireWildcard(_React);
 
-	var _Transmit = __webpack_require__(40);
+	var _Transmit = __webpack_require__(39);
 
 	var _Transmit2 = _interopRequireWildcard(_Transmit);
 
@@ -150,6 +149,7 @@
 	module.exports = exports["default"];
 
 /***/ },
+/* 2 */,
 /* 3 */,
 /* 4 */,
 /* 5 */,
@@ -859,8 +859,7 @@
 
 
 /***/ },
-/* 39 */,
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -880,6 +879,7 @@
 
 
 /***/ },
+/* 40 */,
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 

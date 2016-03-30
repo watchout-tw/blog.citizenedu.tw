@@ -52,14 +52,15 @@
 
 	var _React2 = _interopRequireWildcard(_React);
 
-	var _Comments = __webpack_require__(1);
+	var _Comments = __webpack_require__(2);
 
 	var _Comments2 = _interopRequireWildcard(_Comments);
 
 	_React2["default"].render(_React2["default"].createElement(_Comments2["default"], null), document.getElementById("comment-root"));
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -370,7 +371,6 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 2 */,
 /* 3 */,
 /* 4 */,
 /* 5 */,
@@ -714,7 +714,7 @@
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(39);
+	module.exports = __webpack_require__(40);
 
 
 /***/ },
@@ -10429,7 +10429,8 @@
 
 
 /***/ },
-/* 39 */
+/* 39 */,
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10486,7 +10487,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 40 */,
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
