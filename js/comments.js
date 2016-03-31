@@ -70,13 +70,13 @@
 	  value: true
 	});
 
-	var _React = __webpack_require__(31);
+	var _React = __webpack_require__(32);
 
 	var _React2 = _interopRequireWildcard(_React);
 
 	__webpack_require__(19);
 
-	var _Tabs = __webpack_require__(32);
+	var _Tabs = __webpack_require__(33);
 
 	var _Tabs2 = _interopRequireWildcard(_Tabs);
 
@@ -92,7 +92,7 @@
 
 	var _superagent2 = _interopRequireWildcard(_superagent);
 
-	var _helper = __webpack_require__(33);
+	var _helper = __webpack_require__(31);
 
 	var _helper2 = _interopRequireWildcard(_helper);
 
@@ -659,61 +659,6 @@
 /* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(39);
-
-
-/***/ },
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { "default": obj }; };
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _React = __webpack_require__(31);
-
-	var _React2 = _interopRequireWildcard(_React);
-
-	__webpack_require__(25);
-
-	exports["default"] = _React2["default"].createClass({
-	    displayName: "Tabs",
-
-	    render: function render() {
-	        var _props = this.props;
-	        var activeId = _props.activeId;
-	        var data = _props.data;
-	        var onClick = _props.onClick;
-
-	        var tabsItem = data.map(function (value, i) {
-	            var classes = activeId === value.id ? "Tabs-tab is-active" : "Tabs-tab";
-	            var boundleClick = onClick.bind(null, value.id);
-
-	            return _React2["default"].createElement(
-	                "div",
-	                { className: classes,
-	                    key: i,
-	                    onClick: boundleClick },
-	                value.title
-	            );
-	        });
-	        return _React2["default"].createElement(
-	            "div",
-	            { className: "Tabs" },
-	            tabsItem
-	        );
-	    }
-	});
-	module.exports = exports["default"];
-
-/***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/* WEBPACK VAR INJECTION */(function(__dirname) {'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
@@ -764,6 +709,61 @@
 	exports['default'] = helper;
 	module.exports = exports['default'];
 	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(40);
+
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { "default": obj }; };
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _React = __webpack_require__(32);
+
+	var _React2 = _interopRequireWildcard(_React);
+
+	__webpack_require__(25);
+
+	exports["default"] = _React2["default"].createClass({
+	    displayName: "Tabs",
+
+	    render: function render() {
+	        var _props = this.props;
+	        var activeId = _props.activeId;
+	        var data = _props.data;
+	        var onClick = _props.onClick;
+
+	        var tabsItem = data.map(function (value, i) {
+	            var classes = activeId === value.id ? "Tabs-tab is-active" : "Tabs-tab";
+	            var boundleClick = onClick.bind(null, value.id);
+
+	            return _React2["default"].createElement(
+	                "div",
+	                { className: classes,
+	                    key: i,
+	                    onClick: boundleClick },
+	                value.title
+	            );
+	        });
+	        return _React2["default"].createElement(
+	            "div",
+	            { className: "Tabs" },
+	            tabsItem
+	        );
+	    }
+	});
+	module.exports = exports["default"];
 
 /***/ },
 /* 34 */
@@ -10429,7 +10429,8 @@
 
 
 /***/ },
-/* 39 */
+/* 39 */,
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10486,7 +10487,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 40 */,
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -10494,8 +10494,8 @@
 	 * Module dependencies.
 	 */
 
-	var Emitter = __webpack_require__(151);
-	var reduce = __webpack_require__(152);
+	var Emitter = __webpack_require__(152);
+	var reduce = __webpack_require__(151);
 
 	/**
 	 * Root reference for iframes.
@@ -27757,6 +27757,35 @@
 
 	
 	/**
+	 * Reduce `arr` with `fn`.
+	 *
+	 * @param {Array} arr
+	 * @param {Function} fn
+	 * @param {Mixed} initial
+	 *
+	 * TODO: combatible error handling?
+	 */
+
+	module.exports = function(arr, fn, initial){  
+	  var idx = 0;
+	  var len = arr.length;
+	  var curr = arguments.length == 3
+	    ? initial
+	    : arr[idx++];
+
+	  while (idx < len) {
+	    curr = fn.call(null, curr, arr[idx], ++idx, arr);
+	  }
+	  
+	  return curr;
+	};
+
+/***/ },
+/* 152 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	/**
 	 * Expose `Emitter`.
 	 */
 
@@ -27920,35 +27949,6 @@
 	  return !! this.listeners(event).length;
 	};
 
-
-/***/ },
-/* 152 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	/**
-	 * Reduce `arr` with `fn`.
-	 *
-	 * @param {Array} arr
-	 * @param {Function} fn
-	 * @param {Mixed} initial
-	 *
-	 * TODO: combatible error handling?
-	 */
-
-	module.exports = function(arr, fn, initial){  
-	  var idx = 0;
-	  var len = arr.length;
-	  var curr = arguments.length == 3
-	    ? initial
-	    : arr[idx++];
-
-	  while (idx < len) {
-	    curr = fn.call(null, curr, arr[idx], ++idx, arr);
-	  }
-	  
-	  return curr;
-	};
 
 /***/ },
 /* 153 */,
