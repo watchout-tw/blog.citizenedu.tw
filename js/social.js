@@ -85,7 +85,7 @@
 
 	var _superagent2 = _interopRequireWildcard(_superagent);
 
-	var _helper = __webpack_require__(31);
+	var _helper = __webpack_require__(33);
 
 	var _helper2 = _interopRequireWildcard(_helper);
 
@@ -407,7 +407,9 @@
 
 
 /***/ },
-/* 31 */
+/* 31 */,
+/* 32 */,
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(__dirname) {'use strict';
@@ -462,8 +464,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
 
 /***/ },
-/* 32 */,
-/* 33 */,
 /* 34 */,
 /* 35 */
 /***/ function(module, exports, __webpack_require__) {
@@ -887,8 +887,8 @@
 	 * Module dependencies.
 	 */
 
-	var Emitter = __webpack_require__(153);
-	var reduce = __webpack_require__(152);
+	var Emitter = __webpack_require__(152);
+	var reduce = __webpack_require__(151);
 
 	/**
 	 * Root reference for iframes.
@@ -9254,7 +9254,7 @@
 	"use strict";
 
 	var promiseProxy = __webpack_require__(81);
-	var React        = __webpack_require__(151);
+	var React        = __webpack_require__(153);
 	var assign       = React.__spread;
 
 	/**
@@ -9442,7 +9442,7 @@
 	 */
 	"use strict";
 
-	var React  = __webpack_require__(151);
+	var React  = __webpack_require__(153);
 	var assign = React.__spread;
 
 	/**
@@ -9469,7 +9469,7 @@
 	"use strict";
 
 	var promiseProxy = __webpack_require__(81);
-	var React        = __webpack_require__(151);
+	var React        = __webpack_require__(153);
 	var assign       = React.__spread;
 
 	/**
@@ -16983,18 +16983,6 @@
 /* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * @copyright © 2015, Rick Wong. All rights reserved.
-	 */
-	"use strict";
-
-	module.exports = __webpack_require__(29);
-
-
-/***/ },
-/* 152 */
-/***/ function(module, exports, __webpack_require__) {
-
 	
 	/**
 	 * Reduce `arr` with `fn`.
@@ -17021,7 +17009,7 @@
 	};
 
 /***/ },
-/* 153 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -17188,6 +17176,18 @@
 	Emitter.prototype.hasListeners = function(event){
 	  return !! this.listeners(event).length;
 	};
+
+
+/***/ },
+/* 153 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * @copyright © 2015, Rick Wong. All rights reserved.
+	 */
+	"use strict";
+
+	module.exports = __webpack_require__(29);
 
 
 /***/ },
