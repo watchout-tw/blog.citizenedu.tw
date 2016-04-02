@@ -71,13 +71,13 @@
 	  value: true
 	});
 
-	var _React = __webpack_require__(31);
+	var _React = __webpack_require__(30);
 
 	var _React2 = _interopRequireWildcard(_React);
 
 	__webpack_require__(22);
 
-	var _Tabs = __webpack_require__(32);
+	var _Tabs = __webpack_require__(31);
 
 	var _Tabs2 = _interopRequireWildcard(_Tabs);
 
@@ -93,7 +93,7 @@
 
 	var _superagent2 = _interopRequireWildcard(_superagent);
 
-	var _helper = __webpack_require__(30);
+	var _helper = __webpack_require__(32);
 
 	var _helper2 = _interopRequireWildcard(_helper);
 
@@ -463,6 +463,61 @@
 /* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__(39);
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { "default": obj }; };
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _React = __webpack_require__(30);
+
+	var _React2 = _interopRequireWildcard(_React);
+
+	__webpack_require__(26);
+
+	exports["default"] = _React2["default"].createClass({
+	    displayName: "Tabs",
+
+	    render: function render() {
+	        var _props = this.props;
+	        var activeId = _props.activeId;
+	        var data = _props.data;
+	        var onClick = _props.onClick;
+
+	        var tabsItem = data.map(function (value, i) {
+	            var classes = activeId === value.id ? "Tabs-tab is-active" : "Tabs-tab";
+	            var boundleClick = onClick.bind(null, value.id);
+
+	            return _React2["default"].createElement(
+	                "div",
+	                { className: classes,
+	                    key: i,
+	                    onClick: boundleClick },
+	                value.title
+	            );
+	        });
+	        return _React2["default"].createElement(
+	            "div",
+	            { className: "Tabs" },
+	            tabsItem
+	        );
+	    }
+	});
+	module.exports = exports["default"];
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function(__dirname) {'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
@@ -513,61 +568,6 @@
 	exports['default'] = helper;
 	module.exports = exports['default'];
 	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
-
-/***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(40);
-
-
-/***/ },
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { "default": obj }; };
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _React = __webpack_require__(31);
-
-	var _React2 = _interopRequireWildcard(_React);
-
-	__webpack_require__(26);
-
-	exports["default"] = _React2["default"].createClass({
-	    displayName: "Tabs",
-
-	    render: function render() {
-	        var _props = this.props;
-	        var activeId = _props.activeId;
-	        var data = _props.data;
-	        var onClick = _props.onClick;
-
-	        var tabsItem = data.map(function (value, i) {
-	            var classes = activeId === value.id ? "Tabs-tab is-active" : "Tabs-tab";
-	            var boundleClick = onClick.bind(null, value.id);
-
-	            return _React2["default"].createElement(
-	                "div",
-	                { className: classes,
-	                    key: i,
-	                    onClick: boundleClick },
-	                value.title
-	            );
-	        });
-	        return _React2["default"].createElement(
-	            "div",
-	            { className: "Tabs" },
-	            tabsItem
-	        );
-	    }
-	});
-	module.exports = exports["default"];
 
 /***/ },
 /* 33 */
@@ -10429,8 +10429,7 @@
 
 
 /***/ },
-/* 39 */,
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10487,6 +10486,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
+/* 40 */,
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -10494,8 +10494,8 @@
 	 * Module dependencies.
 	 */
 
-	var Emitter = __webpack_require__(139);
-	var reduce = __webpack_require__(140);
+	var Emitter = __webpack_require__(147);
+	var reduce = __webpack_require__(152);
 
 	/**
 	 * Root reference for iframes.
@@ -18348,7 +18348,7 @@
 
 	"use strict";
 
-	var shallowEqual = __webpack_require__(143);
+	var shallowEqual = __webpack_require__(148);
 
 	/**
 	 * If your React component's render function is "pure", e.g. it will render the
@@ -18410,7 +18410,7 @@
 	  __webpack_require__(70)
 	);
 	var ReactCSSTransitionGroupChild = React.createFactory(
-	  __webpack_require__(144)
+	  __webpack_require__(139)
 	);
 
 	var ReactCSSTransitionGroup = React.createClass({
@@ -18473,7 +18473,7 @@
 	"use strict";
 
 	var React = __webpack_require__(35);
-	var ReactTransitionChildMapping = __webpack_require__(145);
+	var ReactTransitionChildMapping = __webpack_require__(140);
 
 	var assign = __webpack_require__(62);
 	var cloneWithProps = __webpack_require__(73);
@@ -18665,11 +18665,11 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(146);
+	var CallbackQueue = __webpack_require__(143);
 	var PooledClass = __webpack_require__(89);
 	var ReactCurrentOwner = __webpack_require__(48);
 	var ReactPerf = __webpack_require__(58);
-	var Transaction = __webpack_require__(147);
+	var Transaction = __webpack_require__(144);
 
 	var assign = __webpack_require__(62);
 	var invariant = __webpack_require__(88);
@@ -19236,11 +19236,11 @@
 	"use strict";
 
 	var DOMProperty = __webpack_require__(83);
-	var ReactDefaultPerfAnalysis = __webpack_require__(148);
+	var ReactDefaultPerfAnalysis = __webpack_require__(145);
 	var ReactMount = __webpack_require__(56);
 	var ReactPerf = __webpack_require__(58);
 
-	var performanceNow = __webpack_require__(149);
+	var performanceNow = __webpack_require__(146);
 
 	function roundFloat(val) {
 	  return Math.floor(val * 100) / 100;
@@ -19499,15 +19499,15 @@
 	"use strict";
 
 	var EventConstants = __webpack_require__(87);
-	var EventPluginHub = __webpack_require__(150);
-	var EventPropagators = __webpack_require__(151);
+	var EventPluginHub = __webpack_require__(149);
+	var EventPropagators = __webpack_require__(150);
 	var React = __webpack_require__(35);
 	var ReactElement = __webpack_require__(49);
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 	var ReactMount = __webpack_require__(56);
 	var ReactTextComponent = __webpack_require__(61);
 	var ReactUpdates = __webpack_require__(71);
-	var SyntheticEvent = __webpack_require__(152);
+	var SyntheticEvent = __webpack_require__(151);
 
 	var assign = __webpack_require__(62);
 
@@ -21898,7 +21898,7 @@
 	"use strict";
 
 	var EventConstants = __webpack_require__(87);
-	var EventPluginHub = __webpack_require__(150);
+	var EventPluginHub = __webpack_require__(149);
 	var EventPluginRegistry = __webpack_require__(162);
 	var ReactEventEmitterMixin = __webpack_require__(163);
 	var ViewportMetrics = __webpack_require__(164);
@@ -22326,7 +22326,7 @@
 	"use strict";
 
 	var EventConstants = __webpack_require__(87);
-	var EventPropagators = __webpack_require__(151);
+	var EventPropagators = __webpack_require__(150);
 	var ExecutionEnvironment = __webpack_require__(65);
 	var SyntheticInputEvent = __webpack_require__(165);
 
@@ -22551,11 +22551,11 @@
 	"use strict";
 
 	var EventConstants = __webpack_require__(87);
-	var EventPluginHub = __webpack_require__(150);
-	var EventPropagators = __webpack_require__(151);
+	var EventPluginHub = __webpack_require__(149);
+	var EventPropagators = __webpack_require__(150);
 	var ExecutionEnvironment = __webpack_require__(65);
 	var ReactUpdates = __webpack_require__(71);
-	var SyntheticEvent = __webpack_require__(152);
+	var SyntheticEvent = __webpack_require__(151);
 
 	var isEventSupported = __webpack_require__(106);
 	var isTextInputElement = __webpack_require__(166);
@@ -22967,7 +22967,7 @@
 	"use strict";
 
 	var EventConstants = __webpack_require__(87);
-	var EventPropagators = __webpack_require__(151);
+	var EventPropagators = __webpack_require__(150);
 	var ExecutionEnvironment = __webpack_require__(65);
 	var ReactInputSelection = __webpack_require__(167);
 	var SyntheticCompositionEvent = __webpack_require__(168);
@@ -23274,7 +23274,7 @@
 	"use strict";
 
 	var EventConstants = __webpack_require__(87);
-	var EventPropagators = __webpack_require__(151);
+	var EventPropagators = __webpack_require__(150);
 	var SyntheticMouseEvent = __webpack_require__(170);
 
 	var ReactMount = __webpack_require__(56);
@@ -23800,7 +23800,7 @@
 	"use strict";
 
 	var ReactUpdates = __webpack_require__(71);
-	var Transaction = __webpack_require__(147);
+	var Transaction = __webpack_require__(144);
 
 	var assign = __webpack_require__(62);
 	var emptyFunction = __webpack_require__(136);
@@ -24809,7 +24809,7 @@
 	"use strict";
 
 	var DOMProperty = __webpack_require__(83);
-	var EventPluginHub = __webpack_require__(150);
+	var EventPluginHub = __webpack_require__(149);
 	var ReactComponent = __webpack_require__(45);
 	var ReactCompositeComponent = __webpack_require__(46);
 	var ReactEmptyComponent = __webpack_require__(93);
@@ -24853,14 +24853,14 @@
 	"use strict";
 
 	var EventConstants = __webpack_require__(87);
-	var EventPropagators = __webpack_require__(151);
+	var EventPropagators = __webpack_require__(150);
 	var ReactInputSelection = __webpack_require__(167);
-	var SyntheticEvent = __webpack_require__(152);
+	var SyntheticEvent = __webpack_require__(151);
 
 	var getActiveElement = __webpack_require__(180);
 	var isTextInputElement = __webpack_require__(166);
 	var keyOf = __webpack_require__(99);
-	var shallowEqual = __webpack_require__(143);
+	var shallowEqual = __webpack_require__(148);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -25088,9 +25088,9 @@
 
 	var EventConstants = __webpack_require__(87);
 	var EventPluginUtils = __webpack_require__(43);
-	var EventPropagators = __webpack_require__(151);
+	var EventPropagators = __webpack_require__(150);
 	var SyntheticClipboardEvent = __webpack_require__(181);
-	var SyntheticEvent = __webpack_require__(152);
+	var SyntheticEvent = __webpack_require__(151);
 	var SyntheticFocusEvent = __webpack_require__(182);
 	var SyntheticKeyboardEvent = __webpack_require__(183);
 	var SyntheticMouseEvent = __webpack_require__(170);
@@ -26000,9 +26000,9 @@
 	"use strict";
 
 	var PooledClass = __webpack_require__(89);
-	var CallbackQueue = __webpack_require__(146);
+	var CallbackQueue = __webpack_require__(143);
 	var ReactPutListenerQueue = __webpack_require__(191);
-	var Transaction = __webpack_require__(147);
+	var Transaction = __webpack_require__(144);
 
 	var assign = __webpack_require__(62);
 	var emptyFunction = __webpack_require__(136);
@@ -26102,200 +26102,244 @@
 /* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
-	/**
-	 * Expose `Emitter`.
-	 */
-
-	module.exports = Emitter;
-
-	/**
-	 * Initialize a new `Emitter`.
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
 	 *
-	 * @api public
-	 */
-
-	function Emitter(obj) {
-	  if (obj) return mixin(obj);
-	};
-
-	/**
-	 * Mixin the emitter properties.
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * @param {Object} obj
-	 * @return {Object}
-	 * @api private
+	 * @typechecks
+	 * @providesModule ReactCSSTransitionGroupChild
 	 */
 
-	function mixin(obj) {
-	  for (var key in Emitter.prototype) {
-	    obj[key] = Emitter.prototype[key];
-	  }
-	  return obj;
+	"use strict";
+
+	var React = __webpack_require__(35);
+
+	var CSSCore = __webpack_require__(192);
+	var ReactTransitionEvents = __webpack_require__(193);
+
+	var onlyChild = __webpack_require__(64);
+
+	// We don't remove the element from the DOM until we receive an animationend or
+	// transitionend event. If the user screws up and forgets to add an animation
+	// their node will be stuck in the DOM forever, so we detect if an animation
+	// does not start and if it doesn't, we just call the end listener immediately.
+	var TICK = 17;
+	var NO_EVENT_TIMEOUT = 5000;
+
+	var noEventListener = null;
+
+
+	if ("production" !== process.env.NODE_ENV) {
+	  noEventListener = function() {
+	    console.warn(
+	      'transition(): tried to perform an animation without ' +
+	      'an animationend or transitionend event after timeout (' +
+	      NO_EVENT_TIMEOUT + 'ms). You should either disable this ' +
+	      'transition in JS or add a CSS animation/transition.'
+	    );
+	  };
 	}
 
-	/**
-	 * Listen on the given `event` with `fn`.
-	 *
-	 * @param {String} event
-	 * @param {Function} fn
-	 * @return {Emitter}
-	 * @api public
-	 */
+	var ReactCSSTransitionGroupChild = React.createClass({
+	  displayName: 'ReactCSSTransitionGroupChild',
 
-	Emitter.prototype.on =
-	Emitter.prototype.addEventListener = function(event, fn){
-	  this._callbacks = this._callbacks || {};
-	  (this._callbacks[event] = this._callbacks[event] || [])
-	    .push(fn);
-	  return this;
-	};
+	  transition: function(animationType, finishCallback) {
+	    var node = this.getDOMNode();
+	    var className = this.props.name + '-' + animationType;
+	    var activeClassName = className + '-active';
+	    var noEventTimeout = null;
 
-	/**
-	 * Adds an `event` listener that will be invoked a single
-	 * time then automatically removed.
-	 *
-	 * @param {String} event
-	 * @param {Function} fn
-	 * @return {Emitter}
-	 * @api public
-	 */
+	    var endListener = function(e) {
+	      if (e && e.target !== node) {
+	        return;
+	      }
+	      if ("production" !== process.env.NODE_ENV) {
+	        clearTimeout(noEventTimeout);
+	      }
 
-	Emitter.prototype.once = function(event, fn){
-	  var self = this;
-	  this._callbacks = this._callbacks || {};
+	      CSSCore.removeClass(node, className);
+	      CSSCore.removeClass(node, activeClassName);
 
-	  function on() {
-	    self.off(event, on);
-	    fn.apply(this, arguments);
-	  }
+	      ReactTransitionEvents.removeEndEventListener(node, endListener);
 
-	  on.fn = fn;
-	  this.on(event, on);
-	  return this;
-	};
+	      // Usually this optional callback is used for informing an owner of
+	      // a leave animation and telling it to remove the child.
+	      finishCallback && finishCallback();
+	    };
 
-	/**
-	 * Remove the given callback for `event` or all
-	 * registered callbacks.
-	 *
-	 * @param {String} event
-	 * @param {Function} fn
-	 * @return {Emitter}
-	 * @api public
-	 */
+	    ReactTransitionEvents.addEndEventListener(node, endListener);
 
-	Emitter.prototype.off =
-	Emitter.prototype.removeListener =
-	Emitter.prototype.removeAllListeners =
-	Emitter.prototype.removeEventListener = function(event, fn){
-	  this._callbacks = this._callbacks || {};
+	    CSSCore.addClass(node, className);
 
-	  // all
-	  if (0 == arguments.length) {
-	    this._callbacks = {};
-	    return this;
-	  }
+	    // Need to do this to actually trigger a transition.
+	    this.queueClass(activeClassName);
 
-	  // specific event
-	  var callbacks = this._callbacks[event];
-	  if (!callbacks) return this;
-
-	  // remove all handlers
-	  if (1 == arguments.length) {
-	    delete this._callbacks[event];
-	    return this;
-	  }
-
-	  // remove specific handler
-	  var cb;
-	  for (var i = 0; i < callbacks.length; i++) {
-	    cb = callbacks[i];
-	    if (cb === fn || cb.fn === fn) {
-	      callbacks.splice(i, 1);
-	      break;
+	    if ("production" !== process.env.NODE_ENV) {
+	      noEventTimeout = setTimeout(noEventListener, NO_EVENT_TIMEOUT);
 	    }
-	  }
-	  return this;
-	};
+	  },
 
-	/**
-	 * Emit `event` with the given args.
-	 *
-	 * @param {String} event
-	 * @param {Mixed} ...
-	 * @return {Emitter}
-	 */
+	  queueClass: function(className) {
+	    this.classNameQueue.push(className);
 
-	Emitter.prototype.emit = function(event){
-	  this._callbacks = this._callbacks || {};
-	  var args = [].slice.call(arguments, 1)
-	    , callbacks = this._callbacks[event];
-
-	  if (callbacks) {
-	    callbacks = callbacks.slice(0);
-	    for (var i = 0, len = callbacks.length; i < len; ++i) {
-	      callbacks[i].apply(this, args);
+	    if (!this.timeout) {
+	      this.timeout = setTimeout(this.flushClassNameQueue, TICK);
 	    }
+	  },
+
+	  flushClassNameQueue: function() {
+	    if (this.isMounted()) {
+	      this.classNameQueue.forEach(
+	        CSSCore.addClass.bind(CSSCore, this.getDOMNode())
+	      );
+	    }
+	    this.classNameQueue.length = 0;
+	    this.timeout = null;
+	  },
+
+	  componentWillMount: function() {
+	    this.classNameQueue = [];
+	  },
+
+	  componentWillUnmount: function() {
+	    if (this.timeout) {
+	      clearTimeout(this.timeout);
+	    }
+	  },
+
+	  componentWillEnter: function(done) {
+	    if (this.props.enter) {
+	      this.transition('enter', done);
+	    } else {
+	      done();
+	    }
+	  },
+
+	  componentWillLeave: function(done) {
+	    if (this.props.leave) {
+	      this.transition('leave', done);
+	    } else {
+	      done();
+	    }
+	  },
+
+	  render: function() {
+	    return onlyChild(this.props.children);
 	  }
+	});
 
-	  return this;
-	};
+	module.exports = ReactCSSTransitionGroupChild;
 
-	/**
-	 * Return array of callbacks for `event`.
-	 *
-	 * @param {String} event
-	 * @return {Array}
-	 * @api public
-	 */
-
-	Emitter.prototype.listeners = function(event){
-	  this._callbacks = this._callbacks || {};
-	  return this._callbacks[event] || [];
-	};
-
-	/**
-	 * Check if this emitter has `event` handlers.
-	 *
-	 * @param {String} event
-	 * @return {Boolean}
-	 * @api public
-	 */
-
-	Emitter.prototype.hasListeners = function(event){
-	  return !! this.listeners(event).length;
-	};
-
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
 /* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
-	
 	/**
-	 * Reduce `arr` with `fn`.
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
 	 *
-	 * @param {Array} arr
-	 * @param {Function} fn
-	 * @param {Mixed} initial
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * TODO: combatible error handling?
+	 * @typechecks static-only
+	 * @providesModule ReactTransitionChildMapping
 	 */
 
-	module.exports = function(arr, fn, initial){  
-	  var idx = 0;
-	  var len = arr.length;
-	  var curr = arguments.length == 3
-	    ? initial
-	    : arr[idx++];
+	"use strict";
 
-	  while (idx < len) {
-	    curr = fn.call(null, curr, arr[idx], ++idx, arr);
+	var ReactChildren = __webpack_require__(44);
+
+	var ReactTransitionChildMapping = {
+	  /**
+	   * Given `this.props.children`, return an object mapping key to child. Just
+	   * simple syntactic sugar around ReactChildren.map().
+	   *
+	   * @param {*} children `this.props.children`
+	   * @return {object} Mapping of key to child
+	   */
+	  getChildMapping: function(children) {
+	    return ReactChildren.map(children, function(child) {
+	      return child;
+	    });
+	  },
+
+	  /**
+	   * When you're adding or removing children some may be added or removed in the
+	   * same render pass. We want to show *both* since we want to simultaneously
+	   * animate elements in and out. This function takes a previous set of keys
+	   * and a new set of keys and merges them with its best guess of the correct
+	   * ordering. In the future we may expose some of the utilities in
+	   * ReactMultiChild to make this easy, but for now React itself does not
+	   * directly have this concept of the union of prevChildren and nextChildren
+	   * so we implement it here.
+	   *
+	   * @param {object} prev prev children as returned from
+	   * `ReactTransitionChildMapping.getChildMapping()`.
+	   * @param {object} next next children as returned from
+	   * `ReactTransitionChildMapping.getChildMapping()`.
+	   * @return {object} a key set that contains all keys in `prev` and all keys
+	   * in `next` in a reasonable order.
+	   */
+	  mergeChildMappings: function(prev, next) {
+	    prev = prev || {};
+	    next = next || {};
+
+	    function getValueForKey(key) {
+	      if (next.hasOwnProperty(key)) {
+	        return next[key];
+	      } else {
+	        return prev[key];
+	      }
+	    }
+
+	    // For each key of `next`, the list of keys to insert before that key in
+	    // the combined list
+	    var nextKeysPending = {};
+
+	    var pendingKeys = [];
+	    for (var prevKey in prev) {
+	      if (next.hasOwnProperty(prevKey)) {
+	        if (pendingKeys.length) {
+	          nextKeysPending[prevKey] = pendingKeys;
+	          pendingKeys = [];
+	        }
+	      } else {
+	        pendingKeys.push(prevKey);
+	      }
+	    }
+
+	    var i;
+	    var childMapping = {};
+	    for (var nextKey in next) {
+	      if (nextKeysPending.hasOwnProperty(nextKey)) {
+	        for (i = 0; i < nextKeysPending[nextKey].length; i++) {
+	          var pendingNextKey = nextKeysPending[nextKey][i];
+	          childMapping[nextKeysPending[nextKey][i]] = getValueForKey(
+	            pendingNextKey
+	          );
+	        }
+	      }
+	      childMapping[nextKey] = getValueForKey(nextKey);
+	    }
+
+	    // Finally, add the keys which didn't appear before any key in `next`
+	    for (i = 0; i < pendingKeys.length; i++) {
+	      childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
+	    }
+
+	    return childMapping;
 	  }
-	  
-	  return curr;
 	};
+
+	module.exports = ReactTransitionChildMapping;
+
 
 /***/ },
 /* 141 */
@@ -26488,297 +26532,6 @@
 /* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule shallowEqual
-	 */
-
-	"use strict";
-
-	/**
-	 * Performs equality by iterating through keys on an object and returning
-	 * false when any key has values which are not strictly equal between
-	 * objA and objB. Returns true when the values of all keys are strictly equal.
-	 *
-	 * @return {boolean}
-	 */
-	function shallowEqual(objA, objB) {
-	  if (objA === objB) {
-	    return true;
-	  }
-	  var key;
-	  // Test for A's keys different from B.
-	  for (key in objA) {
-	    if (objA.hasOwnProperty(key) &&
-	        (!objB.hasOwnProperty(key) || objA[key] !== objB[key])) {
-	      return false;
-	    }
-	  }
-	  // Test for B's keys missing from A.
-	  for (key in objB) {
-	    if (objB.hasOwnProperty(key) && !objA.hasOwnProperty(key)) {
-	      return false;
-	    }
-	  }
-	  return true;
-	}
-
-	module.exports = shallowEqual;
-
-
-/***/ },
-/* 144 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @typechecks
-	 * @providesModule ReactCSSTransitionGroupChild
-	 */
-
-	"use strict";
-
-	var React = __webpack_require__(35);
-
-	var CSSCore = __webpack_require__(192);
-	var ReactTransitionEvents = __webpack_require__(193);
-
-	var onlyChild = __webpack_require__(64);
-
-	// We don't remove the element from the DOM until we receive an animationend or
-	// transitionend event. If the user screws up and forgets to add an animation
-	// their node will be stuck in the DOM forever, so we detect if an animation
-	// does not start and if it doesn't, we just call the end listener immediately.
-	var TICK = 17;
-	var NO_EVENT_TIMEOUT = 5000;
-
-	var noEventListener = null;
-
-
-	if ("production" !== process.env.NODE_ENV) {
-	  noEventListener = function() {
-	    console.warn(
-	      'transition(): tried to perform an animation without ' +
-	      'an animationend or transitionend event after timeout (' +
-	      NO_EVENT_TIMEOUT + 'ms). You should either disable this ' +
-	      'transition in JS or add a CSS animation/transition.'
-	    );
-	  };
-	}
-
-	var ReactCSSTransitionGroupChild = React.createClass({
-	  displayName: 'ReactCSSTransitionGroupChild',
-
-	  transition: function(animationType, finishCallback) {
-	    var node = this.getDOMNode();
-	    var className = this.props.name + '-' + animationType;
-	    var activeClassName = className + '-active';
-	    var noEventTimeout = null;
-
-	    var endListener = function(e) {
-	      if (e && e.target !== node) {
-	        return;
-	      }
-	      if ("production" !== process.env.NODE_ENV) {
-	        clearTimeout(noEventTimeout);
-	      }
-
-	      CSSCore.removeClass(node, className);
-	      CSSCore.removeClass(node, activeClassName);
-
-	      ReactTransitionEvents.removeEndEventListener(node, endListener);
-
-	      // Usually this optional callback is used for informing an owner of
-	      // a leave animation and telling it to remove the child.
-	      finishCallback && finishCallback();
-	    };
-
-	    ReactTransitionEvents.addEndEventListener(node, endListener);
-
-	    CSSCore.addClass(node, className);
-
-	    // Need to do this to actually trigger a transition.
-	    this.queueClass(activeClassName);
-
-	    if ("production" !== process.env.NODE_ENV) {
-	      noEventTimeout = setTimeout(noEventListener, NO_EVENT_TIMEOUT);
-	    }
-	  },
-
-	  queueClass: function(className) {
-	    this.classNameQueue.push(className);
-
-	    if (!this.timeout) {
-	      this.timeout = setTimeout(this.flushClassNameQueue, TICK);
-	    }
-	  },
-
-	  flushClassNameQueue: function() {
-	    if (this.isMounted()) {
-	      this.classNameQueue.forEach(
-	        CSSCore.addClass.bind(CSSCore, this.getDOMNode())
-	      );
-	    }
-	    this.classNameQueue.length = 0;
-	    this.timeout = null;
-	  },
-
-	  componentWillMount: function() {
-	    this.classNameQueue = [];
-	  },
-
-	  componentWillUnmount: function() {
-	    if (this.timeout) {
-	      clearTimeout(this.timeout);
-	    }
-	  },
-
-	  componentWillEnter: function(done) {
-	    if (this.props.enter) {
-	      this.transition('enter', done);
-	    } else {
-	      done();
-	    }
-	  },
-
-	  componentWillLeave: function(done) {
-	    if (this.props.leave) {
-	      this.transition('leave', done);
-	    } else {
-	      done();
-	    }
-	  },
-
-	  render: function() {
-	    return onlyChild(this.props.children);
-	  }
-	});
-
-	module.exports = ReactCSSTransitionGroupChild;
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
-
-/***/ },
-/* 145 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @typechecks static-only
-	 * @providesModule ReactTransitionChildMapping
-	 */
-
-	"use strict";
-
-	var ReactChildren = __webpack_require__(44);
-
-	var ReactTransitionChildMapping = {
-	  /**
-	   * Given `this.props.children`, return an object mapping key to child. Just
-	   * simple syntactic sugar around ReactChildren.map().
-	   *
-	   * @param {*} children `this.props.children`
-	   * @return {object} Mapping of key to child
-	   */
-	  getChildMapping: function(children) {
-	    return ReactChildren.map(children, function(child) {
-	      return child;
-	    });
-	  },
-
-	  /**
-	   * When you're adding or removing children some may be added or removed in the
-	   * same render pass. We want to show *both* since we want to simultaneously
-	   * animate elements in and out. This function takes a previous set of keys
-	   * and a new set of keys and merges them with its best guess of the correct
-	   * ordering. In the future we may expose some of the utilities in
-	   * ReactMultiChild to make this easy, but for now React itself does not
-	   * directly have this concept of the union of prevChildren and nextChildren
-	   * so we implement it here.
-	   *
-	   * @param {object} prev prev children as returned from
-	   * `ReactTransitionChildMapping.getChildMapping()`.
-	   * @param {object} next next children as returned from
-	   * `ReactTransitionChildMapping.getChildMapping()`.
-	   * @return {object} a key set that contains all keys in `prev` and all keys
-	   * in `next` in a reasonable order.
-	   */
-	  mergeChildMappings: function(prev, next) {
-	    prev = prev || {};
-	    next = next || {};
-
-	    function getValueForKey(key) {
-	      if (next.hasOwnProperty(key)) {
-	        return next[key];
-	      } else {
-	        return prev[key];
-	      }
-	    }
-
-	    // For each key of `next`, the list of keys to insert before that key in
-	    // the combined list
-	    var nextKeysPending = {};
-
-	    var pendingKeys = [];
-	    for (var prevKey in prev) {
-	      if (next.hasOwnProperty(prevKey)) {
-	        if (pendingKeys.length) {
-	          nextKeysPending[prevKey] = pendingKeys;
-	          pendingKeys = [];
-	        }
-	      } else {
-	        pendingKeys.push(prevKey);
-	      }
-	    }
-
-	    var i;
-	    var childMapping = {};
-	    for (var nextKey in next) {
-	      if (nextKeysPending.hasOwnProperty(nextKey)) {
-	        for (i = 0; i < nextKeysPending[nextKey].length; i++) {
-	          var pendingNextKey = nextKeysPending[nextKey][i];
-	          childMapping[nextKeysPending[nextKey][i]] = getValueForKey(
-	            pendingNextKey
-	          );
-	        }
-	      }
-	      childMapping[nextKey] = getValueForKey(nextKey);
-	    }
-
-	    // Finally, add the keys which didn't appear before any key in `next`
-	    for (i = 0; i < pendingKeys.length; i++) {
-	      childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
-	    }
-
-	    return childMapping;
-	  }
-	};
-
-	module.exports = ReactTransitionChildMapping;
-
-
-/***/ },
-/* 146 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/* WEBPACK VAR INJECTION */(function(process) {/**
 	 * Copyright 2013-2014, Facebook, Inc.
 	 * All rights reserved.
@@ -26879,7 +26632,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 147 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -27123,7 +26876,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 148 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -27333,7 +27086,7 @@
 
 
 /***/ },
-/* 149 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -27365,7 +27118,225 @@
 
 
 /***/ },
-/* 150 */
+/* 147 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	/**
+	 * Expose `Emitter`.
+	 */
+
+	module.exports = Emitter;
+
+	/**
+	 * Initialize a new `Emitter`.
+	 *
+	 * @api public
+	 */
+
+	function Emitter(obj) {
+	  if (obj) return mixin(obj);
+	};
+
+	/**
+	 * Mixin the emitter properties.
+	 *
+	 * @param {Object} obj
+	 * @return {Object}
+	 * @api private
+	 */
+
+	function mixin(obj) {
+	  for (var key in Emitter.prototype) {
+	    obj[key] = Emitter.prototype[key];
+	  }
+	  return obj;
+	}
+
+	/**
+	 * Listen on the given `event` with `fn`.
+	 *
+	 * @param {String} event
+	 * @param {Function} fn
+	 * @return {Emitter}
+	 * @api public
+	 */
+
+	Emitter.prototype.on =
+	Emitter.prototype.addEventListener = function(event, fn){
+	  this._callbacks = this._callbacks || {};
+	  (this._callbacks[event] = this._callbacks[event] || [])
+	    .push(fn);
+	  return this;
+	};
+
+	/**
+	 * Adds an `event` listener that will be invoked a single
+	 * time then automatically removed.
+	 *
+	 * @param {String} event
+	 * @param {Function} fn
+	 * @return {Emitter}
+	 * @api public
+	 */
+
+	Emitter.prototype.once = function(event, fn){
+	  var self = this;
+	  this._callbacks = this._callbacks || {};
+
+	  function on() {
+	    self.off(event, on);
+	    fn.apply(this, arguments);
+	  }
+
+	  on.fn = fn;
+	  this.on(event, on);
+	  return this;
+	};
+
+	/**
+	 * Remove the given callback for `event` or all
+	 * registered callbacks.
+	 *
+	 * @param {String} event
+	 * @param {Function} fn
+	 * @return {Emitter}
+	 * @api public
+	 */
+
+	Emitter.prototype.off =
+	Emitter.prototype.removeListener =
+	Emitter.prototype.removeAllListeners =
+	Emitter.prototype.removeEventListener = function(event, fn){
+	  this._callbacks = this._callbacks || {};
+
+	  // all
+	  if (0 == arguments.length) {
+	    this._callbacks = {};
+	    return this;
+	  }
+
+	  // specific event
+	  var callbacks = this._callbacks[event];
+	  if (!callbacks) return this;
+
+	  // remove all handlers
+	  if (1 == arguments.length) {
+	    delete this._callbacks[event];
+	    return this;
+	  }
+
+	  // remove specific handler
+	  var cb;
+	  for (var i = 0; i < callbacks.length; i++) {
+	    cb = callbacks[i];
+	    if (cb === fn || cb.fn === fn) {
+	      callbacks.splice(i, 1);
+	      break;
+	    }
+	  }
+	  return this;
+	};
+
+	/**
+	 * Emit `event` with the given args.
+	 *
+	 * @param {String} event
+	 * @param {Mixed} ...
+	 * @return {Emitter}
+	 */
+
+	Emitter.prototype.emit = function(event){
+	  this._callbacks = this._callbacks || {};
+	  var args = [].slice.call(arguments, 1)
+	    , callbacks = this._callbacks[event];
+
+	  if (callbacks) {
+	    callbacks = callbacks.slice(0);
+	    for (var i = 0, len = callbacks.length; i < len; ++i) {
+	      callbacks[i].apply(this, args);
+	    }
+	  }
+
+	  return this;
+	};
+
+	/**
+	 * Return array of callbacks for `event`.
+	 *
+	 * @param {String} event
+	 * @return {Array}
+	 * @api public
+	 */
+
+	Emitter.prototype.listeners = function(event){
+	  this._callbacks = this._callbacks || {};
+	  return this._callbacks[event] || [];
+	};
+
+	/**
+	 * Check if this emitter has `event` handlers.
+	 *
+	 * @param {String} event
+	 * @return {Boolean}
+	 * @api public
+	 */
+
+	Emitter.prototype.hasListeners = function(event){
+	  return !! this.listeners(event).length;
+	};
+
+
+/***/ },
+/* 148 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule shallowEqual
+	 */
+
+	"use strict";
+
+	/**
+	 * Performs equality by iterating through keys on an object and returning
+	 * false when any key has values which are not strictly equal between
+	 * objA and objB. Returns true when the values of all keys are strictly equal.
+	 *
+	 * @return {boolean}
+	 */
+	function shallowEqual(objA, objB) {
+	  if (objA === objB) {
+	    return true;
+	  }
+	  var key;
+	  // Test for A's keys different from B.
+	  for (key in objA) {
+	    if (objA.hasOwnProperty(key) &&
+	        (!objB.hasOwnProperty(key) || objA[key] !== objB[key])) {
+	      return false;
+	    }
+	  }
+	  // Test for B's keys missing from A.
+	  for (key in objB) {
+	    if (objB.hasOwnProperty(key) && !objA.hasOwnProperty(key)) {
+	      return false;
+	    }
+	  }
+	  return true;
+	}
+
+	module.exports = shallowEqual;
+
+
+/***/ },
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -27644,7 +27615,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 151 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -27661,7 +27632,7 @@
 	"use strict";
 
 	var EventConstants = __webpack_require__(87);
-	var EventPluginHub = __webpack_require__(150);
+	var EventPluginHub = __webpack_require__(149);
 
 	var accumulateInto = __webpack_require__(195);
 	var forEachAccumulated = __webpack_require__(196);
@@ -27789,7 +27760,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 152 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -27949,6 +27920,35 @@
 
 	module.exports = SyntheticEvent;
 
+
+/***/ },
+/* 152 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	/**
+	 * Reduce `arr` with `fn`.
+	 *
+	 * @param {Array} arr
+	 * @param {Function} fn
+	 * @param {Mixed} initial
+	 *
+	 * TODO: combatible error handling?
+	 */
+
+	module.exports = function(arr, fn, initial){  
+	  var idx = 0;
+	  var len = arr.length;
+	  var curr = arguments.length == 3
+	    ? initial
+	    : arr[idx++];
+
+	  while (idx < len) {
+	    curr = fn.call(null, curr, arr[idx], ++idx, arr);
+	  }
+	  
+	  return curr;
+	};
 
 /***/ },
 /* 153 */,
@@ -28804,7 +28804,7 @@
 
 	"use strict";
 
-	var EventPluginHub = __webpack_require__(150);
+	var EventPluginHub = __webpack_require__(149);
 
 	function runEventQueueInBatch(events) {
 	  EventPluginHub.enqueueEvents(events);
@@ -28895,7 +28895,7 @@
 
 	"use strict";
 
-	var SyntheticEvent = __webpack_require__(152);
+	var SyntheticEvent = __webpack_require__(151);
 
 	/**
 	 * @interface Event
@@ -29134,7 +29134,7 @@
 
 	"use strict";
 
-	var SyntheticEvent = __webpack_require__(152);
+	var SyntheticEvent = __webpack_require__(151);
 
 	/**
 	 * @interface Event
@@ -29501,12 +29501,12 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(146);
+	var CallbackQueue = __webpack_require__(143);
 	var PooledClass = __webpack_require__(89);
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 	var ReactInputSelection = __webpack_require__(167);
 	var ReactPutListenerQueue = __webpack_require__(191);
-	var Transaction = __webpack_require__(147);
+	var Transaction = __webpack_require__(144);
 
 	var assign = __webpack_require__(62);
 
@@ -30211,7 +30211,7 @@
 
 	"use strict";
 
-	var SyntheticEvent = __webpack_require__(152);
+	var SyntheticEvent = __webpack_require__(151);
 
 	/**
 	 * @interface Event
@@ -30490,7 +30490,7 @@
 
 	"use strict";
 
-	var SyntheticEvent = __webpack_require__(152);
+	var SyntheticEvent = __webpack_require__(151);
 
 	var getEventTarget = __webpack_require__(178);
 
