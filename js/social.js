@@ -75,7 +75,7 @@
 
 	var _React2 = _interopRequireWildcard(_React);
 
-	var _Transmit = __webpack_require__(40);
+	var _Transmit = __webpack_require__(39);
 
 	var _Transmit2 = _interopRequireWildcard(_Transmit);
 
@@ -859,8 +859,7 @@
 
 
 /***/ },
-/* 39 */,
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -880,6 +879,7 @@
 
 
 /***/ },
+/* 40 */,
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
