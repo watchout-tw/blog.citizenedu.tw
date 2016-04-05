@@ -12212,7 +12212,7 @@
 	var SyntheticEvent = __webpack_require__(150);
 
 	var isEventSupported = __webpack_require__(106);
-	var isTextInputElement = __webpack_require__(166);
+	var isTextInputElement = __webpack_require__(169);
 	var keyOf = __webpack_require__(99);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
@@ -12623,10 +12623,10 @@
 	var EventConstants = __webpack_require__(87);
 	var EventPropagators = __webpack_require__(149);
 	var ExecutionEnvironment = __webpack_require__(65);
-	var ReactInputSelection = __webpack_require__(167);
-	var SyntheticCompositionEvent = __webpack_require__(168);
+	var ReactInputSelection = __webpack_require__(166);
+	var SyntheticCompositionEvent = __webpack_require__(167);
 
-	var getTextContentAccessor = __webpack_require__(169);
+	var getTextContentAccessor = __webpack_require__(168);
 	var keyOf = __webpack_require__(99);
 
 	var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
@@ -14508,11 +14508,11 @@
 
 	var EventConstants = __webpack_require__(87);
 	var EventPropagators = __webpack_require__(149);
-	var ReactInputSelection = __webpack_require__(167);
+	var ReactInputSelection = __webpack_require__(166);
 	var SyntheticEvent = __webpack_require__(150);
 
 	var getActiveElement = __webpack_require__(180);
-	var isTextInputElement = __webpack_require__(166);
+	var isTextInputElement = __webpack_require__(169);
 	var keyOf = __webpack_require__(99);
 	var shallowEqual = __webpack_require__(141);
 
@@ -18179,54 +18179,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-	 * @providesModule isTextInputElement
-	 */
-
-	"use strict";
-
-	/**
-	 * @see http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary
-	 */
-	var supportedInputTypes = {
-	  'color': true,
-	  'date': true,
-	  'datetime': true,
-	  'datetime-local': true,
-	  'email': true,
-	  'month': true,
-	  'number': true,
-	  'password': true,
-	  'range': true,
-	  'search': true,
-	  'tel': true,
-	  'text': true,
-	  'time': true,
-	  'url': true,
-	  'week': true
-	};
-
-	function isTextInputElement(elem) {
-	  return elem && (
-	    (elem.nodeName === 'INPUT' && supportedInputTypes[elem.type]) ||
-	    elem.nodeName === 'TEXTAREA'
-	  );
-	}
-
-	module.exports = isTextInputElement;
-
-
-/***/ },
-/* 167 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
 	 * @providesModule ReactInputSelection
 	 */
 
@@ -18356,7 +18308,7 @@
 
 
 /***/ },
-/* 168 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18406,7 +18358,7 @@
 
 
 /***/ },
-/* 169 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -18444,6 +18396,54 @@
 	}
 
 	module.exports = getTextContentAccessor;
+
+
+/***/ },
+/* 169 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule isTextInputElement
+	 */
+
+	"use strict";
+
+	/**
+	 * @see http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary
+	 */
+	var supportedInputTypes = {
+	  'color': true,
+	  'date': true,
+	  'datetime': true,
+	  'datetime-local': true,
+	  'email': true,
+	  'month': true,
+	  'number': true,
+	  'password': true,
+	  'range': true,
+	  'search': true,
+	  'tel': true,
+	  'text': true,
+	  'time': true,
+	  'url': true,
+	  'week': true
+	};
+
+	function isTextInputElement(elem) {
+	  return elem && (
+	    (elem.nodeName === 'INPUT' && supportedInputTypes[elem.type]) ||
+	    elem.nodeName === 'TEXTAREA'
+	  );
+	}
+
+	module.exports = isTextInputElement;
 
 
 /***/ },
@@ -18743,7 +18743,7 @@
 	var CallbackQueue = __webpack_require__(144);
 	var PooledClass = __webpack_require__(89);
 	var ReactBrowserEventEmitter = __webpack_require__(105);
-	var ReactInputSelection = __webpack_require__(167);
+	var ReactInputSelection = __webpack_require__(166);
 	var ReactPutListenerQueue = __webpack_require__(191);
 	var Transaction = __webpack_require__(145);
 
@@ -20306,7 +20306,7 @@
 	var ExecutionEnvironment = __webpack_require__(65);
 
 	var getNodeForCharacterOffset = __webpack_require__(206);
-	var getTextContentAccessor = __webpack_require__(169);
+	var getTextContentAccessor = __webpack_require__(168);
 
 	/**
 	 * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -20604,7 +20604,7 @@
 	var Danger = __webpack_require__(207);
 	var ReactMultiChildUpdateTypes = __webpack_require__(134);
 
-	var getTextContentAccessor = __webpack_require__(169);
+	var getTextContentAccessor = __webpack_require__(168);
 	var invariant = __webpack_require__(88);
 
 	/**
