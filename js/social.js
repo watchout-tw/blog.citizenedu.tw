@@ -48,18 +48,19 @@
 
 	var _interopRequireWildcard = function (obj) { return obj && obj.__esModule ? obj : { "default": obj }; };
 
-	var _React = __webpack_require__(3);
+	var _React = __webpack_require__(29);
 
 	var _React2 = _interopRequireWildcard(_React);
 
-	var _Social = __webpack_require__(1);
+	var _Social = __webpack_require__(2);
 
 	var _Social2 = _interopRequireWildcard(_Social);
 
 	_React2["default"].render(_React2["default"].createElement(_Social2["default"], null), document.getElementById("social-root"));
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -70,7 +71,7 @@
 	  value: true
 	});
 
-	var _React = __webpack_require__(3);
+	var _React = __webpack_require__(29);
 
 	var _React2 = _interopRequireWildcard(_React);
 
@@ -78,13 +79,13 @@
 
 	var _Transmit2 = _interopRequireWildcard(_Transmit);
 
-	__webpack_require__(8);
+	__webpack_require__(23);
 
 	var _superagent = __webpack_require__(41);
 
 	var _superagent2 = _interopRequireWildcard(_superagent);
 
-	var _helper = __webpack_require__(30);
+	var _helper = __webpack_require__(33);
 
 	var _helper2 = _interopRequireWildcard(_helper);
 
@@ -149,48 +150,13 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 2 */,
-/* 3 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(35);
-
-
-/***/ },
+/* 3 */,
 /* 4 */,
 /* 5 */,
 /* 6 */,
 /* 7 */,
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(9);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(33)(content, {});
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		module.hot.accept("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Social/Social.css", function() {
-			var newContent = require("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Social/Social.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(36)();
-	exports.push([module.id, "/* MOBILE */\n.Social {\n\tposition: fixed;\n\tbottom: 0;\n\twidth: 100%;\n\theight: 50px;\n\tz-index: 10;\n\tbox-shadow: 0 -2px 8px rgba(0,0,0,0.12);\n}\n.Social-socialSets {\n\tdisplay: inline-block;\n\tvertical-align: top;\n\twidth: 100%;\n}\n.Social-social {\n\tbackground: #F1F1F1;\n\tdisplay: inline-block;\n\tborder-left: 3px solid rgb(230,230,230);\n\twidth: calc(50% - 3px);\n\theight: 50px;\n\ttext-align: center;\n\tcursor: pointer;\n\tpadding: 8px 0 0 0;\n\n}\n\n/* WEB */\n@media screen and (min-width: 400px){\n\t.Social {\n\t   position: relative;\n\t   margin: 0 auto;\n\t   width: 600px;\n\t   vertical-align: bottom;\n\t   height: 0px;\n    }\n    .Social-socialSets {\n       text-align: left;\n       position: absolute;\n       top: 25px;\n       left: 5px;\n       width: auto;\n    }\n    .Social-social {\n    \tdisplay: inline-block;\n    \twidth: auto;\n    \theight: auto;\n    \tpadding: 0 0 0 20px;\n    \tmargin-right: 20px;\n\t    background: none;\n\t    text-align: left;\n\t    color: rgb(50,50,50);\n    }\n\n}", ""]);
-
-/***/ },
+/* 8 */,
+/* 9 */,
 /* 10 */,
 /* 11 */,
 /* 12 */,
@@ -204,71 +170,48 @@
 /* 20 */,
 /* 21 */,
 /* 22 */,
-/* 23 */,
-/* 24 */,
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(24);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(30)(content, {});
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		module.hot.accept("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Social/Social.css", function() {
+			var newContent = require("!!/home/pm5/blog.citizenedu.tw/node_modules/css-loader/index.js!/home/pm5/blog.citizenedu.tw/app/components/Social/Social.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(35)();
+	exports.push([module.id, "/* MOBILE */\n.Social {\n\tposition: fixed;\n\tbottom: 0;\n\twidth: 100%;\n\theight: 50px;\n\tz-index: 10;\n\tbox-shadow: 0 -2px 8px rgba(0,0,0,0.12);\n}\n.Social-socialSets {\n\tdisplay: inline-block;\n\tvertical-align: top;\n\twidth: 100%;\n}\n.Social-social {\n\tbackground: #F1F1F1;\n\tdisplay: inline-block;\n\tborder-left: 3px solid rgb(230,230,230);\n\twidth: calc(50% - 3px);\n\theight: 50px;\n\ttext-align: center;\n\tcursor: pointer;\n\tpadding: 8px 0 0 0;\n\n}\n\n/* WEB */\n@media screen and (min-width: 400px){\n\t.Social {\n\t   position: relative;\n\t   margin: 0 auto;\n\t   width: 600px;\n\t   vertical-align: bottom;\n\t   height: 0px;\n    }\n    .Social-socialSets {\n       text-align: left;\n       position: absolute;\n       top: 25px;\n       left: 5px;\n       width: auto;\n    }\n    .Social-social {\n    \tdisplay: inline-block;\n    \twidth: auto;\n    \theight: auto;\n    \tpadding: 0 0 0 20px;\n    \tmargin-right: 20px;\n\t    background: none;\n\t    text-align: left;\n\t    color: rgb(50,50,50);\n    }\n\n}", ""]);
+
+/***/ },
 /* 25 */,
 /* 26 */,
 /* 27 */,
 /* 28 */,
-/* 29 */,
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(__dirname) {'use strict';
+	module.exports = __webpack_require__(36);
 
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	var debug = __webpack_require__(38)('helper');
-
-	var helper = {
-	  postsPath: __dirname + '/../src/posts',
-	  columnsPath: __dirname + '/../src/columns',
-	  authorsPath: __dirname + '/../src/authors',
-
-	  baseURL: 'http://community.citizenedu.tw',
-
-	  topicURL: function topicURL(id) {
-	    var _ref = arguments[1] === undefined ? {} : arguments[1];
-
-	    var json = _ref.json;
-
-	    id = String(id).replace(/\/$/, '');
-	    if (json) {
-	      return 'http://community.citizenedu.tw/t/' + id + '.json';
-	    } else {
-	      return 'http://community.citizenedu.tw/t/topic/' + id;
-	    }
-	  },
-
-	  // superagent middleware
-	  withPromise: function withPromise() {
-	    return function (req) {
-	      req.end = function () {
-	        return new Promise(function (resolve, reject) {
-	          Object.getPrototypeOf(req).end.call(req, function (err, res) {
-	            if (err) {
-	              return reject(err);
-	            }
-	            if (!res.ok) {
-	              return reject(res.text);
-	            }
-	            resolve(res);
-	          });
-	        });
-	      };
-	    };
-	  } };
-
-	exports['default'] = helper;
-	module.exports = exports['default'];
-	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
 
 /***/ },
-/* 31 */,
-/* 32 */,
-/* 33 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -464,8 +407,86 @@
 
 
 /***/ },
+/* 31 */,
+/* 32 */,
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(__dirname) {'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var debug = __webpack_require__(38)('helper');
+
+	var helper = {
+	  postsPath: __dirname + '/../src/posts',
+	  columnsPath: __dirname + '/../src/columns',
+	  authorsPath: __dirname + '/../src/authors',
+
+	  baseURL: 'http://community.citizenedu.tw',
+
+	  topicURL: function topicURL(id) {
+	    var _ref = arguments[1] === undefined ? {} : arguments[1];
+
+	    var json = _ref.json;
+
+	    id = String(id).replace(/\/$/, '');
+	    if (json) {
+	      return 'http://community.citizenedu.tw/t/' + id + '.json';
+	    } else {
+	      return 'http://community.citizenedu.tw/t/topic/' + id;
+	    }
+	  },
+
+	  // superagent middleware
+	  withPromise: function withPromise() {
+	    return function (req) {
+	      req.end = function () {
+	        return new Promise(function (resolve, reject) {
+	          Object.getPrototypeOf(req).end.call(req, function (err, res) {
+	            if (err) {
+	              return reject(err);
+	            }
+	            if (!res.ok) {
+	              return reject(res.text);
+	            }
+	            resolve(res);
+	          });
+	        });
+	      };
+	    };
+	  } };
+
+	exports['default'] = helper;
+	module.exports = exports['default'];
+	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
+
+/***/ },
 /* 34 */,
 /* 35 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = function() {
+		var list = [];
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+		return list;
+	}
+
+/***/ },
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -654,27 +675,6 @@
 	module.exports = React;
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = function() {
-		var list = [];
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-		return list;
-	}
 
 /***/ },
 /* 37 */,
@@ -887,8 +887,8 @@
 	 * Module dependencies.
 	 */
 
-	var Emitter = __webpack_require__(139);
-	var reduce = __webpack_require__(140);
+	var Emitter = __webpack_require__(151);
+	var reduce = __webpack_require__(152);
 
 	/**
 	 * Root reference for iframes.
@@ -8700,11 +8700,11 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(146);
+	var CallbackQueue = __webpack_require__(144);
 	var PooledClass = __webpack_require__(89);
 	var ReactCurrentOwner = __webpack_require__(48);
 	var ReactPerf = __webpack_require__(58);
-	var Transaction = __webpack_require__(147);
+	var Transaction = __webpack_require__(145);
 
 	var assign = __webpack_require__(62);
 	var invariant = __webpack_require__(88);
@@ -8998,11 +8998,11 @@
 	"use strict";
 
 	var DOMProperty = __webpack_require__(83);
-	var ReactDefaultPerfAnalysis = __webpack_require__(151);
+	var ReactDefaultPerfAnalysis = __webpack_require__(146);
 	var ReactMount = __webpack_require__(56);
 	var ReactPerf = __webpack_require__(58);
 
-	var performanceNow = __webpack_require__(152);
+	var performanceNow = __webpack_require__(147);
 
 	function roundFloat(val) {
 	  return Math.floor(val * 100) / 100;
@@ -13454,7 +13454,7 @@
 	"use strict";
 
 	var ReactUpdates = __webpack_require__(71);
-	var Transaction = __webpack_require__(147);
+	var Transaction = __webpack_require__(145);
 
 	var assign = __webpack_require__(62);
 	var emptyFunction = __webpack_require__(136);
@@ -15654,9 +15654,9 @@
 	"use strict";
 
 	var PooledClass = __webpack_require__(89);
-	var CallbackQueue = __webpack_require__(146);
+	var CallbackQueue = __webpack_require__(144);
 	var ReactPutListenerQueue = __webpack_require__(191);
-	var Transaction = __webpack_require__(147);
+	var Transaction = __webpack_require__(145);
 
 	var assign = __webpack_require__(62);
 	var emptyFunction = __webpack_require__(136);
@@ -15753,205 +15753,8 @@
 
 
 /***/ },
-/* 139 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	/**
-	 * Expose `Emitter`.
-	 */
-
-	module.exports = Emitter;
-
-	/**
-	 * Initialize a new `Emitter`.
-	 *
-	 * @api public
-	 */
-
-	function Emitter(obj) {
-	  if (obj) return mixin(obj);
-	};
-
-	/**
-	 * Mixin the emitter properties.
-	 *
-	 * @param {Object} obj
-	 * @return {Object}
-	 * @api private
-	 */
-
-	function mixin(obj) {
-	  for (var key in Emitter.prototype) {
-	    obj[key] = Emitter.prototype[key];
-	  }
-	  return obj;
-	}
-
-	/**
-	 * Listen on the given `event` with `fn`.
-	 *
-	 * @param {String} event
-	 * @param {Function} fn
-	 * @return {Emitter}
-	 * @api public
-	 */
-
-	Emitter.prototype.on =
-	Emitter.prototype.addEventListener = function(event, fn){
-	  this._callbacks = this._callbacks || {};
-	  (this._callbacks[event] = this._callbacks[event] || [])
-	    .push(fn);
-	  return this;
-	};
-
-	/**
-	 * Adds an `event` listener that will be invoked a single
-	 * time then automatically removed.
-	 *
-	 * @param {String} event
-	 * @param {Function} fn
-	 * @return {Emitter}
-	 * @api public
-	 */
-
-	Emitter.prototype.once = function(event, fn){
-	  var self = this;
-	  this._callbacks = this._callbacks || {};
-
-	  function on() {
-	    self.off(event, on);
-	    fn.apply(this, arguments);
-	  }
-
-	  on.fn = fn;
-	  this.on(event, on);
-	  return this;
-	};
-
-	/**
-	 * Remove the given callback for `event` or all
-	 * registered callbacks.
-	 *
-	 * @param {String} event
-	 * @param {Function} fn
-	 * @return {Emitter}
-	 * @api public
-	 */
-
-	Emitter.prototype.off =
-	Emitter.prototype.removeListener =
-	Emitter.prototype.removeAllListeners =
-	Emitter.prototype.removeEventListener = function(event, fn){
-	  this._callbacks = this._callbacks || {};
-
-	  // all
-	  if (0 == arguments.length) {
-	    this._callbacks = {};
-	    return this;
-	  }
-
-	  // specific event
-	  var callbacks = this._callbacks[event];
-	  if (!callbacks) return this;
-
-	  // remove all handlers
-	  if (1 == arguments.length) {
-	    delete this._callbacks[event];
-	    return this;
-	  }
-
-	  // remove specific handler
-	  var cb;
-	  for (var i = 0; i < callbacks.length; i++) {
-	    cb = callbacks[i];
-	    if (cb === fn || cb.fn === fn) {
-	      callbacks.splice(i, 1);
-	      break;
-	    }
-	  }
-	  return this;
-	};
-
-	/**
-	 * Emit `event` with the given args.
-	 *
-	 * @param {String} event
-	 * @param {Mixed} ...
-	 * @return {Emitter}
-	 */
-
-	Emitter.prototype.emit = function(event){
-	  this._callbacks = this._callbacks || {};
-	  var args = [].slice.call(arguments, 1)
-	    , callbacks = this._callbacks[event];
-
-	  if (callbacks) {
-	    callbacks = callbacks.slice(0);
-	    for (var i = 0, len = callbacks.length; i < len; ++i) {
-	      callbacks[i].apply(this, args);
-	    }
-	  }
-
-	  return this;
-	};
-
-	/**
-	 * Return array of callbacks for `event`.
-	 *
-	 * @param {String} event
-	 * @return {Array}
-	 * @api public
-	 */
-
-	Emitter.prototype.listeners = function(event){
-	  this._callbacks = this._callbacks || {};
-	  return this._callbacks[event] || [];
-	};
-
-	/**
-	 * Check if this emitter has `event` handlers.
-	 *
-	 * @param {String} event
-	 * @return {Boolean}
-	 * @api public
-	 */
-
-	Emitter.prototype.hasListeners = function(event){
-	  return !! this.listeners(event).length;
-	};
-
-
-/***/ },
-/* 140 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	/**
-	 * Reduce `arr` with `fn`.
-	 *
-	 * @param {Array} arr
-	 * @param {Function} fn
-	 * @param {Mixed} initial
-	 *
-	 * TODO: combatible error handling?
-	 */
-
-	module.exports = function(arr, fn, initial){  
-	  var idx = 0;
-	  var len = arr.length;
-	  var curr = arguments.length == 3
-	    ? initial
-	    : arr[idx++];
-
-	  while (idx < len) {
-	    curr = fn.call(null, curr, arr[idx], ++idx, arr);
-	  }
-	  
-	  return curr;
-	};
-
-/***/ },
+/* 139 */,
+/* 140 */,
 /* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -16002,9 +15805,7 @@
 /***/ },
 /* 142 */,
 /* 143 */,
-/* 144 */,
-/* 145 */,
-/* 146 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16107,7 +15908,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 147 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16351,6 +16152,248 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
+/* 146 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule ReactDefaultPerfAnalysis
+	 */
+
+	var assign = __webpack_require__(62);
+
+	// Don't try to save users less than 1.2ms (a number I made up)
+	var DONT_CARE_THRESHOLD = 1.2;
+	var DOM_OPERATION_TYPES = {
+	  'mountImageIntoNode': 'set innerHTML',
+	  INSERT_MARKUP: 'set innerHTML',
+	  MOVE_EXISTING: 'move',
+	  REMOVE_NODE: 'remove',
+	  TEXT_CONTENT: 'set textContent',
+	  'updatePropertyByID': 'update attribute',
+	  'deletePropertyByID': 'delete attribute',
+	  'updateStylesByID': 'update styles',
+	  'updateInnerHTMLByID': 'set innerHTML',
+	  'dangerouslyReplaceNodeWithMarkupByID': 'replace'
+	};
+
+	function getTotalTime(measurements) {
+	  // TODO: return number of DOM ops? could be misleading.
+	  // TODO: measure dropped frames after reconcile?
+	  // TODO: log total time of each reconcile and the top-level component
+	  // class that triggered it.
+	  var totalTime = 0;
+	  for (var i = 0; i < measurements.length; i++) {
+	    var measurement = measurements[i];
+	    totalTime += measurement.totalTime;
+	  }
+	  return totalTime;
+	}
+
+	function getDOMSummary(measurements) {
+	  var items = [];
+	  for (var i = 0; i < measurements.length; i++) {
+	    var measurement = measurements[i];
+	    var id;
+
+	    for (id in measurement.writes) {
+	      measurement.writes[id].forEach(function(write) {
+	        items.push({
+	          id: id,
+	          type: DOM_OPERATION_TYPES[write.type] || write.type,
+	          args: write.args
+	        });
+	      });
+	    }
+	  }
+	  return items;
+	}
+
+	function getExclusiveSummary(measurements) {
+	  var candidates = {};
+	  var displayName;
+
+	  for (var i = 0; i < measurements.length; i++) {
+	    var measurement = measurements[i];
+	    var allIDs = assign(
+	      {},
+	      measurement.exclusive,
+	      measurement.inclusive
+	    );
+
+	    for (var id in allIDs) {
+	      displayName = measurement.displayNames[id].current;
+
+	      candidates[displayName] = candidates[displayName] || {
+	        componentName: displayName,
+	        inclusive: 0,
+	        exclusive: 0,
+	        render: 0,
+	        count: 0
+	      };
+	      if (measurement.render[id]) {
+	        candidates[displayName].render += measurement.render[id];
+	      }
+	      if (measurement.exclusive[id]) {
+	        candidates[displayName].exclusive += measurement.exclusive[id];
+	      }
+	      if (measurement.inclusive[id]) {
+	        candidates[displayName].inclusive += measurement.inclusive[id];
+	      }
+	      if (measurement.counts[id]) {
+	        candidates[displayName].count += measurement.counts[id];
+	      }
+	    }
+	  }
+
+	  // Now make a sorted array with the results.
+	  var arr = [];
+	  for (displayName in candidates) {
+	    if (candidates[displayName].exclusive >= DONT_CARE_THRESHOLD) {
+	      arr.push(candidates[displayName]);
+	    }
+	  }
+
+	  arr.sort(function(a, b) {
+	    return b.exclusive - a.exclusive;
+	  });
+
+	  return arr;
+	}
+
+	function getInclusiveSummary(measurements, onlyClean) {
+	  var candidates = {};
+	  var inclusiveKey;
+
+	  for (var i = 0; i < measurements.length; i++) {
+	    var measurement = measurements[i];
+	    var allIDs = assign(
+	      {},
+	      measurement.exclusive,
+	      measurement.inclusive
+	    );
+	    var cleanComponents;
+
+	    if (onlyClean) {
+	      cleanComponents = getUnchangedComponents(measurement);
+	    }
+
+	    for (var id in allIDs) {
+	      if (onlyClean && !cleanComponents[id]) {
+	        continue;
+	      }
+
+	      var displayName = measurement.displayNames[id];
+
+	      // Inclusive time is not useful for many components without knowing where
+	      // they are instantiated. So we aggregate inclusive time with both the
+	      // owner and current displayName as the key.
+	      inclusiveKey = displayName.owner + ' > ' + displayName.current;
+
+	      candidates[inclusiveKey] = candidates[inclusiveKey] || {
+	        componentName: inclusiveKey,
+	        time: 0,
+	        count: 0
+	      };
+
+	      if (measurement.inclusive[id]) {
+	        candidates[inclusiveKey].time += measurement.inclusive[id];
+	      }
+	      if (measurement.counts[id]) {
+	        candidates[inclusiveKey].count += measurement.counts[id];
+	      }
+	    }
+	  }
+
+	  // Now make a sorted array with the results.
+	  var arr = [];
+	  for (inclusiveKey in candidates) {
+	    if (candidates[inclusiveKey].time >= DONT_CARE_THRESHOLD) {
+	      arr.push(candidates[inclusiveKey]);
+	    }
+	  }
+
+	  arr.sort(function(a, b) {
+	    return b.time - a.time;
+	  });
+
+	  return arr;
+	}
+
+	function getUnchangedComponents(measurement) {
+	  // For a given reconcile, look at which components did not actually
+	  // render anything to the DOM and return a mapping of their ID to
+	  // the amount of time it took to render the entire subtree.
+	  var cleanComponents = {};
+	  var dirtyLeafIDs = Object.keys(measurement.writes);
+	  var allIDs = assign({}, measurement.exclusive, measurement.inclusive);
+
+	  for (var id in allIDs) {
+	    var isDirty = false;
+	    // For each component that rendered, see if a component that triggered
+	    // a DOM op is in its subtree.
+	    for (var i = 0; i < dirtyLeafIDs.length; i++) {
+	      if (dirtyLeafIDs[i].indexOf(id) === 0) {
+	        isDirty = true;
+	        break;
+	      }
+	    }
+	    if (!isDirty && measurement.counts[id] > 0) {
+	      cleanComponents[id] = true;
+	    }
+	  }
+	  return cleanComponents;
+	}
+
+	var ReactDefaultPerfAnalysis = {
+	  getExclusiveSummary: getExclusiveSummary,
+	  getInclusiveSummary: getInclusiveSummary,
+	  getDOMSummary: getDOMSummary,
+	  getTotalTime: getTotalTime
+	};
+
+	module.exports = ReactDefaultPerfAnalysis;
+
+
+/***/ },
+/* 147 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule performanceNow
+	 * @typechecks
+	 */
+
+	var performance = __webpack_require__(194);
+
+	/**
+	 * Detect if we can use `window.performance.now()` and gracefully fallback to
+	 * `Date.now()` if it doesn't exist. We need to support Firefox < 15 for now
+	 * because of Facebook's testing infrastructure.
+	 */
+	if (!performance || !performance.now) {
+	  performance = Date;
+	}
+
+	var performanceNow = performance.now.bind(performance);
+
+	module.exports = performanceNow;
+
+
+/***/ },
 /* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -16370,8 +16413,8 @@
 	var EventPluginRegistry = __webpack_require__(162);
 	var EventPluginUtils = __webpack_require__(43);
 
-	var accumulateInto = __webpack_require__(194);
-	var forEachAccumulated = __webpack_require__(195);
+	var accumulateInto = __webpack_require__(195);
+	var forEachAccumulated = __webpack_require__(196);
 	var invariant = __webpack_require__(88);
 
 	/**
@@ -16649,8 +16692,8 @@
 	var EventConstants = __webpack_require__(87);
 	var EventPluginHub = __webpack_require__(148);
 
-	var accumulateInto = __webpack_require__(194);
-	var forEachAccumulated = __webpack_require__(195);
+	var accumulateInto = __webpack_require__(195);
+	var forEachAccumulated = __webpack_require__(196);
 
 	var PropagationPhases = EventConstants.PropagationPhases;
 	var getListener = EventPluginHub.getListener;
@@ -16940,243 +16983,200 @@
 /* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
+	
 	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactDefaultPerfAnalysis
+	 * Expose `Emitter`.
 	 */
 
-	var assign = __webpack_require__(62);
+	module.exports = Emitter;
 
-	// Don't try to save users less than 1.2ms (a number I made up)
-	var DONT_CARE_THRESHOLD = 1.2;
-	var DOM_OPERATION_TYPES = {
-	  'mountImageIntoNode': 'set innerHTML',
-	  INSERT_MARKUP: 'set innerHTML',
-	  MOVE_EXISTING: 'move',
-	  REMOVE_NODE: 'remove',
-	  TEXT_CONTENT: 'set textContent',
-	  'updatePropertyByID': 'update attribute',
-	  'deletePropertyByID': 'delete attribute',
-	  'updateStylesByID': 'update styles',
-	  'updateInnerHTMLByID': 'set innerHTML',
-	  'dangerouslyReplaceNodeWithMarkupByID': 'replace'
+	/**
+	 * Initialize a new `Emitter`.
+	 *
+	 * @api public
+	 */
+
+	function Emitter(obj) {
+	  if (obj) return mixin(obj);
 	};
 
-	function getTotalTime(measurements) {
-	  // TODO: return number of DOM ops? could be misleading.
-	  // TODO: measure dropped frames after reconcile?
-	  // TODO: log total time of each reconcile and the top-level component
-	  // class that triggered it.
-	  var totalTime = 0;
-	  for (var i = 0; i < measurements.length; i++) {
-	    var measurement = measurements[i];
-	    totalTime += measurement.totalTime;
+	/**
+	 * Mixin the emitter properties.
+	 *
+	 * @param {Object} obj
+	 * @return {Object}
+	 * @api private
+	 */
+
+	function mixin(obj) {
+	  for (var key in Emitter.prototype) {
+	    obj[key] = Emitter.prototype[key];
 	  }
-	  return totalTime;
+	  return obj;
 	}
 
-	function getDOMSummary(measurements) {
-	  var items = [];
-	  for (var i = 0; i < measurements.length; i++) {
-	    var measurement = measurements[i];
-	    var id;
+	/**
+	 * Listen on the given `event` with `fn`.
+	 *
+	 * @param {String} event
+	 * @param {Function} fn
+	 * @return {Emitter}
+	 * @api public
+	 */
 
-	    for (id in measurement.writes) {
-	      measurement.writes[id].forEach(function(write) {
-	        items.push({
-	          id: id,
-	          type: DOM_OPERATION_TYPES[write.type] || write.type,
-	          args: write.args
-	        });
-	      });
-	    }
-	  }
-	  return items;
-	}
-
-	function getExclusiveSummary(measurements) {
-	  var candidates = {};
-	  var displayName;
-
-	  for (var i = 0; i < measurements.length; i++) {
-	    var measurement = measurements[i];
-	    var allIDs = assign(
-	      {},
-	      measurement.exclusive,
-	      measurement.inclusive
-	    );
-
-	    for (var id in allIDs) {
-	      displayName = measurement.displayNames[id].current;
-
-	      candidates[displayName] = candidates[displayName] || {
-	        componentName: displayName,
-	        inclusive: 0,
-	        exclusive: 0,
-	        render: 0,
-	        count: 0
-	      };
-	      if (measurement.render[id]) {
-	        candidates[displayName].render += measurement.render[id];
-	      }
-	      if (measurement.exclusive[id]) {
-	        candidates[displayName].exclusive += measurement.exclusive[id];
-	      }
-	      if (measurement.inclusive[id]) {
-	        candidates[displayName].inclusive += measurement.inclusive[id];
-	      }
-	      if (measurement.counts[id]) {
-	        candidates[displayName].count += measurement.counts[id];
-	      }
-	    }
-	  }
-
-	  // Now make a sorted array with the results.
-	  var arr = [];
-	  for (displayName in candidates) {
-	    if (candidates[displayName].exclusive >= DONT_CARE_THRESHOLD) {
-	      arr.push(candidates[displayName]);
-	    }
-	  }
-
-	  arr.sort(function(a, b) {
-	    return b.exclusive - a.exclusive;
-	  });
-
-	  return arr;
-	}
-
-	function getInclusiveSummary(measurements, onlyClean) {
-	  var candidates = {};
-	  var inclusiveKey;
-
-	  for (var i = 0; i < measurements.length; i++) {
-	    var measurement = measurements[i];
-	    var allIDs = assign(
-	      {},
-	      measurement.exclusive,
-	      measurement.inclusive
-	    );
-	    var cleanComponents;
-
-	    if (onlyClean) {
-	      cleanComponents = getUnchangedComponents(measurement);
-	    }
-
-	    for (var id in allIDs) {
-	      if (onlyClean && !cleanComponents[id]) {
-	        continue;
-	      }
-
-	      var displayName = measurement.displayNames[id];
-
-	      // Inclusive time is not useful for many components without knowing where
-	      // they are instantiated. So we aggregate inclusive time with both the
-	      // owner and current displayName as the key.
-	      inclusiveKey = displayName.owner + ' > ' + displayName.current;
-
-	      candidates[inclusiveKey] = candidates[inclusiveKey] || {
-	        componentName: inclusiveKey,
-	        time: 0,
-	        count: 0
-	      };
-
-	      if (measurement.inclusive[id]) {
-	        candidates[inclusiveKey].time += measurement.inclusive[id];
-	      }
-	      if (measurement.counts[id]) {
-	        candidates[inclusiveKey].count += measurement.counts[id];
-	      }
-	    }
-	  }
-
-	  // Now make a sorted array with the results.
-	  var arr = [];
-	  for (inclusiveKey in candidates) {
-	    if (candidates[inclusiveKey].time >= DONT_CARE_THRESHOLD) {
-	      arr.push(candidates[inclusiveKey]);
-	    }
-	  }
-
-	  arr.sort(function(a, b) {
-	    return b.time - a.time;
-	  });
-
-	  return arr;
-	}
-
-	function getUnchangedComponents(measurement) {
-	  // For a given reconcile, look at which components did not actually
-	  // render anything to the DOM and return a mapping of their ID to
-	  // the amount of time it took to render the entire subtree.
-	  var cleanComponents = {};
-	  var dirtyLeafIDs = Object.keys(measurement.writes);
-	  var allIDs = assign({}, measurement.exclusive, measurement.inclusive);
-
-	  for (var id in allIDs) {
-	    var isDirty = false;
-	    // For each component that rendered, see if a component that triggered
-	    // a DOM op is in its subtree.
-	    for (var i = 0; i < dirtyLeafIDs.length; i++) {
-	      if (dirtyLeafIDs[i].indexOf(id) === 0) {
-	        isDirty = true;
-	        break;
-	      }
-	    }
-	    if (!isDirty && measurement.counts[id] > 0) {
-	      cleanComponents[id] = true;
-	    }
-	  }
-	  return cleanComponents;
-	}
-
-	var ReactDefaultPerfAnalysis = {
-	  getExclusiveSummary: getExclusiveSummary,
-	  getInclusiveSummary: getInclusiveSummary,
-	  getDOMSummary: getDOMSummary,
-	  getTotalTime: getTotalTime
+	Emitter.prototype.on =
+	Emitter.prototype.addEventListener = function(event, fn){
+	  this._callbacks = this._callbacks || {};
+	  (this._callbacks[event] = this._callbacks[event] || [])
+	    .push(fn);
+	  return this;
 	};
 
-	module.exports = ReactDefaultPerfAnalysis;
+	/**
+	 * Adds an `event` listener that will be invoked a single
+	 * time then automatically removed.
+	 *
+	 * @param {String} event
+	 * @param {Function} fn
+	 * @return {Emitter}
+	 * @api public
+	 */
+
+	Emitter.prototype.once = function(event, fn){
+	  var self = this;
+	  this._callbacks = this._callbacks || {};
+
+	  function on() {
+	    self.off(event, on);
+	    fn.apply(this, arguments);
+	  }
+
+	  on.fn = fn;
+	  this.on(event, on);
+	  return this;
+	};
+
+	/**
+	 * Remove the given callback for `event` or all
+	 * registered callbacks.
+	 *
+	 * @param {String} event
+	 * @param {Function} fn
+	 * @return {Emitter}
+	 * @api public
+	 */
+
+	Emitter.prototype.off =
+	Emitter.prototype.removeListener =
+	Emitter.prototype.removeAllListeners =
+	Emitter.prototype.removeEventListener = function(event, fn){
+	  this._callbacks = this._callbacks || {};
+
+	  // all
+	  if (0 == arguments.length) {
+	    this._callbacks = {};
+	    return this;
+	  }
+
+	  // specific event
+	  var callbacks = this._callbacks[event];
+	  if (!callbacks) return this;
+
+	  // remove all handlers
+	  if (1 == arguments.length) {
+	    delete this._callbacks[event];
+	    return this;
+	  }
+
+	  // remove specific handler
+	  var cb;
+	  for (var i = 0; i < callbacks.length; i++) {
+	    cb = callbacks[i];
+	    if (cb === fn || cb.fn === fn) {
+	      callbacks.splice(i, 1);
+	      break;
+	    }
+	  }
+	  return this;
+	};
+
+	/**
+	 * Emit `event` with the given args.
+	 *
+	 * @param {String} event
+	 * @param {Mixed} ...
+	 * @return {Emitter}
+	 */
+
+	Emitter.prototype.emit = function(event){
+	  this._callbacks = this._callbacks || {};
+	  var args = [].slice.call(arguments, 1)
+	    , callbacks = this._callbacks[event];
+
+	  if (callbacks) {
+	    callbacks = callbacks.slice(0);
+	    for (var i = 0, len = callbacks.length; i < len; ++i) {
+	      callbacks[i].apply(this, args);
+	    }
+	  }
+
+	  return this;
+	};
+
+	/**
+	 * Return array of callbacks for `event`.
+	 *
+	 * @param {String} event
+	 * @return {Array}
+	 * @api public
+	 */
+
+	Emitter.prototype.listeners = function(event){
+	  this._callbacks = this._callbacks || {};
+	  return this._callbacks[event] || [];
+	};
+
+	/**
+	 * Check if this emitter has `event` handlers.
+	 *
+	 * @param {String} event
+	 * @return {Boolean}
+	 * @api public
+	 */
+
+	Emitter.prototype.hasListeners = function(event){
+	  return !! this.listeners(event).length;
+	};
 
 
 /***/ },
 /* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
+	
 	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
+	 * Reduce `arr` with `fn`.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * @param {Array} arr
+	 * @param {Function} fn
+	 * @param {Mixed} initial
 	 *
-	 * @providesModule performanceNow
-	 * @typechecks
+	 * TODO: combatible error handling?
 	 */
 
-	var performance = __webpack_require__(196);
+	module.exports = function(arr, fn, initial){  
+	  var idx = 0;
+	  var len = arr.length;
+	  var curr = arguments.length == 3
+	    ? initial
+	    : arr[idx++];
 
-	/**
-	 * Detect if we can use `window.performance.now()` and gracefully fallback to
-	 * `Date.now()` if it doesn't exist. We need to support Firefox < 15 for now
-	 * because of Facebook's testing infrastructure.
-	 */
-	if (!performance || !performance.now) {
-	  performance = Date;
-	}
-
-	var performanceNow = performance.now.bind(performance);
-
-	module.exports = performanceNow;
-
+	  while (idx < len) {
+	    curr = fn.call(null, curr, arr[idx], ++idx, arr);
+	  }
+	  
+	  return curr;
+	};
 
 /***/ },
 /* 153 */
@@ -17187,7 +17187,7 @@
 	 */
 	"use strict";
 
-	module.exports = __webpack_require__(3);
+	module.exports = __webpack_require__(29);
 
 
 /***/ },
@@ -18232,10 +18232,10 @@
 
 	"use strict";
 
-	var ReactDOMSelection = __webpack_require__(200);
+	var ReactDOMSelection = __webpack_require__(201);
 
 	var containsNode = __webpack_require__(132);
-	var focusNode = __webpack_require__(201);
+	var focusNode = __webpack_require__(202);
 	var getActiveElement = __webpack_require__(180);
 
 	function isInDocument(node) {
@@ -18467,7 +18467,7 @@
 	var SyntheticUIEvent = __webpack_require__(186);
 	var ViewportMetrics = __webpack_require__(164);
 
-	var getEventModifierState = __webpack_require__(202);
+	var getEventModifierState = __webpack_require__(200);
 
 	/**
 	 * @interface MouseEvent
@@ -18740,12 +18740,12 @@
 
 	"use strict";
 
-	var CallbackQueue = __webpack_require__(146);
+	var CallbackQueue = __webpack_require__(144);
 	var PooledClass = __webpack_require__(89);
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 	var ReactInputSelection = __webpack_require__(167);
 	var ReactPutListenerQueue = __webpack_require__(191);
-	var Transaction = __webpack_require__(147);
+	var Transaction = __webpack_require__(145);
 
 	var assign = __webpack_require__(62);
 
@@ -19002,7 +19002,7 @@
 
 	"use strict";
 
-	var focusNode = __webpack_require__(201);
+	var focusNode = __webpack_require__(202);
 
 	var AutoFocusMixin = {
 	  componentDidMount: function() {
@@ -19034,8 +19034,8 @@
 
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 
-	var accumulateInto = __webpack_require__(194);
-	var forEachAccumulated = __webpack_require__(195);
+	var accumulateInto = __webpack_require__(195);
+	var forEachAccumulated = __webpack_require__(196);
 	var invariant = __webpack_require__(88);
 
 	function remove(event) {
@@ -19547,7 +19547,7 @@
 
 	var getEventCharCode = __webpack_require__(188);
 	var getEventKey = __webpack_require__(204);
-	var getEventModifierState = __webpack_require__(202);
+	var getEventModifierState = __webpack_require__(200);
 
 	/**
 	 * @interface KeyboardEvent
@@ -19679,7 +19679,7 @@
 
 	var SyntheticUIEvent = __webpack_require__(186);
 
-	var getEventModifierState = __webpack_require__(202);
+	var getEventModifierState = __webpack_require__(200);
 
 	/**
 	 * @interface TouchEvent
@@ -20031,6 +20031,38 @@
 /* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule performance
+	 * @typechecks
+	 */
+
+	"use strict";
+
+	var ExecutionEnvironment = __webpack_require__(65);
+
+	var performance;
+
+	if (ExecutionEnvironment.canUseDOM) {
+	  performance =
+	    window.performance ||
+	    window.msPerformance ||
+	    window.webkitPerformance;
+	}
+
+	module.exports = performance || {};
+
+
+/***/ },
+/* 195 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function(process) {/**
 	 * Copyright 2014, Facebook, Inc.
 	 * All rights reserved.
@@ -20097,7 +20129,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(82)))
 
 /***/ },
-/* 195 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20129,38 +20161,6 @@
 	};
 
 	module.exports = forEachAccumulated;
-
-
-/***/ },
-/* 196 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule performance
-	 * @typechecks
-	 */
-
-	"use strict";
-
-	var ExecutionEnvironment = __webpack_require__(65);
-
-	var performance;
-
-	if (ExecutionEnvironment.canUseDOM) {
-	  performance =
-	    window.performance ||
-	    window.msPerformance ||
-	    window.webkitPerformance;
-	}
-
-	module.exports = performance || {};
 
 
 /***/ },
@@ -20288,6 +20288,57 @@
 
 /***/ },
 /* 200 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013 Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule getEventModifierState
+	 * @typechecks static-only
+	 */
+
+	"use strict";
+
+	/**
+	 * Translation from modifier key to the associated property in the event.
+	 * @see http://www.w3.org/TR/DOM-Level-3-Events/#keys-Modifiers
+	 */
+
+	var modifierKeyToProp = {
+	  'Alt': 'altKey',
+	  'Control': 'ctrlKey',
+	  'Meta': 'metaKey',
+	  'Shift': 'shiftKey'
+	};
+
+	// IE8 does not implement getModifierState so we simply map it to the only
+	// modifier keys exposed by the event itself, does not support Lock-keys.
+	// Currently, all major browsers except Chrome seems to support Lock-keys.
+	function modifierStateGetter(keyArg) {
+	  /*jshint validthis:true */
+	  var syntheticEvent = this;
+	  var nativeEvent = syntheticEvent.nativeEvent;
+	  if (nativeEvent.getModifierState) {
+	    return nativeEvent.getModifierState(keyArg);
+	  }
+	  var keyProp = modifierKeyToProp[keyArg];
+	  return keyProp ? !!nativeEvent[keyProp] : false;
+	}
+
+	function getEventModifierState(nativeEvent) {
+	  return modifierStateGetter;
+	}
+
+	module.exports = getEventModifierState;
+
+
+/***/ },
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20500,7 +20551,7 @@
 
 
 /***/ },
-/* 201 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20530,57 +20581,6 @@
 	}
 
 	module.exports = focusNode;
-
-
-/***/ },
-/* 202 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013 Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule getEventModifierState
-	 * @typechecks static-only
-	 */
-
-	"use strict";
-
-	/**
-	 * Translation from modifier key to the associated property in the event.
-	 * @see http://www.w3.org/TR/DOM-Level-3-Events/#keys-Modifiers
-	 */
-
-	var modifierKeyToProp = {
-	  'Alt': 'altKey',
-	  'Control': 'ctrlKey',
-	  'Meta': 'metaKey',
-	  'Shift': 'shiftKey'
-	};
-
-	// IE8 does not implement getModifierState so we simply map it to the only
-	// modifier keys exposed by the event itself, does not support Lock-keys.
-	// Currently, all major browsers except Chrome seems to support Lock-keys.
-	function modifierStateGetter(keyArg) {
-	  /*jshint validthis:true */
-	  var syntheticEvent = this;
-	  var nativeEvent = syntheticEvent.nativeEvent;
-	  if (nativeEvent.getModifierState) {
-	    return nativeEvent.getModifierState(keyArg);
-	  }
-	  var keyProp = modifierKeyToProp[keyArg];
-	  return keyProp ? !!nativeEvent[keyProp] : false;
-	}
-
-	function getEventModifierState(nativeEvent) {
-	  return modifierStateGetter;
-	}
-
-	module.exports = getEventModifierState;
 
 
 /***/ },
