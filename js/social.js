@@ -52,14 +52,15 @@
 
 	var _React2 = _interopRequireWildcard(_React);
 
-	var _Social = __webpack_require__(1);
+	var _Social = __webpack_require__(2);
 
 	var _Social2 = _interopRequireWildcard(_Social);
 
 	_React2["default"].render(_React2["default"].createElement(_Social2["default"], null), document.getElementById("social-root"));
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -78,7 +79,7 @@
 
 	var _Transmit2 = _interopRequireWildcard(_Transmit);
 
-	__webpack_require__(8);
+	__webpack_require__(10);
 
 	var _superagent = __webpack_require__(41);
 
@@ -149,7 +150,6 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 2 */,
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -161,13 +161,15 @@
 /* 5 */,
 /* 6 */,
 /* 7 */,
-/* 8 */
+/* 8 */,
+/* 9 */,
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(9);
+	var content = __webpack_require__(11);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(33)(content, {});
@@ -184,15 +186,13 @@
 	}
 
 /***/ },
-/* 9 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(36)();
 	exports.push([module.id, "/* MOBILE */\n.Social {\n\tposition: fixed;\n\tbottom: 0;\n\twidth: 100%;\n\theight: 50px;\n\tz-index: 10;\n\tbox-shadow: 0 -2px 8px rgba(0,0,0,0.12);\n}\n.Social-socialSets {\n\tdisplay: inline-block;\n\tvertical-align: top;\n\twidth: 100%;\n}\n.Social-social {\n\tbackground: #F1F1F1;\n\tdisplay: inline-block;\n\tborder-left: 3px solid rgb(230,230,230);\n\twidth: calc(50% - 3px);\n\theight: 50px;\n\ttext-align: center;\n\tcursor: pointer;\n\tpadding: 8px 0 0 0;\n\n}\n\n/* WEB */\n@media screen and (min-width: 400px){\n\t.Social {\n\t   position: relative;\n\t   margin: 0 auto;\n\t   width: 600px;\n\t   vertical-align: bottom;\n\t   height: 0px;\n    }\n    .Social-socialSets {\n       text-align: left;\n       position: absolute;\n       top: 25px;\n       left: 5px;\n       width: auto;\n    }\n    .Social-social {\n    \tdisplay: inline-block;\n    \twidth: auto;\n    \theight: auto;\n    \tpadding: 0 0 0 20px;\n    \tmargin-right: 20px;\n\t    background: none;\n\t    text-align: left;\n\t    color: rgb(50,50,50);\n    }\n\n}", ""]);
 
 /***/ },
-/* 10 */,
-/* 11 */,
 /* 12 */,
 /* 13 */,
 /* 14 */,
@@ -887,8 +887,8 @@
 	 * Module dependencies.
 	 */
 
-	var Emitter = __webpack_require__(139);
-	var reduce = __webpack_require__(140);
+	var Emitter = __webpack_require__(140);
+	var reduce = __webpack_require__(139);
 
 	/**
 	 * Root reference for iframes.
@@ -7749,7 +7749,7 @@
 	var ReactPropTypeLocationNames = __webpack_require__(97);
 
 	var deprecated = __webpack_require__(63);
-	var emptyFunction = __webpack_require__(138);
+	var emptyFunction = __webpack_require__(136);
 
 	/**
 	 * Collection of methods that allow declaration and validation of props that are
@@ -8105,9 +8105,9 @@
 
 	var ReactElement = __webpack_require__(49);
 	var ReactInstanceHandles = __webpack_require__(54);
-	var ReactMarkupChecksum = __webpack_require__(136);
+	var ReactMarkupChecksum = __webpack_require__(137);
 	var ReactServerRenderingTransaction =
-	  __webpack_require__(137);
+	  __webpack_require__(138);
 
 	var instantiateReactComponent = __webpack_require__(98);
 	var invariant = __webpack_require__(84);
@@ -10078,7 +10078,7 @@
 
 	"use strict";
 
-	var emptyFunction = __webpack_require__(138);
+	var emptyFunction = __webpack_require__(136);
 
 	/**
 	 * Similar to invariant but only logs a warning if the condition is not met.
@@ -10845,7 +10845,7 @@
 	"use strict";
 
 	var assign = __webpack_require__(62);
-	var emptyFunction = __webpack_require__(138);
+	var emptyFunction = __webpack_require__(136);
 	var invariant = __webpack_require__(84);
 	var joinClasses = __webpack_require__(156);
 	var warning = __webpack_require__(87);
@@ -13269,7 +13269,7 @@
 
 	var EventConstants = __webpack_require__(83);
 
-	var emptyFunction = __webpack_require__(138);
+	var emptyFunction = __webpack_require__(136);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -13331,7 +13331,7 @@
 	"use strict";
 
 	var ReactDOMIDOperations = __webpack_require__(171);
-	var ReactMarkupChecksum = __webpack_require__(136);
+	var ReactMarkupChecksum = __webpack_require__(137);
 	var ReactMount = __webpack_require__(56);
 	var ReactPerf = __webpack_require__(58);
 	var ReactReconcileTransaction = __webpack_require__(172);
@@ -13457,7 +13457,7 @@
 	var Transaction = __webpack_require__(147);
 
 	var assign = __webpack_require__(62);
-	var emptyFunction = __webpack_require__(138);
+	var emptyFunction = __webpack_require__(136);
 
 	var RESET_BATCHED_UPDATES = {
 	  initialize: emptyFunction,
@@ -14514,7 +14514,7 @@
 	var getActiveElement = __webpack_require__(180);
 	var isTextInputElement = __webpack_require__(166);
 	var keyOf = __webpack_require__(99);
-	var shallowEqual = __webpack_require__(141);
+	var shallowEqual = __webpack_require__(143);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -15557,6 +15557,44 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
+	 * @providesModule emptyFunction
+	 */
+
+	function makeEmptyFunction(arg) {
+	  return function() {
+	    return arg;
+	  };
+	}
+
+	/**
+	 * This function accepts and discards inputs; it has no side effects. This is
+	 * primarily useful idiomatically for overridable function endpoints which
+	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+	 */
+	function emptyFunction() {}
+
+	emptyFunction.thatReturns = makeEmptyFunction;
+	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+	emptyFunction.thatReturnsThis = function() { return this; };
+	emptyFunction.thatReturnsArgument = function(arg) { return arg; };
+
+	module.exports = emptyFunction;
+
+
+/***/ },
+/* 137 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
 	 * @providesModule ReactMarkupChecksum
 	 */
 
@@ -15598,7 +15636,7 @@
 
 
 /***/ },
-/* 137 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15621,7 +15659,7 @@
 	var Transaction = __webpack_require__(147);
 
 	var assign = __webpack_require__(62);
-	var emptyFunction = __webpack_require__(138);
+	var emptyFunction = __webpack_require__(136);
 
 	/**
 	 * Provides a `CallbackQueue` queue for collecting `onDOMReady` callbacks
@@ -15715,45 +15753,36 @@
 
 
 /***/ },
-/* 138 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
+	
 	/**
-	 * Copyright 2013-2014, Facebook, Inc.
-	 * All rights reserved.
+	 * Reduce `arr` with `fn`.
 	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
+	 * @param {Array} arr
+	 * @param {Function} fn
+	 * @param {Mixed} initial
 	 *
-	 * @providesModule emptyFunction
+	 * TODO: combatible error handling?
 	 */
 
-	function makeEmptyFunction(arg) {
-	  return function() {
-	    return arg;
-	  };
-	}
+	module.exports = function(arr, fn, initial){  
+	  var idx = 0;
+	  var len = arr.length;
+	  var curr = arguments.length == 3
+	    ? initial
+	    : arr[idx++];
 
-	/**
-	 * This function accepts and discards inputs; it has no side effects. This is
-	 * primarily useful idiomatically for overridable function endpoints which
-	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
-	 */
-	function emptyFunction() {}
-
-	emptyFunction.thatReturns = makeEmptyFunction;
-	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-	emptyFunction.thatReturnsThis = function() { return this; };
-	emptyFunction.thatReturnsArgument = function(arg) { return arg; };
-
-	module.exports = emptyFunction;
-
+	  while (idx < len) {
+	    curr = fn.call(null, curr, arr[idx], ++idx, arr);
+	  }
+	  
+	  return curr;
+	};
 
 /***/ },
-/* 139 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -15923,36 +15952,9 @@
 
 
 /***/ },
-/* 140 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	/**
-	 * Reduce `arr` with `fn`.
-	 *
-	 * @param {Array} arr
-	 * @param {Function} fn
-	 * @param {Mixed} initial
-	 *
-	 * TODO: combatible error handling?
-	 */
-
-	module.exports = function(arr, fn, initial){  
-	  var idx = 0;
-	  var len = arr.length;
-	  var curr = arguments.length == 3
-	    ? initial
-	    : arr[idx++];
-
-	  while (idx < len) {
-	    curr = fn.call(null, curr, arr[idx], ++idx, arr);
-	  }
-	  
-	  return curr;
-	};
-
-/***/ },
-/* 141 */
+/* 141 */,
+/* 142 */,
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16000,8 +16002,6 @@
 
 
 /***/ },
-/* 142 */,
-/* 143 */,
 /* 144 */,
 /* 145 */,
 /* 146 */
@@ -17037,7 +17037,7 @@
 	var PooledClass = __webpack_require__(85);
 
 	var assign = __webpack_require__(62);
-	var emptyFunction = __webpack_require__(138);
+	var emptyFunction = __webpack_require__(136);
 	var getEventTarget = __webpack_require__(178);
 
 	/**
@@ -19250,7 +19250,7 @@
 	 * @typechecks
 	 */
 
-	var emptyFunction = __webpack_require__(138);
+	var emptyFunction = __webpack_require__(136);
 
 	/**
 	 * Upstream version of event listener. Does not take into account specific
@@ -21004,7 +21004,7 @@
 	var ExecutionEnvironment = __webpack_require__(65);
 
 	var createNodesFromMarkup = __webpack_require__(208);
-	var emptyFunction = __webpack_require__(138);
+	var emptyFunction = __webpack_require__(136);
 	var getMarkupWrap = __webpack_require__(209);
 	var invariant = __webpack_require__(84);
 
